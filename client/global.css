@@ -57,6 +57,34 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* OneAlgorithm Brand Colors */
+    --onealgo-blue-50: 210 100% 98%;
+    --onealgo-blue-100: 200 100% 97%;
+    --onealgo-blue-200: 200 100% 93%;
+    --onealgo-blue-300: 200 96% 88%;
+    --onealgo-blue-400: 201 96% 78%;
+    --onealgo-blue-500: 199 89% 48%;
+    --onealgo-blue-600: 201 96% 32%;
+    --onealgo-blue-700: 201 96% 25%;
+    --onealgo-blue-800: 201 96% 20%;
+    --onealgo-blue-900: 202 80% 24%;
+    --onealgo-blue-950: 210 100% 21%; /* Primary #005eaa */
+
+    --onealgo-orange-50: 38 100% 97%;
+    --onealgo-orange-100: 43 96% 90%;
+    --onealgo-orange-200: 43 96% 80%;
+    --onealgo-orange-300: 45 97% 64%;
+    --onealgo-orange-400: 43 100% 57%;
+    --onealgo-orange-500: 36 100% 60%; /* Primary #ffa634 */
+    --onealgo-orange-600: 32 95% 44%;
+    --onealgo-orange-700: 26 90% 37%;
+    --onealgo-orange-800: 23 83% 31%;
+    --onealgo-orange-900: 21 84% 27%;
+    --onealgo-orange-950: 17 88% 15%;
+
+    --onealgo-light: 210 100% 98%;
+    --onealgo-lighter: 206 73% 95%;
   }
 
   .dark {
