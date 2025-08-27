@@ -207,10 +207,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
                 Annual Maintenance Contract <span className="text-onealgo-orange-500">(AMC)</span>
               </h2>
-              <p className="text-xl text-gray-600 mb-6">
+              <p className="text-xl text-gray-600 mb-6 animate-fade-in-up">
                 End-to-end management of your systems, so the team can stay focused on driving sales.
               </p>
               <div className="space-y-4">
@@ -235,23 +235,23 @@ export default function Index() {
               </Button>
             </div>
             <div className="grid grid-cols-2 gap-6">
-              <div className="text-center">
-                <Globe className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4" />
+              <div className="text-center hover:scale-105 transition-transform duration-300">
+                <Globe className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4 animate-pulse-slow" />
                 <h3 className="text-lg font-semibold text-gray-900">24/7 Support</h3>
                 <p className="text-gray-600">Round-the-clock monitoring and support</p>
               </div>
-              <div className="text-center">
-                <Users className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4" />
+              <div className="text-center hover:scale-105 transition-transform duration-300">
+                <Users className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4 animate-pulse-slow" style={{animationDelay: '0.5s'}} />
                 <h3 className="text-lg font-semibold text-gray-900">Expert Team</h3>
                 <p className="text-gray-600">Dedicated specialists for your systems</p>
               </div>
-              <div className="text-center">
-                <Zap className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4" />
+              <div className="text-center hover:scale-105 transition-transform duration-300">
+                <Zap className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4 animate-pulse-slow" style={{animationDelay: '1s'}} />
                 <h3 className="text-lg font-semibold text-gray-900">Proactive Updates</h3>
                 <p className="text-gray-600">Stay ahead with regular optimizations</p>
               </div>
-              <div className="text-center">
-                <TrendingUp className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4" />
+              <div className="text-center hover:scale-105 transition-transform duration-300">
+                <TrendingUp className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4 animate-pulse-slow" style={{animationDelay: '1.5s'}} />
                 <h3 className="text-lg font-semibold text-gray-900">Performance Tuning</h3>
                 <p className="text-gray-600">Continuous system optimization</p>
               </div>
@@ -263,10 +263,10 @@ export default function Index() {
       {/* CTA Section */}
       <section className="py-20 bg-onealgo-blue-950 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto animate-fade-in-up">
             Let's talk about how OneAlgorithm can streamline your operations and accelerate your growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
