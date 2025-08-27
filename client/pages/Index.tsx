@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import OneAlgorithmText from "../components/OneAlgorithmText";
 import CollapsibleDetails from "../components/CollapsibleDetails";
+import DetailedCollapsible from "../components/DetailedCollapsible";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import {
@@ -151,51 +152,63 @@ export default function Index() {
             {/* Construction */}
             <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
               <CardHeader>
-                <Building2 className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow" />
+                <Building2 className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-onealgo-orange-500 transition-colors duration-300" />
                 <CardTitle className="text-2xl text-onealgo-blue-950">Construction</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Keep projects on track with smarter coordination, automated task management, and real-time visibility from the field to the office.
-                </p>
-                <div className="space-y-2 text-sm text-gray-500">
-                  <p><strong>Learn more:</strong> Centralize schedules, budgets, and communication to avoid delays and costly missteps.</p>
-                  <p><strong>Go deeper:</strong> Integrations link field teams, subcontractors, and back-office operations — delivering a single, clear view of every project milestone.</p>
-                </div>
+                <DetailedCollapsible
+                  title="Construction"
+                  summary="Keep projects on track with smarter coordination, automated task management, and real-time visibility from the field to the office."
+                  details={[
+                    "Centralize schedules, budgets, and communication to avoid delays and costly missteps",
+                    "Integrations link field teams, subcontractors, and back-office operations",
+                    "Single, clear view of every project milestone and progress tracking",
+                    "Real-time field updates sync directly with office management systems",
+                    "Automated compliance tracking and safety protocol management"
+                  ]}
+                />
               </CardContent>
             </Card>
 
             {/* Manufacturing */}
             <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
               <CardHeader>
-                <Factory className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow" style={{animationDelay: '0.5s'}} />
+                <Factory className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-green-500 transition-colors duration-300" style={{animationDelay: '0.5s'}} />
                 <CardTitle className="text-2xl text-onealgo-blue-950">Manufacturing</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Boost efficiency with connected systems, streamlined production workflows, and live data insights.
-                </p>
-                <div className="space-y-2 text-sm text-gray-500">
-                  <p><strong>Learn more:</strong> Track production, inventory, and supply chain activity in one place.</p>
-                  <p><strong>Go deeper:</strong> Automated workflows reduce downtime, optimize capacity planning, and ensure every resource is used at its best.</p>
-                </div>
+                <DetailedCollapsible
+                  title="Manufacturing"
+                  summary="Boost efficiency with connected systems, streamlined production workflows, and live data insights."
+                  details={[
+                    "Track production, inventory, and supply chain activity in one unified platform",
+                    "Automated workflows reduce downtime and optimize capacity planning",
+                    "Real-time quality control monitoring and defect tracking",
+                    "Predictive maintenance scheduling to prevent equipment failures",
+                    "Resource optimization ensures maximum efficiency and minimal waste"
+                  ]}
+                />
               </CardContent>
             </Card>
 
             {/* Marketing & Commerce */}
             <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
               <CardHeader>
-                <ShoppingCart className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow" style={{animationDelay: '1s'}} />
+                <ShoppingCart className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-purple-500 transition-colors duration-300" style={{animationDelay: '1s'}} />
                 <CardTitle className="text-2xl text-onealgo-blue-950">Marketing & Commerce</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Deliver personalized experiences, fuel customer loyalty, and turn data into scalable commerce growth.
-                </p>
-                <div className="space-y-2 text-sm text-gray-500">
-                  <p><strong>Learn more:</strong> Create campaigns that adapt instantly to customer behavior.</p>
-                  <p><strong>Go deeper:</strong> AI-driven insights connect marketing, sales, and commerce — giving every customer interaction a consistent, engaging touch.</p>
-                </div>
+                <DetailedCollapsible
+                  title="Marketing & Commerce"
+                  summary="Deliver personalized experiences, fuel customer loyalty, and turn data into scalable commerce growth."
+                  details={[
+                    "Create campaigns that adapt instantly to customer behavior and preferences",
+                    "AI-driven insights connect marketing, sales, and commerce platforms",
+                    "Personalized customer journeys from first touch to conversion",
+                    "Advanced analytics for ROI tracking and campaign optimization",
+                    "Automated lead nurturing and customer retention workflows"
+                  ]}
+                />
               </CardContent>
             </Card>
           </div>
@@ -223,7 +236,7 @@ export default function Index() {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-onealgo-orange-500 mt-1 flex-shrink-0" />
                   <p className="text-gray-600">
-                    <strong>Go deeper:</strong> AMC covers everything from system optimization and troubleshooting to user training and performance tuning — ensuring technology stays aligned with evolving business goals.
+                    <strong>Go deeper:</strong> AMC covers everything from system optimization and troubleshooting to user training and performance tuning �� ensuring technology stays aligned with evolving business goals.
                   </p>
                 </div>
               </div>
