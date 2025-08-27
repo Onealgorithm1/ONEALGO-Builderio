@@ -124,6 +124,42 @@ export default function Contact() {
                   />
                 </div>
 
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="companySize" className="text-gray-700">
+                      Company Size
+                    </Label>
+                    <Select onValueChange={(value) => handleSelectChange("companySize", value)}>
+                      <SelectTrigger className="mt-1">
+                        <SelectValue placeholder="Select company size" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="1-10">1-10 employees</SelectItem>
+                        <SelectItem value="11-50">11-50 employees</SelectItem>
+                        <SelectItem value="51-200">51-200 employees</SelectItem>
+                        <SelectItem value="201-500">201-500 employees</SelectItem>
+                        <SelectItem value="501-1000">501-1000 employees</SelectItem>
+                        <SelectItem value="1000+">1000+ employees</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="companyAddress" className="text-gray-700">
+                      Company Address
+                    </Label>
+                    <Input
+                      id="companyAddress"
+                      name="companyAddress"
+                      type="text"
+                      placeholder="Enter your company address"
+                      value={formData.companyAddress}
+                      onChange={handleInputChange}
+                      className="mt-1"
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <Label htmlFor="phone" className="text-gray-700">
                     Phone Number
