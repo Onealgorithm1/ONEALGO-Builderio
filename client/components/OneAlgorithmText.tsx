@@ -1,5 +1,5 @@
 import React from "react";
-import BinaryGlobe from "./BinaryGlobe";
+import BinaryGlobeSVG from "./BinaryGlobeSVG";
 
 interface OneAlgorithmTextProps {
   size?: "sm" | "md" | "lg" | "xl";
@@ -33,7 +33,7 @@ export default function OneAlgorithmText({
       <span className="text-onealgo-orange-500">One</span>
       <span className="text-onealgo-blue-950">Alg</span>
       {showGlobe ? (
-        <BinaryGlobe size={globeSizes[size]} className="mx-1 inline-block" />
+        <BinaryGlobeSVG size={globeSizes[size]} className="mx-1 inline-block" />
       ) : (
         <span className="text-onealgo-blue-950">o</span>
       )}
