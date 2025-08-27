@@ -237,26 +237,6 @@ export default function Index() {
                   "Custom workflow development and refinement"
                 ]}
               />
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-onealgo-orange-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-600">
-                    <strong>Learn more:</strong> Proactive monitoring, regular updates, and 24/7 support keep operations running without disruption.
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-6 h-6 text-onealgo-orange-500 mt-1 flex-shrink-0" />
-                  <p className="text-gray-600">
-                    <strong>Go deeper:</strong> AMC covers everything from system optimization and troubleshooting to user training and performance tuning �� ensuring technology stays aligned with evolving business goals.
-                  </p>
-                </div>
-              </div>
-              <Button 
-                size="lg" 
-                className="mt-8 bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
-              >
-                Learn About AMC
-              </Button>
             </div>
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center hover:scale-105 transition-transform duration-300">
