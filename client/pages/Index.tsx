@@ -65,36 +65,36 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Goals-First Approach */}
-            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <CardHeader>
-                <Target className="w-12 h-12 text-onealgo-orange-500 mb-4" />
+                <Target className="w-12 h-12 text-onealgo-orange-500 mb-4 animate-float" />
                 <CardTitle className="text-onealgo-blue-950">Goals-First Approach</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
                   Solutions designed around your business goals — not the other way around. Every system is built to drive measurable results.
                 </p>
-                <div className="space-y-2 text-sm text-gray-500">
-                  <p><strong>Learn more:</strong> The process begins with a deep understanding of your model, challenges, and growth targets before any technology is recommended.</p>
-                  <p><strong>Go deeper:</strong> Discovery workshops, process mapping, and data analysis ensure that every solution aligns with the outcomes that matter most — revenue, efficiency, and customer satisfaction.</p>
-                </div>
+                <CollapsibleDetails
+                  learnMore="The process begins with a deep understanding of your model, challenges, and growth targets before any technology is recommended."
+                  goDeeper="Discovery workshops, process mapping, and data analysis ensure that every solution aligns with the outcomes that matter most — revenue, efficiency, and customer satisfaction."
+                />
               </CardContent>
             </Card>
 
             {/* Complete Connection */}
-            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               <CardHeader>
-                <LinkIcon className="w-12 h-12 text-onealgo-orange-500 mb-4" />
+                <LinkIcon className="w-12 h-12 text-onealgo-orange-500 mb-4 animate-float" style={{animationDelay: '0.5s'}} />
                 <CardTitle className="text-onealgo-blue-950">Complete Connection</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
                   Sales, Service, Marketing, Finance, and Operations connected into one seamless system.
                 </p>
-                <div className="space-y-2 text-sm text-gray-500">
-                  <p><strong>Learn more:</strong> A connected business runs faster, with fewer silos and less friction between departments.</p>
-                  <p><strong>Go deeper:</strong> A single source of truth across all business units delivers leadership visibility, stronger collaboration, and a smoother customer journey from first touch to fulfillment.</p>
-                </div>
+                <CollapsibleDetails
+                  learnMore="A connected business runs faster, with fewer silos and less friction between departments."
+                  goDeeper="A single source of truth across all business units delivers leadership visibility, stronger collaboration, and a smoother customer journey from first touch to fulfillment."
+                />
               </CardContent>
             </Card>
 
@@ -160,7 +160,7 @@ export default function Index() {
                 </p>
                 <div className="space-y-2 text-sm text-gray-500">
                   <p><strong>Learn more:</strong> Centralize schedules, budgets, and communication to avoid delays and costly missteps.</p>
-                  <p><strong>Go deeper:</strong> Integrations link field teams, subcontractors, and back-office operations — delivering a single, clear view of every project milestone.</p>
+                  <p><strong>Go deeper:</strong> Integrations link field teams, subcontractors, and back-office operations ��� delivering a single, clear view of every project milestone.</p>
                 </div>
               </CardContent>
             </Card>
