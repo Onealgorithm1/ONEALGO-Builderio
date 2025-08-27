@@ -1,15 +1,16 @@
 import React from "react";
 import Layout from "../components/Layout";
 import OneAlgorithmText from "../components/OneAlgorithmText";
+import CollapsibleDetails from "../components/CollapsibleDetails";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
-import { 
-  Target, 
-  Link as LinkIcon, 
-  TrendingUp, 
-  Settings, 
-  Building2, 
-  Factory, 
+import {
+  Target,
+  Link as LinkIcon,
+  TrendingUp,
+  Settings,
+  Building2,
+  Factory,
   ShoppingCart,
   CheckCircle,
   Globe,
