@@ -54,11 +54,11 @@ export default function Index() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
               Why <span className="text-onealgo-orange-500">One</span>
               <span className="text-onealgo-blue-950">Algorithm</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up">
               We streamline operations, automate the busywork, and build tools that let you focus on what matters: growing your business.
             </p>
           </div>
@@ -139,10 +139,10 @@ export default function Index() {
       <section className="py-20 bg-onealgo-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
               Industries We Specialize In
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up">
               Tailored Salesforce solutions for your industry's unique challenges.
             </p>
           </div>
