@@ -198,6 +198,46 @@ export default function Contact() {
                   Send My Message
                 </Button>
               </form>
+
+              {/* Office Locations Map */}
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Office Locations</h3>
+                <div className="bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                  <iframe
+                    src="https://www.google.com/maps/d/embed?mid=1example&ehbc=2E312F"
+                    width="100%"
+                    height="400"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="OneAlgorithm Office Locations"
+                    className="w-full"
+                  ></iframe>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                  <div className="text-center p-4 bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                    <span className="text-3xl mb-2 block">🇺🇸</span>
+                    <h4 className="font-semibold text-onealgo-blue-950">USA</h4>
+                    <p className="text-sm text-gray-600">Malvern, PA</p>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                    <span className="text-3xl mb-2 block">🇮🇳</span>
+                    <h4 className="font-semibold text-onealgo-blue-950">India</h4>
+                    <p className="text-sm text-gray-600">Hyderabad</p>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                    <span className="text-3xl mb-2 block">🇦🇪</span>
+                    <h4 className="font-semibold text-onealgo-blue-950">UAE</h4>
+                    <p className="text-sm text-gray-600">Dubai</p>
+                  </div>
+                  <div className="text-center p-4 bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                    <span className="text-3xl mb-2 block">🇨🇦</span>
+                    <h4 className="font-semibold text-onealgo-blue-950">Canada</h4>
+                    <p className="text-sm text-gray-600">Toronto</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Contact Information */}
