@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Layout from "../../components/Layout";
 import {
   Card,
@@ -69,10 +70,11 @@ export default function Marketing() {
               preferences with AI-driven insights and automated lead nurturing.
             </p>
             <Button
+              asChild
               size="lg"
               className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-4"
             >
-              Get Started
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
