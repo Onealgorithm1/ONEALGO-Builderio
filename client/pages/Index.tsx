@@ -6,6 +6,7 @@ import CollapsibleDetails from "../components/CollapsibleDetails";
 import DetailedCollapsible from "../components/DetailedCollapsible";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Collapsible } from "../components/ui/collapsible";
 import {
   Target,
   Link as LinkIcon,
@@ -74,8 +75,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Solutions designed around your business goals — not the other way around. Every system is built to drive measurable results through discovery workshops, process mapping, and data analysis that align technology with revenue, efficiency, and customer satisfaction outcomes.
+                  Solutions designed around your business goals — not the other way around. Every system is built to drive measurable results.
                 </p>
+                <Collapsible trigger="Learn More">
+                  Our process begins with discovery workshops, process mapping, and data analysis that align technology with revenue, efficiency, and customer satisfaction outcomes.
+                </Collapsible>
               </CardContent>
             </Card>
 
@@ -87,8 +91,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Sales, Service, Marketing, Finance, and Operations connected into one seamless system. A single source of truth across all business units delivers leadership visibility, stronger collaboration, and a smoother customer journey from first touch to fulfillment.
+                  Sales, Service, Marketing, Finance, and Operations connected into one seamless system.
                 </p>
+                <Collapsible trigger="Learn More">
+                  A single source of truth across all business units delivers leadership visibility, stronger collaboration, and a smoother customer journey from first touch to fulfillment.
+                </Collapsible>
               </CardContent>
             </Card>
 
@@ -100,8 +107,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Automation and streamlined operations free teams to focus on strategy and growth. From lead routing to financial reporting, efficient workflows reduce errors, increase accountability, and empower teams to innovate instead of handling routine admin tasks.
+                  Automation and streamlined operations free teams to focus on strategy and growth.
                 </p>
+                <Collapsible trigger="Learn More">
+                  From lead routing to financial reporting, efficient workflows reduce errors, increase accountability, and empower teams to innovate instead of handling routine admin tasks.
+                </Collapsible>
               </CardContent>
             </Card>
 
@@ -113,8 +123,11 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Every implementation is customized to unique processes, industry standards, and long-term vision. Specialized solutions adapt technology to your business across construction, finance, healthcare, and beyond — aligning with workflows, compliance needs, and customer expectations.
+                  Every implementation is customized to unique processes, industry standards, and long-term vision.
                 </p>
+                <Collapsible trigger="Learn More">
+                  Specialized solutions adapt technology to your business across construction, finance, healthcare, and beyond — aligning with workflows, compliance needs, and customer expectations.
+                </Collapsible>
               </CardContent>
             </Card>
           </div>
