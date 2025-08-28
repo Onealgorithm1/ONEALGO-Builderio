@@ -27,7 +27,7 @@ export default function OneAlgorithmText({
   };
 
   // If className includes text-white, show simplified version
-  const isWhiteText = className.includes('text-white');
+  const isWhiteText = className.includes("text-white");
 
   if (isWhiteText) {
     return (
@@ -47,7 +47,10 @@ export default function OneAlgorithmText({
       <span className="text-onealgo-orange-500">One</span>
       <span className="text-onealgo-blue-950">Alg</span>
       {showGlobe ? (
-        <BinaryGlobeSVG size={globeSizes[size]} className="mx-1 inline-block drop-shadow-md" />
+        <BinaryGlobeSVG
+          size={globeSizes[size]}
+          className="mx-1 inline-block drop-shadow-md"
+        />
       ) : (
         <span className="text-onealgo-blue-950">o</span>
       )}
