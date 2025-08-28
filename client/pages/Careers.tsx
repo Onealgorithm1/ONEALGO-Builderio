@@ -345,7 +345,20 @@ export default function Careers() {
             )}
           </div>
 
-          {jobCategories.map((category, categoryIndex) => (
+          {filteredCategories.length === 0 && searchTerm ? (
+            <div className="text-center py-16">
+              <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">No jobs found</h3>
+              <p className="text-gray-500">Try adjusting your search terms or browse all available positions.</p>
+              <Button
+                onClick={() => setSearchTerm("")}
+                className="mt-4 bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+              >
+                Clear Search
+              </Button>
+            </div>
+          ) : (
+            filteredCategories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="mb-16">
               <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">{category.title}</h3>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -404,7 +417,8 @@ export default function Careers() {
                 ))}
               </div>
             </div>
-          ))}
+            ))
+          )}
         </div>
       </section>
 
