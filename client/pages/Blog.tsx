@@ -2,8 +2,8 @@ import React from "react";
 import Layout from "../components/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
-import { Button } from "../components/ui/button";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, Clock, Building2 } from "lucide-react";
+import { Collapsible } from "../components/ui/collapsible";
 
 export default function Blog() {
   const blogPosts = [
@@ -11,6 +11,13 @@ export default function Blog() {
       id: 1,
       title: "The Future of Business Automation: What to Expect in 2025",
       excerpt: "Discover the latest trends in business automation and how they'll transform operations across industries.",
+      fullContent: `Business automation is revolutionizing how organizations operate, with 2025 marking a pivotal year for widespread adoption. AI-powered workflows are reducing manual tasks by up to 80%, while intelligent process automation (IPA) combines robotic process automation (RPA) with machine learning capabilities.
+
+Key trends shaping the automation landscape include hyper-automation platforms that integrate multiple automation technologies, low-code/no-code solutions democratizing automation access, and cognitive automation that handles complex decision-making processes.
+
+Organizations implementing comprehensive automation strategies report 40% faster processing times, 60% reduction in operational costs, and 90% improvement in accuracy for routine tasks. The most successful implementations focus on employee upskilling, gradual deployment, and continuous optimization.
+
+Industries leading automation adoption include financial services (fraud detection, compliance), healthcare (patient scheduling, claims processing), manufacturing (predictive maintenance, quality control), and retail (inventory management, customer service).`,
       category: "Technology",
       author: "OneAlgorithm Team",
       date: "March 15, 2025",
@@ -22,6 +29,13 @@ export default function Blog() {
       id: 2,
       title: "Construction Project Management: Best Practices for 2025",
       excerpt: "Learn how modern construction companies are using technology to streamline projects and reduce costs.",
+      fullContent: `Digital transformation in construction is accelerating project delivery while improving safety and quality outcomes. Cloud-based project management platforms now integrate real-time collaboration, automated scheduling, and predictive analytics to prevent delays and cost overruns.
+
+Building Information Modeling (BIM) combined with IoT sensors provides unprecedented visibility into project progress, resource utilization, and potential issues. Mobile workforce management solutions enable real-time updates from job sites, reducing communication gaps and improving decision-making speed.
+
+Cost reduction strategies include automated material ordering based on project schedules, drone surveillance for progress monitoring, and AI-powered risk assessment for better project planning. Companies adopting these technologies report 25% faster project completion and 30% reduction in material waste.
+
+Safety improvements through wearable technology, virtual reality training, and automated hazard detection systems have reduced workplace accidents by 40% in digitally-enabled construction sites.`,
       category: "Construction",
       author: "Sarah Johnson",
       date: "March 12, 2025",
@@ -32,6 +46,13 @@ export default function Blog() {
       id: 3,
       title: "E-Commerce Growth Strategies That Actually Work",
       excerpt: "Proven techniques to scale your online business and increase customer retention in today's competitive market.",
+      fullContent: `Successful e-commerce growth requires a data-driven approach combining customer experience optimization, strategic technology implementation, and personalized marketing automation. Leading businesses focus on three key areas: conversion rate optimization, customer lifetime value enhancement, and operational efficiency.
+
+Personalization engines powered by machine learning analyze customer behavior patterns to deliver individualized product recommendations, resulting in 35% higher conversion rates. Dynamic pricing algorithms adjust to market conditions and competitor pricing in real-time, optimizing revenue without sacrificing competitiveness.
+
+Customer retention strategies include loyalty program automation, predictive churn analysis, and omnichannel support integration. Businesses implementing comprehensive retention programs see 60% higher customer lifetime value and 40% reduction in acquisition costs.
+
+Supply chain optimization through automated inventory management, demand forecasting, and multi-channel fulfillment ensures product availability while minimizing carrying costs. Advanced analytics help predict seasonal trends and optimize stock levels across multiple sales channels.`,
       category: "E-Commerce",
       author: "Mike Chen",
       date: "March 10, 2025",
@@ -42,6 +63,13 @@ export default function Blog() {
       id: 4,
       title: "Manufacturing Efficiency: The Role of Connected Systems",
       excerpt: "How integrated manufacturing systems are revolutionizing production and reducing waste.",
+      fullContent: `Industry 4.0 initiatives are transforming manufacturing through interconnected systems that optimize production, reduce waste, and improve quality control. Smart factories leverage IoT sensors, edge computing, and cloud analytics to create responsive production environments that adapt to real-time conditions.
+
+Predictive maintenance systems monitor equipment health continuously, reducing unplanned downtime by 50% and extending machinery lifespan by 20%. Digital twin technology creates virtual replicas of production lines, enabling simulation-based optimization and risk-free testing of process improvements.
+
+Quality control automation using computer vision and machine learning detects defects with 99.5% accuracy, significantly reducing rework costs and customer returns. Real-time production monitoring provides visibility into bottlenecks, enabling immediate corrective actions and continuous process improvement.
+
+Energy management systems integrated with production scheduling optimize power consumption, reducing energy costs by 30% while maintaining production targets. Sustainable manufacturing practices supported by data analytics help companies meet environmental goals while improving operational efficiency.`,
       category: "Manufacturing",
       author: "David Rodriguez",
       date: "March 8, 2025",
@@ -52,6 +80,13 @@ export default function Blog() {
       id: 5,
       title: "Website Performance: Why Speed Matters More Than Ever",
       excerpt: "Understanding the impact of website performance on user experience and business results.",
+      fullContent: `Website performance directly impacts user engagement, search rankings, and revenue generation. Research shows that a one-second delay in page load time results in 7% reduction in conversions, 11% fewer page views, and 16% decrease in customer satisfaction.
+
+Core Web Vitals have become critical ranking factors, making technical optimization essential for search visibility. Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS) metrics provide measurable targets for performance improvement.
+
+Performance optimization strategies include image compression and next-generation formats (WebP, AVIF), code splitting for reduced bundle sizes, and CDN implementation for global content delivery. Progressive Web App (PWA) technologies enable app-like experiences with offline functionality and instant loading.
+
+Mobile performance optimization is particularly crucial, as mobile users are five times more likely to abandon tasks if sites aren't mobile-optimized. Responsive design, touch-friendly interfaces, and accelerated mobile pages (AMP) contribute to superior mobile experiences that drive engagement and conversions.`,
       category: "Web Development",
       author: "Emily Watson",
       date: "March 5, 2025",
@@ -62,6 +97,13 @@ export default function Blog() {
       id: 6,
       title: "Marketing Automation: ROI Strategies That Work",
       excerpt: "How to implement marketing automation that delivers measurable results and improves customer engagement.",
+      fullContent: `Marketing automation platforms generate average ROI of 451% when implemented strategically, focusing on lead nurturing, customer segmentation, and behavioral trigger campaigns. Successful implementations prioritize customer journey mapping, content personalization, and cross-channel coordination.
+
+Lead scoring algorithms analyze prospect behavior, demographics, and engagement patterns to identify sales-ready opportunities, improving sales efficiency by 40% and reducing conversion time by 35%. Automated nurture sequences guide prospects through educational content tailored to their interests and buying stage.
+
+Email marketing automation achieves 320% more revenue than non-automated campaigns through triggered messages, personalized content, and optimal send time optimization. Advanced segmentation based on customer lifecycle stage, preferences, and behavior patterns increases engagement rates by 60%.
+
+Attribution modeling tracks customer touchpoints across multiple channels, providing insights into campaign effectiveness and budget allocation optimization. Multi-touch attribution reveals the true impact of marketing activities, enabling data-driven investment decisions that maximize return on marketing spend.`,
       category: "Marketing",
       author: "Alex Thompson",
       date: "March 3, 2025",
@@ -72,6 +114,13 @@ export default function Blog() {
       id: 7,
       title: "The Rise of Low-Code/No-Code Solutions in Enterprise",
       excerpt: "How low-code platforms are democratizing software development and accelerating digital transformation.",
+      fullContent: `Low-code/no-code platforms are revolutionizing enterprise software development, enabling business users to create applications without traditional programming skills. These platforms reduce development time by 80% and lower development costs by 60% while maintaining enterprise-grade security and scalability.
+
+Citizen development programs empower business users to build workflow automation, data collection forms, and reporting dashboards that address specific departmental needs. IT departments shift from gatekeepers to enablers, providing governance frameworks and technical oversight while accelerating solution delivery.
+
+Enterprise adoption drivers include faster time-to-market for digital solutions, reduced IT backlogs, and improved business-IT alignment. Organizations report 3x faster application deployment and 50% reduction in maintenance overhead for low-code applications compared to custom development.
+
+Integration capabilities with existing enterprise systems ensure seamless data flow and process continuity. API connectors, database integration, and workflow orchestration enable low-code applications to enhance rather than replace existing technology investments.`,
       category: "Technology",
       author: "OneAlgorithm Team",
       date: "February 28, 2025",
@@ -82,6 +131,13 @@ export default function Blog() {
       id: 8,
       title: "Data Privacy and GDPR Compliance: A Practical Guide",
       excerpt: "Essential strategies for ensuring data privacy compliance while maintaining operational efficiency.",
+      fullContent: `Data privacy regulations like GDPR, CCPA, and emerging regional laws require comprehensive compliance strategies that protect customer data while enabling business operations. Organizations face potential fines of up to 4% of annual revenue for non-compliance, making privacy management a critical business priority.
+
+Privacy by design principles integrate data protection into system architecture from the initial design phase, reducing compliance risks and simplifying ongoing management. Technical measures include data encryption, access controls, automated retention policies, and audit trail maintenance.
+
+Consent management platforms streamline customer preference collection and management, ensuring transparent communication about data usage while maintaining compliance across multiple jurisdictions. Dynamic consent updates and granular permission controls give customers control over their data usage preferences.
+
+Data mapping and inventory processes identify all personal data collection points, processing activities, and third-party data sharing arrangements. Regular privacy impact assessments evaluate new technologies and processes for compliance risks, enabling proactive risk mitigation and regulatory alignment.`,
       category: "Technology",
       author: "Legal & Compliance Team",
       date: "February 25, 2025",
@@ -92,6 +148,13 @@ export default function Blog() {
       id: 9,
       title: "Remote Team Collaboration: Tools and Best Practices",
       excerpt: "Building effective remote teams with the right technology stack and communication strategies.",
+      fullContent: `Remote team collaboration requires intentional tool selection, communication protocols, and team culture development to maintain productivity and engagement. Organizations with mature remote work practices report 40% higher employee satisfaction and 25% better retention rates compared to traditional office-based teams.
+
+Collaboration platform integration enables seamless workflows across video conferencing, project management, document sharing, and instant messaging tools. Unified workspaces reduce context switching and improve information accessibility, leading to 30% faster project completion times.
+
+Asynchronous communication strategies accommodate global team members across different time zones while maintaining project momentum. Documentation-first approaches create searchable knowledge bases that preserve institutional knowledge and reduce meeting dependencies.
+
+Performance management for remote teams focuses on outcome-based metrics rather than time tracking, empowering employees to optimize their work schedules while meeting deliverable requirements. Regular virtual team building activities and informal communication channels maintain social connections and team cohesion.`,
       category: "Technology",
       author: "HR & Operations",
       date: "February 22, 2025",
@@ -102,6 +165,13 @@ export default function Blog() {
       id: 10,
       title: "Sustainable Technology: Green Solutions for Modern Business",
       excerpt: "How to implement eco-friendly technology solutions that reduce costs and environmental impact.",
+      fullContent: `Sustainable technology initiatives deliver environmental benefits while generating significant cost savings, with organizations reporting average 25% reduction in energy costs and 40% decrease in carbon footprint through strategic green technology adoption.
+
+Cloud computing optimization reduces server infrastructure requirements and energy consumption through efficient resource allocation and serverless architectures. Green hosting providers powered by renewable energy sources further minimize environmental impact while maintaining performance standards.
+
+Energy management systems monitor and optimize power consumption across facilities, identifying opportunities for efficiency improvements and renewable energy integration. Smart building technologies automatically adjust lighting, heating, and cooling based on occupancy patterns, reducing energy waste by 35%.
+
+Circular economy principles applied to technology lifecycle management include device refurbishment programs, responsible e-waste disposal, and sustainable procurement policies. These initiatives reduce technology costs by 20% while supporting corporate sustainability goals and regulatory compliance requirements.`,
       category: "Technology",
       author: "Sustainability Team",
       date: "February 20, 2025",
@@ -112,6 +182,13 @@ export default function Blog() {
       id: 11,
       title: "Construction Tech Trends: Digital Transformation on the Job Site",
       excerpt: "Exploring how digital tools are revolutionizing construction project management and safety.",
+      fullContent: `Construction technology adoption is accelerating, with digital tools transforming traditional job site operations through automation, real-time monitoring, and predictive analytics. Organizations embracing construction tech report 20% faster project delivery and 15% cost savings compared to traditional methods.
+
+Augmented reality (AR) applications enable on-site visualization of building plans, reducing errors and rework by 60%. Workers can overlay digital blueprints onto physical spaces, identify potential conflicts before construction begins, and access real-time project updates through mobile devices.
+
+Drone technology provides aerial project monitoring, progress tracking, and safety surveillance capabilities that improve project oversight and risk management. Automated drone surveys generate accurate site measurements and identify potential issues before they impact project timelines.
+
+Wearable safety technology monitors worker vital signs, environmental conditions, and potential hazard exposure, reducing workplace accidents by 45%. Real-time alerts enable immediate response to dangerous situations while comprehensive safety data supports continuous improvement initiatives and regulatory compliance.`,
       category: "Construction",
       author: "Construction Tech Team",
       date: "February 18, 2025",
@@ -122,6 +199,13 @@ export default function Blog() {
       id: 12,
       title: "E-Commerce Analytics: Turning Data into Revenue",
       excerpt: "Advanced analytics strategies to optimize conversion rates and customer lifetime value.",
+      fullContent: `E-commerce analytics transforms raw data into actionable insights that drive revenue growth through conversion optimization, customer behavior analysis, and personalized marketing strategies. Advanced analytics implementations generate average 25% increase in conversion rates and 40% improvement in customer lifetime value.
+
+Customer journey analytics track touchpoints across multiple channels, identifying friction points and optimization opportunities throughout the purchase process. Heat mapping and user session recordings reveal browsing patterns that inform website design improvements and conversion rate optimization strategies.
+
+Predictive analytics models forecast customer behavior, purchase likelihood, and churn probability, enabling proactive retention campaigns and personalized product recommendations. Machine learning algorithms analyze historical data to identify high-value customer segments and optimize marketing spend allocation.
+
+Real-time dashboard monitoring provides visibility into key performance indicators, enabling immediate response to conversion issues or inventory constraints. Automated alerts notify managers of significant metric changes, ensuring rapid problem resolution and opportunity capitalization.`,
       category: "E-Commerce",
       author: "Analytics Team",
       date: "February 15, 2025",
@@ -132,6 +216,13 @@ export default function Blog() {
       id: 13,
       title: "Cybersecurity Best Practices for Small and Medium Businesses",
       excerpt: "Essential cybersecurity measures every business should implement to protect against threats.",
+      fullContent: `Small and medium businesses face increasing cybersecurity threats, with 43% of cyber attacks targeting SMBs. Comprehensive security strategies combining technology solutions, employee training, and incident response planning reduce breach risk by 80% while protecting business continuity and customer trust.
+
+Multi-factor authentication (MFA) implementation provides additional security layers beyond traditional passwords, reducing unauthorized access by 99.9%. Password management solutions encourage strong, unique passwords while simplifying access management for employees across multiple business applications.
+
+Regular security awareness training educates employees about phishing attacks, social engineering tactics, and safe computing practices. Human error accounts for 95% of successful cyber attacks, making employee education the most effective security investment for small businesses.
+
+Automated backup solutions with offline storage options ensure business continuity during ransomware attacks or system failures. Regular backup testing verifies data integrity and recovery procedures, minimizing downtime and data loss during security incidents.`,
       category: "Technology",
       author: "Security Team",
       date: "February 12, 2025",
@@ -142,6 +233,13 @@ export default function Blog() {
       id: 14,
       title: "The Future of Work: Hybrid Models and Digital Workspaces",
       excerpt: "Adapting to the new normal with flexible work arrangements and digital collaboration tools.",
+      fullContent: `Hybrid work models combine remote and in-office work to optimize productivity, employee satisfaction, and business outcomes. Organizations implementing structured hybrid policies report 35% higher employee engagement and 20% improvement in work-life balance while maintaining collaborative effectiveness.
+
+Digital workspace platforms integrate communication, collaboration, and productivity tools into unified environments that support seamless work regardless of location. Cloud-based applications ensure consistent access to business systems and data while maintaining security and compliance requirements.
+
+Flexible scheduling policies accommodate diverse employee needs while ensuring adequate coverage for collaborative activities and customer service requirements. Data-driven scheduling optimization balances individual preferences with business needs, maximizing both productivity and employee satisfaction.
+
+Change management strategies support successful hybrid work transitions through clear communication, technology training, and cultural adaptation initiatives. Leadership development programs equip managers with skills for leading distributed teams effectively while maintaining accountability and performance standards.`,
       category: "Technology",
       author: "Future of Work Team",
       date: "February 10, 2025",
@@ -152,6 +250,13 @@ export default function Blog() {
       id: 15,
       title: "API Integration Best Practices for Business Applications",
       excerpt: "Learn how to seamlessly integrate third-party APIs to enhance your business applications and workflows.",
+      fullContent: `API integration enables businesses to connect disparate systems, automate workflows, and enhance application functionality through third-party services. Strategic API implementation reduces development time by 60% and improves system interoperability while maintaining security and performance standards.
+
+RESTful API design principles ensure scalable, maintainable integrations that support business growth and changing requirements. Proper authentication, rate limiting, and error handling mechanisms protect against security vulnerabilities while ensuring reliable data exchange between systems.
+
+Integration testing strategies validate API functionality, performance, and error scenarios before production deployment. Automated testing frameworks monitor API endpoints continuously, detecting issues before they impact business operations or customer experiences.
+
+Documentation and version management practices ensure smooth API transitions and minimize integration maintenance overhead. Clear API documentation accelerates developer onboarding while version control strategies enable backward compatibility during system updates and enhancements.`,
       category: "Technology",
       author: "Integration Team",
       date: "February 8, 2025",
@@ -162,6 +267,7 @@ export default function Blog() {
       id: 16,
       title: "Customer Success Stories: Digital Transformation Wins",
       excerpt: "Real-world examples of how our clients achieved remarkable results through strategic technology implementation.",
+      fullContent: "coming-soon-placeholder",
       category: "Case Studies",
       author: "Client Success Team",
       date: "February 5, 2025",
@@ -172,6 +278,13 @@ export default function Blog() {
       id: 17,
       title: "Mobile-First Design: Creating Apps That Users Love",
       excerpt: "Essential principles for designing mobile applications that provide exceptional user experiences.",
+      fullContent: `Mobile-first design prioritizes mobile user experience in application development, resulting in higher engagement rates and improved user satisfaction across all device types. Mobile-optimized applications show 53% higher conversion rates compared to desktop-first designs adapted for mobile use.
+
+User interface design principles for mobile include touch-friendly navigation, optimized content hierarchy, and simplified interaction patterns that accommodate smaller screens and gesture-based input. Progressive disclosure techniques present information in digestible chunks while maintaining comprehensive functionality.
+
+Performance optimization for mobile applications requires careful attention to loading times, battery consumption, and data usage. Techniques include image optimization, lazy loading, caching strategies, and efficient code architecture that delivers smooth experiences even on slower network connections.
+
+Accessibility considerations ensure mobile applications work effectively for users with disabilities, including screen reader compatibility, voice navigation support, and alternative input methods. Universal design principles create inclusive experiences that expand market reach while improving usability for all users.`,
       category: "Web Development",
       author: "UX Design Team",
       date: "February 3, 2025",
@@ -182,6 +295,13 @@ export default function Blog() {
       id: 18,
       title: "Scaling Your Business with Cloud Infrastructure",
       excerpt: "How cloud technologies can help your business grow while reducing operational costs and complexity.",
+      fullContent: `Cloud infrastructure enables business scalability through flexible resource allocation, reduced infrastructure costs, and improved operational efficiency. Organizations migrating to cloud platforms report average 30% cost reduction and 50% faster deployment times compared to traditional on-premise infrastructure.
+
+Microservices architecture deployed on cloud platforms provides modular application development that supports independent scaling and rapid feature deployment. Container orchestration technologies like Kubernetes enable automatic scaling based on demand, optimizing resource utilization and cost management.
+
+Multi-cloud strategies reduce vendor lock-in risks while optimizing costs and performance through strategic workload placement. Cloud-native development practices leverage managed services for databases, messaging, and authentication, reducing operational overhead and accelerating development cycles.
+
+Disaster recovery and business continuity planning benefit from cloud infrastructure through automated backups, geographically distributed data centers, and rapid recovery capabilities. Cloud-based disaster recovery solutions provide enterprise-grade protection at fraction of traditional costs.`,
       category: "Technology",
       author: "Cloud Architecture Team",
       date: "January 30, 2025",
@@ -192,6 +312,13 @@ export default function Blog() {
       id: 19,
       title: "Manufacturing 4.0: The Smart Factory Revolution",
       excerpt: "Exploring how IoT, AI, and automation are transforming modern manufacturing operations.",
+      fullContent: `Manufacturing 4.0 represents the fourth industrial revolution, integrating Internet of Things (IoT), artificial intelligence, and advanced automation to create intelligent, adaptive manufacturing systems. Smart factories demonstrate 25% higher productivity and 30% reduction in operating costs compared to traditional manufacturing facilities.
+
+Industrial IoT sensors monitor equipment performance, environmental conditions, and product quality in real-time, enabling predictive maintenance and proactive quality control. Machine learning algorithms analyze sensor data to optimize production parameters automatically, reducing defects and improving overall equipment effectiveness (OEE).
+
+Digital twin technology creates virtual replicas of manufacturing processes, enabling simulation-based optimization and predictive modeling for continuous improvement. Virtual testing of process changes reduces risk while accelerating innovation and quality enhancement initiatives.
+
+Supply chain integration through Manufacturing 4.0 technologies provides end-to-end visibility from raw materials to finished products. Real-time demand sensing and automated production scheduling optimize inventory levels while ensuring timely delivery to customers across global markets.`,
       category: "Manufacturing",
       author: "Manufacturing Solutions Team",
       date: "January 28, 2025",
@@ -202,6 +329,13 @@ export default function Blog() {
       id: 20,
       title: "Building Inclusive Digital Experiences",
       excerpt: "Designing accessible websites and applications that work for everyone, including users with disabilities.",
+      fullContent: `Inclusive design creates digital experiences that accommodate users with diverse abilities, preferences, and technological constraints. Accessible websites and applications reach 15% larger audiences while improving usability for all users through better navigation, clearer content structure, and enhanced user interfaces.
+
+Web Content Accessibility Guidelines (WCAG) provide comprehensive standards for creating accessible digital content, including proper heading structure, alternative text for images, keyboard navigation support, and sufficient color contrast ratios. Compliance with accessibility standards also improves search engine optimization and mobile user experience.
+
+Assistive technology compatibility ensures websites and applications work effectively with screen readers, voice recognition software, and alternative input devices. Testing with actual assistive technology users provides valuable insights into real-world accessibility challenges and improvement opportunities.
+
+Universal design principles benefit all users by creating clearer navigation, more intuitive interfaces, and better content organization. Features designed for accessibility, such as captions and transcripts, enhance user experience in noisy environments or when audio is unavailable.`,
       category: "Web Development",
       author: "Accessibility Team",
       date: "January 25, 2025",
@@ -219,6 +353,33 @@ export default function Blog() {
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
+
+  const renderBlogContent = (post: any) => {
+    if (post.category === "Case Studies" && post.fullContent === "coming-soon-placeholder") {
+      return (
+        <div className="mt-4 p-6 bg-gradient-to-r from-onealgo-orange-50 to-onealgo-blue-50 rounded-lg border-2 border-dashed border-onealgo-orange-200">
+          <div className="flex items-center gap-3 mb-3">
+            <Building2 className="w-6 h-6 text-onealgo-orange-500" />
+            <h4 className="text-lg font-semibold text-onealgo-blue-950">Coming Soon</h4>
+          </div>
+          <p className="text-gray-600 mb-3">
+            We're currently working on detailed case studies that showcase real-world success stories from our clients. These in-depth analyses will demonstrate the transformative power of strategic technology implementation.
+          </p>
+          <div className="text-sm text-onealgo-orange-600 font-medium">
+            📄 Case studies will include detailed metrics, implementation timelines, and measurable business outcomes
+          </div>
+        </div>
+      );
+    }
+    
+    return (
+      <div className="mt-4 text-gray-700 leading-relaxed space-y-4">
+        {post.fullContent.split('\n\n').map((paragraph: string, index: number) => (
+          <p key={index} className="text-sm">{paragraph}</p>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <Layout>
@@ -271,12 +432,15 @@ export default function Blog() {
                       <Calendar className="w-4 h-4" />
                       {featuredPost.date}
                     </div>
-                    <span>{featuredPost.readTime}</span>
+                    <div className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {featuredPost.readTime}
+                    </div>
                   </div>
-                  <Button className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white w-fit">
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
+                  
+                  <Collapsible trigger="Learn More" className="mt-4">
+                    {renderBlogContent(featuredPost)}
+                  </Collapsible>
                 </div>
               </div>
             </Card>
@@ -289,17 +453,17 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((category) => (
-              <Button
+              <button
                 key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
-                className={selectedCategory === category 
-                  ? "bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white" 
-                  : "text-gray-700 hover:bg-gray-100"
-                }
+                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                  selectedCategory === category 
+                    ? "bg-onealgo-blue-950 text-white" 
+                    : "bg-white text-gray-700 hover:bg-gray-100 border"
+                }`}
               >
                 {category}
-              </Button>
+              </button>
             ))}
           </div>
         </div>
@@ -340,12 +504,16 @@ export default function Blog() {
                       {post.date}
                     </div>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-500">{post.readTime}</span>
-                    <Button variant="outline" size="sm" className="text-onealgo-blue-950 hover:bg-onealgo-blue-950 hover:text-white">
-                      Read More
-                    </Button>
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="flex items-center gap-1 text-sm text-gray-500">
+                      <Clock className="w-4 h-4" />
+                      {post.readTime}
+                    </div>
                   </div>
+                  
+                  <Collapsible trigger="Learn More">
+                    {renderBlogContent(post)}
+                  </Collapsible>
                 </CardContent>
               </Card>
             ))}
@@ -368,9 +536,9 @@ export default function Blog() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-onealgo-orange-500"
             />
-            <Button className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white px-6 py-3">
+            <button className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors">
               Subscribe
-            </Button>
+            </button>
           </div>
         </div>
       </section>
