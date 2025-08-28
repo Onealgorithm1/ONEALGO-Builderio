@@ -72,13 +72,9 @@ export default function Index() {
                 <CardTitle className="text-onealgo-blue-950">Goals-First Approach</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Solutions designed around your business goals — not the other way around. Every system is built to drive measurable results.
+                <p className="text-gray-600">
+                  Solutions designed around your business goals — not the other way around. Every system is built to drive measurable results through discovery workshops, process mapping, and data analysis that align technology with revenue, efficiency, and customer satisfaction outcomes.
                 </p>
-                <CollapsibleDetails
-                  learnMore="The process begins with a deep understanding of your model, challenges, and growth targets before any technology is recommended."
-                  goDeeper="Discovery workshops, process mapping, and data analysis ensure that every solution aligns with the outcomes that matter most — revenue, efficiency, and customer satisfaction."
-                />
               </CardContent>
             </Card>
 
@@ -89,13 +85,9 @@ export default function Index() {
                 <CardTitle className="text-onealgo-blue-950">Complete Connection</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Sales, Service, Marketing, Finance, and Operations connected into one seamless system.
+                <p className="text-gray-600">
+                  Sales, Service, Marketing, Finance, and Operations connected into one seamless system. A single source of truth across all business units delivers leadership visibility, stronger collaboration, and a smoother customer journey from first touch to fulfillment.
                 </p>
-                <CollapsibleDetails
-                  learnMore="A connected business runs faster, with fewer silos and less friction between departments."
-                  goDeeper="A single source of truth across all business units delivers leadership visibility, stronger collaboration, and a smoother customer journey from first touch to fulfillment."
-                />
               </CardContent>
             </Card>
 
@@ -106,13 +98,9 @@ export default function Index() {
                 <CardTitle className="text-onealgo-blue-950">Focus on Growth</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Automation and streamlined operations free teams to focus on strategy and growth.
+                <p className="text-gray-600">
+                  Automation and streamlined operations free teams to focus on strategy and growth. From lead routing to financial reporting, efficient workflows reduce errors, increase accountability, and empower teams to innovate instead of handling routine admin tasks.
                 </p>
-                <CollapsibleDetails
-                  learnMore="Repetitive tasks are replaced with efficient workflows, saving valuable time every week."
-                  goDeeper="From lead routing to financial reporting, automation reduces errors, increases accountability, and empowers teams to focus on innovation instead of routine admin."
-                />
               </CardContent>
             </Card>
 
@@ -123,13 +111,9 @@ export default function Index() {
                 <CardTitle className="text-onealgo-blue-950">Tailored Solutions</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Every implementation is customized to unique processes, industry standards, and long-term vision.
+                <p className="text-gray-600">
+                  Every implementation is customized to unique processes, industry standards, and long-term vision. Specialized solutions adapt technology to your business across construction, finance, healthcare, and beyond — aligning with workflows, compliance needs, and customer expectations.
                 </p>
-                <CollapsibleDetails
-                  learnMore="No cookie-cutter setups — technology adapts to the business, not the other way around."
-                  goDeeper="Specialized solutions are built for complex industries. Construction, finance, healthcare, and beyond — each system is aligned to workflows, compliance needs, and customer expectations."
-                />
               </CardContent>
             </Card>
           </div>
