@@ -222,7 +222,7 @@ export default function Layout({ children }: LayoutProps) {
                     asChild
                     className="w-full bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white"
                   >
-                    <Link to="/contact">Schedule a Demo</Link>
+                    <Link to="/contact">Get Started</Link>
                   </Button>
                 </div>
               </div>
