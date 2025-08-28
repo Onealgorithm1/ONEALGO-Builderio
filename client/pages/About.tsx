@@ -1,46 +1,377 @@
 import React from "react";
 import Layout from "../components/Layout";
 import { Button } from "../components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import { Building2, Factory, ShoppingCart, Target, Lightbulb, Users, ArrowRight, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <Layout>
-      <section className="py-20 bg-gradient-to-br from-onealgo-lighter via-white to-onealgo-light">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-            About <span className="text-onealgo-orange-500">One</span>
-            <span className="text-onealgo-blue-950">Algorithm</span>
-          </h1>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <p className="text-xl text-gray-600 mb-6">
-              This page is currently under development. Our team is working to provide you with comprehensive information about OneAlgorithm's story, mission, and values.
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              About <span className="text-onealgo-orange-500">One</span>Algorithm
+            </h1>
+            <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
+              We exist to transform struggling businesses into thriving enterprises through intelligent technology solutions that simplify operations, reduce costs, and accelerate growth.
             </p>
-            
-            <p className="text-gray-600 mb-8">
-              In the meantime, you can learn more about our services and approach on our homepage, or get in touch with us directly.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={() => window.location.href = '/'}
-                className="bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white"
-              >
-                Back to Home
-              </Button>
-              <Button 
-                onClick={() => window.location.href = '/contact'}
-                variant="outline"
-                className="border-onealgo-blue-950 text-onealgo-blue-950 hover:bg-onealgo-blue-950 hover:text-white"
-              >
-                Contact Us
-              </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Our Mission: <span className="text-onealgo-orange-500">Empowering</span> Struggling Businesses
+              </h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                Every day, we witness capable businesses struggle with outdated processes, disconnected systems, and manual workflows that drain resources and limit growth potential. Our mission is clear: to be the catalyst that transforms these challenges into competitive advantages.
+              </p>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                We believe that with the right technology foundation, any business can achieve remarkable efficiency, reduce operational costs, and focus on what they do best – serving their customers and growing their impact.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  asChild
+                  size="lg"
+                  className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                >
+                  <Link to="/contact">Start Your Transformation</Link>
+                </Button>
+                <Button 
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-onealgo-blue-950 text-onealgo-blue-950 hover:bg-onealgo-blue-950 hover:text-white"
+                >
+                  <Link to="/industries">Explore Our Solutions</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-gradient-to-r from-onealgo-orange-50 to-onealgo-blue-50 rounded-2xl p-8">
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <Target className="w-8 h-8 text-onealgo-orange-500 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Targeted Solutions</h3>
+                      <p className="text-gray-600">Industry-specific technology that addresses your unique operational challenges.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Lightbulb className="w-8 h-8 text-onealgo-orange-500 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Innovation</h3>
+                      <p className="text-gray-600">Practical automation and intelligent systems that deliver immediate value.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Users className="w-8 h-8 text-onealgo-orange-500 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">Partnership Approach</h3>
+                      <p className="text-gray-600">We become extension of your team, committed to your long-term success.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          
-          <p className="text-sm text-gray-500">
-            Want this page completed? Continue prompting our AI assistant to fill in the content!
+        </div>
+      </section>
+
+      {/* What We Do Section */}
+      <section className="py-20 bg-onealgo-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Capabilities Across Industries
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We bring deep expertise and proven solutions to the industries where businesses need transformation most.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {/* Construction */}
+            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors h-full">
+              <CardHeader>
+                <Building2 className="w-12 h-12 text-onealgo-blue-950 mb-4" />
+                <CardTitle className="text-xl text-onealgo-blue-950">Construction</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Project coordination & tracking
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Automated task management
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Real-time field visibility
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Resource optimization
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Manufacturing */}
+            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors h-full">
+              <CardHeader>
+                <Factory className="w-12 h-12 text-onealgo-blue-950 mb-4" />
+                <CardTitle className="text-xl text-onealgo-blue-950">Manufacturing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Connected production systems
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Workflow optimization
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Live operational insights
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Quality management
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* E-Commerce */}
+            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors h-full">
+              <CardHeader>
+                <ShoppingCart className="w-12 h-12 text-onealgo-blue-950 mb-4" />
+                <CardTitle className="text-xl text-onealgo-blue-950">E-Commerce</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Integrated platform solutions
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Inventory & payment systems
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Customer data unification
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Sales automation
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Marketing */}
+            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors h-full">
+              <CardHeader>
+                <svg className="w-12 h-12 text-onealgo-blue-950 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+                <CardTitle className="text-xl text-onealgo-blue-950">Marketing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    AI-driven campaign optimization
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Automated lead nurturing
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Customer behavior insights
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Multi-channel coordination
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Website Development */}
+            <Card className="border-2 hover:border-onealgo-orange-500 transition-colors h-full">
+              <CardHeader>
+                <svg className="w-12 h-12 text-onealgo-blue-950 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm2 4v-2H3a2 2 0 002 2zM3 9h2V7H3v2zm12 12h2v-2h-2v2zm4-18H9a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2zm0 12H9V5h10v10z"/>
+                </svg>
+                <CardTitle className="text-xl text-onealgo-blue-950">Website Development</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Modern responsive design
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Performance optimization
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    User experience focus
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    Scalable architecture
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Approach */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              How We Help Businesses Succeed
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our proven methodology transforms operational pain points into competitive advantages through strategic technology implementation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-onealgo-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-onealgo-orange-500">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Understand Your Struggles</h3>
+              <p className="text-gray-600">
+                We dive deep into your current processes to identify bottlenecks, inefficiencies, and missed opportunities that are holding your business back.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-onealgo-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-onealgo-blue-950">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Design Smart Solutions</h3>
+              <p className="text-gray-600">
+                We create tailored technology solutions that integrate seamlessly with your existing operations while introducing automation and intelligence where it matters most.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-green-600">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Deliver Lasting Results</h3>
+              <p className="text-gray-600">
+                We implement solutions that provide immediate improvements while building a foundation for sustainable growth and continuous optimization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 bg-gradient-to-r from-onealgo-blue-950 to-onealgo-blue-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Core Values
+            </h2>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              These principles guide everything we do and ensure we deliver solutions that truly serve your business needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-white bg-opacity-10 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-2">Practical Solutions</h3>
+                <p className="text-blue-200 text-sm">
+                  We focus on technology that solves real problems and delivers measurable business value, not flashy features.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-white bg-opacity-10 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-2">Industry Expertise</h3>
+                <p className="text-blue-200 text-sm">
+                  Deep understanding of sector-specific challenges ensures our solutions fit your business context perfectly.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-white bg-opacity-10 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-2">Long-term Partnership</h3>
+                <p className="text-blue-200 text-sm">
+                  We're committed to your ongoing success, providing support and optimization as your business grows.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-white bg-opacity-10 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-white mb-2">Transparent Process</h3>
+                <p className="text-blue-200 text-sm">
+                  Clear communication, realistic timelines, and honest assessments build trust and ensure project success.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-onealgo-light">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Join the growing number of businesses that have overcome their operational challenges and achieved sustainable growth with OneAlgorithm.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              asChild
+              size="lg"
+              className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white px-8 py-4"
+            >
+              <Link to="/contact">
+                Start Your Transformation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
+            <Button 
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-onealgo-blue-950 text-onealgo-blue-950 hover:bg-onealgo-blue-950 hover:text-white px-8 py-4"
+            >
+              <Link to="/industries">Explore Solutions</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </Layout>
