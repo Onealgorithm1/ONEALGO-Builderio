@@ -72,10 +72,11 @@ export default function Construction() {
               management, and real-time visibility from the field to the office.
             </p>
             <Button
+              asChild
               size="lg"
               className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white px-8 py-4"
             >
-              Get Started
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
