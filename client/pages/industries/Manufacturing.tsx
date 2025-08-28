@@ -163,8 +163,8 @@ export default function Manufacturing() {
                 Discover how our manufacturing solutions can transform your
                 operations and increase efficiency.
               </p>
-              <Button className="w-full bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white">
-                Schedule a Demo
+              <Button asChild className="w-full bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white">
+                <Link to="/contact">Schedule a Demo</Link>
               </Button>
             </div>
           </div>

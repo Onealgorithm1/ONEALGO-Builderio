@@ -169,8 +169,8 @@ export default function Marketing() {
                 See how our marketing solutions can drive better results and
                 increase customer engagement.
               </p>
-              <Button className="w-full bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white">
-                Schedule a Demo
+              <Button asChild className="w-full bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white">
+                <Link to="/contact">Schedule a Demo</Link>
               </Button>
             </div>
           </div>
