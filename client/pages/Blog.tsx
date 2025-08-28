@@ -1,6 +1,11 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
 import { Calendar, User, Clock, Building2 } from "lucide-react";
 import { Collapsible } from "../components/ui/collapsible";
@@ -10,7 +15,8 @@ export default function Blog() {
     {
       id: 1,
       title: "The Future of Business Automation: What to Expect in 2025",
-      excerpt: "Discover the latest trends in business automation and how they'll transform operations across industries.",
+      excerpt:
+        "Discover the latest trends in business automation and how they'll transform operations across industries.",
       fullContent: `Business automation is revolutionizing how organizations operate, with 2025 marking a pivotal year for widespread adoption. AI-powered workflows are reducing manual tasks by up to 80%, while intelligent process automation (IPA) combines robotic process automation (RPA) with machine learning capabilities.
 
 Key trends shaping the automation landscape include hyper-automation platforms that integrate multiple automation technologies, low-code/no-code solutions democratizing automation access, and cognitive automation that handles complex decision-making processes.
@@ -22,13 +28,15 @@ Industries leading automation adoption include financial services (fraud detecti
       author: "OneAlgorithm Team",
       date: "March 15, 2025",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-      featured: true
+      image:
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
+      featured: true,
     },
     {
       id: 2,
       title: "Construction Project Management: Best Practices for 2025",
-      excerpt: "Learn how modern construction companies are using technology to streamline projects and reduce costs.",
+      excerpt:
+        "Learn how modern construction companies are using technology to streamline projects and reduce costs.",
       fullContent: `Digital transformation in construction is accelerating project delivery while improving safety and quality outcomes. Cloud-based project management platforms now integrate real-time collaboration, automated scheduling, and predictive analytics to prevent delays and cost overruns.
 
 Building Information Modeling (BIM) combined with IoT sensors provides unprecedented visibility into project progress, resource utilization, and potential issues. Mobile workforce management solutions enable real-time updates from job sites, reducing communication gaps and improving decision-making speed.
@@ -40,12 +48,14 @@ Safety improvements through wearable technology, virtual reality training, and a
       author: "Sarah Johnson",
       date: "March 12, 2025",
       readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop",
     },
     {
       id: 3,
       title: "E-Commerce Growth Strategies That Actually Work",
-      excerpt: "Proven techniques to scale your online business and increase customer retention in today's competitive market.",
+      excerpt:
+        "Proven techniques to scale your online business and increase customer retention in today's competitive market.",
       fullContent: `Successful e-commerce growth requires a data-driven approach combining customer experience optimization, strategic technology implementation, and personalized marketing automation. Leading businesses focus on three key areas: conversion rate optimization, customer lifetime value enhancement, and operational efficiency.
 
 Personalization engines powered by machine learning analyze customer behavior patterns to deliver individualized product recommendations, resulting in 35% higher conversion rates. Dynamic pricing algorithms adjust to market conditions and competitor pricing in real-time, optimizing revenue without sacrificing competitiveness.
@@ -57,12 +67,14 @@ Supply chain optimization through automated inventory management, demand forecas
       author: "Mike Chen",
       date: "March 10, 2025",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
     },
     {
       id: 4,
       title: "Manufacturing Efficiency: The Role of Connected Systems",
-      excerpt: "How integrated manufacturing systems are revolutionizing production and reducing waste.",
+      excerpt:
+        "How integrated manufacturing systems are revolutionizing production and reducing waste.",
       fullContent: `Industry 4.0 initiatives are transforming manufacturing through interconnected systems that optimize production, reduce waste, and improve quality control. Smart factories leverage IoT sensors, edge computing, and cloud analytics to create responsive production environments that adapt to real-time conditions.
 
 Predictive maintenance systems monitor equipment health continuously, reducing unplanned downtime by 50% and extending machinery lifespan by 20%. Digital twin technology creates virtual replicas of production lines, enabling simulation-based optimization and risk-free testing of process improvements.
@@ -74,12 +86,14 @@ Energy management systems integrated with production scheduling optimize power c
       author: "David Rodriguez",
       date: "March 8, 2025",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&h=400&fit=crop",
     },
     {
       id: 5,
       title: "Website Performance: Why Speed Matters More Than Ever",
-      excerpt: "Understanding the impact of website performance on user experience and business results.",
+      excerpt:
+        "Understanding the impact of website performance on user experience and business results.",
       fullContent: `Website performance directly impacts user engagement, search rankings, and revenue generation. Research shows that a one-second delay in page load time results in 7% reduction in conversions, 11% fewer page views, and 16% decrease in customer satisfaction.
 
 Core Web Vitals have become critical ranking factors, making technical optimization essential for search visibility. Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS) metrics provide measurable targets for performance improvement.
@@ -91,12 +105,14 @@ Mobile performance optimization is particularly crucial, as mobile users are fiv
       author: "Emily Watson",
       date: "March 5, 2025",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     },
     {
       id: 6,
       title: "Marketing Automation: ROI Strategies That Work",
-      excerpt: "How to implement marketing automation that delivers measurable results and improves customer engagement.",
+      excerpt:
+        "How to implement marketing automation that delivers measurable results and improves customer engagement.",
       fullContent: `Marketing automation platforms generate average ROI of 451% when implemented strategically, focusing on lead nurturing, customer segmentation, and behavioral trigger campaigns. Successful implementations prioritize customer journey mapping, content personalization, and cross-channel coordination.
 
 Lead scoring algorithms analyze prospect behavior, demographics, and engagement patterns to identify sales-ready opportunities, improving sales efficiency by 40% and reducing conversion time by 35%. Automated nurture sequences guide prospects through educational content tailored to their interests and buying stage.
@@ -108,12 +124,14 @@ Attribution modeling tracks customer touchpoints across multiple channels, provi
       author: "Alex Thompson",
       date: "March 3, 2025",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=600&h=400&fit=crop",
     },
     {
       id: 7,
       title: "The Rise of Low-Code/No-Code Solutions in Enterprise",
-      excerpt: "How low-code platforms are democratizing software development and accelerating digital transformation.",
+      excerpt:
+        "How low-code platforms are democratizing software development and accelerating digital transformation.",
       fullContent: `Low-code/no-code platforms are revolutionizing enterprise software development, enabling business users to create applications without traditional programming skills. These platforms reduce development time by 80% and lower development costs by 60% while maintaining enterprise-grade security and scalability.
 
 Citizen development programs empower business users to build workflow automation, data collection forms, and reporting dashboards that address specific departmental needs. IT departments shift from gatekeepers to enablers, providing governance frameworks and technical oversight while accelerating solution delivery.
@@ -125,12 +143,14 @@ Integration capabilities with existing enterprise systems ensure seamless data f
       author: "OneAlgorithm Team",
       date: "February 28, 2025",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
     },
     {
       id: 8,
       title: "Data Privacy and GDPR Compliance: A Practical Guide",
-      excerpt: "Essential strategies for ensuring data privacy compliance while maintaining operational efficiency.",
+      excerpt:
+        "Essential strategies for ensuring data privacy compliance while maintaining operational efficiency.",
       fullContent: `Data privacy regulations like GDPR, CCPA, and emerging regional laws require comprehensive compliance strategies that protect customer data while enabling business operations. Organizations face potential fines of up to 4% of annual revenue for non-compliance, making privacy management a critical business priority.
 
 Privacy by design principles integrate data protection into system architecture from the initial design phase, reducing compliance risks and simplifying ongoing management. Technical measures include data encryption, access controls, automated retention policies, and audit trail maintenance.
@@ -142,12 +162,14 @@ Data mapping and inventory processes identify all personal data collection point
       author: "Legal & Compliance Team",
       date: "February 25, 2025",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&h=400&fit=crop",
     },
     {
       id: 9,
       title: "Remote Team Collaboration: Tools and Best Practices",
-      excerpt: "Building effective remote teams with the right technology stack and communication strategies.",
+      excerpt:
+        "Building effective remote teams with the right technology stack and communication strategies.",
       fullContent: `Remote team collaboration requires intentional tool selection, communication protocols, and team culture development to maintain productivity and engagement. Organizations with mature remote work practices report 40% higher employee satisfaction and 25% better retention rates compared to traditional office-based teams.
 
 Collaboration platform integration enables seamless workflows across video conferencing, project management, document sharing, and instant messaging tools. Unified workspaces reduce context switching and improve information accessibility, leading to 30% faster project completion times.
@@ -159,12 +181,14 @@ Performance management for remote teams focuses on outcome-based metrics rather 
       author: "HR & Operations",
       date: "February 22, 2025",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
     },
     {
       id: 10,
       title: "Sustainable Technology: Green Solutions for Modern Business",
-      excerpt: "How to implement eco-friendly technology solutions that reduce costs and environmental impact.",
+      excerpt:
+        "How to implement eco-friendly technology solutions that reduce costs and environmental impact.",
       fullContent: `Sustainable technology initiatives deliver environmental benefits while generating significant cost savings, with organizations reporting average 25% reduction in energy costs and 40% decrease in carbon footprint through strategic green technology adoption.
 
 Cloud computing optimization reduces server infrastructure requirements and energy consumption through efficient resource allocation and serverless architectures. Green hosting providers powered by renewable energy sources further minimize environmental impact while maintaining performance standards.
@@ -176,12 +200,14 @@ Circular economy principles applied to technology lifecycle management include d
       author: "Sustainability Team",
       date: "February 20, 2025",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop",
     },
     {
       id: 11,
       title: "Construction Tech Trends: Digital Transformation on the Job Site",
-      excerpt: "Exploring how digital tools are revolutionizing construction project management and safety.",
+      excerpt:
+        "Exploring how digital tools are revolutionizing construction project management and safety.",
       fullContent: `Construction technology adoption is accelerating, with digital tools transforming traditional job site operations through automation, real-time monitoring, and predictive analytics. Organizations embracing construction tech report 20% faster project delivery and 15% cost savings compared to traditional methods.
 
 Augmented reality (AR) applications enable on-site visualization of building plans, reducing errors and rework by 60%. Workers can overlay digital blueprints onto physical spaces, identify potential conflicts before construction begins, and access real-time project updates through mobile devices.
@@ -193,12 +219,14 @@ Wearable safety technology monitors worker vital signs, environmental conditions
       author: "Construction Tech Team",
       date: "February 18, 2025",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop",
     },
     {
       id: 12,
       title: "E-Commerce Analytics: Turning Data into Revenue",
-      excerpt: "Advanced analytics strategies to optimize conversion rates and customer lifetime value.",
+      excerpt:
+        "Advanced analytics strategies to optimize conversion rates and customer lifetime value.",
       fullContent: `E-commerce analytics transforms raw data into actionable insights that drive revenue growth through conversion optimization, customer behavior analysis, and personalized marketing strategies. Advanced analytics implementations generate average 25% increase in conversion rates and 40% improvement in customer lifetime value.
 
 Customer journey analytics track touchpoints across multiple channels, identifying friction points and optimization opportunities throughout the purchase process. Heat mapping and user session recordings reveal browsing patterns that inform website design improvements and conversion rate optimization strategies.
@@ -210,12 +238,14 @@ Real-time dashboard monitoring provides visibility into key performance indicato
       author: "Analytics Team",
       date: "February 15, 2025",
       readTime: "9 min read",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
     },
     {
       id: 13,
       title: "Cybersecurity Best Practices for Small and Medium Businesses",
-      excerpt: "Essential cybersecurity measures every business should implement to protect against threats.",
+      excerpt:
+        "Essential cybersecurity measures every business should implement to protect against threats.",
       fullContent: `Small and medium businesses face increasing cybersecurity threats, with 43% of cyber attacks targeting SMBs. Comprehensive security strategies combining technology solutions, employee training, and incident response planning reduce breach risk by 80% while protecting business continuity and customer trust.
 
 Multi-factor authentication (MFA) implementation provides additional security layers beyond traditional passwords, reducing unauthorized access by 99.9%. Password management solutions encourage strong, unique passwords while simplifying access management for employees across multiple business applications.
@@ -227,12 +257,14 @@ Automated backup solutions with offline storage options ensure business continui
       author: "Security Team",
       date: "February 12, 2025",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop",
     },
     {
       id: 14,
       title: "The Future of Work: Hybrid Models and Digital Workspaces",
-      excerpt: "Adapting to the new normal with flexible work arrangements and digital collaboration tools.",
+      excerpt:
+        "Adapting to the new normal with flexible work arrangements and digital collaboration tools.",
       fullContent: `Hybrid work models combine remote and in-office work to optimize productivity, employee satisfaction, and business outcomes. Organizations implementing structured hybrid policies report 35% higher employee engagement and 20% improvement in work-life balance while maintaining collaborative effectiveness.
 
 Digital workspace platforms integrate communication, collaboration, and productivity tools into unified environments that support seamless work regardless of location. Cloud-based applications ensure consistent access to business systems and data while maintaining security and compliance requirements.
@@ -244,12 +276,14 @@ Change management strategies support successful hybrid work transitions through 
       author: "Future of Work Team",
       date: "February 10, 2025",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop",
     },
     {
       id: 15,
       title: "API Integration Best Practices for Business Applications",
-      excerpt: "Learn how to seamlessly integrate third-party APIs to enhance your business applications and workflows.",
+      excerpt:
+        "Learn how to seamlessly integrate third-party APIs to enhance your business applications and workflows.",
       fullContent: `API integration enables businesses to connect disparate systems, automate workflows, and enhance application functionality through third-party services. Strategic API implementation reduces development time by 60% and improves system interoperability while maintaining security and performance standards.
 
 RESTful API design principles ensure scalable, maintainable integrations that support business growth and changing requirements. Proper authentication, rate limiting, and error handling mechanisms protect against security vulnerabilities while ensuring reliable data exchange between systems.
@@ -261,23 +295,27 @@ Documentation and version management practices ensure smooth API transitions and
       author: "Integration Team",
       date: "February 8, 2025",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
     },
     {
       id: 16,
       title: "Customer Success Stories: Digital Transformation Wins",
-      excerpt: "Real-world examples of how our clients achieved remarkable results through strategic technology implementation.",
+      excerpt:
+        "Real-world examples of how our clients achieved remarkable results through strategic technology implementation.",
       fullContent: "coming-soon-placeholder",
       category: "Case Studies",
       author: "Client Success Team",
       date: "February 5, 2025",
       readTime: "10 min read",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
     },
     {
       id: 17,
       title: "Mobile-First Design: Creating Apps That Users Love",
-      excerpt: "Essential principles for designing mobile applications that provide exceptional user experiences.",
+      excerpt:
+        "Essential principles for designing mobile applications that provide exceptional user experiences.",
       fullContent: `Mobile-first design prioritizes mobile user experience in application development, resulting in higher engagement rates and improved user satisfaction across all device types. Mobile-optimized applications show 53% higher conversion rates compared to desktop-first designs adapted for mobile use.
 
 User interface design principles for mobile include touch-friendly navigation, optimized content hierarchy, and simplified interaction patterns that accommodate smaller screens and gesture-based input. Progressive disclosure techniques present information in digestible chunks while maintaining comprehensive functionality.
@@ -289,12 +327,14 @@ Accessibility considerations ensure mobile applications work effectively for use
       author: "UX Design Team",
       date: "February 3, 2025",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
     },
     {
       id: 18,
       title: "Scaling Your Business with Cloud Infrastructure",
-      excerpt: "How cloud technologies can help your business grow while reducing operational costs and complexity.",
+      excerpt:
+        "How cloud technologies can help your business grow while reducing operational costs and complexity.",
       fullContent: `Cloud infrastructure enables business scalability through flexible resource allocation, reduced infrastructure costs, and improved operational efficiency. Organizations migrating to cloud platforms report average 30% cost reduction and 50% faster deployment times compared to traditional on-premise infrastructure.
 
 Microservices architecture deployed on cloud platforms provides modular application development that supports independent scaling and rapid feature deployment. Container orchestration technologies like Kubernetes enable automatic scaling based on demand, optimizing resource utilization and cost management.
@@ -306,12 +346,14 @@ Disaster recovery and business continuity planning benefit from cloud infrastruc
       author: "Cloud Architecture Team",
       date: "January 30, 2025",
       readTime: "9 min read",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
     },
     {
       id: 19,
       title: "Manufacturing 4.0: The Smart Factory Revolution",
-      excerpt: "Exploring how IoT, AI, and automation are transforming modern manufacturing operations.",
+      excerpt:
+        "Exploring how IoT, AI, and automation are transforming modern manufacturing operations.",
       fullContent: `Manufacturing 4.0 represents the fourth industrial revolution, integrating Internet of Things (IoT), artificial intelligence, and advanced automation to create intelligent, adaptive manufacturing systems. Smart factories demonstrate 25% higher productivity and 30% reduction in operating costs compared to traditional manufacturing facilities.
 
 Industrial IoT sensors monitor equipment performance, environmental conditions, and product quality in real-time, enabling predictive maintenance and proactive quality control. Machine learning algorithms analyze sensor data to optimize production parameters automatically, reducing defects and improving overall equipment effectiveness (OEE).
@@ -323,12 +365,14 @@ Supply chain integration through Manufacturing 4.0 technologies provides end-to-
       author: "Manufacturing Solutions Team",
       date: "January 28, 2025",
       readTime: "11 min read",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop"
+      image:
+        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop",
     },
     {
       id: 20,
       title: "Building Inclusive Digital Experiences",
-      excerpt: "Designing accessible websites and applications that work for everyone, including users with disabilities.",
+      excerpt:
+        "Designing accessible websites and applications that work for everyone, including users with disabilities.",
       fullContent: `Inclusive design creates digital experiences that accommodate users with diverse abilities, preferences, and technological constraints. Accessible websites and applications reach 15% larger audiences while improving usability for all users through better navigation, clearer content structure, and enhanced user interfaces.
 
 Web Content Accessibility Guidelines (WCAG) provide comprehensive standards for creating accessible digital content, including proper heading structure, alternative text for images, keyboard navigation support, and sufficient color contrast ratios. Compliance with accessibility standards also improves search engine optimization and mobile user experience.
@@ -340,43 +384,67 @@ Universal design principles benefit all users by creating clearer navigation, mo
       author: "Accessibility Team",
       date: "January 25, 2025",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop"
-    }
+      image:
+        "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop",
+    },
   ];
 
-  const categories = ["All", "Technology", "Construction", "Manufacturing", "E-Commerce", "Marketing", "Web Development", "Case Studies"];
+  const categories = [
+    "All",
+    "Technology",
+    "Construction",
+    "Manufacturing",
+    "E-Commerce",
+    "Marketing",
+    "Web Development",
+    "Case Studies",
+  ];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
-  const filteredPosts = selectedCategory === "All" 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+  const filteredPosts =
+    selectedCategory === "All"
+      ? blogPosts
+      : blogPosts.filter((post) => post.category === selectedCategory);
 
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const featuredPost = blogPosts.find((post) => post.featured);
+  const regularPosts = blogPosts.filter((post) => !post.featured);
 
   const renderBlogContent = (post: any) => {
-    if (post.category === "Case Studies" && post.fullContent === "coming-soon-placeholder") {
+    if (
+      post.category === "Case Studies" &&
+      post.fullContent === "coming-soon-placeholder"
+    ) {
       return (
         <div className="mt-4 p-6 bg-gradient-to-r from-onealgo-orange-50 to-onealgo-blue-50 rounded-lg border-2 border-dashed border-onealgo-orange-200">
           <div className="flex items-center gap-3 mb-3">
             <Building2 className="w-6 h-6 text-onealgo-orange-500" />
-            <h4 className="text-lg font-semibold text-onealgo-blue-950">Coming Soon</h4>
+            <h4 className="text-lg font-semibold text-onealgo-blue-950">
+              Coming Soon
+            </h4>
           </div>
           <p className="text-gray-600 mb-3">
-            We're currently working on detailed case studies that showcase real-world success stories from our clients. These in-depth analyses will demonstrate the transformative power of strategic technology implementation.
+            We're currently working on detailed case studies that showcase
+            real-world success stories from our clients. These in-depth analyses
+            will demonstrate the transformative power of strategic technology
+            implementation.
           </p>
           <div className="text-sm text-onealgo-orange-600 font-medium">
-            📄 Case studies will include detailed metrics, implementation timelines, and measurable business outcomes
+            📄 Case studies will include detailed metrics, implementation
+            timelines, and measurable business outcomes
           </div>
         </div>
       );
     }
-    
+
     return (
       <div className="mt-4 text-gray-700 leading-relaxed space-y-4">
-        {post.fullContent.split('\n\n').map((paragraph: string, index: number) => (
-          <p key={index} className="text-sm">{paragraph}</p>
-        ))}
+        {post.fullContent
+          .split("\n\n")
+          .map((paragraph: string, index: number) => (
+            <p key={index} className="text-sm">
+              {paragraph}
+            </p>
+          ))}
       </div>
     );
   };
@@ -391,7 +459,8 @@ Universal design principles benefit all users by creating clearer navigation, mo
               OneAlgorithm <span className="text-onealgo-orange-500">Blog</span>
             </h1>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-              Insights, strategies, and industry trends to help you grow your business with technology.
+              Insights, strategies, and industry trends to help you grow your
+              business with technology.
             </p>
           </div>
         </div>
@@ -402,13 +471,15 @@ Universal design principles benefit all users by creating clearer navigation, mo
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-8">
-              <Badge className="bg-onealgo-orange-500 text-white mb-4">Featured Post</Badge>
+              <Badge className="bg-onealgo-orange-500 text-white mb-4">
+                Featured Post
+              </Badge>
             </div>
             <Card className="border-2 border-onealgo-orange-500 overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative h-64 lg:h-auto">
-                  <img 
-                    src={featuredPost.image} 
+                  <img
+                    src={featuredPost.image}
                     alt={featuredPost.title}
                     className="w-full h-full object-cover"
                   />
@@ -420,9 +491,7 @@ Universal design principles benefit all users by creating clearer navigation, mo
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     {featuredPost.title}
                   </h2>
-                  <p className="text-gray-600 mb-6">
-                    {featuredPost.excerpt}
-                  </p>
+                  <p className="text-gray-600 mb-6">{featuredPost.excerpt}</p>
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
                     <div className="flex items-center gap-1">
                       <User className="w-4 h-4" />
@@ -437,7 +506,7 @@ Universal design principles benefit all users by creating clearer navigation, mo
                       {featuredPost.readTime}
                     </div>
                   </div>
-                  
+
                   <Collapsible trigger="Learn More" className="mt-4">
                     {renderBlogContent(featuredPost)}
                   </Collapsible>
@@ -457,8 +526,8 @@ Universal design principles benefit all users by creating clearer navigation, mo
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                  selectedCategory === category 
-                    ? "bg-onealgo-blue-950 text-white" 
+                  selectedCategory === category
+                    ? "bg-onealgo-blue-950 text-white"
                     : "bg-white text-gray-700 hover:bg-gray-100 border"
                 }`}
               >
@@ -473,50 +542,55 @@ Universal design principles benefit all users by creating clearer navigation, mo
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.filter(post => !post.featured).map((post) => (
-              <Card key={post.id} className="border-2 hover:border-onealgo-orange-500 transition-colors overflow-hidden">
-                <div className="relative h-48">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardHeader>
-                  <Badge variant="outline" className="w-fit mb-2">
-                    {post.category}
-                  </Badge>
-                  <CardTitle className="text-xl text-onealgo-blue-950 line-clamp-2">
-                    {post.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                    <div className="flex items-center gap-1">
-                      <User className="w-4 h-4" />
-                      {post.author}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      {post.date}
-                    </div>
+            {filteredPosts
+              .filter((post) => !post.featured)
+              .map((post) => (
+                <Card
+                  key={post.id}
+                  className="border-2 hover:border-onealgo-orange-500 transition-colors overflow-hidden"
+                >
+                  <div className="relative h-48">
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="flex items-center gap-1 text-sm text-gray-500">
-                      <Clock className="w-4 h-4" />
-                      {post.readTime}
+                  <CardHeader>
+                    <Badge variant="outline" className="w-fit mb-2">
+                      {post.category}
+                    </Badge>
+                    <CardTitle className="text-xl text-onealgo-blue-950 line-clamp-2">
+                      {post.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                      <div className="flex items-center gap-1">
+                        <User className="w-4 h-4" />
+                        {post.author}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {post.date}
+                      </div>
                     </div>
-                  </div>
-                  
-                  <Collapsible trigger="Learn More">
-                    {renderBlogContent(post)}
-                  </Collapsible>
-                </CardContent>
-              </Card>
-            ))}
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center gap-1 text-sm text-gray-500">
+                        <Clock className="w-4 h-4" />
+                        {post.readTime}
+                      </div>
+                    </div>
+
+                    <Collapsible trigger="Learn More">
+                      {renderBlogContent(post)}
+                    </Collapsible>
+                  </CardContent>
+                </Card>
+              ))}
           </div>
         </div>
       </section>
@@ -528,11 +602,12 @@ Universal design principles benefit all users by creating clearer navigation, mo
             Stay Updated with Our Latest Insights
           </h2>
           <p className="text-blue-200 mb-8">
-            Subscribe to our newsletter for the latest industry trends, best practices, and technology insights.
+            Subscribe to our newsletter for the latest industry trends, best
+            practices, and technology insights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input 
-              type="email" 
+            <input
+              type="email"
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-onealgo-orange-500"
             />
