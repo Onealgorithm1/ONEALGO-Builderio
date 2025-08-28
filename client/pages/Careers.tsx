@@ -3,68 +3,237 @@ import Layout from "../components/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
-import { MapPin, Clock, Users, Briefcase } from "lucide-react";
+import { Collapsible } from "../components/ui/collapsible";
+import { 
+  MapPin, 
+  Clock, 
+  Users, 
+  Briefcase, 
+  Code, 
+  Database, 
+  Shield, 
+  TrendingUp,
+  Settings,
+  BarChart3,
+  Brain,
+  FileCheck,
+  DollarSign,
+  Layers,
+  Monitor,
+  Cloud,
+  GraduationCap
+} from "lucide-react";
 
 export default function Careers() {
-  const jobOpenings = [
+  const jobCategories = [
     {
-      id: 1,
-      title: "Senior Salesforce Developer",
-      department: "Engineering",
-      location: "Malvern, PA / Remote",
-      type: "Full-time",
-      experience: "3-5 years",
-      description: "Join our team to build innovative Salesforce solutions for enterprise clients. You'll work with cutting-edge technologies and collaborate with cross-functional teams.",
-      requirements: [
-        "Salesforce Platform Developer certification",
-        "Strong experience with Apex, Visualforce, and Lightning Components",
-        "Knowledge of integration patterns and REST/SOAP APIs",
-        "Experience with CI/CD and version control systems"
+      title: "Development & Engineering",
+      jobs: [
+        {
+          id: "software-engineer",
+          title: "Software Engineer",
+          icon: <Code className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid to Senior",
+          summary: "Build scalable software solutions that power business transformation across multiple industries.",
+          description: "Join our engineering team to develop cutting-edge applications that streamline business operations. You'll work with modern technologies including React, Node.js, and cloud platforms to create solutions that make a real impact for our clients. Collaborate with cross-functional teams to deliver high-quality software that scales with growing businesses."
+        },
+        {
+          id: "full-stack-developer",
+          title: "Full-Stack Web Developer",
+          icon: <Monitor className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / On-site",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Create end-to-end web applications from concept to deployment using modern frameworks.",
+          description: "Develop complete web applications using both frontend and backend technologies. Work with React, TypeScript, Node.js, and databases to build responsive, user-friendly applications. You'll be involved in the entire development lifecycle, from initial design to deployment and maintenance."
+        },
+        {
+          id: "devops-engineer",
+          title: "DevOps Engineer",
+          icon: <Cloud className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote",
+          type: "Full-time",
+          level: "Mid to Senior",
+          summary: "Optimize deployment pipelines and infrastructure to ensure reliable, scalable system operations.",
+          description: "Design and maintain CI/CD pipelines, manage cloud infrastructure, and implement monitoring solutions. Work with AWS, Docker, Kubernetes, and automation tools to ensure our applications run smoothly in production. Focus on security, scalability, and performance optimization."
+        },
+        {
+          id: "salesforce-developer",
+          title: "Salesforce Developer",
+          icon: <Settings className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Customize and extend Salesforce platforms to meet unique business requirements.",
+          description: "Develop custom Salesforce solutions using Apex, Lightning Web Components, and Flow. Create integrations with external systems and implement complex business logic. Work directly with clients to understand requirements and deliver tailored CRM solutions that drive business growth."
+        },
+        {
+          id: "data-engineer",
+          title: "Data Engineer",
+          icon: <Database className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid to Senior",
+          summary: "Build robust data pipelines and infrastructure to support analytics and business intelligence.",
+          description: "Design and implement data pipelines, ETL processes, and data warehouses. Work with big data technologies like Apache Spark, Kafka, and cloud data platforms. Ensure data quality, performance, and security while supporting business analytics and machine learning initiatives."
+        },
+        {
+          id: "servicenow-developer",
+          title: "ServiceNow Developer",
+          icon: <Layers className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Develop and customize ServiceNow applications for IT service management and workflow automation.",
+          description: "Build custom ServiceNow applications and workflows to automate business processes. Work with ServiceNow platform tools, scripting, and integrations to deliver solutions that improve operational efficiency. Collaborate with IT teams to implement ITSM best practices."
+        },
+        {
+          id: "workday-developer",
+          title: "Workday Developer",
+          icon: <Users className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Configure and customize Workday HCM solutions for human resources and talent management.",
+          description: "Implement Workday HCM modules including Core HCM, Recruiting, and Performance Management. Create custom reports, configure business processes, and integrate Workday with other enterprise systems. Work with HR teams to optimize workforce management processes."
+        }
       ]
     },
     {
-      id: 2,
-      title: "Business Systems Analyst",
-      department: "Consulting",
-      location: "Hyderabad, India / Remote",
-      type: "Full-time",
-      experience: "2-4 years",
-      description: "Analyze business requirements and translate them into technical solutions. Work directly with clients to understand their processes and optimize their systems.",
-      requirements: [
-        "Strong analytical and problem-solving skills",
-        "Experience with CRM systems and business process mapping",
-        "Excellent communication and client-facing abilities",
-        "Bachelor's degree in Business, IT, or related field"
+      title: "Data & Analytics",
+      jobs: [
+        {
+          id: "ai-ml-engineer",
+          title: "AI/ML Engineer",
+          icon: <Brain className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Senior",
+          summary: "Develop and deploy machine learning models to solve complex business problems.",
+          description: "Design, train, and deploy machine learning models for predictive analytics, automation, and intelligent decision-making. Work with TensorFlow, PyTorch, and cloud ML platforms. Collaborate with data scientists and engineers to bring AI solutions from research to production."
+        },
+        {
+          id: "bi-developer",
+          title: "BI Developer",
+          icon: <BarChart3 className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Create dashboards and reports that turn data into actionable business insights.",
+          description: "Develop business intelligence solutions using tools like Power BI, Tableau, and SQL. Design interactive dashboards, create automated reports, and work with stakeholders to understand analytical requirements. Transform complex data into clear, actionable insights for decision-making."
+        },
+        {
+          id: "data-governance-specialist",
+          title: "Data Governance Specialist",
+          icon: <Shield className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid to Senior",
+          summary: "Ensure data quality, security, and compliance across all organizational data assets.",
+          description: "Establish and maintain data governance frameworks, policies, and procedures. Work with cross-functional teams to ensure data quality, privacy, and regulatory compliance. Implement data catalog systems and metadata management to support data discovery and lineage."
+        }
       ]
     },
     {
-      id: 3,
-      title: "Product Marketing Manager",
-      department: "Marketing",
-      location: "Dubai, UAE / Hybrid",
-      type: "Full-time",
-      experience: "4-6 years",
-      description: "Drive go-to-market strategies for our technology solutions. Create compelling content and campaigns that showcase our expertise across different industries.",
-      requirements: [
-        "Proven track record in B2B technology marketing",
-        "Strong content creation and storytelling abilities",
-        "Experience with marketing automation platforms",
-        "Understanding of enterprise software and consulting services"
+      title: "Business & Strategy",
+      jobs: [
+        {
+          id: "business-analyst",
+          title: "Business Analyst",
+          icon: <TrendingUp className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Bridge business needs and technology solutions through detailed analysis and requirements gathering.",
+          description: "Work closely with stakeholders to understand business requirements and translate them into technical specifications. Conduct process analysis, create documentation, and facilitate communication between business users and development teams. Help identify opportunities for process improvement and automation."
+        },
+        {
+          id: "product-owner",
+          title: "Product Owner",
+          icon: <Briefcase className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Senior",
+          summary: "Drive product strategy and roadmap to deliver solutions that meet market and customer needs.",
+          description: "Define product vision, strategy, and roadmap. Work with development teams in an Agile environment to prioritize features and ensure delivery of valuable products. Conduct market research, gather customer feedback, and make data-driven decisions about product direction."
+        },
+        {
+          id: "program-manager",
+          title: "Program Manager",
+          icon: <Users className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Senior",
+          summary: "Coordinate multiple projects and teams to deliver complex initiatives on time and within budget.",
+          description: "Lead cross-functional teams to deliver large-scale programs and initiatives. Manage project timelines, budgets, and resources while ensuring alignment with business objectives. Communicate with stakeholders at all levels and remove blockers to keep projects on track."
+        },
+        {
+          id: "finance-strategy-manager",
+          title: "Finance and Strategy Manager",
+          icon: <DollarSign className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Senior",
+          summary: "Drive financial planning and strategic initiatives to support business growth and profitability.",
+          description: "Lead financial analysis, budgeting, and forecasting processes. Develop strategic plans and business cases for new initiatives. Work with leadership to analyze market opportunities and optimize resource allocation. Support decision-making with financial modeling and ROI analysis."
+        }
       ]
     },
     {
-      id: 4,
-      title: "Implementation Specialist",
-      department: "Professional Services",
-      location: "Toronto, Canada / Remote",
-      type: "Full-time",
-      experience: "1-3 years",
-      description: "Support the implementation of business automation solutions. Train clients on new systems and ensure smooth project delivery from start to finish.",
-      requirements: [
-        "Strong technical aptitude and learning ability",
-        "Excellent training and presentation skills",
-        "Experience with project management methodologies",
-        "Customer service oriented mindset"
+      title: "Quality & Compliance",
+      jobs: [
+        {
+          id: "qa-specialist",
+          title: "QA Specialist",
+          icon: <FileCheck className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Ensure software quality through comprehensive testing strategies and automation frameworks.",
+          description: "Design and execute test plans, create automated testing frameworks, and ensure software quality throughout the development lifecycle. Work with development teams to implement testing best practices and identify potential issues before production deployment."
+        },
+        {
+          id: "compliance-analyst",
+          title: "Compliance Analyst",
+          icon: <Shield className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Ensure organizational compliance with industry regulations and internal policies.",
+          description: "Monitor compliance with regulatory requirements and internal policies across all business operations. Conduct risk assessments, develop compliance procedures, and provide training to ensure adherence to standards. Work with legal and audit teams to maintain compliance certifications."
+        }
+      ]
+    },
+    {
+      title: "Marketing & Growth",
+      jobs: [
+        {
+          id: "digital-marketing-specialist",
+          title: "Digital Marketing Specialist",
+          icon: <TrendingUp className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Full-time",
+          level: "Mid-level",
+          summary: "Drive online presence and lead generation through strategic digital marketing campaigns.",
+          description: "Develop and execute digital marketing strategies across multiple channels including SEO, SEM, social media, and content marketing. Analyze campaign performance, optimize conversion rates, and work with sales teams to generate qualified leads. Stay current with digital marketing trends and best practices."
+        }
+      ]
+    },
+    {
+      title: "Early Career Opportunities",
+      jobs: [
+        {
+          id: "internships",
+          title: "Internship Program",
+          icon: <GraduationCap className="w-8 h-8 text-onealgo-orange-500" />,
+          location: "Remote / Hybrid",
+          type: "Internship",
+          level: "Entry-level",
+          summary: "Gain hands-on experience in technology and business while contributing to real projects.",
+          description: "Our comprehensive internship program offers students and recent graduates the opportunity to work on meaningful projects across various departments. Receive mentorship from experienced professionals, participate in training sessions, and contribute to client solutions. Available in software development, data analysis, business analysis, and digital marketing."
+        }
       ]
     }
   ];
@@ -76,15 +245,16 @@ export default function Careers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our <span className="text-onealgo-orange-500">Team</span>
+              Build Your <span className="text-onealgo-orange-500">Career</span> With Us
             </h1>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-              Build the future of business automation with OneAlgorithm. We're looking for passionate individuals who want to make a real impact.
+              Join a dynamic team that's transforming businesses through innovative technology solutions. Grow your career while making a real impact.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Badge variant="secondary" className="text-lg py-2 px-4">Global Opportunities</Badge>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Badge variant="secondary" className="text-lg py-2 px-4">Remote-First Culture</Badge>
-              <Badge variant="secondary" className="text-lg py-2 px-4">Growth & Learning</Badge>
+              <Badge variant="secondary" className="text-lg py-2 px-4">Global Opportunities</Badge>
+              <Badge variant="secondary" className="text-lg py-2 px-4">Professional Growth</Badge>
+              <Badge variant="secondary" className="text-lg py-2 px-4">Competitive Benefits</Badge>
             </div>
           </div>
         </div>
@@ -95,7 +265,7 @@ export default function Careers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Work With OneAlgorithm?
+              Why Choose OneAlgorithm?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We believe in empowering our team members to do their best work while building solutions that transform businesses.
@@ -122,81 +292,112 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* Current Openings */}
+      {/* Job Listings */}
       <section className="py-20 bg-onealgo-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Current Openings
+              Open Positions
             </h2>
             <p className="text-xl text-gray-600">
               Explore opportunities to grow your career with us
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {jobOpenings.map((job) => (
-              <Card key={job.id} className="border-2 hover:border-onealgo-orange-500 transition-colors h-full">
-                <CardHeader>
-                  <div className="flex justify-between items-start mb-2">
-                    <CardTitle className="text-xl text-onealgo-blue-950">{job.title}</CardTitle>
-                    <Badge variant="outline" className="text-onealgo-orange-500 border-onealgo-orange-500">
-                      {job.department}
-                    </Badge>
-                  </div>
-                  <div className="flex flex-wrap gap-3 text-sm text-gray-600">
-                    <div className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      {job.location}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      {job.type}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Briefcase className="w-4 h-4" />
-                      {job.experience}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="flex flex-col">
-                  <p className="text-gray-600 mb-4">{job.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Requirements:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {job.requirements.map((req, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <span className="text-onealgo-orange-500 mt-1">•</span>
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+          {jobCategories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="mb-16">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">{category.title}</h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {category.jobs.map((job) => (
+                  <Card key={job.id} className="border-2 hover:border-onealgo-orange-500 transition-colors h-full">
+                    <CardHeader>
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex items-center gap-4">
+                          {job.icon}
+                          <div>
+                            <CardTitle className="text-xl text-onealgo-blue-950">{job.title}</CardTitle>
+                            <div className="flex flex-wrap gap-2 mt-2">
+                              <Badge variant="outline" className="text-xs">
+                                <MapPin className="w-3 h-3 mr-1" />
+                                {job.location}
+                              </Badge>
+                              <Badge variant="outline" className="text-xs">
+                                <Clock className="w-3 h-3 mr-1" />
+                                {job.type}
+                              </Badge>
+                              <Badge variant="outline" className="text-xs">
+                                <Briefcase className="w-3 h-3 mr-1" />
+                                {job.level}
+                              </Badge>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 mb-4">{job.summary}</p>
+                      
+                      <Collapsible trigger="Learn More">
+                        <p className="text-gray-600">{job.description}</p>
+                        <div className="mt-4 p-4 bg-blue-50 rounded-lg">
+                          <p className="text-sm text-gray-700">
+                            <strong>Ready to apply?</strong> Send your resume and cover letter to{" "}
+                            <a href="mailto:careers@onealgorithm.com" className="text-onealgo-blue-950 hover:text-onealgo-orange-500">
+                              careers@onealgorithm.com
+                            </a>{" "}
+                            with the position title in the subject line.
+                          </p>
+                        </div>
+                      </Collapsible>
 
-                  <div className="mt-auto">
-                    <Button 
-                      className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
-                      onClick={() => window.open('mailto:careers@onealgorithm.com?subject=Application for ' + job.title, '_blank')}
-                    >
-                      Apply Now
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                      <div className="mt-6">
+                        <Button 
+                          className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                          onClick={() => window.open(`mailto:careers@onealgorithm.com?subject=Application for ${job.title}`, '_blank')}
+                        >
+                          Apply Now
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Application Process */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Don't See the Right Role?
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            How to Apply
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="w-12 h-12 bg-onealgo-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                1
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Submit Application</h3>
+              <p className="text-gray-600">Send your resume and cover letter for the position you're interested in.</p>
+            </div>
+            <div>
+              <div className="w-12 h-12 bg-onealgo-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                2
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Initial Review</h3>
+              <p className="text-gray-600">Our team will review your application and reach out within 5-7 business days.</p>
+            </div>
+            <div>
+              <div className="w-12 h-12 bg-onealgo-orange-500 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-lg">
+                3
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Interview Process</h3>
+              <p className="text-gray-600">Participate in our interview process to showcase your skills and learn about the role.</p>
+            </div>
+          </div>
+          <p className="text-lg text-gray-600 mb-8">
+            Don't see the perfect role? We're always looking for talented individuals to join our growing team.
           </p>
           <Button 
             size="lg"
