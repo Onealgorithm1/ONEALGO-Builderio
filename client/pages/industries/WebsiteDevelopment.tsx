@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Layout from "../../components/Layout";
 import {
   Card,
@@ -77,10 +78,11 @@ export default function WebsiteDevelopment() {
               experience. From corporate sites to complex web applications.
             </p>
             <Button
+              asChild
               size="lg"
               className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4"
             >
-              Get Started
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
