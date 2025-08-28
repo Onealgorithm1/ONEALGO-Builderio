@@ -26,6 +26,20 @@ export default function OneAlgorithmText({
     xl: 44,
   };
 
+  // If className includes text-white, show simplified version
+  const isWhiteText = className.includes('text-white');
+
+  if (isWhiteText) {
+    return (
+      <span
+        className={`font-bold inline-flex items-center ${sizeClasses[size]} ${className}`}
+      >
+        <span className="text-onealgo-orange-500">One</span>
+        <span className="text-white">Algorithm</span>
+      </span>
+    );
+  }
+
   return (
     <span
       className={`font-bold inline-flex items-center ${sizeClasses[size]} ${className}`}
