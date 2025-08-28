@@ -28,7 +28,7 @@ export default function TrustedPartnerships() {
     },
     {
       name: "Microsoft",
-      logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b"
+      logo: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F31dc24de8f0348f2bfca1d38a0ad59e5?format=webp&width=800"
     },
     {
       name: "Twilio",
