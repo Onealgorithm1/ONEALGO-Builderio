@@ -17,6 +17,7 @@ import Manufacturing from "./pages/industries/Manufacturing";
 import Marketing from "./pages/industries/Marketing";
 import ECommerce from "./pages/industries/ECommerce";
 import WebsiteDevelopment from "./pages/industries/WebsiteDevelopment";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/industries/ecommerce" element={<ECommerce />} />
           <Route path="/industries/website-development" element={<WebsiteDevelopment />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/careers" element={<Careers />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

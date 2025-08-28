@@ -101,6 +101,12 @@ export default function Layout({ children }: LayoutProps) {
               </div>
 
               <Link
+                to="/blog"
+                className="text-gray-900 hover:text-onealgo-blue-950 transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
                 to="/contact"
                 className="text-gray-900 hover:text-onealgo-blue-950 transition-colors"
               >
@@ -146,6 +152,13 @@ export default function Layout({ children }: LayoutProps) {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Industries We Serve
+                </Link>
+                <Link
+                  to="/blog"
+                  className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Blog
                 </Link>
                 <Link
                   to="/contact"
