@@ -156,12 +156,6 @@ export default function Layout({ children }: LayoutProps) {
                   </div>
                 )}
               </div>
-              <Link
-                to="/contact"
-                className="text-gray-900 hover:text-onealgo-blue-950 transition-colors"
-              >
-                Contact
-              </Link>
               <Button asChild className="bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white">
                 <Link to="/contact">Get Started</Link>
               </Button>
