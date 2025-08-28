@@ -147,10 +147,70 @@ export default function Blog() {
       date: "February 10, 2025",
       readTime: "6 min read",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
+    },
+    {
+      id: 15,
+      title: "API Integration Best Practices for Business Applications",
+      excerpt: "Learn how to seamlessly integrate third-party APIs to enhance your business applications and workflows.",
+      category: "Technology",
+      author: "Integration Team",
+      date: "February 8, 2025",
+      readTime: "7 min read",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop"
+    },
+    {
+      id: 16,
+      title: "Customer Success Stories: Digital Transformation Wins",
+      excerpt: "Real-world examples of how our clients achieved remarkable results through strategic technology implementation.",
+      category: "Case Studies",
+      author: "Client Success Team",
+      date: "February 5, 2025",
+      readTime: "10 min read",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
+    },
+    {
+      id: 17,
+      title: "Mobile-First Design: Creating Apps That Users Love",
+      excerpt: "Essential principles for designing mobile applications that provide exceptional user experiences.",
+      category: "Web Development",
+      author: "UX Design Team",
+      date: "February 3, 2025",
+      readTime: "8 min read",
+      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop"
+    },
+    {
+      id: 18,
+      title: "Scaling Your Business with Cloud Infrastructure",
+      excerpt: "How cloud technologies can help your business grow while reducing operational costs and complexity.",
+      category: "Technology",
+      author: "Cloud Architecture Team",
+      date: "January 30, 2025",
+      readTime: "9 min read",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop"
+    },
+    {
+      id: 19,
+      title: "Manufacturing 4.0: The Smart Factory Revolution",
+      excerpt: "Exploring how IoT, AI, and automation are transforming modern manufacturing operations.",
+      category: "Manufacturing",
+      author: "Manufacturing Solutions Team",
+      date: "January 28, 2025",
+      readTime: "11 min read",
+      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop"
+    },
+    {
+      id: 20,
+      title: "Building Inclusive Digital Experiences",
+      excerpt: "Designing accessible websites and applications that work for everyone, including users with disabilities.",
+      category: "Web Development",
+      author: "Accessibility Team",
+      date: "January 25, 2025",
+      readTime: "6 min read",
+      image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=400&fit=crop"
     }
   ];
 
-  const categories = ["All", "Technology", "Construction", "Manufacturing", "E-Commerce", "Marketing", "Web Development"];
+  const categories = ["All", "Technology", "Construction", "Manufacturing", "E-Commerce", "Marketing", "Web Development", "Case Studies"];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
   const filteredPosts = selectedCategory === "All" 

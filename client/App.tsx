@@ -12,6 +12,7 @@ import Industries from "./pages/Industries";
 import Contact from "./pages/Contact";
 import Privacy from "./pages/Privacy";
 import Careers from "./pages/Careers";
+import Events from "./pages/Events";
 import Construction from "./pages/industries/Construction";
 import Manufacturing from "./pages/industries/Manufacturing";
 import Marketing from "./pages/industries/Marketing";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/events" element={<Events />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

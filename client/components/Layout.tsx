@@ -13,12 +13,17 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
+  const [careersDropdownOpen, setCareersDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const careersDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIndustriesDropdownOpen(false);
+      }
+      if (careersDropdownRef.current && !careersDropdownRef.current.contains(event.target as Node)) {
+        setCareersDropdownOpen(false);
       }
     };
 
