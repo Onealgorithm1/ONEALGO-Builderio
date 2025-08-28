@@ -2,9 +2,62 @@ import React from "react";
 
 export default function TrustedPartnerships() {
   const partners = [
-    "Salesforce", "Monday.com", "HubSpot", "Zoho", "Zapier", "MuleSoft", 
-    "Microsoft Dynamics", "Twilio", "Aircall", "QuickBooks", "DocuSign", 
-    "OneFlow", "Hootsuite", "Metricool"
+    {
+      name: "Salesforce",
+      logo: "https://www.salesforce.com/content/dam/sfdc-docs/www/logos/company/salesforce-logo.svg"
+    },
+    {
+      name: "Monday.com",
+      logo: "https://cdn.monday.com/images/logos/monday_logo_icon.png"
+    },
+    {
+      name: "HubSpot",
+      logo: "https://www.hubspot.com/hubfs/HubSpot_Logos/HubSpot-Inversed-Favicon.png"
+    },
+    {
+      name: "Zoho",
+      logo: "https://www.zoho.com/sites/default/files/zoho_general_pages/zoho-logo.svg"
+    },
+    {
+      name: "Zapier",
+      logo: "https://cdn.zapier.com/zapier/images/logos/zapier-logo-294x68.png"
+    },
+    {
+      name: "MuleSoft",
+      logo: "https://www.mulesoft.com/sites/default/files/cmm_files/mulesoft-logo-299x68.png"
+    },
+    {
+      name: "Microsoft",
+      logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b"
+    },
+    {
+      name: "Twilio",
+      logo: "https://www.twilio.com/content/dam/twilio-com/global/en/blog/legacy/2017/T-logo-red.svg"
+    },
+    {
+      name: "Aircall",
+      logo: "https://aircall.io/wp-content/uploads/2021/07/aircall-logo.svg"
+    },
+    {
+      name: "QuickBooks",
+      logo: "https://qbhelpdesk.com/wp-content/uploads/2021/05/quickbooks-logo.png"
+    },
+    {
+      name: "DocuSign",
+      logo: "https://www.docusign.com/sites/default/files/2020-05/DS_Logo_Yellow_Gray_2020.svg"
+    },
+    {
+      name: "OneFlow",
+      logo: "https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_d0a6ea3de664b71b76afe0f5a1e3d8fc/oneflow.png"
+    },
+    {
+      name: "Hootsuite",
+      logo: "https://hootsuite.com/uploads/images/brand/logos/hootsuite-logo-dark.svg"
+    },
+    {
+      name: "Metricool",
+      logo: "https://metricool.com/es/wp-content/uploads/2020/07/logo-metricool.svg"
+    }
   ];
 
   return (
@@ -21,11 +74,22 @@ export default function TrustedPartnerships() {
           {partners.map((partner, index) => (
             <div
               key={`first-${index}`}
-              className="flex-shrink-0 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 min-w-[140px] text-center hover:bg-white/20 transition-all duration-300 hover:scale-105"
+              className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-lg px-6 py-4 min-w-[160px] h-16 flex items-center justify-center hover:bg-white transition-all duration-300 hover:scale-105 shadow-sm"
             >
-              <span className="text-blue-100 text-sm font-medium whitespace-nowrap">
-                {partner}
-              </span>
+              <img
+                src={partner.logo}
+                alt={`${partner.name} logo`}
+                className="max-h-8 max-w-[120px] object-contain filter brightness-0 contrast-100"
+                onError={(e) => {
+                  // Fallback to text if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `<span class="text-gray-800 text-sm font-medium whitespace-nowrap">${partner.name}</span>`;
+                  }
+                }}
+              />
             </div>
           ))}
           
@@ -33,11 +97,22 @@ export default function TrustedPartnerships() {
           {partners.map((partner, index) => (
             <div
               key={`second-${index}`}
-              className="flex-shrink-0 bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 min-w-[140px] text-center hover:bg-white/20 transition-all duration-300 hover:scale-105"
+              className="flex-shrink-0 bg-white/90 backdrop-blur-sm rounded-lg px-6 py-4 min-w-[160px] h-16 flex items-center justify-center hover:bg-white transition-all duration-300 hover:scale-105 shadow-sm"
             >
-              <span className="text-blue-100 text-sm font-medium whitespace-nowrap">
-                {partner}
-              </span>
+              <img
+                src={partner.logo}
+                alt={`${partner.name} logo`}
+                className="max-h-8 max-w-[120px] object-contain filter brightness-0 contrast-100"
+                onError={(e) => {
+                  // Fallback to text if image fails to load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.innerHTML = `<span class="text-gray-800 text-sm font-medium whitespace-nowrap">${partner.name}</span>`;
+                  }
+                }}
+              />
             </div>
           ))}
         </div>
