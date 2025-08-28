@@ -64,10 +64,11 @@ export default function Manufacturing() {
               workflows, and live data insights.
             </p>
             <Button
+              asChild
               size="lg"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4"
             >
-              Get Started
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
