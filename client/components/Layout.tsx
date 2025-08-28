@@ -197,23 +197,30 @@ export default function Layout({ children }: LayoutProps) {
                 >
                   Industries We Serve
                 </Link>
-                <Link
-                  to="/blog"
-                  className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Blog
-                </Link>
+                <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100">
+                  Careers & Insights
+                </div>
                 <Link
                   to="/careers"
-                  className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Careers
+                  → Careers
                 </Link>
-                <div className="block px-3 py-2 text-gray-400 cursor-not-allowed">
-                  Events <span className="text-xs text-onealgo-orange-500 animate-pulse ml-2">(Coming Soon)</span>
-                </div>
+                <Link
+                  to="/blog"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  → Blog
+                </Link>
+                <Link
+                  to="/events"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  → Events
+                </Link>
                 <Link
                   to="/contact"
                   className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950"
