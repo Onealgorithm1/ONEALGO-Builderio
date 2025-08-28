@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Layout from "../../components/Layout";
 import {
   Card,
@@ -71,10 +72,11 @@ export default function ECommerce() {
               inventory, payments, and customer data for streamlined operations.
             </p>
             <Button
+              asChild
               size="lg"
               className="bg-green-500 hover:bg-green-600 text-white px-8 py-4"
             >
-              Get Started
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
         </div>
