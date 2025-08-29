@@ -55,12 +55,14 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 to="/"
                 className="text-gray-900 hover:text-onealgo-blue-950 transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Home
               </Link>
               <Link
                 to="/about"
                 className="text-gray-900 hover:text-onealgo-blue-950 transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 About
               </Link>
