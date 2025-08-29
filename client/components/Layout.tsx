@@ -553,6 +553,7 @@ export default function Layout({ children }: LayoutProps) {
               <Link
                 to="/privacy"
                 className="text-blue-200 hover:text-white transition-colors text-sm"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Privacy Policy
               </Link>
