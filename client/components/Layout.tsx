@@ -64,12 +64,6 @@ export default function Layout({ children }: LayoutProps) {
               >
                 About
               </Link>
-              <Link
-                to="/services"
-                className="text-gray-900 hover:text-onealgo-blue-950 transition-colors"
-              >
-                Services
-              </Link>
 
               {/* Industries Dropdown */}
               <div className="relative" ref={dropdownRef}>
