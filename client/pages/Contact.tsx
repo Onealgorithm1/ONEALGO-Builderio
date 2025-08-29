@@ -38,14 +38,14 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-onealgo-lighter via-white to-onealgo-light py-20">
+      <section className="bg-gradient-to-br from-onealgo-lighter via-white to-onealgo-light py-8 sm:py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
               Let's Talk About Growing Your{" "}
               <span className="text-onealgo-orange-500">Business</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Fill out the form below, and we'll get back to you within 24 hours.
             </p>
           </div>
@@ -53,13 +53,13 @@ export default function Contact() {
       </section>
 
       {/* Contact Form and Info Section */}
-      <section className="py-20 bg-white">
+      <section className="py-8 sm:py-12 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Your Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Send Your Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <Label htmlFor="firstName" className="text-gray-700">
