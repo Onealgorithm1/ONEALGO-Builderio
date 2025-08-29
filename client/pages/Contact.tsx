@@ -60,7 +60,7 @@ export default function Contact() {
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Send Your Message</h2>
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <Label htmlFor="firstName" className="text-gray-700">
                       First Name <span className="text-red-500">*</span>
