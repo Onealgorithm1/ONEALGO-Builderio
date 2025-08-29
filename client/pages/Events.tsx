@@ -174,7 +174,9 @@ export default function Events() {
                   ) : (
                     <Button
                       className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
-                      onClick={() => window.open(event.registrationUrl, "_blank")}
+                      onClick={() =>
+                        window.open(event.registrationUrl, "_blank")
+                      }
                     >
                       Register Now
                       <ExternalLink className="w-4 h-4 ml-2" />

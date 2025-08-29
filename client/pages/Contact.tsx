@@ -4,8 +4,19 @@ import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
 import { Textarea } from "../components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
-import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/ui/select";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
@@ -20,13 +31,15 @@ export default function Contact() {
     message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -46,7 +59,8 @@ export default function Contact() {
               <span className="text-onealgo-orange-500">Business</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Fill out the form below, and we'll get back to you within 24 hours.
+              Fill out the form below, and we'll get back to you within 24
+              hours.
             </p>
           </div>
         </div>
@@ -58,7 +72,9 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Send Your Message</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
+                Send Your Message
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
@@ -129,7 +145,11 @@ export default function Contact() {
                     <Label htmlFor="companySize" className="text-gray-700">
                       Company Size
                     </Label>
-                    <Select onValueChange={(value) => handleSelectChange("companySize", value)}>
+                    <Select
+                      onValueChange={(value) =>
+                        handleSelectChange("companySize", value)
+                      }
+                    >
                       <SelectTrigger className="mt-1">
                         <SelectValue placeholder="Select company size" />
                       </SelectTrigger>
@@ -137,8 +157,12 @@ export default function Contact() {
                         <SelectItem value="1-10">1-10 employees</SelectItem>
                         <SelectItem value="11-50">11-50 employees</SelectItem>
                         <SelectItem value="51-200">51-200 employees</SelectItem>
-                        <SelectItem value="201-500">201-500 employees</SelectItem>
-                        <SelectItem value="501-1000">501-1000 employees</SelectItem>
+                        <SelectItem value="201-500">
+                          201-500 employees
+                        </SelectItem>
+                        <SelectItem value="501-1000">
+                          501-1000 employees
+                        </SelectItem>
                         <SelectItem value="1000+">1000+ employees</SelectItem>
                       </SelectContent>
                     </Select>
@@ -177,7 +201,8 @@ export default function Contact() {
 
                 <div>
                   <Label htmlFor="message" className="text-gray-700">
-                    Message / Inquiry Details <span className="text-red-500">*</span>
+                    Message / Inquiry Details{" "}
+                    <span className="text-red-500">*</span>
                   </Label>
                   <Textarea
                     id="message"
@@ -198,13 +223,14 @@ export default function Contact() {
                   Send My Message
                 </Button>
               </form>
-
             </div>
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Contact Information</h2>
-              
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Contact Information
+              </h2>
+
               <div className="space-y-6 mb-8">
                 <div className="flex items-center gap-4">
                   <Mail className="w-6 h-6 text-onealgo-orange-500" />
@@ -213,7 +239,7 @@ export default function Contact() {
                     <p className="text-gray-600">Service@onealgorithm.com</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
                   <Phone className="w-6 h-6 text-onealgo-orange-500" />
                   <div>
@@ -223,7 +249,9 @@ export default function Contact() {
                 </div>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Our Global Offices</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
+                Our Global Offices
+              </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {/* USA Office */}
@@ -239,8 +267,10 @@ export default function Contact() {
                       <MapPin className="w-4 h-4 text-onealgo-orange-500 mt-1 flex-shrink-0" />
                       <div>
                         <p className="text-gray-600 text-sm">
-                          625 Swedesford Rd<br />
-                          Malvern, PA 19355<br />
+                          625 Swedesford Rd
+                          <br />
+                          Malvern, PA 19355
+                          <br />
                           (610) 298-9069
                         </p>
                       </div>
@@ -261,9 +291,12 @@ export default function Contact() {
                       <MapPin className="w-4 h-4 text-onealgo-orange-500 mt-1 flex-shrink-0" />
                       <div>
                         <p className="text-gray-600 text-sm">
-                          2nd Floor, Plot No. 536<br />
-                          Madhapur, Hyderabad<br />
-                          Telangana 500081, IN<br />
+                          2nd Floor, Plot No. 536
+                          <br />
+                          Madhapur, Hyderabad
+                          <br />
+                          Telangana 500081, IN
+                          <br />
                           +91 98765 43211
                         </p>
                       </div>
@@ -284,8 +317,10 @@ export default function Contact() {
                       <MapPin className="w-4 h-4 text-onealgo-orange-500 mt-1 flex-shrink-0" />
                       <div>
                         <p className="text-gray-600 text-sm">
-                          Building R118, Suite 201-A-42<br />
-                          Al Suq Al Kabeer, Dubai<br />
+                          Building R118, Suite 201-A-42
+                          <br />
+                          Al Suq Al Kabeer, Dubai
+                          <br />
                           +971 4 123 4567
                         </p>
                       </div>
@@ -307,7 +342,8 @@ export default function Contact() {
                       <div>
                         <p className="text-gray-600 text-sm">
                           120 Adelaide St W<br />
-                          Toronto, ON M5H 1T1<br />
+                          Toronto, ON M5H 1T1
+                          <br />
                           +1 (416) 555-1234
                         </p>
                       </div>
