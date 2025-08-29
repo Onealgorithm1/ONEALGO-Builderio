@@ -199,13 +199,6 @@ export default function Layout({ children }: LayoutProps) {
                 >
                   About
                 </Link>
-                <Link
-                  to="/services"
-                  className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Services
-                </Link>
                 <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100">
                   Industries We Serve
                 </div>
