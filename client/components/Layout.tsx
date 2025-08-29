@@ -545,18 +545,27 @@ export default function Layout({ children }: LayoutProps) {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-blue-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-blue-200 text-sm">
-              © 2025 OneAlgorithm. All rights reserved.
-            </p>
-            <div className="flex gap-4 mt-2 md:mt-0">
-              <Link
-                to="/privacy"
-                className="text-blue-200 hover:text-white transition-colors text-sm"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                Privacy Policy
-              </Link>
+          <div className="border-t border-blue-800 mt-8 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <p className="text-blue-200 text-sm">
+                © 2025 OneAlgorithm. All rights reserved.
+              </p>
+              <div className="flex gap-4 mt-2 md:mt-0">
+                <Link
+                  to="/privacy"
+                  className="text-blue-200 hover:text-white transition-colors text-sm"
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                >
+                  Privacy Policy
+                </Link>
+              </div>
+            </div>
+
+            {/* Disclaimer */}
+            <div className="mt-4 pt-4 border-t border-blue-800/50">
+              <p className="text-blue-300/80 text-xs leading-relaxed text-center max-w-4xl mx-auto">
+                All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply endorsement.
+              </p>
             </div>
           </div>
         </div>
