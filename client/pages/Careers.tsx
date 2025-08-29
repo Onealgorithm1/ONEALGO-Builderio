@@ -358,20 +358,6 @@ export default function Careers() {
               innovative technology solutions. Grow your career while making a
               real impact.
             </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Badge variant="secondary" className="text-lg py-2 px-4">
-                Remote-First Culture
-              </Badge>
-              <Badge variant="secondary" className="text-lg py-2 px-4">
-                Global Opportunities
-              </Badge>
-              <Badge variant="secondary" className="text-lg py-2 px-4">
-                Professional Growth
-              </Badge>
-              <Badge variant="secondary" className="text-lg py-2 px-4">
-                Competitive Benefits
-              </Badge>
-            </div>
           </div>
         </div>
       </section>
