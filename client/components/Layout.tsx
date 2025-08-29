@@ -554,7 +554,9 @@ export default function Layout({ children }: LayoutProps) {
                 <Link
                   to="/privacy"
                   className="text-blue-200 hover:text-white transition-colors text-sm"
-                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   Privacy Policy
                 </Link>
@@ -564,7 +566,9 @@ export default function Layout({ children }: LayoutProps) {
             {/* Disclaimer */}
             <div className="mt-4 pt-4 border-t border-blue-800/50">
               <p className="text-blue-300/80 text-xs leading-relaxed text-center max-w-4xl mx-auto">
-                All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply endorsement.
+                All product names, logos, and brands are property of their
+                respective owners. Use of these names, logos, and brands does
+                not imply endorsement.
               </p>
             </div>
           </div>
