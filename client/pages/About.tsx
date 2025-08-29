@@ -70,14 +70,6 @@ export default function About() {
                 >
                   <Link to="/contact">Start Your Transformation</Link>
                 </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="border-onealgo-blue-950 text-onealgo-blue-950 hover:bg-onealgo-blue-950 hover:text-white"
-                >
-                  <Link to="/industries">Explore Our Solutions</Link>
-                </Button>
               </div>
             </div>
             <div className="relative">
