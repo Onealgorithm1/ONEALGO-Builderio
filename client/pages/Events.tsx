@@ -11,52 +11,52 @@ import { Badge } from "../components/ui/badge";
 import { Calendar, MapPin, Clock, Users, ExternalLink } from "lucide-react";
 
 export default function Events() {
-  // This will be replaced with CMS data once Builder.io is connected
+  // Placeholder events - to be replaced with actual event data
   const upcomingEvents = [
     {
       id: 1,
-      title: "Digital Transformation Summit 2025",
+      title: "Exciting Events Coming Soon!",
       description:
-        "Join industry leaders to explore the latest trends in business automation and digital innovation.",
-      date: "March 15, 2025",
-      time: "9:00 AM - 5:00 PM EST",
-      location: "Virtual Event",
-      type: "Summit",
-      attendees: "500+ Expected",
+        "We're planning amazing workshops, webinars, and networking events. Stay tuned for announcements!",
+      date: "Coming Soon",
+      time: "TBD",
+      location: "TBD",
+      type: "Coming Soon",
+      attendees: "TBD",
       image:
-        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
-      registrationUrl:
-        "mailto:events@onealgorithm.com?subject=Digital Transformation Summit Registration",
+        "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&h=400&fit=crop",
+      registrationUrl: "#",
+      isPlaceholder: true,
     },
     {
       id: 2,
-      title: "Salesforce Best Practices Webinar",
+      title: "Industry Workshops in Planning",
       description:
-        "Learn advanced Salesforce customization techniques and integration strategies from our experts.",
-      date: "March 22, 2025",
-      time: "2:00 PM - 3:30 PM EST",
-      location: "Online Webinar",
-      type: "Webinar",
-      attendees: "Limited to 100",
+        "Interactive workshops covering the latest in business automation and digital transformation.",
+      date: "Coming Soon",
+      time: "TBD",
+      location: "TBD",
+      type: "Coming Soon",
+      attendees: "TBD",
       image:
-        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
-      registrationUrl:
-        "mailto:events@onealgorithm.com?subject=Salesforce Webinar Registration",
+        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop",
+      registrationUrl: "#",
+      isPlaceholder: true,
     },
     {
       id: 3,
-      title: "Construction Tech Innovation Workshop",
+      title: "Expert-Led Webinar Series",
       description:
-        "Hands-on workshop exploring how technology is revolutionizing construction project management.",
-      date: "April 5, 2025",
-      time: "10:00 AM - 4:00 PM EST",
-      location: "Philadelphia, PA",
-      type: "Workshop",
-      attendees: "50 Participants",
+        "Join our experts for in-depth discussions on technology trends and best practices.",
+      date: "Coming Soon",
+      time: "TBD",
+      location: "TBD",
+      type: "Coming Soon",
+      attendees: "TBD",
       image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop",
-      registrationUrl:
-        "mailto:events@onealgorithm.com?subject=Construction Workshop Registration",
+        "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&h=400&fit=crop",
+      registrationUrl: "#",
+      isPlaceholder: true,
     },
   ];
 
