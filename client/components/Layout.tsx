@@ -199,12 +199,43 @@ export default function Layout({ children }: LayoutProps) {
                 >
                   About
                 </Link>
+                <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100">
+                  Industries We Serve
+                </div>
                 <Link
-                  to="/industries"
-                  className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950"
+                  to="/industries/construction"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Industries We Serve
+                  → Construction
+                </Link>
+                <Link
+                  to="/industries/manufacturing"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  → Manufacturing
+                </Link>
+                <Link
+                  to="/industries/marketing"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  → Marketing
+                </Link>
+                <Link
+                  to="/industries/ecommerce"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  → E-Commerce
+                </Link>
+                <Link
+                  to="/industries/website-development"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  → Website Development
                 </Link>
                 <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100">
                   Careers & Insights
