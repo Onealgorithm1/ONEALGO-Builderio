@@ -6,20 +6,30 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Industries from "./pages/Industries";
-import Contact from "./pages/Contact";
-import Privacy from "./pages/Privacy";
-import Careers from "./pages/Careers";
-import Events from "./pages/Events";
-import Construction from "./pages/industries/Construction";
-import Manufacturing from "./pages/industries/Manufacturing";
-import Marketing from "./pages/industries/Marketing";
-import ECommerce from "./pages/industries/ECommerce";
-import WebsiteDevelopment from "./pages/industries/WebsiteDevelopment";
-import Blog from "./pages/Blog";
-import NotFound from "./pages/NotFound";
+import { Suspense, lazy } from "react";
+
+// Lazy load components for better performance
+const Index = lazy(() => import("./pages/Index"));
+const About = lazy(() => import("./pages/About"));
+const Industries = lazy(() => import("./pages/Industries"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Careers = lazy(() => import("./pages/Careers"));
+const Events = lazy(() => import("./pages/Events"));
+const Construction = lazy(() => import("./pages/industries/Construction"));
+const Manufacturing = lazy(() => import("./pages/industries/Manufacturing"));
+const Marketing = lazy(() => import("./pages/industries/Marketing"));
+const ECommerce = lazy(() => import("./pages/industries/ECommerce"));
+const WebsiteDevelopment = lazy(() => import("./pages/industries/WebsiteDevelopment"));
+const Blog = lazy(() => import("./pages/Blog"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-onealgo-blue-950"></div>
+  </div>
+);
 
 const queryClient = new QueryClient();
 
