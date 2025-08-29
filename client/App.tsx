@@ -39,26 +39,28 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/industries" element={<Industries />} />
-          <Route path="/industries/construction" element={<Construction />} />
-          <Route path="/industries/manufacturing" element={<Manufacturing />} />
-          <Route path="/industries/marketing" element={<Marketing />} />
-          <Route path="/industries/ecommerce" element={<ECommerce />} />
-          <Route
-            path="/industries/website-development"
-            element={<WebsiteDevelopment />}
-          />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/events" element={<Events />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/industries/construction" element={<Construction />} />
+            <Route path="/industries/manufacturing" element={<Manufacturing />} />
+            <Route path="/industries/marketing" element={<Marketing />} />
+            <Route path="/industries/ecommerce" element={<ECommerce />} />
+            <Route
+              path="/industries/website-development"
+              element={<WebsiteDevelopment />}
+            />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/events" element={<Events />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
