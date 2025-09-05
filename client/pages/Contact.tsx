@@ -44,8 +44,40 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
+    
+    // Create a form element to submit to Salesforce
+    const salesforceForm = document.createElement('form');
+    salesforceForm.method = 'POST';
+    salesforceForm.action = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dbn00000plgUf';
+    
+    // Add hidden fields
+    const addHiddenField = (name: string, value: string) => {
+      const hiddenField = document.createElement('input');
+      hiddenField.type = 'hidden';
+      hiddenField.name = name;
+      hiddenField.value = value;
+      salesforceForm.appendChild(hiddenField);
+    };
+    
+    addHiddenField('oid', '00Dbn00000plgUf');
+    addHiddenField('retURL', window.location.origin + '/thank-you'); // Redirect after submission
+    
+    // Map form data to Salesforce fields
+    addHiddenField('first_name', formData.firstName);
+    addHiddenField('last_name', formData.lastName);
+    addHiddenField('email', formData.email);
+    addHiddenField('company', formData.company);
+    addHiddenField('employees', formData.companySize);
+    addHiddenField('street', formData.companyAddress);
+    addHiddenField('phone', formData.phone);
+    addHiddenField('description', formData.message);
+    
+    // Append to body and submit
+    document.body.appendChild(salesforceForm);
+    salesforceForm.submit();
+    
+    // Clean up
+    document.body.removeChild(salesforceForm);
   };
 
   return (
