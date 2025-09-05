@@ -17,7 +17,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Loader2, CheckCircle, Clock } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -30,6 +30,9 @@ export default function Contact() {
     phone: "",
     message: "",
   });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -44,6 +47,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     // Create a form element to submit to Salesforce
     const salesforceForm = document.createElement('form');
@@ -78,6 +82,10 @@ export default function Contact() {
     
     // Clean up
     document.body.removeChild(salesforceForm);
+    
+    // Show thank you message
+    setIsSubmitting(false);
+    setIsSubmitted(true);
   };
 
   return (
