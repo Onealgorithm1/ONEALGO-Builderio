@@ -73,6 +73,13 @@
             enhanced_conversion_data: hashedData
           });
 
+          // Also track as a regular conversion event for easier monitoring
+          gtag('event', 'contact_form_submission', {
+            event_category: 'engagement',
+            event_label: 'contact_form',
+            value: 1
+          });
+
           console.log('Enhanced Conversions data sent successfully');
         } catch (error) {
           console.error('Error sending Enhanced Conversions data:', error);
