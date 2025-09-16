@@ -48,44 +48,58 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Create a form element to submit to Salesforce
-    const salesforceForm = document.createElement('form');
-    salesforceForm.method = 'POST';
-    salesforceForm.action = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dbn00000plgUf';
-    
-    // Add hidden fields
-    const addHiddenField = (name: string, value: string) => {
-      const hiddenField = document.createElement('input');
-      hiddenField.type = 'hidden';
-      hiddenField.name = name;
-      hiddenField.value = value;
-      salesforceForm.appendChild(hiddenField);
-    };
-    
-    addHiddenField('oid', '00Dbn00000plgUf');
-    addHiddenField('retURL', window.location.origin + '/contact'); // Redirect after submission
-    
-    // Map form data to Salesforce fields
-    addHiddenField('first_name', formData.firstName);
-    addHiddenField('last_name', formData.lastName);
-    addHiddenField('email', formData.email);
-    addHiddenField('company', formData.company);
-    addHiddenField('employees', formData.companySize);
-    addHiddenField('street', formData.companyAddress);
-    addHiddenField('phone', formData.phone);
-    addHiddenField('description', formData.message);
-    
-    // Append to body and submit
-    document.body.appendChild(salesforceForm);
-    salesforceForm.submit();
-    
-    // Clean up
-    document.body.removeChild(salesforceForm);
-    
-    // Show thank you message
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+
+    // Show thank you message first
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      // Submit to Salesforce after showing thank you message
+      setTimeout(() => {
+        const salesforceForm = document.createElement('form');
+        salesforceForm.method = 'POST';
+        salesforceForm.action = 'https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dbn00000plgUf';
+        salesforceForm.style.display = 'none'; // Hide the form
+
+        // Add hidden fields
+        const addHiddenField = (name: string, value: string) => {
+          const hiddenField = document.createElement('input');
+          hiddenField.type = 'hidden';
+          hiddenField.name = name;
+          hiddenField.value = value;
+          salesforceForm.appendChild(hiddenField);
+        };
+
+        addHiddenField('oid', '00Dbn00000plgUf');
+        addHiddenField('retURL', window.location.href); // Keep user on current page
+
+        // Map form data to Salesforce fields
+        addHiddenField('first_name', formData.firstName);
+        addHiddenField('last_name', formData.lastName);
+        addHiddenField('email', formData.email);
+        addHiddenField('company', formData.company);
+        addHiddenField('employees', formData.companySize);
+        addHiddenField('street', formData.companyAddress);
+        addHiddenField('phone', formData.phone);
+        addHiddenField('description', formData.message);
+
+        // Submit in a hidden iframe to avoid page redirect
+        const iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.name = 'salesforce-submit';
+        document.body.appendChild(iframe);
+
+        salesforceForm.target = 'salesforce-submit';
+        document.body.appendChild(salesforceForm);
+        salesforceForm.submit();
+
+        // Clean up after submission
+        setTimeout(() => {
+          document.body.removeChild(salesforceForm);
+          document.body.removeChild(iframe);
+        }, 1000);
+      }, 500);
+    }, 800);
   };
 
   return (
