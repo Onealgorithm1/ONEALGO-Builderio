@@ -44,6 +44,8 @@
       // Enhanced Conversions tracking function
       window.trackEnhancedConversion = async function(userData) {
         try {
+          console.log('📊 Enhanced Conversions: Starting tracking...', userData);
+
           // Hash PII data client-side for privacy
           const hashedData = {
             email: userData.email ? await sha256(userData.email.toLowerCase().trim()) : undefined,
