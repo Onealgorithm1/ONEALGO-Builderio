@@ -28,7 +28,56 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-RC48CMQ05T");
+      // Configure Google Analytics with Enhanced Conversions
+      gtag("config", "G-RC48CMQ05T", {
+        allow_enhanced_conversions: true,
+      });
+
+      // SHA-256 hashing utility for Enhanced Conversions
+      async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => ('00' + b.toString(16)).slice(-2)).join('');
+      }
+
+      // Enhanced Conversions tracking function
+      window.trackEnhancedConversion = async function(userData) {
+        try {
+          // Hash PII data client-side for privacy
+          const hashedData = {
+            email: userData.email ? await sha256(userData.email.toLowerCase().trim()) : undefined,
+            phone_number: userData.phone ? await sha256(userData.phone.replace(/\D/g, '')) : undefined,
+            address: {
+              first_name: userData.firstName ? await sha256(userData.firstName.toLowerCase().trim()) : undefined,
+              last_name: userData.lastName ? await sha256(userData.lastName.toLowerCase().trim()) : undefined,
+              street: userData.address ? await sha256(userData.address.toLowerCase().trim()) : undefined,
+            }
+          };
+
+          // Remove undefined values
+          Object.keys(hashedData).forEach(key => {
+            if (hashedData[key] === undefined) {
+              delete hashedData[key];
+            }
+          });
+          Object.keys(hashedData.address).forEach(key => {
+            if (hashedData.address[key] === undefined) {
+              delete hashedData.address[key];
+            }
+          });
+
+          // Send enhanced conversion data to Google Ads
+          gtag('event', 'conversion', {
+            send_to: 'G-RC48CMQ05T',
+            enhanced_conversion_data: hashedData
+          });
+
+          console.log('Enhanced Conversions data sent successfully');
+        } catch (error) {
+          console.error('Error sending Enhanced Conversions data:', error);
+        }
+      };
     </script>
 
     <meta charset="UTF-8" />
