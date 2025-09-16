@@ -1,6 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NTDV6XG6");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RC48CMQ05T"
+    ></script>
+    <script>
+      // Initialize dataLayer and gtag function
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      // Initialize Google Analytics
+      gtag("js", new Date());
+      gtag("config", "G-RC48CMQ05T", {
+        allow_enhanced_conversions: true,
+      });
+
+      // Test gtag is working
+      console.log("🔧 Google Analytics initialized with ID: G-RC48CMQ05T");
+
+      // Test page view tracking
+      gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+
+      // Basic conversion tracking function
+      window.trackFormSubmission = function () {
+        try {
+          console.log("📊 Tracking form submission...");
+
+          gtag("event", "contact_form_submission", {
+            event_category: "form",
+            event_label: "contact",
+            value: 1,
+          });
+
+          console.log("✅ Form submission tracked successfully");
+        } catch (error) {
+          console.error("❌ Error tracking form submission:", error);
+        }
+      };
+    </script>
+
     <title>Google Tags Test</title>
     <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
@@ -11,6 +71,10 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTDV6XG6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <h1>Google Tags Test Page</h1>
     
     <div>
