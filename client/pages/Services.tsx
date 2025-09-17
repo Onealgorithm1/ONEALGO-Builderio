@@ -18,12 +18,36 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Technology <span className="text-onealgo-orange-500">Services</span> —{" "}
-              <span className="text-white">Website Development, IT Consulting & Staff Augmentation</span>
+              Technology{" "}
+              <span className="text-onealgo-orange-500">Services</span> —{" "}
+              <span className="text-white">
+                Website Development, IT Consulting & Staff Augmentation
+              </span>
             </h1>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to accelerate your
-              business growth and digital transformation. Specialized for <Link to="/industries/construction" className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline">construction</Link>, <Link to="/industries/manufacturing" className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline">manufacturing</Link>, and <Link to="/industries/ecommerce" className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline">e-commerce</Link> industries.
+              business growth and digital transformation. Specialized for{" "}
+              <Link
+                to="/industries/construction"
+                className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline"
+              >
+                construction
+              </Link>
+              ,{" "}
+              <Link
+                to="/industries/manufacturing"
+                className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline"
+              >
+                manufacturing
+              </Link>
+              , and{" "}
+              <Link
+                to="/industries/ecommerce"
+                className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline"
+              >
+                e-commerce
+              </Link>{" "}
+              industries.
             </p>
           </div>
         </div>
@@ -37,8 +61,29 @@ export default function Services() {
               What We Offer
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From <Link to="/services/website-development" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">website development</Link> to <Link to="/services/staff-augmentation" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">staff augmentation</Link>, we provide the
-              technical expertise and resources you need to succeed. Learn more <Link to="/about" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">about our mission</Link>.
+              From{" "}
+              <Link
+                to="/services/website-development"
+                className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+              >
+                website development
+              </Link>{" "}
+              to{" "}
+              <Link
+                to="/services/staff-augmentation"
+                className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+              >
+                staff augmentation
+              </Link>
+              , we provide the technical expertise and resources you need to
+              succeed. Learn more{" "}
+              <Link
+                to="/about"
+                className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+              >
+                about our mission
+              </Link>
+              .
             </p>
           </div>
 

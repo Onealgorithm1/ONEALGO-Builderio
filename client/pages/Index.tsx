@@ -43,14 +43,22 @@ export default function Index() {
               <span className="text-onealgo-orange-500 drop-shadow-lg">
                 Business Technology
               </span>{" "}
-              <span className="text-white drop-shadow-lg">& Automation Solutions</span>
+              <span className="text-white drop-shadow-lg">
+                & Automation Solutions
+              </span>
             </h1>
             <p className="text-lg md:text-xl text-onealgo-orange-500/90 mb-4 max-w-3xl mx-auto drop-shadow-md animate-fade-in-up font-semibold italic">
               Reimagine. Connect. Accelerate.
             </p>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto drop-shadow-md animate-fade-in-up">
-              Think bigger. Build smarter. Move faster — with <Link to="/services" className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline">technology solutions</Link> tailored
-              to you.
+              Think bigger. Build smarter. Move faster — with{" "}
+              <Link
+                to="/services"
+                className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline"
+              >
+                technology solutions
+              </Link>{" "}
+              tailored to you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
               <Button
@@ -114,13 +122,33 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Sales, Service, <Link to="/services/marketing" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">Marketing</Link>, Finance, and <Link to="/services/operations-technology" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">Operations</Link> connected
-                  into one seamless system.
+                  Sales, Service,{" "}
+                  <Link
+                    to="/services/marketing"
+                    className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+                  >
+                    Marketing
+                  </Link>
+                  , Finance, and{" "}
+                  <Link
+                    to="/services/operations-technology"
+                    className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+                  >
+                    Operations
+                  </Link>{" "}
+                  connected into one seamless system.
                 </p>
                 <Collapsible trigger="Learn More">
                   A single source of truth across all business units delivers
                   leadership visibility, stronger collaboration, and a smoother
-                  customer journey from first touch to fulfillment. Explore our <Link to="/services/it-consulting" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">IT consulting services</Link> to learn more.
+                  customer journey from first touch to fulfillment. Explore our{" "}
+                  <Link
+                    to="/services/it-consulting"
+                    className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+                  >
+                    IT consulting services
+                  </Link>{" "}
+                  to learn more.
                 </Collapsible>
               </CardContent>
             </Card>
