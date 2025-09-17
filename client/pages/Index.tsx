@@ -309,11 +309,16 @@ export default function Index() {
             <div>
               <h3 className="text-2xl font-bold text-onealgo-blue-950 mb-6">Professional Website Development</h3>
               <p className="text-gray-700 mb-4">
-                We create responsive, high-performance websites and web applications that drive conversions and enhance user experience. Our development team specializes in modern frameworks, e-commerce platforms, content management systems, and SEO optimization.
+                We create responsive, high-performance websites and web applications that drive conversions and enhance user experience.
               </p>
-              <p className="text-gray-700">
-                Whether you need a corporate website, e-commerce platform, or custom web application, our development process ensures fast loading times, mobile responsiveness, and search engine optimization for maximum online visibility.
-              </p>
+              <Collapsible trigger="Read More">
+                <p className="text-gray-700 mb-4">
+                  Our development team specializes in modern frameworks, e-commerce platforms, content management systems, and SEO optimization. We follow industry best practices for security, accessibility, and performance optimization.
+                </p>
+                <p className="text-gray-700">
+                  Whether you need a corporate website, e-commerce platform, or custom web application, our development process ensures fast loading times, mobile responsiveness, and search engine optimization for maximum online visibility. Our websites consistently achieve 95+ PageSpeed scores and deliver exceptional user experiences across all devices.
+                </p>
+              </Collapsible>
             </div>
 
             <div>
