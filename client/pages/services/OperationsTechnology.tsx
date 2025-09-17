@@ -31,9 +31,9 @@ import {
 
 export default function OperationsTechnology() {
   useSEO({
-    title: "Operations Technology Services - OneAlgorithm",
+    title: "Operations Technology & Industrial Automation - OneAlgorithm",
     description:
-      "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
+      "Professional operations technology with industrial automation, process optimization, and monitoring systems. Streamline operations with equipment integration.",
     canonical: getCanonicalUrl("/services/operations-technology"),
     keywords:
       "operations technology, industrial automation, process optimization, monitoring systems, equipment integration, OT services, manufacturing technology",
