@@ -171,6 +171,12 @@ export default function OperationsTechnology() {
 
   return (
     <Layout>
+      <StructuredData data={createServiceSchema(
+        "Operations Technology Services",
+        "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration.",
+        "Operations Technology",
+        "https://onealgorithm.com/services/operations-technology"
+      )} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
