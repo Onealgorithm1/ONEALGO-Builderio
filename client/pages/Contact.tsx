@@ -19,7 +19,10 @@ import {
 } from "../components/ui/card";
 import { Mail, Phone, MapPin, Loader2, CheckCircle, Clock } from "lucide-react";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
-import { StructuredData, createContactPageSchema } from "../components/StructuredData";
+import {
+  StructuredData,
+  createContactPageSchema,
+} from "../components/StructuredData";
 
 // TypeScript declarations for Google Analytics tracking
 declare global {
@@ -31,16 +34,23 @@ declare global {
 export default function Contact() {
   useSEO({
     title: "Contact OneAlgorithm - Get Started with Technology Solutions",
-    description: "Contact OneAlgorithm for expert IT consulting, website development, operations technology, and staff augmentation services. Get a free consultation for your business technology needs.",
+    description:
+      "Contact OneAlgorithm for expert IT consulting, website development, operations technology, and staff augmentation services. Get a free consultation for your business technology needs.",
     canonical: getCanonicalUrl("/contact"),
-    keywords: "contact OneAlgorithm, IT consulting inquiry, technology consultation, business automation quote, website development contact",
+    keywords:
+      "contact OneAlgorithm, IT consulting inquiry, technology consultation, business automation quote, website development contact",
     ogTitle: "Contact OneAlgorithm - Get Started with Technology Solutions",
-    ogDescription: "Contact OneAlgorithm for expert IT consulting, website development, operations technology, and staff augmentation services. Get a free consultation for your business technology needs.",
+    ogDescription:
+      "Contact OneAlgorithm for expert IT consulting, website development, operations technology, and staff augmentation services. Get a free consultation for your business technology needs.",
     ogUrl: getCanonicalUrl("/contact"),
-    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
-    twitterTitle: "Contact OneAlgorithm - Get Started with Technology Solutions",
-    twitterDescription: "Contact OneAlgorithm for expert IT consulting, website development, operations technology, and staff augmentation services. Get a free consultation for your business technology needs.",
-    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+    ogImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    twitterTitle:
+      "Contact OneAlgorithm - Get Started with Technology Solutions",
+    twitterDescription:
+      "Contact OneAlgorithm for expert IT consulting, website development, operations technology, and staff augmentation services. Get a free consultation for your business technology needs.",
+    twitterImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
   });
   const [formData, setFormData] = useState({
     firstName: "",

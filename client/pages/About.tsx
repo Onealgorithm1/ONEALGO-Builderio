@@ -19,30 +19,43 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
-import { StructuredData, createOrganizationSchema, createWebPageSchema } from "../components/StructuredData";
+import {
+  StructuredData,
+  createOrganizationSchema,
+  createWebPageSchema,
+} from "../components/StructuredData";
 
 export default function About() {
   useSEO({
     title: "About OneAlgorithm - Business Technology & Automation Experts",
-    description: "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
+    description:
+      "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
     canonical: getCanonicalUrl("/about"),
-    keywords: "about OneAlgorithm, business technology experts, automation specialists, IT consulting company, digital transformation, business process improvement",
+    keywords:
+      "about OneAlgorithm, business technology experts, automation specialists, IT consulting company, digital transformation, business process improvement",
     ogTitle: "About OneAlgorithm - Business Technology & Automation Experts",
-    ogDescription: "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
+    ogDescription:
+      "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
     ogUrl: getCanonicalUrl("/about"),
-    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
-    twitterTitle: "About OneAlgorithm - Business Technology & Automation Experts",
-    twitterDescription: "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
-    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+    ogImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    twitterTitle:
+      "About OneAlgorithm - Business Technology & Automation Experts",
+    twitterDescription:
+      "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
+    twitterImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
   });
   return (
     <Layout>
       <StructuredData data={createOrganizationSchema()} />
-      <StructuredData data={createWebPageSchema(
-        "About OneAlgorithm - Business Technology & Automation Experts",
-        "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
-        "https://onealgorithm.com/about"
-      )} />
+      <StructuredData
+        data={createWebPageSchema(
+          "About OneAlgorithm - Business Technology & Automation Experts",
+          "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
+          "https://onealgorithm.com/about",
+        )}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

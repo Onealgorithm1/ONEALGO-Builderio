@@ -18,21 +18,30 @@ import {
   Palette,
 } from "lucide-react";
 import { useSEO, getCanonicalUrl } from "../../hooks/use-seo";
-import { StructuredData, createServiceSchema } from "../../components/StructuredData";
+import {
+  StructuredData,
+  createServiceSchema,
+} from "../../components/StructuredData";
 
 export default function WebsiteDevelopment() {
   useSEO({
     title: "Website Development Services - OneAlgorithm",
-    description: "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
+    description:
+      "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
     canonical: getCanonicalUrl("/services/website-development"),
-    keywords: "website development, web design, responsive websites, e-commerce development, SEO optimization, professional web development, custom websites",
+    keywords:
+      "website development, web design, responsive websites, e-commerce development, SEO optimization, professional web development, custom websites",
     ogTitle: "Website Development Services - OneAlgorithm",
-    ogDescription: "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
+    ogDescription:
+      "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
     ogUrl: getCanonicalUrl("/services/website-development"),
-    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    ogImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
     twitterTitle: "Website Development Services - OneAlgorithm",
-    twitterDescription: "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
-    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+    twitterDescription:
+      "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
+    twitterImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
   });
   const features = [
     {
@@ -75,12 +84,14 @@ export default function WebsiteDevelopment() {
 
   return (
     <Layout>
-      <StructuredData data={createServiceSchema(
-        "Website Development Services",
-        "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications.",
-        "Website Development",
-        "https://onealgorithm.com/services/website-development"
-      )} />
+      <StructuredData
+        data={createServiceSchema(
+          "Website Development Services",
+          "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications.",
+          "Website Development",
+          "https://onealgorithm.com/services/website-development",
+        )}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
