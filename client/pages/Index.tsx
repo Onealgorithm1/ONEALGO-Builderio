@@ -114,13 +114,13 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Sales, Service, Marketing, Finance, and Operations connected
+                  Sales, Service, <Link to="/services/marketing" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">Marketing</Link>, Finance, and <Link to="/services/operations-technology" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">Operations</Link> connected
                   into one seamless system.
                 </p>
                 <Collapsible trigger="Learn More">
                   A single source of truth across all business units delivers
                   leadership visibility, stronger collaboration, and a smoother
-                  customer journey from first touch to fulfillment.
+                  customer journey from first touch to fulfillment. Explore our <Link to="/services/it-consulting" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">IT consulting services</Link> to learn more.
                 </Collapsible>
               </CardContent>
             </Card>
