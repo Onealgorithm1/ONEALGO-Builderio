@@ -67,6 +67,12 @@ export default function Marketing() {
 
   return (
     <Layout>
+      <StructuredData data={createServiceSchema(
+        "Marketing Services",
+        "Comprehensive marketing services including campaign management, AI-driven insights, customer journey optimization, and data analytics.",
+        "Marketing",
+        "https://onealgorithm.com/services/marketing"
+      )} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
