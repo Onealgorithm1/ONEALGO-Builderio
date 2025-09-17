@@ -136,6 +136,12 @@ export default function StaffAugmentation() {
 
   return (
     <Layout>
+      <StructuredData data={createServiceSchema(
+        "Staff Augmentation Services",
+        "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
+        "Staff Augmentation",
+        "https://onealgorithm.com/services/staff-augmentation"
+      )} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
