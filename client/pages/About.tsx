@@ -37,6 +37,12 @@ export default function About() {
   });
   return (
     <Layout>
+      <StructuredData data={createOrganizationSchema()} />
+      <StructuredData data={createWebPageSchema(
+        "About OneAlgorithm - Business Technology & Automation Experts",
+        "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
+        "https://onealgorithm.com/about"
+      )} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
