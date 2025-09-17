@@ -27,9 +27,9 @@ import {
 
 export default function About() {
   useSEO({
-    title: "About OneAlgorithm - Business Technology & Automation Experts",
+    title: "About OneAlgorithm - Business Technology Experts",
     description:
-      "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
+      "Learn how OneAlgorithm transforms struggling businesses into thriving enterprises through intelligent technology solutions and expert consulting.",
     canonical: getCanonicalUrl("/about"),
     keywords:
       "about OneAlgorithm, business technology experts, automation specialists, IT consulting company, digital transformation, business process improvement",
