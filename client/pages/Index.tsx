@@ -33,10 +33,9 @@ import {
 
 export default function Index() {
   useSEO({
-    title:
-      "OneAlgorithm - IT Consulting, Website Development & Operations Technology Solutions",
+    title: "OneAlgorithm - IT Consulting & Technology Solutions",
     description:
-      "Transform your business with OneAlgorithm's expert IT consulting, website development, operations technology, and staff augmentation services. Specialized solutions for Construction, Manufacturing, and E-Commerce industries.",
+      "Transform your business with expert IT consulting, website development, and operations technology. Specialized solutions for Construction, Manufacturing, and E-Commerce.",
     canonical: getCanonicalUrl("/"),
     keywords:
       "IT consulting, website development, operations technology, staff augmentation, business automation, construction technology, manufacturing systems, e-commerce solutions, digital transformation, OneAlgorithm",
