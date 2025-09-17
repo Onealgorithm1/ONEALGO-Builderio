@@ -18,8 +18,8 @@ export default function Industries() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Industries We{" "}
-              <span className="text-onealgo-orange-500">Serve</span>
+              Industry-Focused <span className="text-onealgo-orange-500">Technology Solutions</span> —{" "}
+              <span className="text-white">Construction, Manufacturing & E-Commerce</span>
             </h1>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
               Specialized technology solutions designed for your industry's
