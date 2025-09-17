@@ -132,6 +132,7 @@ export default function Contact() {
 
   return (
     <Layout>
+      <StructuredData data={createContactPageSchema()} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-lighter via-white to-onealgo-light py-8 sm:py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
