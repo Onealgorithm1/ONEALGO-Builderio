@@ -760,6 +760,10 @@ Accessibility compliance ensures websites work effectively for users with disabi
                       src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="300"
                     />
                   </div>
                   <CardHeader>
