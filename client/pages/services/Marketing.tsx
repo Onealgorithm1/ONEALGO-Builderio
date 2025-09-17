@@ -180,6 +180,16 @@ export default function Marketing() {
           </div>
         </div>
       </section>
+
+      {/* Social Sharing */}
+      <section className="py-8 bg-gray-50 border-t">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SocialShare
+            title="Marketing Solutions - AI-Driven Campaigns & Automation - OneAlgorithm"
+            className="justify-center"
+          />
+        </div>
+      </section>
     </Layout>
   );
 }
