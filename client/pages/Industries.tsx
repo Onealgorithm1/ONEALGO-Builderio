@@ -91,42 +91,12 @@ export default function Industries() {
               </CardContent>
             </Card>
 
-            {/* Marketing */}
-            <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-              <CardHeader>
-                <svg
-                  className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-purple-500 transition-colors duration-300"
-                  style={{ animationDelay: "1s" }}
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-                <CardTitle className="text-2xl text-onealgo-blue-950">
-                  Marketing
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Create campaigns that adapt instantly to customer behavior and
-                  preferences with AI-driven insights and automated lead
-                  nurturing.
-                </p>
-                <Button
-                  asChild
-                  className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
-                >
-                  <Link to="/industries/marketing">Learn More</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
             {/* E-Commerce */}
             <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
               <CardHeader>
                 <ShoppingCart
                   className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-green-500 transition-colors duration-300"
-                  style={{ animationDelay: "1.2s" }}
+                  style={{ animationDelay: "1s" }}
                 />
                 <CardTitle className="text-2xl text-onealgo-blue-950">
                   E-Commerce
@@ -143,35 +113,6 @@ export default function Industries() {
                   className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
                 >
                   <Link to="/industries/ecommerce">Learn More</Link>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* Website Development */}
-            <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
-              <CardHeader>
-                <svg
-                  className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-blue-500 transition-colors duration-300"
-                  style={{ animationDelay: "1.5s" }}
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm2 4v-2H3a2 2 0 002 2zM3 9h2V7H3v2zm12 12h2v-2h-2v2zm4-18H9a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2zm0 12H9V5h10v10z" />
-                </svg>
-                <CardTitle className="text-2xl text-onealgo-blue-950">
-                  Website Development
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600 mb-4">
-                  Modern, responsive websites built for performance and user
-                  experience. From corporate sites to complex web applications.
-                </p>
-                <Button
-                  asChild
-                  className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
-                >
-                  <Link to="/industries/website-development">Learn More</Link>
                 </Button>
               </CardContent>
             </Card>
