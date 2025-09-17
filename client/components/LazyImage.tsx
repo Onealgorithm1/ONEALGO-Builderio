@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
 interface LazyImageProps {
   src: string;
@@ -6,20 +6,20 @@ interface LazyImageProps {
   className?: string;
   width?: number | string;
   height?: number | string;
-  loading?: 'lazy' | 'eager';
-  fetchpriority?: 'high' | 'low' | 'auto';
+  loading?: "lazy" | "eager";
+  fetchpriority?: "high" | "low" | "auto";
   placeholder?: string;
 }
 
 export function LazyImage({
   src,
   alt,
-  className = '',
+  className = "",
   width,
   height,
-  loading = 'lazy',
-  fetchpriority = 'auto',
-  placeholder = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect width="100%25" height="100%25" fill="%23f3f4f6"/%3E%3C/svg%3E'
+  loading = "lazy",
+  fetchpriority = "auto",
+  placeholder = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect width="100%25" height="100%25" fill="%23f3f4f6"/%3E%3C/svg%3E',
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -35,8 +35,8 @@ export function LazyImage({
       },
       {
         threshold: 0.1,
-        rootMargin: '50px',
-      }
+        rootMargin: "50px",
+      },
     );
 
     if (imgRef.current) {
@@ -61,19 +61,19 @@ export function LazyImage({
         <img
           src={placeholder}
           alt=""
-          className={`absolute inset-0 w-full h-full object-cover blur-sm transition-opacity duration-300 ${isLoaded ? 'opacity-0' : 'opacity-100'}`}
+          className={`absolute inset-0 w-full h-full object-cover blur-sm transition-opacity duration-300 ${isLoaded ? "opacity-0" : "opacity-100"}`}
           width={width}
           height={height}
           aria-hidden="true"
         />
       )}
-      
+
       {/* Actual image */}
       <img
         ref={imgRef}
         src={isInView ? src : placeholder}
         alt={alt}
-        className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"}`}
         width={width}
         height={height}
         loading={loading}
@@ -87,12 +87,12 @@ export function LazyImage({
 }
 
 // Higher-order component for lazy loading sections
-export function LazySection({ 
-  children, 
-  className = '' 
-}: { 
-  children: React.ReactNode; 
-  className?: string; 
+export function LazySection({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
 }) {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -107,8 +107,8 @@ export function LazySection({
       },
       {
         threshold: 0.1,
-        rootMargin: '100px',
-      }
+        rootMargin: "100px",
+      },
     );
 
     if (sectionRef.current) {
@@ -119,11 +119,15 @@ export function LazySection({
   }, []);
 
   return (
-    <div 
-      ref={sectionRef} 
-      className={`transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'} ${className}`}
+    <div
+      ref={sectionRef}
+      className={`transition-opacity duration-500 ${isVisible ? "opacity-100" : "opacity-0"} ${className}`}
     >
-      {isVisible ? children : <div className="h-48 bg-gray-100 animate-pulse rounded-lg" />}
+      {isVisible ? (
+        children
+      ) : (
+        <div className="h-48 bg-gray-100 animate-pulse rounded-lg" />
+      )}
     </div>
   );
 }

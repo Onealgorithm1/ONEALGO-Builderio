@@ -252,13 +252,16 @@
     </style>
 
     <!-- Performance optimization hints -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="format-detection" content="telephone=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="/client/App.tsx" as="script" crossorigin>
-    <link rel="modulepreload" href="/client/App.tsx">
+    <link rel="preload" href="/client/App.tsx" as="script" crossorigin />
+    <link rel="modulepreload" href="/client/App.tsx" />
 
     <!-- Mobile optimization -->
     <meta name="theme-color" content="#1E3A8A" />
@@ -285,14 +288,15 @@
     <!-- Service Worker Registration -->
     <script>
       // Register service worker for performance optimization
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-              console.log('SW registered: ', registration);
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(function (registration) {
+              console.log("SW registered: ", registration);
             })
-            .catch(function(registrationError) {
-              console.log('SW registration failed: ', registrationError);
+            .catch(function (registrationError) {
+              console.log("SW registration failed: ", registrationError);
             });
         });
       }
