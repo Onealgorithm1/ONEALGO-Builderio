@@ -22,6 +22,7 @@ import {
   BarChart3,
 } from "lucide-react";
 import { useSEO, getCanonicalUrl } from "../../hooks/use-seo";
+import { StructuredData, createServiceSchema } from "../../components/StructuredData";
 
 export default function ITConsulting() {
   useSEO({
