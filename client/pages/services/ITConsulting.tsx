@@ -282,7 +282,7 @@ export default function ITConsulting() {
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
                     <strong>Cross-Industry Knowledge:</strong> Experience across
-                    healthcare, finance, manufacturing, and technology sectors.
+                    healthcare, finance, <Link to="/industries/manufacturing" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">manufacturing</Link>, and technology sectors including <Link to="/industries/construction" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">construction</Link> and <Link to="/industries/ecommerce" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">e-commerce</Link>.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
