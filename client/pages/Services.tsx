@@ -1,0 +1,193 @@
+import React from "react";
+import Layout from "../components/Layout";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
+import { Button } from "../components/ui/button";
+import { Code, Users, Megaphone } from "lucide-react";
+import { Link } from "react-router-dom";
+
+export default function Services() {
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="text-onealgo-orange-500">Services</span>
+            </h1>
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
+              Comprehensive technology solutions designed to accelerate your
+              business growth and digital transformation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What We Offer
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From website development to staff augmentation, we provide the
+              technical expertise and resources you need to succeed.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Website Development */}
+            <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+              <CardHeader>
+                <Code className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-blue-500 transition-colors duration-300" />
+                <CardTitle className="text-2xl text-onealgo-blue-950">
+                  Website Development
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Modern, responsive websites built for performance and user
+                  experience. From corporate sites to complex web applications.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                >
+                  <Link to="/services/website-development">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Marketing */}
+            <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+              <CardHeader>
+                <Megaphone className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-purple-500 transition-colors duration-300" />
+                <CardTitle className="text-2xl text-onealgo-blue-950">
+                  Marketing
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Create campaigns that adapt instantly to customer behavior and
+                  preferences with AI-driven insights and automated lead
+                  nurturing.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                >
+                  <Link to="/services/marketing">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Staff Augmentation */}
+            <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+              <CardHeader>
+                <Users className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-green-500 transition-colors duration-300" />
+                <CardTitle className="text-2xl text-onealgo-blue-950">
+                  Staff Augmentation
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Scale your team with expert developers and technical
+                  professionals. Flexible engagement models to meet your project
+                  needs.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                >
+                  <Link to="/services/staff-augmentation">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Services */}
+      <section className="py-20 bg-onealgo-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose OneAlgorithm
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We combine technical expertise with business acumen to deliver
+              solutions that drive real results.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="bg-onealgo-blue-950 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Expert Team
+              </h3>
+              <p className="text-gray-600">
+                Our team consists of seasoned professionals with deep expertise
+                in modern technologies and methodologies.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-onealgo-blue-950 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Agile Approach
+              </h3>
+              <p className="text-gray-600">
+                We use agile methodologies to ensure rapid delivery, continuous
+                improvement, and adaptability to changing requirements.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-onealgo-blue-950 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Long-term Partnership
+              </h3>
+              <p className="text-gray-600">
+                We're not just service providers - we're your technology
+                partners, committed to your long-term success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Let's discuss how our services can help accelerate your business
+            goals and digital transformation.
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white px-8 py-4"
+          >
+            <Link to="/contact">Contact Us Today</Link>
+          </Button>
+        </div>
+      </section>
+    </Layout>
+  );
+}
