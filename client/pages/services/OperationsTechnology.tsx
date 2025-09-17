@@ -67,48 +67,90 @@ export default function OperationsTechnology() {
     {
       icon: Zap,
       title: "Operational Efficiency",
-      description: "Streamline operations and reduce waste through intelligent automation and optimization."
+      description:
+        "Streamline operations and reduce waste through intelligent automation and optimization.",
     },
     {
       icon: BarChart3,
       title: "Data-Driven Decisions",
-      description: "Make informed decisions with real-time operational data and advanced analytics."
+      description:
+        "Make informed decisions with real-time operational data and advanced analytics.",
     },
     {
       icon: Activity,
       title: "Improved Reliability",
-      description: "Enhance system reliability and reduce unplanned downtime through proactive monitoring."
+      description:
+        "Enhance system reliability and reduce unplanned downtime through proactive monitoring.",
     },
     {
       icon: Cog,
       title: "Seamless Integration",
-      description: "Integrate OT systems with existing IT infrastructure for unified operations."
+      description:
+        "Integrate OT systems with existing IT infrastructure for unified operations.",
     },
   ];
 
   const applications = [
     {
       title: "Manufacturing",
-      description: "Smart factory solutions, production line automation, and quality control systems.",
-      features: ["Production Monitoring", "Quality Assurance", "Equipment Optimization", "Supply Chain Integration"]
+      description:
+        "Smart factory solutions, production line automation, and quality control systems.",
+      features: [
+        "Production Monitoring",
+        "Quality Assurance",
+        "Equipment Optimization",
+        "Supply Chain Integration",
+      ],
     },
     {
       title: "Construction",
-      description: "Project management, site coordination, and building information modeling (BIM) systems.",
-      features: ["Project Planning", "Site Monitoring", "Equipment Tracking", "Safety Compliance"]
+      description:
+        "Project management, site coordination, and building information modeling (BIM) systems.",
+      features: [
+        "Project Planning",
+        "Site Monitoring",
+        "Equipment Tracking",
+        "Safety Compliance",
+      ],
     },
     {
       title: "E-Commerce",
-      description: "Inventory management, warehouse automation, and fulfillment optimization systems.",
-      features: ["Inventory Control", "Order Processing", "Logistics Automation", "Customer Analytics"]
+      description:
+        "Inventory management, warehouse automation, and fulfillment optimization systems.",
+      features: [
+        "Inventory Control",
+        "Order Processing",
+        "Logistics Automation",
+        "Customer Analytics",
+      ],
     },
   ];
 
   const process = [
-    { step: "1", title: "Assessment", description: "Evaluate current operational technology infrastructure and identify improvement opportunities." },
-    { step: "2", title: "Design", description: "Create comprehensive OT architecture and integration strategies tailored to your operations." },
-    { step: "3", title: "Implementation", description: "Deploy OT solutions with minimal disruption to ongoing operations." },
-    { step: "4", title: "Optimization", description: "Continuously monitor and optimize systems for peak performance and efficiency." },
+    {
+      step: "1",
+      title: "Assessment",
+      description:
+        "Evaluate current operational technology infrastructure and identify improvement opportunities.",
+    },
+    {
+      step: "2",
+      title: "Design",
+      description:
+        "Create comprehensive OT architecture and integration strategies tailored to your operations.",
+    },
+    {
+      step: "3",
+      title: "Implementation",
+      description:
+        "Deploy OT solutions with minimal disruption to ongoing operations.",
+    },
+    {
+      step: "4",
+      title: "Optimization",
+      description:
+        "Continuously monitor and optimize systems for peak performance and efficiency.",
+    },
   ];
 
   return (
@@ -119,7 +161,8 @@ export default function OperationsTechnology() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Operations <span className="text-onealgo-orange-500">Technology</span>
+                Operations{" "}
+                <span className="text-onealgo-orange-500">Technology</span>
               </h1>
               <ul className="text-xl text-blue-200 mb-8 space-y-3">
                 <li className="flex items-start">
@@ -152,7 +195,9 @@ export default function OperationsTechnology() {
                 <Cpu className="w-24 h-24 text-onealgo-orange-500 mx-auto mb-4" />
                 <div className="text-center text-white">
                   <h3 className="text-2xl font-bold mb-2">Smart Operations</h3>
-                  <p className="text-blue-200">Connecting technology to operational excellence</p>
+                  <p className="text-blue-200">
+                    Connecting technology to operational excellence
+                  </p>
                 </div>
               </div>
             </div>
@@ -168,14 +213,17 @@ export default function OperationsTechnology() {
               Operations Technology Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive OT solutions that bridge the gap between operational processes
-              and modern technology capabilities.
+              Comprehensive OT solutions that bridge the gap between operational
+              processes and modern technology capabilities.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-lg">
+              <Card
+                key={index}
+                className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-lg"
+              >
                 <CardHeader>
                   {service.icon}
                   <CardTitle className="text-xl text-onealgo-blue-950">
@@ -199,13 +247,17 @@ export default function OperationsTechnology() {
               Transform Your Operations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Leverage operations technology to achieve operational excellence and competitive advantage.
+              Leverage operations technology to achieve operational excellence
+              and competitive advantage.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-onealgo-blue-950 transition-colors h-full">
+              <Card
+                key={index}
+                className="border-2 hover:border-onealgo-blue-950 transition-colors h-full"
+              >
                 <CardHeader className="text-center">
                   <benefit.icon className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4" />
                   <CardTitle className="text-xl text-onealgo-blue-950">
@@ -213,7 +265,9 @@ export default function OperationsTechnology() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-center">{benefit.description}</p>
+                  <p className="text-gray-600 text-center">
+                    {benefit.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -229,20 +283,26 @@ export default function OperationsTechnology() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tailored operations technology solutions for diverse industrial sectors.
+              Tailored operations technology solutions for diverse industrial
+              sectors.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {applications.map((app, index) => (
-              <Card key={index} className="border-2 hover:border-onealgo-blue-950 transition-colors h-full">
+              <Card
+                key={index}
+                className="border-2 hover:border-onealgo-blue-950 transition-colors h-full"
+              >
                 <CardHeader>
                   <CardTitle className="text-xl text-onealgo-blue-950 text-center">
                     {app.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 mb-6 text-center">{app.description}</p>
+                  <p className="text-gray-600 mb-6 text-center">
+                    {app.description}
+                  </p>
                   <ul className="space-y-2">
                     {app.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
@@ -266,8 +326,8 @@ export default function OperationsTechnology() {
               Our Implementation Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to implementing operations technology that ensures minimal
-              disruption and maximum value.
+              A systematic approach to implementing operations technology that
+              ensures minimal disruption and maximum value.
             </p>
           </div>
 
@@ -275,9 +335,13 @@ export default function OperationsTechnology() {
             {process.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="bg-onealgo-blue-950 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl font-bold">{step.step}</span>
+                  <span className="text-white text-xl font-bold">
+                    {step.step}
+                  </span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {step.title}
+                </h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
@@ -297,25 +361,29 @@ export default function OperationsTechnology() {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
-                    <strong>Industrial IoT:</strong> Connect equipment, sensors, and systems for comprehensive operational visibility.
+                    <strong>Industrial IoT:</strong> Connect equipment, sensors,
+                    and systems for comprehensive operational visibility.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
-                    <strong>Edge Computing:</strong> Process data at the source for real-time decision making and reduced latency.
+                    <strong>Edge Computing:</strong> Process data at the source
+                    for real-time decision making and reduced latency.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
-                    <strong>Digital Twins:</strong> Create virtual representations of physical assets for predictive analytics.
+                    <strong>Digital Twins:</strong> Create virtual
+                    representations of physical assets for predictive analytics.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
-                    <strong>AI/ML Integration:</strong> Apply machine learning for predictive maintenance and process optimization.
+                    <strong>AI/ML Integration:</strong> Apply machine learning
+                    for predictive maintenance and process optimization.
                   </p>
                 </div>
               </div>
@@ -325,8 +393,8 @@ export default function OperationsTechnology() {
                 Ready to Modernize Your Operations?
               </h3>
               <p className="text-gray-600 mb-6">
-                Let's discuss how operations technology can transform your industrial processes
-                and drive operational excellence.
+                Let's discuss how operations technology can transform your
+                industrial processes and drive operational excellence.
               </p>
               <Button
                 asChild
@@ -346,7 +414,8 @@ export default function OperationsTechnology() {
             Optimize Your Operations Today
           </h2>
           <p className="text-xl text-blue-200 mb-8">
-            Transform your industrial operations with cutting-edge technology solutions and expert guidance.
+            Transform your industrial operations with cutting-edge technology
+            solutions and expert guidance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

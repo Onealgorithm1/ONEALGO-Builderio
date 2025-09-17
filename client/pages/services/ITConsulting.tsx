@@ -65,30 +65,54 @@ export default function ITConsulting() {
     {
       icon: Target,
       title: "Strategic Alignment",
-      description: "Ensure IT investments align with business goals and deliver measurable ROI."
+      description:
+        "Ensure IT investments align with business goals and deliver measurable ROI.",
     },
     {
       icon: TrendingUp,
       title: "Competitive Advantage",
-      description: "Leverage technology to gain a competitive edge in your market."
+      description:
+        "Leverage technology to gain a competitive edge in your market.",
     },
     {
       icon: Shield,
       title: "Risk Mitigation",
-      description: "Identify and mitigate technology risks before they impact your business."
+      description:
+        "Identify and mitigate technology risks before they impact your business.",
     },
     {
       icon: Users,
       title: "Expert Guidance",
-      description: "Access to experienced IT consultants with deep industry knowledge."
+      description:
+        "Access to experienced IT consultants with deep industry knowledge.",
     },
   ];
 
   const process = [
-    { step: "1", title: "Assessment", description: "Comprehensive evaluation of your current IT landscape and business requirements." },
-    { step: "2", title: "Strategy", description: "Development of customized IT strategies and roadmaps aligned with your goals." },
-    { step: "3", title: "Implementation", description: "Guided implementation of recommended solutions with ongoing support." },
-    { step: "4", title: "Optimization", description: "Continuous monitoring and optimization to ensure maximum value and performance." },
+    {
+      step: "1",
+      title: "Assessment",
+      description:
+        "Comprehensive evaluation of your current IT landscape and business requirements.",
+    },
+    {
+      step: "2",
+      title: "Strategy",
+      description:
+        "Development of customized IT strategies and roadmaps aligned with your goals.",
+    },
+    {
+      step: "3",
+      title: "Implementation",
+      description:
+        "Guided implementation of recommended solutions with ongoing support.",
+    },
+    {
+      step: "4",
+      title: "Optimization",
+      description:
+        "Continuous monitoring and optimization to ensure maximum value and performance.",
+    },
   ];
 
   return (
@@ -131,8 +155,12 @@ export default function ITConsulting() {
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
                 <Brain className="w-24 h-24 text-onealgo-orange-500 mx-auto mb-4" />
                 <div className="text-center text-white">
-                  <h3 className="text-2xl font-bold mb-2">Strategic IT Guidance</h3>
-                  <p className="text-blue-200">Transforming technology into business value</p>
+                  <h3 className="text-2xl font-bold mb-2">
+                    Strategic IT Guidance
+                  </h3>
+                  <p className="text-blue-200">
+                    Transforming technology into business value
+                  </p>
                 </div>
               </div>
             </div>
@@ -148,14 +176,17 @@ export default function ITConsulting() {
               Our IT Consulting Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive IT consulting services to help you make informed technology decisions
-              and drive business transformation.
+              Comprehensive IT consulting services to help you make informed
+              technology decisions and drive business transformation.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-lg">
+              <Card
+                key={index}
+                className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-lg"
+              >
                 <CardHeader>
                   {service.icon}
                   <CardTitle className="text-xl text-onealgo-blue-950">
@@ -179,13 +210,17 @@ export default function ITConsulting() {
               Why Choose Our IT Consulting?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Partner with us to unlock the full potential of technology for your business.
+              Partner with us to unlock the full potential of technology for
+              your business.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <Card key={index} className="border-2 hover:border-onealgo-blue-950 transition-colors h-full">
+              <Card
+                key={index}
+                className="border-2 hover:border-onealgo-blue-950 transition-colors h-full"
+              >
                 <CardHeader className="text-center">
                   <benefit.icon className="w-12 h-12 text-onealgo-blue-950 mx-auto mb-4" />
                   <CardTitle className="text-xl text-onealgo-blue-950">
@@ -193,7 +228,9 @@ export default function ITConsulting() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-center">{benefit.description}</p>
+                  <p className="text-gray-600 text-center">
+                    {benefit.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -209,7 +246,8 @@ export default function ITConsulting() {
               Our Consulting Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology that delivers results and drives sustainable technology transformation.
+              A proven methodology that delivers results and drives sustainable
+              technology transformation.
             </p>
           </div>
 
@@ -217,9 +255,13 @@ export default function ITConsulting() {
             {process.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="bg-onealgo-blue-950 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white text-xl font-bold">{step.step}</span>
+                  <span className="text-white text-xl font-bold">
+                    {step.step}
+                  </span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {step.title}
+                </h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
             ))}
@@ -239,25 +281,29 @@ export default function ITConsulting() {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
-                    <strong>Cross-Industry Knowledge:</strong> Experience across healthcare, finance, manufacturing, and technology sectors.
+                    <strong>Cross-Industry Knowledge:</strong> Experience across
+                    healthcare, finance, manufacturing, and technology sectors.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
-                    <strong>Proven Methodologies:</strong> ITIL, COBIT, and agile frameworks for structured consulting approaches.
+                    <strong>Proven Methodologies:</strong> ITIL, COBIT, and
+                    agile frameworks for structured consulting approaches.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
-                    <strong>Technology Partnerships:</strong> Strategic relationships with leading technology vendors and platforms.
+                    <strong>Technology Partnerships:</strong> Strategic
+                    relationships with leading technology vendors and platforms.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
-                    <strong>Measurable Results:</strong> Track record of delivering quantifiable business value and ROI.
+                    <strong>Measurable Results:</strong> Track record of
+                    delivering quantifiable business value and ROI.
                   </p>
                 </div>
               </div>
@@ -267,8 +313,8 @@ export default function ITConsulting() {
                 Ready to Transform Your IT Strategy?
               </h3>
               <p className="text-gray-600 mb-6">
-                Let's discuss how our IT consulting expertise can help you achieve your technology
-                goals and drive business success.
+                Let's discuss how our IT consulting expertise can help you
+                achieve your technology goals and drive business success.
               </p>
               <Button
                 asChild
@@ -288,7 +334,8 @@ export default function ITConsulting() {
             Transform Your Technology Strategy
           </h2>
           <p className="text-xl text-blue-200 mb-8">
-            Partner with our IT consulting experts to unlock technology's full potential for your business.
+            Partner with our IT consulting experts to unlock technology's full
+            potential for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

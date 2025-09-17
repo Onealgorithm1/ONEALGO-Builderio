@@ -417,7 +417,8 @@ Data-driven staffing decisions utilize analytics to optimize team composition, e
     },
     {
       id: 22,
-      title: "IT Consulting Excellence: Digital Transformation Strategies for 2025",
+      title:
+        "IT Consulting Excellence: Digital Transformation Strategies for 2025",
       excerpt:
         "Navigate the complex digital landscape with expert IT consulting strategies that drive innovation, enhance security, and deliver measurable business results.",
       fullContent: `IT consulting in 2025 represents a paradigm shift toward AI-driven solutions, zero trust security models, and sustainable technology practices. Organizations partnering with strategic IT consultants achieve 50% faster digital transformation and 60% improvement in operational efficiency.
@@ -449,7 +450,8 @@ The emphasis on employee experience and digital workplace optimization ensures t
     },
     {
       id: 23,
-      title: "Operations Technology Revolution: Smart Systems for Industrial Excellence",
+      title:
+        "Operations Technology Revolution: Smart Systems for Industrial Excellence",
       excerpt:
         "Explore how Operations Technology (OT) and SCADA systems are transforming industrial operations through AI, IoT, and predictive analytics in 2025.",
       fullContent: `Operations Technology (OT) is experiencing a revolutionary transformation through the integration of artificial intelligence, Industrial Internet of Things (IIoT), and advanced analytics. Organizations implementing comprehensive OT strategies report 35% improvement in operational efficiency and 40% reduction in unplanned downtime.
@@ -483,7 +485,8 @@ The convergence of OT and IT systems creates unified operational environments th
     },
     {
       id: 24,
-      title: "Marketing Automation Mastery: AI-Driven Strategies for Maximum ROI",
+      title:
+        "Marketing Automation Mastery: AI-Driven Strategies for Maximum ROI",
       excerpt:
         "Transform your marketing performance with intelligent automation strategies that deliver personalized experiences and measurable business results in 2025.",
       fullContent: `Marketing automation powered by artificial intelligence is delivering unprecedented returns on investment, with strategic implementations generating average ROI of 451% through intelligent lead nurturing, behavioral targeting, and cross-channel optimization.
@@ -519,7 +522,8 @@ Voice search optimization and conversational marketing strategies prepare busine
     },
     {
       id: 25,
-      title: "Website Development Excellence: Performance, SEO, and User Experience in 2025",
+      title:
+        "Website Development Excellence: Performance, SEO, and User Experience in 2025",
       excerpt:
         "Master modern website development with AI-powered optimization, progressive web apps, and cutting-edge performance strategies that drive results.",
       fullContent: `Website development in 2025 emphasizes AI-powered optimization, progressive web applications, and mobile-first design principles that deliver exceptional user experiences and superior search engine performance. Modern websites implementing these strategies achieve 60% faster loading times and 40% higher conversion rates.
