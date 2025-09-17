@@ -169,16 +169,6 @@ export default function Layout({ children }: LayoutProps) {
                         Manufacturing
                       </Link>
                       <Link
-                        to="/industries/marketing"
-                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
-                        onClick={() => {
-                          setIndustriesDropdownOpen(false);
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        Marketing
-                      </Link>
-                      <Link
                         to="/industries/ecommerce"
                         className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
                         onClick={() => {
@@ -187,16 +177,6 @@ export default function Layout({ children }: LayoutProps) {
                         }}
                       >
                         E-Commerce
-                      </Link>
-                      <Link
-                        to="/industries/website-development"
-                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
-                        onClick={() => {
-                          setIndustriesDropdownOpen(false);
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        Website Development
                       </Link>
                     </div>
                   </div>
