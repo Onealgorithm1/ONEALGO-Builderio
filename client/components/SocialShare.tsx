@@ -37,7 +37,7 @@ export default function SocialShare({
       {/* LinkedIn */}
       <button
         onClick={() => handleShare('linkedin', shareLinks.linkedin)}
-        className="group flex items-center justify-center w-10 h-10 rounded-full bg-[#0077B5] hover:bg-[#0077B5]/90 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+        className="group flex items-center justify-center w-10 h-10 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full bg-[#0077B5] hover:bg-[#0077B5]/90 active:bg-[#0077B5]/80 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg touch-manipulation"
         aria-label="Share on LinkedIn"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
