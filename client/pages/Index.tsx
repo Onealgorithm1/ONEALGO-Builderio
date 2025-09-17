@@ -294,11 +294,16 @@ export default function Index() {
             <div>
               <h3 className="text-2xl font-bold text-onealgo-blue-950 mb-6">Expert IT Consulting Services</h3>
               <p className="text-gray-700 mb-4">
-                Our certified IT consultants provide strategic technology planning, cybersecurity assessments, and digital transformation roadmaps. We analyze your current infrastructure, identify optimization opportunities, and develop comprehensive strategies that align technology investments with business objectives.
+                Our certified IT consultants provide strategic technology planning, cybersecurity assessments, and digital transformation roadmaps.
               </p>
-              <p className="text-gray-700">
-                From cloud migration and system integration to technology audits and performance optimization, our IT consulting services have helped over 200 businesses reduce operational costs while improving efficiency and scalability.
-              </p>
+              <Collapsible trigger="Read More">
+                <p className="text-gray-700 mb-4">
+                  We analyze your current infrastructure, identify optimization opportunities, and develop comprehensive strategies that align technology investments with business objectives. Our expert team brings 15+ years of experience across multiple technology domains.
+                </p>
+                <p className="text-gray-700">
+                  From cloud migration and system integration to technology audits and performance optimization, our IT consulting services have helped over 200 businesses reduce operational costs while improving efficiency and scalability. Our proven methodologies deliver measurable results with an average 40% cost reduction within 6 months.
+                </p>
+              </Collapsible>
             </div>
 
             <div>
