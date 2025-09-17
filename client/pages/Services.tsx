@@ -23,7 +23,7 @@ export default function Services() {
             </h1>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to accelerate your
-              business growth and digital transformation.
+              business growth and digital transformation. Specialized for <Link to="/industries/construction" className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline">construction</Link>, <Link to="/industries/manufacturing" className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline">manufacturing</Link>, and <Link to="/industries/ecommerce" className="text-onealgo-orange-500 hover:text-onealgo-orange-400 underline">e-commerce</Link> industries.
             </p>
           </div>
         </div>
