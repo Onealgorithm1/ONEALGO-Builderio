@@ -79,6 +79,58 @@ export default function Layout({ children }: LayoutProps) {
                 About
               </Link>
 
+              {/* Services Dropdown */}
+              <div className="relative" ref={servicesDropdownRef}>
+                <button
+                  onClick={() =>
+                    setServicesDropdownOpen(!servicesDropdownOpen)
+                  }
+                  className="flex items-center gap-1 text-gray-900 hover:text-onealgo-blue-950 transition-colors"
+                >
+                  Services
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+
+                {servicesDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                    <div className="py-2">
+                      <Link
+                        to="/services/website-development"
+                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
+                        onClick={() => {
+                          setServicesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Website Development
+                      </Link>
+                      <Link
+                        to="/services/marketing"
+                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
+                        onClick={() => {
+                          setServicesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Marketing
+                      </Link>
+                      <Link
+                        to="/services/staff-augmentation"
+                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
+                        onClick={() => {
+                          setServicesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Staff Augmentation
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {/* Industries Dropdown */}
               <div className="relative" ref={dropdownRef}>
                 <button
