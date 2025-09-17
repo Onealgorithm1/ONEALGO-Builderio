@@ -123,7 +123,7 @@ export default function ITConsulting() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT <span className="text-onealgo-orange-500">Consulting</span>
+                IT <span className="text-onealgo-orange-500">Consulting</span> & Digital Transformation
               </h1>
               <ul className="text-xl text-blue-200 mb-8 space-y-3">
                 <li className="flex items-start">
