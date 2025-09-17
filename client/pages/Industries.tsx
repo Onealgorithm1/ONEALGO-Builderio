@@ -17,10 +17,9 @@ import {
 
 export default function Industries() {
   useSEO({
-    title:
-      "Industry-Focused Technology Solutions - OneAlgorithm | Construction, Manufacturing & E-Commerce",
+    title: "Industry Technology Solutions - Construction & Manufacturing",
     description:
-      "Specialized technology solutions for Construction, Manufacturing, and E-Commerce industries. Tailored IT consulting, automation, and digital transformation services by OneAlgorithm.",
+      "Specialized technology solutions for Construction, Manufacturing, and E-Commerce. Tailored IT consulting, automation, and digital transformation services.",
     canonical: getCanonicalUrl("/industries"),
     keywords:
       "industry technology solutions, construction technology, manufacturing technology, e-commerce technology, industry-specific IT consulting, digital transformation by industry",
