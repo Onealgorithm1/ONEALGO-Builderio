@@ -10,8 +10,23 @@ import {
 import { Button } from "../../components/ui/button";
 import SocialShare from "../../components/SocialShare";
 import { Target, TrendingUp, Users, Zap, BarChart3, Mail } from "lucide-react";
+import { useSEO, getCanonicalUrl } from "../../hooks/use-seo";
+import { StructuredData, createServiceSchema } from "../../components/StructuredData";
 
 export default function Marketing() {
+  useSEO({
+    title: "Marketing Services - OneAlgorithm",
+    description: "Comprehensive marketing services including campaign management, AI-driven insights, customer journey optimization, and data analytics. Boost your marketing ROI with OneAlgorithm.",
+    canonical: getCanonicalUrl("/services/marketing"),
+    keywords: "marketing services, campaign management, AI marketing, customer journey optimization, marketing analytics, digital marketing automation",
+    ogTitle: "Marketing Services - OneAlgorithm",
+    ogDescription: "Comprehensive marketing services including campaign management, AI-driven insights, customer journey optimization, and data analytics. Boost your marketing ROI with OneAlgorithm.",
+    ogUrl: getCanonicalUrl("/services/marketing"),
+    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    twitterTitle: "Marketing Services - OneAlgorithm",
+    twitterDescription: "Comprehensive marketing services including campaign management, AI-driven insights, customer journey optimization, and data analytics. Boost your marketing ROI with OneAlgorithm.",
+    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+  });
   const features = [
     {
       icon: <Target className="w-8 h-8 text-onealgo-orange-500" />,
