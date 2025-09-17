@@ -45,9 +45,9 @@ export default defineConfig(({ mode }) => ({
           animation: ["framer-motion"],
         },
         // Optimize file names for better caching
-        entryFileNames: 'assets/[name].[hash].js',
-        chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name].[hash].[ext]'
+        entryFileNames: "assets/[name].[hash].js",
+        chunkFileNames: "assets/[name].[hash].js",
+        assetFileNames: "assets/[name].[hash].[ext]",
       },
     },
     // Increase chunk size warning limit after optimization
