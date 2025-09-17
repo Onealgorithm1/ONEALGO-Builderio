@@ -31,8 +31,8 @@ export default function SocialShare({
   };
 
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
-      <span className="text-sm font-medium text-gray-600">Share:</span>
+    <div className={`flex flex-wrap items-center gap-3 sm:gap-4 ${className}`}>
+      <span className="text-sm font-medium text-gray-600 mb-1 sm:mb-0">Share:</span>
       
       {/* LinkedIn */}
       <button
