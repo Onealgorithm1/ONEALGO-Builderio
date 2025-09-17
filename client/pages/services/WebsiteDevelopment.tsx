@@ -25,9 +25,9 @@ import {
 
 export default function WebsiteDevelopment() {
   useSEO({
-    title: "Website Development Services - OneAlgorithm",
+    title: "Website Development & Design Services - OneAlgorithm",
     description:
-      "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
+      "Professional website development with responsive design, SEO optimization, and e-commerce solutions. Transform your online presence with modern web apps.",
     canonical: getCanonicalUrl("/services/website-development"),
     keywords:
       "website development, web design, responsive websites, e-commerce development, SEO optimization, professional web development, custom websites",
