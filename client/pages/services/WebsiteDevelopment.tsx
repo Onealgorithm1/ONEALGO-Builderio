@@ -17,8 +17,22 @@ import {
   Shield,
   Palette,
 } from "lucide-react";
+import { useSEO, getCanonicalUrl } from "../../hooks/use-seo";
 
 export default function WebsiteDevelopment() {
+  useSEO({
+    title: "Website Development Services - OneAlgorithm",
+    description: "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
+    canonical: getCanonicalUrl("/services/website-development"),
+    keywords: "website development, web design, responsive websites, e-commerce development, SEO optimization, professional web development, custom websites",
+    ogTitle: "Website Development Services - OneAlgorithm",
+    ogDescription: "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
+    ogUrl: getCanonicalUrl("/services/website-development"),
+    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    twitterTitle: "Website Development Services - OneAlgorithm",
+    twitterDescription: "Professional website development services including responsive design, SEO optimization, e-commerce solutions, and modern web applications. Transform your online presence with OneAlgorithm.",
+    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+  });
   const features = [
     {
       icon: <Monitor className="w-8 h-8 text-onealgo-orange-500" />,
