@@ -26,21 +26,33 @@ import {
   Zap,
 } from "lucide-react";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
-import { StructuredData, createOrganizationSchema } from "../components/StructuredData";
+import {
+  StructuredData,
+  createOrganizationSchema,
+} from "../components/StructuredData";
 
 export default function Index() {
   useSEO({
-    title: "OneAlgorithm - IT Consulting, Website Development & Operations Technology Solutions",
-    description: "Transform your business with OneAlgorithm's expert IT consulting, website development, operations technology, and staff augmentation services. Specialized solutions for Construction, Manufacturing, and E-Commerce industries.",
+    title:
+      "OneAlgorithm - IT Consulting, Website Development & Operations Technology Solutions",
+    description:
+      "Transform your business with OneAlgorithm's expert IT consulting, website development, operations technology, and staff augmentation services. Specialized solutions for Construction, Manufacturing, and E-Commerce industries.",
     canonical: getCanonicalUrl("/"),
-    keywords: "IT consulting, website development, operations technology, staff augmentation, business automation, construction technology, manufacturing systems, e-commerce solutions, digital transformation, OneAlgorithm",
-    ogTitle: "OneAlgorithm - IT Consulting, Website Development & Operations Technology Solutions",
-    ogDescription: "Transform your business with expert IT consulting, website development, operations technology, and staff augmentation services for Construction, Manufacturing, and E-Commerce.",
+    keywords:
+      "IT consulting, website development, operations technology, staff augmentation, business automation, construction technology, manufacturing systems, e-commerce solutions, digital transformation, OneAlgorithm",
+    ogTitle:
+      "OneAlgorithm - IT Consulting, Website Development & Operations Technology Solutions",
+    ogDescription:
+      "Transform your business with expert IT consulting, website development, operations technology, and staff augmentation services for Construction, Manufacturing, and E-Commerce.",
     ogUrl: getCanonicalUrl("/"),
-    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
-    twitterTitle: "OneAlgorithm - IT Consulting, Website Development & Operations Technology Solutions",
-    twitterDescription: "Transform your business with expert IT consulting, website development, operations technology, and staff augmentation services for Construction, Manufacturing, and E-Commerce.",
-    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+    ogImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    twitterTitle:
+      "OneAlgorithm - IT Consulting, Website Development & Operations Technology Solutions",
+    twitterDescription:
+      "Transform your business with expert IT consulting, website development, operations technology, and staff augmentation services for Construction, Manufacturing, and E-Commerce.",
+    twitterImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
   });
   return (
     <Layout>
