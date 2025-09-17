@@ -48,7 +48,7 @@ export default function SocialShare({
       {/* Facebook */}
       <button
         onClick={() => handleShare('facebook', shareLinks.facebook)}
-        className="group flex items-center justify-center w-10 h-10 rounded-full bg-[#1877F2] hover:bg-[#1877F2]/90 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+        className="group flex items-center justify-center w-10 h-10 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full bg-[#1877F2] hover:bg-[#1877F2]/90 active:bg-[#1877F2]/80 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg touch-manipulation"
         aria-label="Share on Facebook"
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ export default function SocialShare({
       {/* X (Twitter) */}
       <button
         onClick={() => handleShare('twitter', shareLinks.twitter)}
-        className="group flex items-center justify-center w-10 h-10 rounded-full bg-black hover:bg-gray-800 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+        className="group flex items-center justify-center w-10 h-10 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full bg-black hover:bg-gray-800 active:bg-gray-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg touch-manipulation"
         aria-label="Share on X (Twitter)"
       >
         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ export default function SocialShare({
       {/* Email */}
       <button
         onClick={() => handleShare('email', shareLinks.email)}
-        className="group flex items-center justify-center w-10 h-10 rounded-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg"
+        className="group flex items-center justify-center w-10 h-10 sm:w-10 sm:h-10 min-w-[44px] min-h-[44px] rounded-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 active:bg-onealgo-orange-700 text-white transition-all duration-300 hover:scale-110 hover:shadow-lg touch-manipulation"
         aria-label="Share via Email"
       >
         <Mail className="w-5 h-5" />
