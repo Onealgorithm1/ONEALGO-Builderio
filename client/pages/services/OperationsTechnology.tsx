@@ -23,8 +23,23 @@ import {
   Factory,
   Settings,
 } from "lucide-react";
+import { useSEO, getCanonicalUrl } from "../../hooks/use-seo";
+import { StructuredData, createServiceSchema } from "../../components/StructuredData";
 
 export default function OperationsTechnology() {
+  useSEO({
+    title: "Operations Technology Services - OneAlgorithm",
+    description: "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
+    canonical: getCanonicalUrl("/services/operations-technology"),
+    keywords: "operations technology, industrial automation, process optimization, monitoring systems, equipment integration, OT services, manufacturing technology",
+    ogTitle: "Operations Technology Services - OneAlgorithm",
+    ogDescription: "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
+    ogUrl: getCanonicalUrl("/services/operations-technology"),
+    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    twitterTitle: "Operations Technology Services - OneAlgorithm",
+    twitterDescription: "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
+    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+  });
   const services = [
     {
       icon: <Factory className="w-8 h-8 text-onealgo-orange-500" />,
