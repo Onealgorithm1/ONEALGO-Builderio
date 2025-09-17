@@ -18,7 +18,8 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our <span className="text-onealgo-orange-500">Services</span>
+              Technology <span className="text-onealgo-orange-500">Services</span> —{" "}
+              <span className="text-white">Website Development, IT Consulting & Staff Augmentation</span>
             </h1>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to accelerate your
