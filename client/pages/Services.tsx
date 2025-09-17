@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import { Code, Users, Megaphone } from "lucide-react";
+import { Code, Users, Megaphone, Brain, Cpu } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Services() {
@@ -106,6 +106,50 @@ export default function Services() {
                   className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
                 >
                   <Link to="/services/staff-augmentation">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* IT Consulting */}
+            <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+              <CardHeader>
+                <Brain className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-indigo-500 transition-colors duration-300" />
+                <CardTitle className="text-2xl text-onealgo-blue-950">
+                  IT Consulting
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Strategic technology planning and expert guidance for digital
+                  transformation. Optimize your IT infrastructure and processes.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                >
+                  <Link to="/services/it-consulting">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Operations Technology */}
+            <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+              <CardHeader>
+                <Cpu className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-orange-500 transition-colors duration-300" />
+                <CardTitle className="text-2xl text-onealgo-blue-950">
+                  Operations Technology
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Industrial automation, SCADA systems, and IoT integration.
+                  Optimize operations with smart technology solutions.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                >
+                  <Link to="/services/operations-technology">Learn More</Link>
                 </Button>
               </CardContent>
             </Card>
