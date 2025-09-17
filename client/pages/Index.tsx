@@ -186,7 +186,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Construction */}
             <Link to="/industries/construction" className="group">
               <div className="text-center p-6 rounded-lg border-2 border-transparent hover:border-onealgo-orange-500 transition-colors cursor-pointer">
@@ -207,44 +207,12 @@ export default function Index() {
               </div>
             </Link>
 
-            {/* Marketing */}
-            <Link to="/industries/marketing" className="group">
-              <div className="text-center p-6 rounded-lg border-2 border-transparent hover:border-onealgo-orange-500 transition-colors cursor-pointer">
-                <svg
-                  className="w-16 h-16 text-onealgo-blue-950 mx-auto mb-4 group-hover:text-purple-500 transition-colors duration-300"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-                <h3 className="text-lg font-semibold text-onealgo-blue-950 group-hover:text-purple-500 transition-colors">
-                  Marketing
-                </h3>
-              </div>
-            </Link>
-
             {/* E-Commerce */}
             <Link to="/industries/ecommerce" className="group">
               <div className="text-center p-6 rounded-lg border-2 border-transparent hover:border-onealgo-orange-500 transition-colors cursor-pointer">
                 <ShoppingCart className="w-16 h-16 text-onealgo-blue-950 mx-auto mb-4 group-hover:text-green-500 transition-colors duration-300" />
                 <h3 className="text-lg font-semibold text-onealgo-blue-950 group-hover:text-green-500 transition-colors">
                   E-Commerce
-                </h3>
-              </div>
-            </Link>
-
-            {/* Website Development */}
-            <Link to="/industries/website-development" className="group">
-              <div className="text-center p-6 rounded-lg border-2 border-transparent hover:border-onealgo-orange-500 transition-colors cursor-pointer">
-                <svg
-                  className="w-16 h-16 text-onealgo-blue-950 mx-auto mb-4 group-hover:text-blue-500 transition-colors duration-300"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm2 4v-2H3a2 2 0 002 2zM3 9h2V7H3v2zm12 12h2v-2h-2v2zm4-18H9a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2zm0 12H9V5h10v10z" />
-                </svg>
-                <h3 className="text-lg font-semibold text-onealgo-blue-950 group-hover:text-blue-500 transition-colors">
-                  Website Development
                 </h3>
               </div>
             </Link>
