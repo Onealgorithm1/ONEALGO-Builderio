@@ -123,7 +123,8 @@ export default function ITConsulting() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT <span className="text-onealgo-orange-500">Consulting</span> & Digital Transformation
+                IT <span className="text-onealgo-orange-500">Consulting</span> &
+                Digital Transformation
               </h1>
               <ul className="text-xl text-blue-200 mb-8 space-y-3">
                 <li className="flex items-start">
@@ -282,7 +283,28 @@ export default function ITConsulting() {
                   <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                   <p className="text-gray-600">
                     <strong>Cross-Industry Knowledge:</strong> Experience across
-                    healthcare, finance, <Link to="/industries/manufacturing" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">manufacturing</Link>, and technology sectors including <Link to="/industries/construction" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">construction</Link> and <Link to="/industries/ecommerce" className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline">e-commerce</Link>.
+                    healthcare, finance,{" "}
+                    <Link
+                      to="/industries/manufacturing"
+                      className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+                    >
+                      manufacturing
+                    </Link>
+                    , and technology sectors including{" "}
+                    <Link
+                      to="/industries/construction"
+                      className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+                    >
+                      construction
+                    </Link>{" "}
+                    and{" "}
+                    <Link
+                      to="/industries/ecommerce"
+                      className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
+                    >
+                      e-commerce
+                    </Link>
+                    .
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
