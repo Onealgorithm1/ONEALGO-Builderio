@@ -82,9 +82,7 @@ export default function Layout({ children }: LayoutProps) {
               {/* Services Dropdown */}
               <div className="relative" ref={servicesDropdownRef}>
                 <button
-                  onClick={() =>
-                    setServicesDropdownOpen(!servicesDropdownOpen)
-                  }
+                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                   className="flex items-center gap-1 text-gray-900 hover:text-onealgo-blue-950 transition-colors"
                 >
                   Services
