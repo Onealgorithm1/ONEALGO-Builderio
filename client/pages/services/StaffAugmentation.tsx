@@ -29,9 +29,9 @@ import {
 
 export default function StaffAugmentation() {
   useSEO({
-    title: "Staff Augmentation Services - OneAlgorithm",
+    title: "Staff Augmentation & IT Talent Solutions - OneAlgorithm",
     description:
-      "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
+      "Professional staff augmentation with skilled developers, IT specialists, and technical experts. Scale your team efficiently with proven talent solutions.",
     canonical: getCanonicalUrl("/services/staff-augmentation"),
     keywords:
       "staff augmentation, IT staffing, software developers, technical talent, team scaling, remote developers, IT specialists, talent solutions",
