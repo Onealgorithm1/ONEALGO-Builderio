@@ -186,6 +186,16 @@ export default function WebsiteDevelopment() {
           </div>
         </div>
       </section>
+
+      {/* Social Sharing */}
+      <section className="py-8 bg-gray-50 border-t">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SocialShare
+            title="Website Development & Performance Optimization - OneAlgorithm"
+            className="justify-center"
+          />
+        </div>
+      </section>
     </Layout>
   );
 }
