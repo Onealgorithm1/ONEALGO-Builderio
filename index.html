@@ -19,21 +19,23 @@
     <!-- Google tag (gtag.js) - Deferred loading for performance -->
     <script>
       // Defer Google Analytics loading until after page load
-      window.addEventListener('load', function() {
+      window.addEventListener("load", function () {
         // Google tag (gtag.js) - AW
-        const script1 = document.createElement('script');
+        const script1 = document.createElement("script");
         script1.async = true;
-        script1.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17336277732';
+        script1.src =
+          "https://www.googletagmanager.com/gtag/js?id=AW-17336277732";
         document.head.appendChild(script1);
 
         // Google tag (gtag.js) - GA
-        const script2 = document.createElement('script');
+        const script2 = document.createElement("script");
         script2.async = true;
-        script2.src = 'https://www.googletagmanager.com/gtag/js?id=G-RC48CMQ05T';
+        script2.src =
+          "https://www.googletagmanager.com/gtag/js?id=G-RC48CMQ05T";
         document.head.appendChild(script2);
 
         // Initialize after scripts load
-        script2.onload = function() {
+        script2.onload = function () {
           window.dataLayer = window.dataLayer || [];
           function gtag() {
             dataLayer.push(arguments);

@@ -24,21 +24,30 @@ import {
   Settings,
 } from "lucide-react";
 import { useSEO, getCanonicalUrl } from "../../hooks/use-seo";
-import { StructuredData, createServiceSchema } from "../../components/StructuredData";
+import {
+  StructuredData,
+  createServiceSchema,
+} from "../../components/StructuredData";
 
 export default function OperationsTechnology() {
   useSEO({
     title: "Operations Technology Services - OneAlgorithm",
-    description: "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
+    description:
+      "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
     canonical: getCanonicalUrl("/services/operations-technology"),
-    keywords: "operations technology, industrial automation, process optimization, monitoring systems, equipment integration, OT services, manufacturing technology",
+    keywords:
+      "operations technology, industrial automation, process optimization, monitoring systems, equipment integration, OT services, manufacturing technology",
     ogTitle: "Operations Technology Services - OneAlgorithm",
-    ogDescription: "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
+    ogDescription:
+      "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
     ogUrl: getCanonicalUrl("/services/operations-technology"),
-    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    ogImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
     twitterTitle: "Operations Technology Services - OneAlgorithm",
-    twitterDescription: "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
-    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+    twitterDescription:
+      "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
+    twitterImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
   });
   const services = [
     {
@@ -171,12 +180,14 @@ export default function OperationsTechnology() {
 
   return (
     <Layout>
-      <StructuredData data={createServiceSchema(
-        "Operations Technology Services",
-        "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration.",
-        "Operations Technology",
-        "https://onealgorithm.com/services/operations-technology"
-      )} />
+      <StructuredData
+        data={createServiceSchema(
+          "Operations Technology Services",
+          "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration.",
+          "Operations Technology",
+          "https://onealgorithm.com/services/operations-technology",
+        )}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

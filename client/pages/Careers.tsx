@@ -1,7 +1,10 @@
 import React, { useState, useMemo } from "react";
 import Layout from "../components/Layout";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
-import { StructuredData, createWebPageSchema } from "../components/StructuredData";
+import {
+  StructuredData,
+  createWebPageSchema,
+} from "../components/StructuredData";
 
 interface Job {
   id: string;
@@ -53,16 +56,22 @@ import {
 export default function Careers() {
   useSEO({
     title: "Careers at OneAlgorithm - Join Our Technology Team",
-    description: "Join OneAlgorithm's innovative team of technology experts. Explore career opportunities in software development, IT consulting, operations technology, and more. Build your career with us.",
+    description:
+      "Join OneAlgorithm's innovative team of technology experts. Explore career opportunities in software development, IT consulting, operations technology, and more. Build your career with us.",
     canonical: getCanonicalUrl("/careers"),
-    keywords: "OneAlgorithm careers, technology jobs, software developer jobs, IT consulting careers, operations technology jobs, remote work opportunities",
+    keywords:
+      "OneAlgorithm careers, technology jobs, software developer jobs, IT consulting careers, operations technology jobs, remote work opportunities",
     ogTitle: "Careers at OneAlgorithm - Join Our Technology Team",
-    ogDescription: "Join OneAlgorithm's innovative team of technology experts. Explore career opportunities in software development, IT consulting, operations technology, and more. Build your career with us.",
+    ogDescription:
+      "Join OneAlgorithm's innovative team of technology experts. Explore career opportunities in software development, IT consulting, operations technology, and more. Build your career with us.",
     ogUrl: getCanonicalUrl("/careers"),
-    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    ogImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
     twitterTitle: "Careers at OneAlgorithm - Join Our Technology Team",
-    twitterDescription: "Join OneAlgorithm's innovative team of technology experts. Explore career opportunities in software development, IT consulting, operations technology, and more. Build your career with us.",
-    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+    twitterDescription:
+      "Join OneAlgorithm's innovative team of technology experts. Explore career opportunities in software development, IT consulting, operations technology, and more. Build your career with us.",
+    twitterImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
   });
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -361,11 +370,13 @@ export default function Careers() {
 
   return (
     <Layout>
-      <StructuredData data={createWebPageSchema(
-        "Careers at OneAlgorithm - Join Our Technology Team",
-        "Join OneAlgorithm's innovative team of technology experts. Explore career opportunities in software development, IT consulting, operations technology, and more.",
-        "https://onealgorithm.com/careers"
-      )} />
+      <StructuredData
+        data={createWebPageSchema(
+          "Careers at OneAlgorithm - Join Our Technology Team",
+          "Join OneAlgorithm's innovative team of technology experts. Explore career opportunities in software development, IT consulting, operations technology, and more.",
+          "https://onealgorithm.com/careers",
+        )}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
