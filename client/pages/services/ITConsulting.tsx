@@ -29,9 +29,9 @@ import {
 
 export default function ITConsulting() {
   useSEO({
-    title: "IT Consulting Services - OneAlgorithm",
+    title: "IT Consulting Services & Strategic Planning - OneAlgorithm",
     description:
-      "Expert IT consulting services including strategic IT planning, technology audits, digital transformation, cybersecurity, and business process optimization. Drive growth with OneAlgorithm's IT expertise.",
+      "Expert IT consulting for strategic planning, technology audits, digital transformation, and cybersecurity. Drive business growth with proven IT expertise.",
     canonical: getCanonicalUrl("/services/it-consulting"),
     keywords:
       "IT consulting, strategic IT planning, technology audit, digital transformation, cybersecurity consulting, business process optimization, IT strategy",
