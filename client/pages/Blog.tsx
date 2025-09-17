@@ -11,6 +11,7 @@ import SocialShare from "../components/SocialShare";
 import { Calendar, User, Clock, Building2 } from "lucide-react";
 import { Collapsible } from "../components/ui/collapsible";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
+import { StructuredData, createWebPageSchema } from "../components/StructuredData";
 
 export default function Blog() {
   useSEO({
