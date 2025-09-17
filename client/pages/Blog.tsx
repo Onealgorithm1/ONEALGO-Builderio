@@ -7,6 +7,7 @@ import {
   CardTitle,
 } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
+import SocialShare from "../components/SocialShare";
 import { Calendar, User, Clock, Building2 } from "lucide-react";
 import { Collapsible } from "../components/ui/collapsible";
 
