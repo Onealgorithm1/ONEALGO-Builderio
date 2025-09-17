@@ -15,6 +15,7 @@ import {
   StructuredData,
   createWebPageSchema,
 } from "../components/StructuredData";
+import { LazyImage } from "../components/LazyImage";
 
 export default function Blog() {
   useSEO({
