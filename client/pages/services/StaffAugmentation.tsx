@@ -22,21 +22,30 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO, getCanonicalUrl } from "../../hooks/use-seo";
-import { StructuredData, createServiceSchema } from "../../components/StructuredData";
+import {
+  StructuredData,
+  createServiceSchema,
+} from "../../components/StructuredData";
 
 export default function StaffAugmentation() {
   useSEO({
     title: "Staff Augmentation Services - OneAlgorithm",
-    description: "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
+    description:
+      "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
     canonical: getCanonicalUrl("/services/staff-augmentation"),
-    keywords: "staff augmentation, IT staffing, software developers, technical talent, team scaling, remote developers, IT specialists, talent solutions",
+    keywords:
+      "staff augmentation, IT staffing, software developers, technical talent, team scaling, remote developers, IT specialists, talent solutions",
     ogTitle: "Staff Augmentation Services - OneAlgorithm",
-    ogDescription: "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
+    ogDescription:
+      "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
     ogUrl: getCanonicalUrl("/services/staff-augmentation"),
-    ogImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+    ogImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
     twitterTitle: "Staff Augmentation Services - OneAlgorithm",
-    twitterDescription: "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
-    twitterImage: "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200"
+    twitterDescription:
+      "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
+    twitterImage:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
   });
   const skills = [
     {
@@ -136,12 +145,14 @@ export default function StaffAugmentation() {
 
   return (
     <Layout>
-      <StructuredData data={createServiceSchema(
-        "Staff Augmentation Services",
-        "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
-        "Staff Augmentation",
-        "https://onealgorithm.com/services/staff-augmentation"
-      )} />
+      <StructuredData
+        data={createServiceSchema(
+          "Staff Augmentation Services",
+          "Professional staff augmentation services providing skilled developers, IT specialists, and technical experts. Scale your team efficiently with OneAlgorithm's talent solutions.",
+          "Staff Augmentation",
+          "https://onealgorithm.com/services/staff-augmentation",
+        )}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

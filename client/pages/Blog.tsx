@@ -11,7 +11,10 @@ import SocialShare from "../components/SocialShare";
 import { Calendar, User, Clock, Building2 } from "lucide-react";
 import { Collapsible } from "../components/ui/collapsible";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
-import { StructuredData, createWebPageSchema } from "../components/StructuredData";
+import {
+  StructuredData,
+  createWebPageSchema,
+} from "../components/StructuredData";
 
 export default function Blog() {
   useSEO({
@@ -653,11 +656,13 @@ Accessibility compliance ensures websites work effectively for users with disabi
 
   return (
     <Layout>
-      <StructuredData data={createWebPageSchema(
-        "OneAlgorithm Blog - Business Technology Insights & Trends",
-        "Stay updated with the latest insights on business automation, technology trends, IT consulting tips, and industry best practices from OneAlgorithm experts.",
-        "https://onealgorithm.com/blog"
-      )} />
+      <StructuredData
+        data={createWebPageSchema(
+          "OneAlgorithm Blog - Business Technology Insights & Trends",
+          "Stay updated with the latest insights on business automation, technology trends, IT consulting tips, and industry best practices from OneAlgorithm experts.",
+          "https://onealgorithm.com/blog",
+        )}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
