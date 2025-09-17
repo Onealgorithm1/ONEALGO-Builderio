@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
+import { StructuredData, createOrganizationSchema, createWebPageSchema } from "../components/StructuredData";
 
 export default function About() {
   useSEO({
