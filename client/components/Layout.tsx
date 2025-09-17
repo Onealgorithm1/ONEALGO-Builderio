@@ -277,6 +277,39 @@ export default function Layout({ children }: LayoutProps) {
                   About
                 </Link>
                 <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100">
+                  Services
+                </div>
+                <Link
+                  to="/services/website-development"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  → Website Development
+                </Link>
+                <Link
+                  to="/services/marketing"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  → Marketing
+                </Link>
+                <Link
+                  to="/services/staff-augmentation"
+                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  → Staff Augmentation
+                </Link>
+                <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100">
                   Industries We Serve
                 </div>
                 <Link
@@ -300,16 +333,6 @@ export default function Layout({ children }: LayoutProps) {
                   → Manufacturing
                 </Link>
                 <Link
-                  to="/industries/marketing"
-                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → Marketing
-                </Link>
-                <Link
                   to="/industries/ecommerce"
                   className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
                   onClick={() => {
@@ -318,16 +341,6 @@ export default function Layout({ children }: LayoutProps) {
                   }}
                 >
                   → E-Commerce
-                </Link>
-                <Link
-                  to="/industries/website-development"
-                  className="block px-6 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → Website Development
                 </Link>
                 <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100">
                   Careers & Insights
