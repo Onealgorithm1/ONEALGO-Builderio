@@ -28,6 +28,11 @@ export default function Services() {
   });
   return (
     <Layout>
+      <StructuredData data={createWebPageSchema(
+        "Technology Services - OneAlgorithm | IT Consulting, Website Development & More",
+        "Comprehensive technology services including website development, IT consulting, operations technology, staff augmentation, and marketing solutions.",
+        "https://onealgorithm.com/services"
+      )} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
