@@ -19,6 +19,28 @@ export default function Layout({ children }: LayoutProps) {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const careersDropdownRef = useRef<HTMLDivElement>(null);
 
+  // Close all dropdowns when mobile menu closes
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      setServicesDropdownOpen(false);
+      setIndustriesDropdownOpen(false);
+      setCareersDropdownOpen(false);
+    }
+  }, [mobileMenuOpen]);
+
+  // Handle window resize to close dropdowns when switching between mobile/desktop
+  useEffect(() => {
+    const handleResize = () => {
+      // Close all dropdowns on resize to prevent state sync issues
+      setServicesDropdownOpen(false);
+      setIndustriesDropdownOpen(false);
+      setCareersDropdownOpen(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
