@@ -305,125 +305,160 @@ export default function Layout({ children }: LayoutProps) {
                 >
                   Contact
                 </Link>
-                <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm">
-                  Services
-                </div>
-                <Link
-                  to="/services/website-development"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
+                <button
+                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                  className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm"
                 >
-                  → Website Development
-                </Link>
-                <Link
-                  to="/services/marketing"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
+                  <span>Services</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                {servicesDropdownOpen && (
+                  <div className="pl-4">
+                    <Link
+                      to="/services/website-development"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setServicesDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Website Development
+                    </Link>
+                    <Link
+                      to="/services/marketing"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setServicesDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Marketing
+                    </Link>
+                    <Link
+                      to="/services/staff-augmentation"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setServicesDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Staff Augmentation
+                    </Link>
+                    <Link
+                      to="/services/it-consulting"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setServicesDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      IT Consulting
+                    </Link>
+                    <Link
+                      to="/services/operations-technology"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setServicesDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Operations Technology
+                    </Link>
+                  </div>
+                )}
+                <button
+                  onClick={() => setIndustriesDropdownOpen(!industriesDropdownOpen)}
+                  className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm"
                 >
-                  → Marketing
-                </Link>
-                <Link
-                  to="/services/staff-augmentation"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
+                  <span>Industries We Serve</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 h-4 transition-transform ${industriesDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                {industriesDropdownOpen && (
+                  <div className="pl-4">
+                    <Link
+                      to="/industries/construction"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setIndustriesDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Construction
+                    </Link>
+                    <Link
+                      to="/industries/manufacturing"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setIndustriesDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Manufacturing
+                    </Link>
+                    <Link
+                      to="/industries/ecommerce"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setIndustriesDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      E-Commerce
+                    </Link>
+                  </div>
+                )}
+                <button
+                  onClick={() => setCareersDropdownOpen(!careersDropdownOpen)}
+                  className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm"
                 >
-                  → Staff Augmentation
-                </Link>
-                <Link
-                  to="/services/it-consulting"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → IT Consulting
-                </Link>
-                <Link
-                  to="/services/operations-technology"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → Operations Technology
-                </Link>
-                <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm">
-                  Industries We Serve
-                </div>
-                <Link
-                  to="/industries/construction"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → Construction
-                </Link>
-                <Link
-                  to="/industries/manufacturing"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → Manufacturing
-                </Link>
-                <Link
-                  to="/industries/ecommerce"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → E-Commerce
-                </Link>
-                <div className="px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm">
-                  Careers & Insights
-                </div>
-                <Link
-                  to="/careers"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → Careers
-                </Link>
-                <Link
-                  to="/blog"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → Blog
-                </Link>
-                <Link
-                  to="/events"
-                  className="block px-4 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  → Events
-                </Link>
+                  <span>Careers & Insights</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 h-4 transition-transform ${careersDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                {careersDropdownOpen && (
+                  <div className="pl-4">
+                    <Link
+                      to="/careers"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setCareersDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Careers
+                    </Link>
+                    <Link
+                      to="/blog"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setCareersDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Blog
+                    </Link>
+                    <Link
+                      to="/events"
+                      className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setCareersDropdownOpen(false);
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      Events
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           )}
