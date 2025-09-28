@@ -321,7 +321,7 @@ export default function Layout({ children }: LayoutProps) {
                 </Link>
                 <Link
                   to="/contact"
-                  className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950 font-medium text-sm"
+                  className="block px-3 py-2 text-onealgo-blue-950 hover:text-onealgo-orange-500 font-medium text-sm"
                   onClick={() => {
                     setMobileMenuOpen(false);
                     window.scrollTo({ top: 0, behavior: "smooth" });
