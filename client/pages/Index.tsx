@@ -112,6 +112,11 @@ export default function Index() {
               We streamline operations, automate the busywork, and build tools
               that let you focus on what matters: growing your business.
             </p>
+
+            {/* Mobile-only heading so key SEO text is visible on small screens */}
+            <h2 className="text-2xl md:hidden font-bold text-gray-900 mb-6 mt-8 text-center">
+              Leading Technology Solutions for Business Transformation
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
