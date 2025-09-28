@@ -423,16 +423,6 @@ export default function Layout({ children }: LayoutProps) {
                 >
                   → Events
                 </Link>
-                <Link
-                  to="/contact"
-                  className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950"
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  Contact
-                </Link>
               </div>
             </div>
           )}
