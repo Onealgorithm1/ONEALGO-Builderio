@@ -295,8 +295,10 @@ export default function Layout({ children }: LayoutProps) {
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
             <div className="md:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t"
-                   style={{ maxHeight: 'calc(100vh - 64px)', overflow: 'auto' }}>
+              <div
+                className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t"
+                style={{ maxHeight: "calc(100vh - 64px)", overflow: "auto" }}
+              >
                 <Link
                   to="/"
                   className="block px-3 py-2 text-gray-900 hover:text-onealgo-blue-950 text-sm"
@@ -332,7 +334,18 @@ export default function Layout({ children }: LayoutProps) {
                   className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm"
                 >
                   <span>Services</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? "rotate-180" : ""}`}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
                 </button>
                 {servicesDropdownOpen && (
                   <div className="pl-4">
@@ -394,11 +407,24 @@ export default function Layout({ children }: LayoutProps) {
                   </div>
                 )}
                 <button
-                  onClick={() => setIndustriesDropdownOpen(!industriesDropdownOpen)}
+                  onClick={() =>
+                    setIndustriesDropdownOpen(!industriesDropdownOpen)
+                  }
                   className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm"
                 >
                   <span>Industries We Serve</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 h-4 transition-transform ${industriesDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`w-4 h-4 transition-transform ${industriesDropdownOpen ? "rotate-180" : ""}`}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
                 </button>
                 {industriesDropdownOpen && (
                   <div className="pl-4">
@@ -442,7 +468,18 @@ export default function Layout({ children }: LayoutProps) {
                   className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium border-t border-gray-100 text-sm"
                 >
                   <span>Careers & Insights</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" className={`w-4 h-4 transition-transform ${careersDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`w-4 h-4 transition-transform ${careersDropdownOpen ? "rotate-180" : ""}`}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
                 </button>
                 {careersDropdownOpen && (
                   <div className="pl-4">

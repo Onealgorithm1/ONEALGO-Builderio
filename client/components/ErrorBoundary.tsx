@@ -67,12 +67,15 @@ class ErrorBoundary extends Component<Props, State> {
                 Something went wrong
               </h1>
               <p className="text-gray-600 mb-6">
-                We apologize for the inconvenience. An unexpected error has occurred.
+                We apologize for the inconvenience. An unexpected error has
+                occurred.
               </p>
-              
+
               {process.env.NODE_ENV === "development" && this.state.error && (
                 <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6 text-left">
-                  <h3 className="text-sm font-medium text-red-800 mb-2">Error Details:</h3>
+                  <h3 className="text-sm font-medium text-red-800 mb-2">
+                    Error Details:
+                  </h3>
                   <pre className="text-xs text-red-700 overflow-auto max-h-32">
                     {this.state.error.toString()}
                     {this.state.errorInfo?.componentStack}

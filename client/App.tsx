@@ -51,20 +51,26 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <ErrorBoundary fallback={
-            <div className="min-h-screen flex items-center justify-center">
-              <div className="text-center">
-                <h1 className="text-2xl font-bold text-gray-900 mb-4">Page Loading Error</h1>
-                <p className="text-gray-600 mb-4">Unable to load the requested page.</p>
-                <button
-                  onClick={() => window.location.reload()}
-                  className="px-4 py-2 bg-onealgo-blue-950 text-white rounded hover:bg-onealgo-blue-800"
-                >
-                  Refresh Page
-                </button>
+          <ErrorBoundary
+            fallback={
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="text-center">
+                  <h1 className="text-2xl font-bold text-gray-900 mb-4">
+                    Page Loading Error
+                  </h1>
+                  <p className="text-gray-600 mb-4">
+                    Unable to load the requested page.
+                  </p>
+                  <button
+                    onClick={() => window.location.reload()}
+                    className="px-4 py-2 bg-onealgo-blue-950 text-white rounded hover:bg-onealgo-blue-800"
+                  >
+                    Refresh Page
+                  </button>
+                </div>
               </div>
-            </div>
-          }>
+            }
+          >
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<Index />} />
@@ -79,13 +85,19 @@ const App = () => (
                   path="/services/staff-augmentation"
                   element={<StaffAugmentation />}
                 />
-                <Route path="/services/it-consulting" element={<ITConsulting />} />
+                <Route
+                  path="/services/it-consulting"
+                  element={<ITConsulting />}
+                />
                 <Route
                   path="/services/operations-technology"
                   element={<OperationsTechnology />}
                 />
                 <Route path="/industries" element={<Industries />} />
-                <Route path="/industries/construction" element={<Construction />} />
+                <Route
+                  path="/industries/construction"
+                  element={<Construction />}
+                />
                 <Route
                   path="/industries/manufacturing"
                   element={<Manufacturing />}
