@@ -17,7 +17,7 @@ import {
 
 export default function Events() {
   useSEO({
-    title: "Technology Events & Workshops - Learn & Network",
+    title: "OneAlgorithm — Events & Webinars",
     description:
       "Join OneAlgorithm's technology events, workshops, and webinars. Stay updated with industry trends, learn new skills, and network with professionals.",
     canonical: getCanonicalUrl("/events"),
