@@ -23,7 +23,7 @@ export default function Events() {
     canonical: getCanonicalUrl("/events"),
     keywords:
       "OneAlgorithm events, technology workshops, IT webinars, networking events, professional development, technology training",
-    ogTitle: "Technology Events & Workshops - OneAlgorithm",
+    ogTitle: "OneAlgorithm — Events & Webinars",
     ogDescription:
       "Join OneAlgorithm's technology events, workshops, and webinars. Stay updated with the latest industry trends, learn new skills, and network with technology professionals.",
     ogUrl: getCanonicalUrl("/events"),
