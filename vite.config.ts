@@ -67,6 +67,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./client"),
       "@shared": path.resolve(__dirname, "./shared"),
     },
+    // Ensure only a single React instance is bundled at runtime
+    dedupe: ["react", "react-dom"],
+  },
+  // Improve dependency optimization to pre-bundle React packages
+  optimizeDeps: {
+    include: ["react", "react-dom"],
+    exclude: [],
   },
 }));
 
