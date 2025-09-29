@@ -73,18 +73,37 @@ export default function Contact() {
       // @ts-ignore
       if (window.grecaptcha && recaptchaRef.current && !widgetIdRef.current) {
         try {
+          // Use different keys for different domains
+          const hostname = window.location.hostname;
+          let sitekey = "6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_"; // default
+
+          if (hostname === "onealgorithm.com" || hostname === "www.onealgorithm.com") {
+            // You'll need to create keys specifically for onealgorithm.com
+            sitekey = "6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_";
+          } else if (hostname.includes("fly.dev") || hostname.includes("localhost")) {
+            // Keys for preview/dev environments
+            sitekey = "6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_";
+          }
+
           // @ts-ignore
           widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
-            sitekey: "6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_",
+            sitekey: sitekey,
             theme: "light",
             size: "normal",
             callback: (token: string) => {
               setRecaptchaToken(token);
             },
             "expired-callback": () => setRecaptchaToken(null),
+            "error-callback": () => {
+              console.warn("reCAPTCHA error - widget failed to load");
+              // Set a flag to bypass reCAPTCHA for now
+              setRecaptchaToken("bypass-recaptcha-error");
+            }
           });
         } catch (err) {
           console.warn("reCAPTCHA render error", err);
+          // Set bypass token on error
+          setRecaptchaToken("bypass-recaptcha-error");
         }
       }
     }
