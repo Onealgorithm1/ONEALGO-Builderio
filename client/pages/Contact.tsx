@@ -428,10 +428,32 @@ export default function Contact() {
                           Security Verification *
                         </label>
                       </div>
+
+                      {recaptchaLoading && !recaptchaError && (
+                        <div className="p-4 bg-gray-50 border border-gray-200 rounded">
+                          <div className="flex items-center space-x-2">
+                            <div className="animate-spin h-4 w-4 border-2 border-onealgo-blue-950 border-t-transparent rounded-full"></div>
+                            <span className="text-sm text-gray-600">Loading security verification...</span>
+                          </div>
+                        </div>
+                      )}
+
+                      {recaptchaError && (
+                        <div className="p-4 bg-yellow-50 border border-yellow-200 rounded">
+                          <div className="flex items-center space-x-2">
+                            <div className="text-yellow-600">⚠️</div>
+                            <div className="text-sm">
+                              <p className="text-yellow-800 font-medium">Security verification temporarily unavailable</p>
+                              <p className="text-yellow-700">Your form submission will be processed manually for verification.</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
                       <div
                         ref={recaptchaRef}
                         id="recaptcha-container"
-                        className="g-recaptcha"
+                        className={`g-recaptcha ${recaptchaError ? 'hidden' : ''}`}
                         data-sitekey="6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_"
                         data-theme="light"
                         data-size="normal"
