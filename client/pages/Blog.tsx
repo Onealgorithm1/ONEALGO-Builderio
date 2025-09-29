@@ -31,7 +31,7 @@ export default function Blog() {
     ogUrl: getCanonicalUrl("/blog"),
     ogImage:
       "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
-    twitterTitle: "OneAlgorithm Blog - Business Technology Insights & Trends",
+    twitterTitle: "OneAlgorithm — Blog & Insights",
     twitterDescription:
       "Stay updated with the latest insights on business automation, technology trends, IT consulting tips, and industry best practices from OneAlgorithm experts.",
     twitterImage:
