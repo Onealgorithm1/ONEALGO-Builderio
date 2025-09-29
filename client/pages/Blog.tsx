@@ -25,7 +25,7 @@ export default function Blog() {
     canonical: getCanonicalUrl("/blog"),
     keywords:
       "OneAlgorithm blog, business automation insights, technology trends, IT consulting tips, industry best practices, business technology news",
-    ogTitle: "OneAlgorithm Blog - Business Technology Insights & Trends",
+    ogTitle: "OneAlgorithm — Blog & Insights",
     ogDescription:
       "Stay updated with the latest insights on business automation, technology trends, IT consulting tips, and industry best practices from OneAlgorithm experts.",
     ogUrl: getCanonicalUrl("/blog"),
