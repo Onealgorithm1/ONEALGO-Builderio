@@ -118,38 +118,14 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // First try reCAPTCHA Enterprise (grecaptcha.enterprise.execute)
-    let token: string | null = null;
+    // Get token from v2 widget
+    let token: string | null = recaptchaToken;
+
+    // If widget exists but callback didn't run, try to get response
     // @ts-ignore
-    if (window.grecaptcha && window.grecaptcha.enterprise) {
-      try {
-        // @ts-ignore
-        await window.grecaptcha.enterprise.ready();
-        try {
-          // @ts-ignore
-          token = await window.grecaptcha.enterprise.execute(
-            "6LfysdgrAAAAAJBnWoVcfBNpQGVJ8V8M1u7sMgTY",
-            { action: "contact" },
-          );
-        } catch (err) {
-          // Some enterprise builds return token via callback; fallback to promise style
-          console.warn("enterprise.execute promise failed, falling back to callback", err);
-        }
-      } catch (err) {
-        console.warn("grecaptcha.enterprise.ready failed", err);
-      }
-    }
-
-    // If enterprise didn't provide a token, fall back to v2 widget response
-    if (!token) {
-      token = recaptchaToken;
-
-      // If widget exists but callback didn't run, try to get response
+    if (!token && window.grecaptcha && widgetIdRef.current !== null) {
       // @ts-ignore
-      if (!token && window.grecaptcha && widgetIdRef.current !== null) {
-        // @ts-ignore
-        token = window.grecaptcha.getResponse(widgetIdRef.current);
-      }
+      token = window.grecaptcha.getResponse(widgetIdRef.current);
     }
 
     if (!token) {
@@ -650,7 +626,7 @@ export default function Contact() {
                 <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
-                      <span className="text-xl">🇦🇪</span>
+                      <span className="text-xl">🇦���</span>
                       UAE
                     </CardTitle>
                   </CardHeader>
