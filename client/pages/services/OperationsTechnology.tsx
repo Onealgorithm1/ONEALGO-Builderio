@@ -37,7 +37,7 @@ export default function OperationsTechnology() {
     canonical: getCanonicalUrl("/services/operations-technology"),
     keywords:
       "operations technology, industrial automation, process optimization, monitoring systems, equipment integration, OT services, manufacturing technology",
-    ogTitle: "Operations Technology Services - OneAlgorithm",
+    ogTitle: "OneAlgorithm — Operations Tech",
     ogDescription:
       "Professional operations technology services including industrial automation, process optimization, monitoring systems, and equipment integration. Streamline your operations with OneAlgorithm.",
     ogUrl: getCanonicalUrl("/services/operations-technology"),
