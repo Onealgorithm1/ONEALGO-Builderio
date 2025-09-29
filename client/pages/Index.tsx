@@ -58,9 +58,11 @@ export default function Index() {
   });
   return (
     <Layout>
+      {/*
       <StructuredData data={createOrganizationSchemaDetailed()} />
       <StructuredData data={createFAQSchema()} />
       <StructuredData data={createLocalBusinessSchema()} />
+      */}
       {/* Hero Section */}
       <section
         className="relative py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
