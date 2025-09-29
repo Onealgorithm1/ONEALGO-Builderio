@@ -71,12 +71,12 @@ export default function Layout({ children }: LayoutProps) {
 
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [mobileMenuOpen]);
 
@@ -338,7 +338,10 @@ export default function Layout({ children }: LayoutProps) {
                 </button>
               </div>
 
-              <div className="px-4 py-4 overflow-auto" style={{ maxHeight: "calc(100vh - 64px)" }}>
+              <div
+                className="px-4 py-4 overflow-auto"
+                style={{ maxHeight: "calc(100vh - 64px)" }}
+              >
                 <nav className="space-y-1">
                   <Link
                     to="/"
@@ -375,13 +378,17 @@ export default function Layout({ children }: LayoutProps) {
 
                   <div className="pt-2 border-t">
                     <button
-                      onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+                      onClick={() =>
+                        setServicesDropdownOpen(!servicesDropdownOpen)
+                      }
                       className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium text-sm"
                       aria-expanded={servicesDropdownOpen}
                       aria-controls="mobile-services"
                     >
                       <span>Services</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? "rotate-180" : ""}`} />
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? "rotate-180" : ""}`}
+                      />
                     </button>
 
                     {servicesDropdownOpen && (
@@ -447,13 +454,17 @@ export default function Layout({ children }: LayoutProps) {
 
                   <div className="pt-2 border-t">
                     <button
-                      onClick={() => setIndustriesDropdownOpen(!industriesDropdownOpen)}
+                      onClick={() =>
+                        setIndustriesDropdownOpen(!industriesDropdownOpen)
+                      }
                       className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium text-sm"
                       aria-expanded={industriesDropdownOpen}
                       aria-controls="mobile-industries"
                     >
                       <span>Industries We Serve</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${industriesDropdownOpen ? "rotate-180" : ""}`} />
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${industriesDropdownOpen ? "rotate-180" : ""}`}
+                      />
                     </button>
 
                     {industriesDropdownOpen && (
@@ -497,13 +508,17 @@ export default function Layout({ children }: LayoutProps) {
 
                   <div className="pt-2 border-t">
                     <button
-                      onClick={() => setCareersDropdownOpen(!careersDropdownOpen)}
+                      onClick={() =>
+                        setCareersDropdownOpen(!careersDropdownOpen)
+                      }
                       className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium text-sm"
                       aria-expanded={careersDropdownOpen}
                       aria-controls="mobile-careers"
                     >
                       <span>Careers & Insights</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform ${careersDropdownOpen ? "rotate-180" : ""}`} />
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform ${careersDropdownOpen ? "rotate-180" : ""}`}
+                      />
                     </button>
 
                     {careersDropdownOpen && (
@@ -567,7 +582,10 @@ export default function Layout({ children }: LayoutProps) {
       <main aria-hidden={mobileMenuOpen}>{children}</main>
 
       {/* Footer */}
-      <footer className="bg-onealgo-blue-950 text-white" aria-hidden={mobileMenuOpen}>
+      <footer
+        className="bg-onealgo-blue-950 text-white"
+        aria-hidden={mobileMenuOpen}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Trusted Partnerships Carousel */}
           <TrustedPartnerships />
