@@ -29,7 +29,7 @@ import {
 
 export default function StaffAugmentation() {
   useSEO({
-    title: "Staff Augmentation & IT Talent Solutions - OneAlgorithm",
+    title: "OneAlgorithm — Staff Augmentation",
     description:
       "Professional staff augmentation with skilled developers, IT specialists, and technical experts. Scale your team efficiently with proven talent solutions.",
     canonical: getCanonicalUrl("/services/staff-augmentation"),
