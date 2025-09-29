@@ -32,8 +32,13 @@ declare global {
 }
 
 export default function Contact() {
-  // Temporarily disable SEO hook to isolate React issues
-  // useSEO({...});
+  useSEO({
+    title: "OneAlgorithm — Contact Us",
+    description: "Contact OneAlgorithm for IT consulting, web development, and automation solutions.",
+    canonical: getCanonicalUrl("/contact"),
+    ogTitle: "OneAlgorithm — Contact Us",
+    ogDescription: "Get in touch with OneAlgorithm for technology consulting and services.",
+  });
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
