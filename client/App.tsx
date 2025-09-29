@@ -46,7 +46,6 @@ const queryClient = new QueryClient();
 const App = () => (
   <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
@@ -113,7 +112,6 @@ const App = () => (
             </Suspense>
           </ErrorBoundary>
         </BrowserRouter>
-      </TooltipProvider>
     </QueryClientProvider>
   </ErrorBoundary>
 );
