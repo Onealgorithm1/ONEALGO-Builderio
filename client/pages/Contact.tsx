@@ -50,6 +50,8 @@ export default function Contact() {
 
   // reCAPTCHA v2 state
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [recaptchaError, setRecaptchaError] = useState<boolean>(false);
+  const [recaptchaLoading, setRecaptchaLoading] = useState<boolean>(true);
   const recaptchaRef = React.useRef<HTMLDivElement | null>(null);
   const widgetIdRef = React.useRef<number | null>(null);
 
