@@ -27,7 +27,7 @@ import {
 
 export default function About() {
   useSEO({
-    title: "About OneAlgorithm - Business Technology Experts",
+    title: "OneAlgorithm — About Us",
     description:
       "Learn how OneAlgorithm transforms struggling businesses into thriving enterprises through intelligent technology solutions and expert consulting.",
     canonical: getCanonicalUrl("/about"),
