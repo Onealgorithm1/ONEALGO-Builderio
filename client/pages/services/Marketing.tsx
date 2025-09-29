@@ -24,7 +24,7 @@ export default function Marketing() {
     canonical: getCanonicalUrl("/services/marketing"),
     keywords:
       "marketing services, campaign management, AI marketing, customer journey optimization, marketing analytics, digital marketing automation",
-    ogTitle: "Marketing Services - OneAlgorithm",
+    ogTitle: "OneAlgorithm — Marketing Services",
     ogDescription:
       "Comprehensive marketing services including campaign management, AI-driven insights, customer journey optimization, and data analytics. Boost your marketing ROI with OneAlgorithm.",
     ogUrl: getCanonicalUrl("/services/marketing"),
