@@ -45,6 +45,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
+      <NotificationProvider>
         <BrowserRouter>
           <ErrorBoundary
             fallback={
@@ -109,6 +110,7 @@ const App = () => (
             </Suspense>
           </ErrorBoundary>
         </BrowserRouter>
+      </NotificationProvider>
     </QueryClientProvider>
   </ErrorBoundary>
 );
