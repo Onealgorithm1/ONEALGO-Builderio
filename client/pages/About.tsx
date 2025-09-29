@@ -33,7 +33,7 @@ export default function About() {
     canonical: getCanonicalUrl("/about"),
     keywords:
       "about OneAlgorithm, business technology experts, automation specialists, IT consulting company, digital transformation, business process improvement",
-    ogTitle: "About OneAlgorithm - Business Technology & Automation Experts",
+    ogTitle: "OneAlgorithm — About Us",
     ogDescription:
       "Learn about OneAlgorithm's mission to transform struggling businesses into thriving enterprises through intelligent technology solutions, business automation, and expert consulting services.",
     ogUrl: getCanonicalUrl("/about"),
