@@ -48,6 +48,11 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // reCAPTCHA v2 state
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = React.useRef<HTMLDivElement | null>(null);
+  const widgetIdRef = React.useRef<number | null>(null);
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -59,10 +64,91 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Render reCAPTCHA widget when grecaptcha is available
+  React.useEffect(() => {
+    let mounted = true;
+
+    function renderRecaptcha() {
+      if (!mounted) return;
+      // @ts-ignore
+      if (window.grecaptcha && recaptchaRef.current && !widgetIdRef.current) {
+        try {
+          // @ts-ignore
+          widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
+            sitekey: "6Lfa4NgrAAAAAKugHQgsxPB6l3CKZBXDQiNfk91y",
+            callback: (token: string) => {
+              setRecaptchaToken(token);
+            },
+            "expired-callback": () => setRecaptchaToken(null),
+          });
+        } catch (err) {
+          console.warn("reCAPTCHA render error", err);
+        }
+      }
+    }
+
+    // Try to render immediately, otherwise poll until grecaptcha loads
+    renderRecaptcha();
+    const interval = setInterval(() => {
+      renderRecaptcha();
+    }, 500);
+
+    return () => {
+      mounted = false;
+      clearInterval(interval);
+    };
+  }, []);
+
+  const verifyTokenWithServer = async (token: string) => {
+    try {
+      const res = await fetch("/api/verify-recaptcha", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token }),
+      });
+      const data = await res.json();
+      return data && data.success;
+    } catch (err) {
+      console.error("Recaptcha verification failed", err);
+      return false;
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    // Ensure we have a token from the client widget
+    let token = recaptchaToken;
+
+    // If widget exists but callback didn't run, try to get response
+    // @ts-ignore
+    if (!token && window.grecaptcha && widgetIdRef.current !== null) {
+      // @ts-ignore
+      token = window.grecaptcha.getResponse(widgetIdRef.current);
+    }
+
+    if (!token) {
+      alert("Please complete the reCAPTCHA verification.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    const valid = await verifyTokenWithServer(token);
+    if (!valid) {
+      alert("reCAPTCHA verification failed. Please try again.");
+      setIsSubmitting(false);
+      // Reset widget
+      // @ts-ignore
+      if (window.grecaptcha && widgetIdRef.current !== null) {
+        // @ts-ignore
+        window.grecaptcha.reset(widgetIdRef.current);
+      }
+      setRecaptchaToken(null);
+      return;
+    }
+
+    // Proceed with existing submission flow
     // Show thank you message first
     setTimeout(() => {
       setIsSubmitting(false);
