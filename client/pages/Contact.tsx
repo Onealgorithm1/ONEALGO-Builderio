@@ -76,6 +76,8 @@ export default function Contact() {
           // @ts-ignore
           widgetIdRef.current = window.grecaptcha.render(recaptchaRef.current, {
             sitekey: "6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_",
+            theme: "light",
+            size: "normal",
             callback: (token: string) => {
               setRecaptchaToken(token);
             },
