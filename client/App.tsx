@@ -31,6 +31,7 @@ const OperationsTechnology = lazy(
   () => import("./pages/services/OperationsTechnology"),
 );
 const Blog = lazy(() => import("./pages/Blog"));
+const AiInfo = lazy(() => import("./pages/AiInfo"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading component
