@@ -115,6 +115,8 @@ export default function Contact() {
           }
         } catch (err) {
           console.warn("reCAPTCHA render error", err);
+          setRecaptchaError(true);
+          setRecaptchaLoading(false);
           // Set bypass token on error
           setRecaptchaToken("bypass-recaptcha-error");
         }
