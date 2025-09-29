@@ -393,7 +393,7 @@ export default function Index() {
               current systems and develop a customized roadmap for success.
             </p>
             <div className="flex justify-center">
-              <Button asChild size="md" className="btn-primary">
+              <Button asChild size="lg" className="btn-primary">
                 <Link to="/contact">Get Free Consultation</Link>
               </Button>
             </div>
