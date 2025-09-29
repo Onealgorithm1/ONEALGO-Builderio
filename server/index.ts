@@ -20,5 +20,8 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
+  // Verify reCAPTCHA token (v2 checkbox)
+  app.post("/api/verify-recaptcha", handleVerifyRecaptcha);
+
   return app;
 }
