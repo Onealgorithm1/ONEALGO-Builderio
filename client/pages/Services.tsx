@@ -23,10 +23,9 @@ export default function Services() {
     canonical: getCanonicalUrl("/services"),
     keywords:
       "technology services, IT consulting services, website development services, operations technology, staff augmentation, marketing services, business technology solutions",
-    ogTitle:
-      "Technology Services - OneAlgorithm | IT Consulting, Website Development & More",
+    ogTitle: "OneAlgorithm — Services",
     ogDescription:
-      "Comprehensive technology services including website development, IT consulting, operations technology, staff augmentation, and marketing solutions. Accelerate your business growth with OneAlgorithm.",
+      "Comprehensive technology services including website development, IT consulting, operations technology, staff augmentation, and marketing solutions.",
     ogUrl: getCanonicalUrl("/services"),
     ogImage:
       "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
