@@ -58,7 +58,7 @@ export default defineConfig(({ mode }) => ({
     cssCodeSplit: true,
   },
   optimizeDeps: {
-    // Remove force and complex deduplication that might cause issues
+    include: ["react", "react-dom"],
     exclude: [],
   },
   plugins: [react(), expressPlugin()],
