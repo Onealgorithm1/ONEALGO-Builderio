@@ -13,7 +13,7 @@ export async function handleVerifyRecaptcha(req: Request, res: Response) {
       return res.json({
         success: true,
         bypass: true,
-        message: "Verification bypassed due to reCAPTCHA loading error"
+        message: "Verification bypassed due to reCAPTCHA loading error",
       });
     }
 
