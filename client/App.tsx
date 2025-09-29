@@ -46,6 +46,8 @@ const queryClient = new QueryClient();
 const App = () => (
   <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
+        <Toaster />
+        <Sonner />
         <BrowserRouter>
           <ErrorBoundary
             fallback={
