@@ -29,7 +29,7 @@ export default function Events() {
     ogUrl: getCanonicalUrl("/events"),
     ogImage:
       "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
-    twitterTitle: "Technology Events & Workshops - OneAlgorithm",
+    twitterTitle: "OneAlgorithm — Events & Webinars",
     twitterDescription:
       "Join OneAlgorithm's technology events, workshops, and webinars. Stay updated with the latest industry trends, learn new skills, and network with technology professionals.",
     twitterImage:
