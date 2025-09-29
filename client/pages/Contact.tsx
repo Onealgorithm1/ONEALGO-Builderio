@@ -398,13 +398,20 @@ export default function Contact() {
                       />
                     </div>
 
-                    {/* reCAPTCHA v2 checkbox container (markup fallback + programmatic render) */}
+                    {/* reCAPTCHA v2 checkbox container */}
                     <div className="mt-4">
+                      <div className="mb-2">
+                        <label className="text-sm font-medium text-gray-700">
+                          Security Verification *
+                        </label>
+                      </div>
                       <div
                         ref={recaptchaRef}
                         id="recaptcha-container"
                         className="g-recaptcha"
-                        data-sitekey="6Lfa4NgrAAAAAKugHQgsxPB6l3CKZBXDQiNfk91y"
+                        data-sitekey="6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_"
+                        data-theme="light"
+                        data-size="normal"
                       />
                     </div>
 
