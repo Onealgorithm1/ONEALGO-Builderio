@@ -398,9 +398,14 @@ export default function Contact() {
                       />
                     </div>
 
-                    {/* reCAPTCHA v2 checkbox container */}
+                    {/* reCAPTCHA v2 checkbox container (markup fallback + programmatic render) */}
                     <div className="mt-4">
-                      <div ref={recaptchaRef} id="recaptcha-container" />
+                      <div
+                        ref={recaptchaRef}
+                        id="recaptcha-container"
+                        className="g-recaptcha"
+                        data-sitekey="6Lfa4NgrAAAAAKugHQgsxPB6l3CKZBXDQiNfk91y"
+                      />
                     </div>
 
                     <Button
