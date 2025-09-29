@@ -2,7 +2,7 @@ import "./global.css";
 
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { NotificationProvider } from "@/components/SimpleNotifications";
+// import { NotificationProvider } from "@/components/SimpleNotifications";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import ErrorBoundary from "@/components/ErrorBoundary";
