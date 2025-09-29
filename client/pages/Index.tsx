@@ -35,13 +35,15 @@ import {
 
 export default function Index() {
   useSEO({
-    title: "One Algorithm | Custom Software Development & Integration Agency | Malvern, PA",
+    title:
+      "One Algorithm | Custom Software Development & Integration Agency | Malvern, PA",
     description:
       "One Algorithm delivers custom software development, system integration, and growth marketing services. Based in Malvern, PA, we build scalable applications, automate workflows, and integrate 200+ platforms. Fast delivery, no vendor lock-in, 24/7 support. Founded 2020.",
     canonical: getCanonicalUrl("/"),
     keywords:
       "custom software development Malvern PA, system integration agency, API integration, CRM integration, marketing automation, Philadelphia software development, enterprise software, SaaS development, mobile app development, One Algorithm",
-    ogTitle: "One Algorithm | Custom Software Development & Integration Agency | Malvern, PA",
+    ogTitle:
+      "One Algorithm | Custom Software Development & Integration Agency | Malvern, PA",
     ogDescription:
       "One Algorithm delivers custom software development, system integration, and growth marketing services. Based in Malvern, PA, we build scalable applications, automate workflows, and integrate 200+ platforms. Fast delivery, no vendor lock-in, 24/7 support. Founded 2020.",
     ogUrl: getCanonicalUrl("/"),
