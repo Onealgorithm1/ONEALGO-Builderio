@@ -11,7 +11,7 @@ export default function AiInfo() {
     canonical: getCanonicalUrl("/ai-info"),
     keywords:
       "AI discoverability, structured data, JSON-LD, SEO, AI-friendly content",
-    ogTitle: "AI Discoverability Guide — OneAlgorithm",
+    ogTitle: "OneAlgorithm ��� AI Solutions",
     ogDescription:
       "How to structure content, metadata, and APIs so AI systems can reliably find and use your information.",
     ogUrl: getCanonicalUrl("/ai-info"),
