@@ -57,6 +57,10 @@ export default defineConfig(({ mode }) => ({
     // Optimize CSS
     cssCodeSplit: true,
   },
+  optimizeDeps: {
+    include: ["react", "react-dom", "react/jsx-runtime"],
+    force: true,
+  },
   plugins: [react(), expressPlugin()],
   resolve: {
     alias: {
