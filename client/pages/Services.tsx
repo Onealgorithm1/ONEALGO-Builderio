@@ -17,7 +17,7 @@ import {
 
 export default function Services() {
   useSEO({
-    title: "Technology Services - IT Consulting & Development",
+    title: "OneAlgorithm — Services",
     description:
       "Comprehensive technology services including website development, IT consulting, operations technology, and staff augmentation. Accelerate business growth.",
     canonical: getCanonicalUrl("/services"),
