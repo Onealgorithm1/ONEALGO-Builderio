@@ -9,7 +9,8 @@ export default function AiInfo() {
     description:
       "Practical guidance for making your site and content discoverable, indexable, and useful to AI agents and crawlers.",
     canonical: getCanonicalUrl("/ai-info"),
-    keywords: "AI discoverability, structured data, JSON-LD, SEO, AI-friendly content",
+    keywords:
+      "AI discoverability, structured data, JSON-LD, SEO, AI-friendly content",
     ogTitle: "AI Discoverability Guide — OneAlgorithm",
     ogDescription:
       "How to structure content, metadata, and APIs so AI systems can reliably find and use your information.",
@@ -52,7 +53,7 @@ export default function AiInfo() {
             </p>
 
             <pre className="bg-gray-100 rounded-md p-4 overflow-auto text-sm text-gray-800">
-{`<script type="application/ld+json">${JSON.stringify(jsonLd, null, 2)}</script>`}
+              {`<script type="application/ld+json">${JSON.stringify(jsonLd, null, 2)}</script>`}
             </pre>
           </section>
 
@@ -84,8 +85,8 @@ export default function AiInfo() {
             </h2>
             <p className="text-gray-700 mb-3">
               Provide stable, documented APIs or feeds (JSON, RSS, or GraphQL)
-              for programmatic access to frequently-updated content. Consider
-              a dedicated endpoint that returns structured summaries for pages
+              for programmatic access to frequently-updated content. Consider a
+              dedicated endpoint that returns structured summaries for pages
               intended to be consumed by AI agents.
             </p>
           </section>
@@ -111,7 +112,9 @@ export default function AiInfo() {
                 Audit high-value pages and add appropriate JSON-LD and Open
                 Graph metadata.
               </li>
-              <li>Expose structured feeds or APIs for programmatic consumption.</li>
+              <li>
+                Expose structured feeds or APIs for programmatic consumption.
+              </li>
               <li>
                 Monitor indexing and crawler behavior using search console tools
                 and logs.
@@ -120,8 +123,15 @@ export default function AiInfo() {
 
             <p className="mt-4">
               Need help implementing any of these recommendations? Reach out via
-              the <Link to="/contact" className="font-semibold text-onealgo-orange-500">Contact</Link> page and we can
-              help tailor a discoverability plan for your project.
+              the{" "}
+              <Link
+                to="/contact"
+                className="font-semibold text-onealgo-orange-500"
+              >
+                Contact
+              </Link>{" "}
+              page and we can help tailor a discoverability plan for your
+              project.
             </p>
           </section>
         </div>

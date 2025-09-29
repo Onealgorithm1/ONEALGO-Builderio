@@ -1,15 +1,25 @@
-import { useState, useEffect, createContext, useContext, ReactNode } from 'react';
+import {
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+  ReactNode,
+} from "react";
 
 interface Notification {
   id: string;
   message: string;
-  type: 'success' | 'error' | 'info';
+  type: "success" | "error" | "info";
   duration?: number;
 }
 
 interface NotificationContextType {
   notifications: Notification[];
-  addNotification: (message: string, type: 'success' | 'error' | 'info', duration?: number) => void;
+  addNotification: (
+    message: string,
+    type: "success" | "error" | "info",
+    duration?: number,
+  ) => void;
   removeNotification: (id: string) => void;
 }
 
@@ -18,12 +28,16 @@ const NotificationContext = createContext<NotificationContextType | null>(null);
 export function NotificationProvider({ children }: { children: ReactNode }) {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
-  const addNotification = (message: string, type: 'success' | 'error' | 'info', duration = 5000) => {
+  const addNotification = (
+    message: string,
+    type: "success" | "error" | "info",
+    duration = 5000,
+  ) => {
     const id = Math.random().toString(36).substr(2, 9);
     const notification: Notification = { id, message, type, duration };
-    
-    setNotifications(prev => [...prev, notification]);
-    
+
+    setNotifications((prev) => [...prev, notification]);
+
     if (duration > 0) {
       setTimeout(() => {
         removeNotification(id);
@@ -32,11 +46,13 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   };
 
   const removeNotification = (id: string) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
+    setNotifications((prev) => prev.filter((n) => n.id !== id));
   };
 
   return (
-    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>
+    <NotificationContext.Provider
+      value={{ notifications, addNotification, removeNotification }}
+    >
       {children}
       <NotificationContainer />
     </NotificationContext.Provider>
@@ -46,7 +62,9 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 export function useNotification() {
   const context = useContext(NotificationContext);
   if (!context) {
-    throw new Error('useNotification must be used within a NotificationProvider');
+    throw new Error(
+      "useNotification must be used within a NotificationProvider",
+    );
   }
   return context;
 }
@@ -58,16 +76,17 @@ function NotificationContainer() {
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
-      {notifications.map(notification => (
+      {notifications.map((notification) => (
         <div
           key={notification.id}
           className={`
             min-w-80 p-4 rounded-lg shadow-lg border transform transition-all duration-300 ease-in-out
-            ${notification.type === 'success' 
-              ? 'bg-green-50 border-green-200 text-green-800' 
-              : notification.type === 'error' 
-              ? 'bg-red-50 border-red-200 text-red-800' 
-              : 'bg-blue-50 border-blue-200 text-blue-800'
+            ${
+              notification.type === "success"
+                ? "bg-green-50 border-green-200 text-green-800"
+                : notification.type === "error"
+                  ? "bg-red-50 border-red-200 text-red-800"
+                  : "bg-blue-50 border-blue-200 text-blue-800"
             }
           `}
         >
@@ -77,8 +96,18 @@ function NotificationContainer() {
               onClick={() => removeNotification(notification.id)}
               className="ml-4 text-gray-400 hover:text-gray-600 transition-colors"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>

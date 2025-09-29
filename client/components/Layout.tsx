@@ -556,7 +556,6 @@ export default function Layout({ children }: LayoutProps) {
                         >
                           Events
                         </Link>
-
                       </div>
                     )}
                   </div>
