@@ -79,10 +79,16 @@ export default function Contact() {
           const hostname = window.location.hostname;
           let sitekey = "6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_"; // default
 
-          if (hostname === "onealgorithm.com" || hostname === "www.onealgorithm.com") {
+          if (
+            hostname === "onealgorithm.com" ||
+            hostname === "www.onealgorithm.com"
+          ) {
             // You'll need to create keys specifically for onealgorithm.com
             sitekey = "6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_";
-          } else if (hostname.includes("fly.dev") || hostname.includes("localhost")) {
+          } else if (
+            hostname.includes("fly.dev") ||
+            hostname.includes("localhost")
+          ) {
             // Keys for preview/dev environments
             sitekey = "6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_";
           }
@@ -106,7 +112,7 @@ export default function Contact() {
               setRecaptchaLoading(false);
               // Set a flag to bypass reCAPTCHA for now
               setRecaptchaToken("bypass-recaptcha-error");
-            }
+            },
           });
 
           // Set loading to false after successful render
@@ -446,7 +452,9 @@ export default function Contact() {
                         <div className="p-4 bg-gray-50 border border-gray-200 rounded">
                           <div className="flex items-center space-x-2">
                             <div className="animate-spin h-4 w-4 border-2 border-onealgo-blue-950 border-t-transparent rounded-full"></div>
-                            <span className="text-sm text-gray-600">Loading security verification...</span>
+                            <span className="text-sm text-gray-600">
+                              Loading security verification...
+                            </span>
                           </div>
                         </div>
                       )}
@@ -456,8 +464,13 @@ export default function Contact() {
                           <div className="flex items-center space-x-2">
                             <div className="text-yellow-600">⚠️</div>
                             <div className="text-sm">
-                              <p className="text-yellow-800 font-medium">Security verification temporarily unavailable</p>
-                              <p className="text-yellow-700">Your form submission will be processed manually for verification.</p>
+                              <p className="text-yellow-800 font-medium">
+                                Security verification temporarily unavailable
+                              </p>
+                              <p className="text-yellow-700">
+                                Your form submission will be processed manually
+                                for verification.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -466,7 +479,7 @@ export default function Contact() {
                       <div
                         ref={recaptchaRef}
                         id="recaptcha-container"
-                        className={`g-recaptcha ${recaptchaError ? 'hidden' : ''}`}
+                        className={`g-recaptcha ${recaptchaError ? "hidden" : ""}`}
                         data-sitekey="6Ler5dgrAAAAAHlI_57aoBhGJfardOea1fFgRLY_"
                         data-theme="light"
                         data-size="normal"
