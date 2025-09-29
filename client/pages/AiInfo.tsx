@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function AiInfo() {
   useSEO({
-    title: "AI Discoverability Guide — OneAlgorithm",
+    title: "OneAlgorithm — AI Solutions",
     description:
       "Practical guidance for making your site and content discoverable, indexable, and useful to AI agents and crawlers.",
     canonical: getCanonicalUrl("/ai-info"),
