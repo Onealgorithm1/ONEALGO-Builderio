@@ -29,7 +29,7 @@ import {
 
 export default function ITConsulting() {
   useSEO({
-    title: "IT Consulting Services & Strategic Planning - OneAlgorithm",
+    title: "OneAlgorithm — IT Consulting",
     description:
       "Expert IT consulting for strategic planning, technology audits, digital transformation, and cybersecurity. Drive business growth with proven IT expertise.",
     canonical: getCanonicalUrl("/services/it-consulting"),
