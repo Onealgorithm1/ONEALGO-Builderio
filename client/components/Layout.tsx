@@ -69,6 +69,17 @@ export default function Layout({ children }: LayoutProps) {
     };
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -553,10 +564,10 @@ export default function Layout({ children }: LayoutProps) {
       </nav>
 
       {/* Main Content */}
-      <main>{children}</main>
+      <main aria-hidden={mobileMenuOpen}>{children}</main>
 
       {/* Footer */}
-      <footer className="bg-onealgo-blue-950 text-white">
+      <footer className="bg-onealgo-blue-950 text-white" aria-hidden={mobileMenuOpen}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Trusted Partnerships Carousel */}
           <TrustedPartnerships />
