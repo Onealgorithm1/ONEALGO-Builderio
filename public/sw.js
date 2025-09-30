@@ -1,169 +1,81 @@
-// OneAlgorithm Service Worker for Performance Optimization
+// OneAlgorithm Service Worker - safer network-first strategy
 // Bump cache name to force clients to fetch new assets on update
-const CACHE_NAME = "onealgorithm-v3";
+const CACHE_NAME = "onealgorithm-v4";
 const STATIC_CACHE_URLS = ["/", "/index.html"];
 
-const DYNAMIC_CACHE_URLS = [
-  // API endpoints and dynamic content
-  "/api/",
-  // External resources
-  "https://fonts.googleapis.com/",
-  "https://fonts.gstatic.com/",
-  "https://images.unsplash.com/",
-  "https://cdn.builder.io/",
-];
-
-// Install event - cache static resources (do not pre-cache /contact to avoid serving stale page)
-self.addEventListener("install", (event) => {
+self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches
-      .open(CACHE_NAME)
-      .then((cache) => {
-        return cache.addAll(STATIC_CACHE_URLS);
-      })
-      .then(() => {
-        return self.skipWaiting();
-      }),
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(STATIC_CACHE_URLS)).then(() => self.skipWaiting()),
   );
 });
 
-// Activate event - clean up old caches
-self.addEventListener("activate", (event) => {
+self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches
-      .keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== CACHE_NAME) {
-              return caches.delete(cacheName);
-            }
-            return Promise.resolve();
-          }),
-        );
-      })
-      .then(() => {
-        return self.clients.claim();
-      }),
+    caches.keys().then((keys) => Promise.all(
+      keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))
+    )).then(() => self.clients.claim()),
   );
 });
 
-// Fetch event - network-first for navigations, cache-first for static assets
-self.addEventListener("fetch", (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
-
-  // If this is a cross-origin request (third-party script/resource), do not handle it
-  // in the SW routing to avoid CORS issues for external providers (e.g., SearchAtlas).
+// Utility: is same-origin
+function isSameOrigin(url) {
   try {
-    if (url.origin !== location.origin) {
-      event.respondWith(
-        fetch(request, { mode: "no-cors" }).catch(() =>
-          caches.match("/offline.html"),
-        ),
-      );
-      return;
-    }
+    return new URL(url).origin === location.origin;
   } catch (e) {
-    // If URL parsing fails, fall back to default behavior
+    return false;
   }
+}
 
-  // For navigation requests (HTML pages) use network-first to ensure fresh content
-  if (request.mode === "navigate") {
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+
+  // Only handle GET requests
+  if (request.method !== 'GET') return;
+
+  // Let cross-origin requests go to network (avoid opaque/no-cors issues)
+  if (!isSameOrigin(request.url)) return;
+
+  // Navigation (HTML pages) - network-first, fallback to cached index.html
+  if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
         .then((response) => {
-          // Update cache with latest page (optional)
+          // Optionally update the cached index.html for offline fallback
           if (response && response.status === 200) {
-            const responseClone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(request, responseClone);
-            });
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put('/index.html', clone));
           }
           return response;
         })
-        .catch(() => caches.match("/index.html")),
+        .catch(() => caches.match('/index.html')),
     );
     return;
   }
 
-  // Static assets - cache first strategy
-  if (STATIC_CACHE_URLS.some((path) => url.pathname === path)) {
+  // For scripts, styles, images, fonts and common asset extensions use network-first then cache fallback
+  const pathname = new URL(request.url).pathname;
+  const assetExtRegex = /\.(js|mjs|css|png|jpg|jpeg|webp|svg|gif|woff2?|woff|ttf|map)$/i;
+  if (assetExtRegex.test(pathname) || ['script', 'style', 'image', 'font'].includes(request.destination)) {
     event.respondWith(
-      caches.match(request).then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(request).then((response) => {
+      fetch(request)
+        .then((response) => {
           if (response && response.status === 200) {
-            const responseClone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(request, responseClone);
-            });
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
           }
           return response;
-        });
-      }),
+        })
+        .catch(() => caches.match(request)),
     );
     return;
   }
 
-  // External resources - cache with network fallback
-  if (DYNAMIC_CACHE_URLS.some((domain) => url.origin.includes(domain))) {
-    event.respondWith(
-      caches.match(request).then((response) => {
-        return (
-          response ||
-          fetch(request)
-            .then((response) => {
-              if (response && response.status === 200) {
-                const responseClone = response.clone();
-                caches.open(CACHE_NAME).then((cache) => {
-                  cache.put(request, responseClone);
-                });
-              }
-              return response;
-            })
-            .catch(() => caches.match("/offline.html"))
-        );
-      }),
-    );
-    return;
-  }
-
-  // Default - network first with cache fallback
-  event.respondWith(
-    fetch(request)
-      .then((response) => {
-        if (response && response.status === 200) {
-          const responseClone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(request, responseClone);
-          });
-        }
-        return response;
-      })
-      .catch(() => caches.match(request)),
-  );
+  // Default: perform a normal network fetch (do not intercept)
 });
 
-// Background sync for offline functionality
-self.addEventListener("sync", (event) => {
-  if (event.tag === "background-sync") {
-    event.waitUntil(
-      // Handle background sync tasks
-      console.log("Background sync triggered"),
-    );
+// Optional: listen for messages to trigger skipWaiting from the page
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
   }
-});
-
-// Handle push notifications
-self.addEventListener("push", (event) => {
-  const options = {
-    body: event.data ? event.data.text() : "New update available",
-    icon: "/logo.webp",
-    badge: "/logo.webp",
-  };
-
-  event.waitUntil(self.registration.showNotification("OneAlgorithm", options));
 });
