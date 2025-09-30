@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-
-import { useEffect } from "react";
+// StructuredData: perform DOM-safe updates without relying on React hooks
 
 interface OrganizationSchema {
   type: "Organization";
