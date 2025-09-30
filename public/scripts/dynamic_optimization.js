@@ -12,7 +12,7 @@
     function fetchUrlDetails() {
       // Skip external fetch to sa.searchatlas.com to avoid 401/blocked requests.
       // Return a resolved promise with null so callers continue gracefully.
-      log('SearchAtlas fetch disabled (inline).');
+      log("SearchAtlas fetch disabled (inline).");
       return Promise.resolve(null);
     }
 
@@ -20,24 +20,24 @@
       try {
         fetchUrlDetails().then(function (data) {
           if (data) {
-            log('SearchAtlas data loaded (vendor):', data);
+            log("SearchAtlas data loaded (vendor):", data);
             window.__SEARCHATLAS_DATA__ = data;
           } else {
-            log('SearchAtlas: fetch disabled or no data (vendor)');
+            log("SearchAtlas: fetch disabled or no data (vendor)");
           }
         });
       } catch (e) {
-        log('SearchAtlas initialize error (ignored)');
+        log("SearchAtlas initialize error (ignored)");
       }
     }
 
     if (
-      document.readyState === 'complete' ||
-      document.readyState === 'interactive'
+      document.readyState === "complete" ||
+      document.readyState === "interactive"
     ) {
       setTimeout(initializeScript, 0);
     } else {
-      window.addEventListener('DOMContentLoaded', initializeScript);
+      window.addEventListener("DOMContentLoaded", initializeScript);
     }
 
     window.SearchAtlas = window.SearchAtlas || {};
@@ -45,7 +45,7 @@
     window.SearchAtlas.fetchUrlDetails = fetchUrlDetails;
   } catch (e) {
     try {
-      console.error('Vendor SearchAtlas failed:', e);
+      console.error("Vendor SearchAtlas failed:", e);
     } catch (e) {}
   }
 })();
