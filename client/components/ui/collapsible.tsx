@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import * as React from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
