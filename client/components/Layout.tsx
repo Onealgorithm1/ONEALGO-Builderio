@@ -4,23 +4,23 @@ import OneAlgorithmText from "./OneAlgorithmText";
 import TrustedPartnerships from "./TrustedPartnerships";
 import { Button } from "./ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import * as React from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
-  const [careersDropdownOpen, setCareersDropdownOpen] = useState(false);
-  const servicesDropdownRef = useRef<HTMLDivElement>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const careersDropdownRef = useRef<HTMLDivElement>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = React.useState(false);
+  const [industriesDropdownOpen, setIndustriesDropdownOpen] = React.useState(false);
+  const [careersDropdownOpen, setCareersDropdownOpen] = React.useState(false);
+  const servicesDropdownRef = React.useRef<HTMLDivElement>(null);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
+  const careersDropdownRef = React.useRef<HTMLDivElement>(null);
 
   // Close all dropdowns when mobile menu closes
-  useEffect(() => {
+  React.useEffect(() => {
     if (!mobileMenuOpen) {
       setServicesDropdownOpen(false);
       setIndustriesDropdownOpen(false);
@@ -29,7 +29,7 @@ export default function Layout({ children }: LayoutProps) {
   }, [mobileMenuOpen]);
 
   // Handle window resize to close dropdowns when switching between mobile/desktop
-  useEffect(() => {
+  React.useEffect(() => {
     const handleResize = () => {
       // Close all dropdowns on resize to prevent state sync issues
       setServicesDropdownOpen(false);
@@ -41,7 +41,7 @@ export default function Layout({ children }: LayoutProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
         servicesDropdownRef.current &&
@@ -69,7 +69,7 @@ export default function Layout({ children }: LayoutProps) {
     };
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
