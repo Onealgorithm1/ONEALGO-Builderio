@@ -75,34 +75,40 @@
             } catch (e) {}
           });
 
-          if (document.querySelector('script[src="https://dashboard.searchatlas.com/scripts/dynamic_optimization.js"]')) {
-            console.log('SearchAtlas script already present in HTML; skipping dynamic append.');
+          if (
+            document.querySelector(
+              'script[src="https://dashboard.searchatlas.com/scripts/dynamic_optimization.js"]',
+            )
+          ) {
+            console.log(
+              "SearchAtlas script already present in HTML; skipping dynamic append.",
+            );
           } else {
-          var s = document.createElement("script");
-          s.type = "text/javascript";
-          s.id = "sa-dynamic-optimization-visible";
-          s.dataset.uuid = "180b3689-4f9a-42e5-8fc5-f4b7c2217a7e";
-          s.crossOrigin = "anonymous";
-          s.src =
-            "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+            var s = document.createElement("script");
+            s.type = "text/javascript";
+            s.id = "sa-dynamic-optimization-visible";
+            s.dataset.uuid = "180b3689-4f9a-42e5-8fc5-f4b7c2217a7e";
+            s.crossOrigin = "anonymous";
+            s.src =
+              "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
 
-          s.onload = function () {
-            try {
-              console.log("SearchAtlas dynamic optimization loaded");
-            } catch (e) {}
-          };
+            s.onload = function () {
+              try {
+                console.log("SearchAtlas dynamic optimization loaded");
+              } catch (e) {}
+            };
 
-          s.onerror = function (e) {
-            console.error("SearchAtlas script failed to load", e);
-            reportError({
-              type: "resource_error",
-              message: "SearchAtlas script failed to load",
-              href: location.href,
-              time: Date.now(),
-            });
-          };
+            s.onerror = function (e) {
+              console.error("SearchAtlas script failed to load", e);
+              reportError({
+                type: "resource_error",
+                message: "SearchAtlas script failed to load",
+                href: location.href,
+                time: Date.now(),
+              });
+            };
 
-          document.head.appendChild(s);
+            document.head.appendChild(s);
           }
         } catch (err) {
           console.error("Error inserting SearchAtlas script", err);
@@ -295,7 +301,13 @@
 
     <!-- DNS prefetch for better performance -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-    <script async crossorigin="anonymous" id="sa-dynamic-optimization" data-uuid="180b3689-4f9a-42e5-8fc5-f4b7c2217a7e" src="https://dashboard.searchatlas.com/scripts/dynamic_optimization.js"></script>
+    <script
+      async
+      crossorigin="anonymous"
+      id="sa-dynamic-optimization"
+      data-uuid="180b3689-4f9a-42e5-8fc5-f4b7c2217a7e"
+      src="https://dashboard.searchatlas.com/scripts/dynamic_optimization.js"
+    ></script>
     <link rel="dns-prefetch" href="//images.unsplash.com" />
 
     <!-- Resource hints -->
