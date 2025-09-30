@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 
+import { useEffect } from "react";
+
 interface SEOConfig {
   title?: string;
   description?: string;
