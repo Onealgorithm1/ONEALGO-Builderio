@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as React from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 interface CollapsibleProps {
@@ -12,7 +13,7 @@ export function Collapsible({
   children,
   className = "",
 }: CollapsibleProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <div className={className}>
