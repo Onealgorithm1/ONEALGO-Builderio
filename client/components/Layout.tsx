@@ -670,7 +670,7 @@ export default function Layout({ children }: LayoutProps) {
                 </a>
 
                 <a
-                  href="https://share.google/B7LlkfBclo07Iyg2i"
+                  href="https://maps.app.goo.gl/kVEeTz9dCyB64CGk6"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group bg-blue-800 hover:bg-red-500 p-3 rounded-full transition-all duration-300 hover:scale-110"
