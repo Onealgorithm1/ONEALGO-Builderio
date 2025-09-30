@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from "react";
-import React from "react";
 import Layout from "../components/Layout";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
 import {
