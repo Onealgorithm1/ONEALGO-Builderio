@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 
 
+import * as React from "react";
+
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -22,11 +24,11 @@ export function LazyImage({
   fetchpriority = "auto",
   placeholder = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect width="100%25" height="100%25" fill="%23f3f4f6"/%3E%3C/svg%3E',
 }: LazyImageProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  const [isInView, setIsInView] = React.useState(false);
+  const imgRef = React.useRef<HTMLImageElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -95,10 +97,10 @@ export function LazySection({
   children: React.ReactNode;
   className?: string;
 }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = React.useState(false);
+  const sectionRef = React.useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
