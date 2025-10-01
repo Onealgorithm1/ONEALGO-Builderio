@@ -89,7 +89,10 @@
     var saScriptUuid = "180b3689-4f9a-42e5-8fc5-f4b7c2217a7e";
 
     function loadSearchAtlasScript() {
-      if (window.__saDynamicOptimizationLoading || document.getElementById(saScriptId)) {
+      if (
+        window.__saDynamicOptimizationLoading ||
+        document.getElementById(saScriptId)
+      ) {
         return;
       }
 
@@ -97,7 +100,8 @@
       var script = document.createElement("script");
       script.id = saScriptId;
       script.type = "text/javascript";
-      script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+      script.src =
+        "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
       script.defer = true;
       script.async = true;
       script.setAttribute("nowprocket", "");
@@ -116,7 +120,10 @@
       document.head.appendChild(script);
     }
 
-    if (document.readyState === "complete" || document.readyState === "interactive") {
+    if (
+      document.readyState === "complete" ||
+      document.readyState === "interactive"
+    ) {
       loadSearchAtlasScript();
     } else {
       document.addEventListener("DOMContentLoaded", loadSearchAtlasScript, {
