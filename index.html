@@ -125,16 +125,6 @@
             console.log(
               "SearchAtlas script already present in HTML; skipping dynamic append.",
             );
-          } else {
-            var s = document.createElement("script");
-            s.type = "text/javascript";
-            s.id = "sa-dynamic-optimization-loader";
-            s.dataset.uuid = "180b3689-4f9a-42e5-8fc5-f4b7c2217a7e";
-            // Point to local vendorized copy instead of embedding inline string
-            s.src = "/scripts/dynamic_optimization.js";
-
-            // Append vendor script
-            document.head.appendChild(s);
           }
         } catch (err) {
           console.error("Error inserting SearchAtlas script", err);
