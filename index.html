@@ -57,6 +57,11 @@
 
           window.addEventListener("error", function (evt) {
             try {
+              // Ignore opaque cross-origin script errors to reduce noise
+              if (evt.message === "Script error." && !evt.filename) {
+                return;
+              }
+
               var isResourceError =
                 evt.target && (evt.target.src || evt.target.href);
               var payload = {
@@ -114,22 +119,12 @@
 
           if (
             document.querySelector(
-              'script[id="sa-dynamic-optimization-visible"]',
+              "#sa-dynamic-optimization, #sa-dynamic-optimization-loader",
             )
           ) {
             console.log(
               "SearchAtlas script already present in HTML; skipping dynamic append.",
             );
-          } else {
-            var s = document.createElement("script");
-            s.type = "text/javascript";
-            s.id = "sa-dynamic-optimization-visible";
-            s.dataset.uuid = "180b3689-4f9a-42e5-8fc5-f4b7c2217a7e";
-            // Point to local vendorized copy instead of embedding inline string
-            s.src = "/scripts/dynamic_optimization.js";
-
-            // Append vendor script
-            document.head.appendChild(s);
           }
         } catch (err) {
           console.error("Error inserting SearchAtlas script", err);
@@ -287,5 +282,26 @@
       sizes="16x16"
       href="https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F7ac5062ee651476bb378c8bccb3f5456?format=webp&width=16"
     />
+    <script
+      nowprocket
+      nitro-exclude
+      type="text/javascript"
+      id="sa-dynamic-optimization"
+      data-uuid="180b3689-4f9a-42e5-8fc5-f4b7c2217a7e"
+      src="data:text/javascript;base64,KGZ1bmN0aW9uICgpIHsKICBpZiAod2luZG93LlNlYXJjaEF0bGFzICYmIHdpbmRvdy5TZWFyY2hBdGxhcy5fX3N0dWJiZWQpIHJldHVybjsKCiAgZnVuY3Rpb24gbm9vcCgpIHsKICAgIHJldHVybiBQcm9taXNlLnJlc29sdmUobnVsbCk7CiAgfQoKICB3aW5kb3cuU2VhcmNoQXRsYXMgPSBPYmplY3QuYXNzaWduKHt9LCB3aW5kb3cuU2VhcmNoQXRsYXMsIHsKICAgIF9fc3R1YmJlZDogdHJ1ZSwKICAgIGluaXQ6IG5vb3AsCiAgICBmZXRjaFVybERldGFpbHM6IG5vb3AsCiAgICBmZXRjaERhdGE6IG5vb3AsCiAgfSk7CgogIHdpbmRvdy5vdHRvX2pzX2luc3RhbGxlZCA9IHRydWU7CiAgd2luZG93Lm90dG9fanNfdXVpZCA9ICIxODBiMzY4OS00ZjlhLTQyZTUtOGZjNS1mNGI3YzIyMTdhN2UiOwp9KSgpOw=="
+    ></script>
   </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NTDV6XG6"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <div id="root"></div>
+    <script type="module" src="/client/App.tsx"></script>
+  </body>
 </html>
