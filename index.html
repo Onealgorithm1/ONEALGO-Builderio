@@ -1,7 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Google Tag Manager -->
+    
+    
+    <!-- DNS Prefetch for Performance -->
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//cdn.builder.io">
+    
+    <!-- Google Tag Manager - AFTER SearchAtlas -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -15,16 +21,6 @@
       })(window, document, "script", "dataLayer", "GTM-NTDV6XG6");
     </script>
     <!-- End Google Tag Manager -->
-    <!-- OTTO -->
-    <script
-      nowprocket
-      nitro-exclude
-      type="text/javascript"
-      id="sa-dynamic-optimization"
-      data-uuid="67538d68-7102-4008-8810-49c94fafae37"
-      src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gIjY3NTM4ZDY4LTcxMDItNDAwOC04ODEwLTQ5Yzk0ZmFmYWUzNyI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="
-    ></script>
-    <!-- End OTTO -->
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -84,6 +80,7 @@
       })();
     </script>
 
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OneAlgorithm — IT Consulting & Web Development</title>
@@ -96,10 +93,21 @@
       content="IT consulting, website development, operations technology, staff augmentation, business automation, construction technology, manufacturing systems, e-commerce solutions, digital transformation, OneAlgorithm"
     />
     <meta name="author" content="OneAlgorithm" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://onealgorithm.com/">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Robots and indexing -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-    <!-- Bing Search Engine Validation -->
+    <!-- Search Engine Validations -->
     <meta name="msvalidate.01" content="1BC7A274BE398B1CF0FDD647281B5EEF" />
-    <!-- Pinterest domain verification -->
     <meta name="p:domain_verify" content="55dcfab197ccf9d46c3b2773d7877269" />
 
     <!-- Open Graph / Facebook -->
@@ -126,8 +134,6 @@
       property="og:image:alt"
       content="OneAlgorithm Technology Solutions - Digital Transformation & Automation"
     />
-
-    <!-- Additional Open Graph for better sharing -->
     <meta property="article:author" content="OneAlgorithm" />
     <meta
       property="article:publisher"
@@ -175,8 +181,81 @@
       sizes="16x16"
       href="https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F7ac5062ee651476bb378c8bccb3f5456?format=webp&width=16"
     />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OneAlgorithm",
+      "url": "https://onealgorithm.com",
+      "logo": "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F7ac5062ee651476bb378c8bccb3f5456",
+      "description": "Expert IT consulting, website development, operations technology, and staff augmentation services",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/onealgorithmllc",
+        "https://twitter.com/OneAlgorithm"
+      ],
+      "knowsAbout": [
+        "IT Consulting",
+        "Website Development",
+        "Operations Technology",
+        "Staff Augmentation",
+        "Digital Transformation"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "IT Consulting",
+              "description": "Expert IT consulting services for digital transformation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website Development",
+              "description": "Custom website development for businesses"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Operations Technology",
+              "description": "Operations technology solutions for Manufacturing and Construction"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Staff Augmentation",
+              "description": "Professional staff augmentation services"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
   </head>
   <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#root" class="skip-link" style="position: absolute; left: -9999px; z-index: 999; padding: 1rem; background: #000; color: #fff; text-decoration: none;">Skip to main content</a>
+    
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -184,9 +263,23 @@
         height="0"
         width="0"
         style="display: none; visibility: hidden"
+        title="Google Tag Manager"
       ></iframe>
     </noscript>
-    <div id="root"></div>
+    
+   
+    <!-- Main application root -->
+    <div id="root" role="main"></div>
+
+    <!-- Application JavaScript (compiled from TypeScript) -->
     <script type="module" src="/client/App.tsx"></script>
+    
+    <!-- Fallback for older browsers -->
+    <noscript>
+      <div style="padding: 2rem; text-align: center;">
+        <h1>JavaScript Required</h1>
+        <p>Please enable JavaScript to use this application.</p>
+      </div>
+    </noscript>
   </body>
 </html>
