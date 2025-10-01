@@ -140,7 +140,7 @@
             script.setAttribute("data-uuid", saScriptUuid);
 
             script.onload = function () {
-              (window as any).__saDynamicOptimizationLoaded = true;
+              window.__saDynamicOptimizationLoaded = true;
             };
             script.onerror = function (event) {
               try {
