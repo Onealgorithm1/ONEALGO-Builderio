@@ -21,17 +21,25 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
   src: url("https://fonts.bunny.net/fonts/roboto/files/roboto-latin-400-normal.woff2")
     format("woff2");
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
+  font-display: optional;
   src: url("https://fonts.bunny.net/fonts/roboto/files/roboto-latin-700-normal.woff2")
     format("woff2");
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
 }
 
 /* Performance optimizations */
