@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { Collapsible } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
+import { CheckCircle } from "lucide-react";
 
 export default function SeoContentSection() {
   return (
@@ -52,6 +53,73 @@ export default function SeoContentSection() {
           <div className="flex justify-center">
             <Button asChild size="lg" className="btn-primary">
               <Link to="/contact">Get Free Consultation</Link>
+            </Button>
+          </div>
+        </div>
+        <div className="bg-onealgo-light rounded-2xl p-8 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold text-onealgo-blue-950 mb-6">Industry-Specific Technology Expertise</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Construction Technology</h4>
+                  <p className="text-gray-700 text-sm">Project management systems, BIM integration, field data collection, equipment tracking, safety compliance tools, and workforce management solutions tailored for construction companies.</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Manufacturing Systems</h4>
+                  <p className="text-gray-700 text-sm">Production planning, quality control systems, inventory management, supply chain optimization, equipment monitoring, and lean manufacturing implementations.</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">E-Commerce Solutions</h4>
+                  <p className="text-gray-700 text-sm">Online store development, payment integration, inventory synchronization, customer analytics, marketing automation, and multi-channel selling platforms.</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-onealgo-blue-950 mb-6">Why Businesses Choose OneAlgorithm</h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-onealgo-orange-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Proven Track Record</h4>
+                    <p className="text-gray-700 text-sm">Successfully delivered 500+ technology projects with 98% client satisfaction rate</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-onealgo-orange-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Expert Team</h4>
+                    <p className="text-gray-700 text-sm">Certified consultants with 15+ years of industry experience across multiple technology domains</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-onealgo-orange-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Measurable Results</h4>
+                    <p className="text-gray-700 text-sm">Average 40% cost reduction and 60% efficiency improvement within 6 months of implementation</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-onealgo-orange-500 mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">24/7 Support</h4>
+                    <p className="text-gray-700 text-sm">Round-the-clock technical support and maintenance across all time zones and geographic locations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center bg-gradient-to-br from-onealgo-blue-950 to-onealgo-blue-800 text-white rounded-2xl p-8">
+          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h3>
+          <p className="text-xl text-blue-200 mb-6 max-w-3xl mx-auto">Join industry leaders who trust OneAlgorithm for their technology transformation. Our expert consultants are ready to assess your current systems and develop a customized roadmap for success.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white px-8 py-4 text-lg">
+              <Link to="/contact">Get Free Consultation</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-onealgo-blue-950 px-8 py-4 text-lg">
+              <Link to="/services">Explore Our Services</Link>
             </Button>
           </div>
         </div>
