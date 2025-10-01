@@ -62,11 +62,15 @@ export default defineConfig(({ mode }) => ({
     // Optimize CSS
     cssCodeSplit: true,
   },
-  plugins: [react(), expressPlugin(), Critters({
-    preload: "swap",
-    pruneSource: true,
-    reduceInlineStyles: true,
-  })],
+  plugins: [
+    react(),
+    expressPlugin(),
+    Critters({
+      preload: "swap",
+      pruneSource: true,
+      reduceInlineStyles: true,
+    }),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
