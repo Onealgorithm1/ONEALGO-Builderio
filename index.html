@@ -117,14 +117,49 @@
             }
           });
 
+          var saScriptId = "sa-dynamic-optimization";
+          var saScriptUuid = "180b3689-4f9a-42e5-8fc5-f4b7c2217a7e";
+
+          function loadSearchAtlasScript() {
+            if (
+              (window as any).__saDynamicOptimizationLoading ||
+              document.getElementById(saScriptId)
+            ) {
+              return;
+            }
+
+            (window as any).__saDynamicOptimizationLoading = true;
+            var script = document.createElement("script");
+            script.id = saScriptId;
+            script.type = "text/javascript";
+            script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+            script.defer = true;
+            script.async = true;
+            script.setAttribute("nowprocket", "");
+            script.setAttribute("nitro-exclude", "");
+            script.setAttribute("data-uuid", saScriptUuid);
+
+            script.onload = function () {
+              (window as any).__saDynamicOptimizationLoaded = true;
+            };
+            script.onerror = function (event) {
+              try {
+                console.warn("SearchAtlas script failed to load", event);
+              } catch (e) {}
+            };
+
+            document.head.appendChild(script);
+          }
+
           if (
-            document.querySelector(
-              "#sa-dynamic-optimization, #sa-dynamic-optimization-loader",
-            )
+            document.readyState === "complete" ||
+            document.readyState === "interactive"
           ) {
-            console.log(
-              "SearchAtlas script already present in HTML; skipping dynamic append.",
-            );
+            loadSearchAtlasScript();
+          } else {
+            document.addEventListener("DOMContentLoaded", loadSearchAtlasScript, {
+              once: true,
+            });
           }
         } catch (err) {
           console.error("Error inserting SearchAtlas script", err);
@@ -282,15 +317,6 @@
       sizes="16x16"
       href="https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F7ac5062ee651476bb378c8bccb3f5456?format=webp&width=16"
     />
-    <script
-      nowprocket
-      nitro-exclude
-      type="text/javascript"
-      id="sa-dynamic-optimization"
-      data-uuid="180b3689-4f9a-42e5-8fc5-f4b7c2217a7e"
-      src="https://dashboard.searchatlas.com/scripts/dynamic_optimization.js"
-      defer
-    ></script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
