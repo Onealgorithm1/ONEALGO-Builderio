@@ -88,8 +88,7 @@
     var LOADER_ID = "sa-dynamic-optimization-loader";
     var LEGACY_ID = "sa-dynamic-optimization";
     var LOADER_UUID = "ca1f4c7667df2c4769bff7338a598f2a";
-    var LOADER_SRC =
-      "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+    var LOADER_SRC = "/scripts/dynamic_optimization.js";
 
     function loadSearchAtlasScript() {
       if (window.saScriptLoaded || document.getElementById(LOADER_ID)) {
