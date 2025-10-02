@@ -7,7 +7,8 @@
         if (!prodHosts.includes(location.hostname)) return;
         try {
           var script = document.createElement("script");
-          script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+          script.src =
+            "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
           script.id = "sa-dynamic-optimization-loader";
           script.setAttribute("nowprocket", "");
           script.setAttribute("nitro-exclude", "");
@@ -30,14 +31,17 @@
               if (child && child.tagName === "SCRIPT") {
                 var id = (child.id || "").toLowerCase();
                 var src = (child.src || "").toLowerCase();
-                var uuid = (child.getAttribute && child.getAttribute("data-uuid")) || "";
+                var uuid =
+                  (child.getAttribute && child.getAttribute("data-uuid")) || "";
                 var isOtto =
                   id === "sa-dynamic-optimization" ||
                   src.indexOf("searchatlas") !== -1 ||
                   src.indexOf("sa.searchatlas.com") !== -1 ||
                   src.indexOf("dashboard.searchatlas.com") !== -1 ||
                   uuid.length > 0;
-                var already = document.getElementById("sa-dynamic-optimization");
+                var already = document.getElementById(
+                  "sa-dynamic-optimization",
+                );
                 if (isOtto && (already || seen)) {
                   return child;
                 }
