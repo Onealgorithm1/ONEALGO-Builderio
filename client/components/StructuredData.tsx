@@ -175,7 +175,7 @@ export function createOrganizationSchemaDetailed() {
     description:
       "Custom software development, system integration, and growth marketing agency serving Philadelphia and nationwide clients",
     url: "https://onealgorithm.com",
-    logo: "https://onealgorithm.com/logo.png",
+    logo: "https://onealgorithm.com/logo.webp",
     foundingDate: "2020",
     telephone: "(610) 298-9069",
     email: "contact@onealgorithm.com",
@@ -310,7 +310,7 @@ export function createLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "One Algorithm",
-    image: "https://onealgorithm.com/logo.png",
+    image: "https://onealgorithm.com/logo.webp",
     telephone: "(610) 298-9069",
     email: "contact@onealgorithm.com",
     address: {
