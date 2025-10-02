@@ -14,11 +14,13 @@ import { Factory, Cog, BarChart3, Shield, Clock, Zap } from "lucide-react";
 export default function Manufacturing() {
   useSEO({
     title: "Manufacturing Solutions — OneAlgorithm",
-    description: "Production tracking, workflow automation, quality control, and predictive maintenance for manufacturers.",
+    description:
+      "Production tracking, workflow automation, quality control, and predictive maintenance for manufacturers.",
     canonical: getCanonicalUrl("/industries/manufacturing"),
     ogTitle: "Manufacturing Solutions — OneAlgorithm",
-    ogDescription: "Integrated systems delivering live data insights across operations.",
-    ogUrl: getCanonicalUrl("/industries/manufacturing")
+    ogDescription:
+      "Integrated systems delivering live data insights across operations.",
+    ogUrl: getCanonicalUrl("/industries/manufacturing"),
   });
   const features = [
     {

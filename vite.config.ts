@@ -61,10 +61,7 @@ export default defineConfig(({ mode }) => ({
     // Optimize CSS
     cssCodeSplit: true,
   },
-  plugins: [
-    react(),
-    expressPlugin(),
-  ],
+  plugins: [react(), expressPlugin()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),

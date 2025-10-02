@@ -21,11 +21,13 @@ import {
 export default function Construction() {
   useSEO({
     title: "Construction Solutions — OneAlgorithm",
-    description: "Project scheduling, team coordination, safety, and cost control solutions for construction firms.",
+    description:
+      "Project scheduling, team coordination, safety, and cost control solutions for construction firms.",
     canonical: getCanonicalUrl("/industries/construction"),
     ogTitle: "Construction Solutions — OneAlgorithm",
-    ogDescription: "Smarter coordination and real-time visibility from field to office.",
-    ogUrl: getCanonicalUrl("/industries/construction")
+    ogDescription:
+      "Smarter coordination and real-time visibility from field to office.",
+    ogUrl: getCanonicalUrl("/industries/construction"),
   });
   const features = [
     {
