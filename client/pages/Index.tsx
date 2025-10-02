@@ -47,12 +47,12 @@ export default function Index() {
       "OneAlgorithm delivers custom software development, system integration, and growth marketing services.",
     ogUrl: getCanonicalUrl("/"),
     ogImage:
-      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=png&width=1200",
     twitterTitle: "OneAlgorithm — IT Consulting & Web Development",
     twitterDescription:
       "OneAlgorithm delivers custom software development, system integration, and growth marketing services.",
     twitterImage:
-      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=webp&width=1200",
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=png&width=1200",
   });
   return (
     <Layout>
