@@ -1,7 +1,9 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useSEO } from "../hooks/use-seo";
 
 const NotFound = () => {
+  useSEO({ title: "404 — Page Not Found | OneAlgorithm" });
   const location = useLocation();
 
   useEffect(() => {
