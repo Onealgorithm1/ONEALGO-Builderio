@@ -19,6 +19,7 @@ export default function Layout({ children }: LayoutProps) {
   const servicesDropdownRef = React.useRef<HTMLDivElement>(null);
   const dropdownRef = React.useRef<HTMLDivElement>(null);
   const careersDropdownRef = React.useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   // Close all dropdowns when mobile menu closes
   React.useEffect(() => {
