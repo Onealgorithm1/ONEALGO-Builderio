@@ -10,7 +10,7 @@ export default function BinaryGlobeSVG({
   className = "",
 }: BinaryGlobeSVGProps) {
   const src =
-    "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fdc081d752c66412d9b254d3932210f12?format=webp&width=800";
+    "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F557317a35fa3445dbb745567290f1bd4";
   return (
     <img
       src={src}
