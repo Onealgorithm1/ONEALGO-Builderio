@@ -61,7 +61,7 @@ export default function About() {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               About <span className="text-onealgo-orange-500">One</span>
-              Algorithm
+              Algorithm — Our Mission & Team
             </h1>
             <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
               We exist to transform struggling businesses into thriving
