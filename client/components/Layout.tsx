@@ -45,6 +45,9 @@ export default function Layout({ children }: LayoutProps) {
 
   React.useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      // When mobile menu is open, don't auto-close dropdowns on outside click
+      if (mobileMenuOpen) return;
+
       if (
         servicesDropdownRef.current &&
         !servicesDropdownRef.current.contains(event.target as Node)
@@ -69,7 +72,7 @@ export default function Layout({ children }: LayoutProps) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [mobileMenuOpen]);
 
   React.useEffect(() => {
     if (mobileMenuOpen) {
