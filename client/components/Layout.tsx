@@ -82,6 +82,19 @@ export default function Layout({ children }: LayoutProps) {
     };
   }, [mobileMenuOpen]);
 
+  // Close mobile menu and dropdowns on route change, and scroll to top
+  React.useEffect(() => {
+    setMobileMenuOpen(false);
+    setServicesDropdownOpen(false);
+    setIndustriesDropdownOpen(false);
+    setCareersDropdownOpen(false);
+    try {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch (_) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
