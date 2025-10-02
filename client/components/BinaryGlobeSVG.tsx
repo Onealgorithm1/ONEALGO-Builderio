@@ -18,7 +18,14 @@ export default function BinaryGlobeSVG({
       width={size}
       height={size}
       className={`inline-block ${className}`}
-      style={{ objectFit: "contain" }}
+      style={{
+        objectFit: "contain",
+        width: `${size}px`,
+        filter:
+          "drop-shadow(rgba(0, 0, 0, 0.07) 0px 4px 3px) drop-shadow(rgba(0, 0, 0, 0.06) 0px 2px 2px)",
+        color: "rgba(255, 255, 255, 1)",
+        border: "1px solid rgba(255, 255, 255, 1)",
+      }}
       loading="lazy"
       decoding="async"
     />
