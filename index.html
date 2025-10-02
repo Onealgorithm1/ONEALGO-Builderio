@@ -1,16 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script
-      nowprocket
-      nitro-exclude
-      type="text/javascript"
-      id="sa-dynamic-optimization"
-      data-uuid="67538d68-7102-4008-8810-49c94fafae37"
-      src="data:text/javascript;base64,dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO3NjcmlwdC5zZXRBdHRyaWJ1dGUoIm5vd3Byb2NrZXQiLCAiIik7c2NyaXB0LnNldEF0dHJpYnV0ZSgibml0cm8tZXhjbHVkZSIsICIiKTtzY3JpcHQuc3JjID0gImh0dHBzOi8vZGFzaGJvYXJkLnNlYXJjaGF0bGFzLmNvbS9zY3JpcHRzL2R5bmFtaWNfb3B0aW1pemF0aW9uLmpzIjtzY3JpcHQuZGF0YXNldC51dWlkID0gIjY3NTM4ZDY4LTcxMDItNDAwOC04ODEwLTQ5Yzk0ZmFmYWUzNyI7c2NyaXB0LmlkID0gInNhLWR5bmFtaWMtb3B0aW1pemF0aW9uLWxvYWRlciI7ZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzY3JpcHQpOw=="
-    ></script>
     <script>
       (function () {
+        var prodHosts = ["onealgorithm.com", "www.onealgorithm.com"];
+        if (!prodHosts.includes(location.hostname)) return;
+        try {
+          var script = document.createElement("script");
+          script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+          script.id = "sa-dynamic-optimization-loader";
+          script.setAttribute("nowprocket", "");
+          script.setAttribute("nitro-exclude", "");
+          script.dataset.uuid = "67538d68-7102-4008-8810-49c94fafae37";
+          script.async = true;
+          script.onerror = function () {};
+          document.head.appendChild(script);
+        } catch (e) {}
+      })();
+    </script>
+    <script>
+      (function () {
+        var prodHosts = ["onealgorithm.com", "www.onealgorithm.com"];
+        if (!prodHosts.includes(location.hostname)) return;
         try {
           var seen = false;
           var originalAppend = Element.prototype.appendChild;
@@ -19,17 +30,14 @@
               if (child && child.tagName === "SCRIPT") {
                 var id = (child.id || "").toLowerCase();
                 var src = (child.src || "").toLowerCase();
-                var uuid =
-                  (child.getAttribute && child.getAttribute("data-uuid")) || "";
+                var uuid = (child.getAttribute && child.getAttribute("data-uuid")) || "";
                 var isOtto =
                   id === "sa-dynamic-optimization" ||
                   src.indexOf("searchatlas") !== -1 ||
                   src.indexOf("sa.searchatlas.com") !== -1 ||
                   src.indexOf("dashboard.searchatlas.com") !== -1 ||
                   uuid.length > 0;
-                var already = document.getElementById(
-                  "sa-dynamic-optimization",
-                );
+                var already = document.getElementById("sa-dynamic-optimization");
                 if (isOtto && (already || seen)) {
                   return child;
                 }
