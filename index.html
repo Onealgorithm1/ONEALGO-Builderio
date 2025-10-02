@@ -2,117 +2,11 @@
 <html lang="en">
   <head>
     <!-- DNS Prefetch for Performance -->
-    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     <link rel="dns-prefetch" href="//cdn.builder.io" />
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
 
     <!-- Preload main CSS to reduce blocking time -->
     <link rel="preload" as="style" href="/assets/index.css" />
-
-    <!-- Google Tag Manager (deferred, production only) -->
-    <script>
-      (function () {
-        var prodHosts = ["onealgorithm.com", "www.onealgorithm.com"];
-        if (!prodHosts.includes(location.hostname)) return;
-        function loadAnalytics() {
-          if (loadAnalytics._done) return;
-          loadAnalytics._done = true;
-          (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-            var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s),
-              dl = l != "dataLayer" ? "&l=" + l : "";
-            j.async = true;
-            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-            f.parentNode.insertBefore(j, f);
-          })(window, document, "script", "dataLayer", "GTM-NTDV6XG6");
-          var gs = document.createElement("script");
-          gs.async = true;
-          gs.src = "https://www.googletagmanager.com/gtag/js?id=G-RC48CMQ05T";
-          document.head.appendChild(gs);
-        }
-        var fired = false;
-        function fireOnce() {
-          if (!fired) {
-            fired = true;
-            loadAnalytics();
-            removeListeners();
-          }
-        }
-        function removeListeners() {
-          [
-            "pointerdown",
-            "keydown",
-            "scroll",
-            "mousemove",
-            "touchstart",
-          ].forEach(function (t) {
-            window.removeEventListener(t, fireOnce, { passive: true });
-          });
-        }
-        ["pointerdown", "keydown", "scroll", "mousemove", "touchstart"].forEach(
-          function (t) {
-            window.addEventListener(t, fireOnce, { passive: true });
-          },
-        );
-        setTimeout(loadAnalytics, 10000);
-      })();
-    </script>
-    <!-- End Google Tag Manager -->
-    <script>
-      (function () {
-        function warn(message, error) {
-          if (
-            typeof console !== "undefined" &&
-            typeof console.warn === "function"
-          ) {
-            if (error) {
-              console.warn(message, error);
-            } else {
-              console.warn(message);
-            }
-          }
-        }
-
-        try {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            window.dataLayer.push(arguments);
-          }
-          window.gtag = window.gtag || gtag;
-          var prodHosts = ["onealgorithm.com", "www.onealgorithm.com"];
-          if (!prodHosts.includes(location.hostname)) return;
-          window.gtag("js", new Date());
-          window.gtag("config", "G-RC48CMQ05T", {
-            allow_enhanced_conversions: true,
-          });
-          window.gtag("config", "AW-17336277732");
-          window.gtag("event", "page_view", {
-            page_title: document.title,
-            page_location: window.location.href,
-          });
-        } catch (error) {
-          warn("Google Analytics initialization failed", error);
-        }
-
-        window.trackFormSubmission = function () {
-          try {
-            if (typeof window.gtag === "function") {
-              window.gtag("event", "contact_form_submission", {
-                event_category: "form",
-                event_label: "contact",
-                value: 1,
-              });
-            } else {
-              warn("Analytics unavailable: contact_form_submission skipped");
-            }
-          } catch (error) {
-            warn("Analytics unavailable: contact_form_submission error", error);
-          }
-        };
-      })();
-    </script>
 
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
@@ -271,81 +165,23 @@
         }
       }
     </script>
+
+    <!-- SearchAtlas OTTO Script -->
     <script>
       (function () {
         var prodHosts = ["onealgorithm.com", "www.onealgorithm.com"];
         if (!prodHosts.includes(location.hostname)) return;
-        try {
-          if (!document.getElementById("sa-dynamic-optimization")) {
-            var script = document.createElement("script");
-            script.src =
-              "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
-            script.id = "sa-dynamic-optimization";
-            script.setAttribute("nowprocket", "");
-            script.setAttribute("nitro-exclude", "");
-            script.setAttribute(
-              "data-uuid",
-              "67538d68-7102-4008-8810-49c94fafae37",
-            );
-            script.async = true;
-            script.onerror = function () {};
-            document.head.appendChild(script);
-          }
-          // Guard against duplicate or wrong-UUID OTTO injections (e.g., via GTM)
-          try {
-            var SA_UUID = "67538d68-7102-4008-8810-49c94fafae37";
-            if (!window.__OTTO_GUARD__) {
-              window.__OTTO_GUARD__ = true;
-              var __otto_append = Element.prototype.appendChild;
-              Element.prototype.appendChild = function (child) {
-                try {
-                  if (child && child.tagName === "SCRIPT") {
-                    var id = (child.id || "").toLowerCase();
-                    var src = (child.src || "").toLowerCase();
-                    var uuid =
-                      (child.getAttribute && child.getAttribute("data-uuid")) ||
-                      "";
-                    var isOtto =
-                      id.indexOf("sa-dynamic-optimization") !== -1 ||
-                      src.indexOf("searchatlas.com") !== -1 ||
-                      src.indexOf("sa.searchatlas.com") !== -1 ||
-                      src.indexOf("dashboard.searchatlas.com") !== -1 ||
-                      uuid.length > 0;
-                    var already = document.getElementById(
-                      "sa-dynamic-optimization",
-                    );
-                    var wrongUuid = isOtto && uuid && uuid !== SA_UUID;
-                    if (isOtto && (already || wrongUuid)) {
-                      return child; // block duplicate or wrong UUID
-                    }
-                  }
-                } catch (e) {}
-                return __otto_append.call(this, child);
-              };
-            }
-
-            // Cleanup any stray duplicates
-            var nodes = Array.prototype.slice.call(
-              document.querySelectorAll(
-                'script[src*="searchatlas.com"], script#sa-dynamic-optimization',
-              ),
-            );
-            var kept = false;
-            for (var i = 0; i < nodes.length; i++) {
-              var n = nodes[i];
-              var isCorrect =
-                (n.id || "").toLowerCase() === "sa-dynamic-optimization" ||
-                (n.getAttribute && n.getAttribute("data-uuid") === SA_UUID);
-              if (!kept && isCorrect) {
-                kept = true;
-                continue;
-              }
-              if (kept && n && n.parentNode) {
-                n.parentNode.removeChild(n);
-              }
-            }
-          } catch (e) {}
-        } catch (e) {}
+        
+        if (!document.getElementById("sa-dynamic-optimization")) {
+          var script = document.createElement("script");
+          script.setAttribute("nowprocket", "");
+          script.setAttribute("nitro-exclude", "");
+          script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js";
+          script.dataset.uuid = "67538d68-7102-4008-8810-49c94fafae37";
+          script.id = "sa-dynamic-optimization";
+          script.async = true;
+          document.head.appendChild(script);
+        }
       })();
     </script>
   </head>
@@ -365,17 +201,6 @@
       "
       >Skip to main content</a
     >
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NTDV6XG6"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-        title="Google Tag Manager"
-      ></iframe>
-    </noscript>
 
     <!-- Main application root -->
     <div id="root" role="main"></div>
