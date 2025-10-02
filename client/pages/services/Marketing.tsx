@@ -96,7 +96,8 @@ export default function Marketing() {
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
             </svg>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Marketing Services & <span className="text-purple-500">Automation Solutions</span>
+              Marketing Services &{" "}
+              <span className="text-purple-500">Automation Solutions</span>
             </h1>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
               Create campaigns that adapt instantly to customer behavior and
