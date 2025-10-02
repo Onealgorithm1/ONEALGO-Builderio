@@ -230,6 +230,26 @@ export default function Layout({ children }: LayoutProps) {
                       >
                         E-Commerce
                       </Link>
+                      <Link
+                        to="/industries/marketing"
+                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
+                        onClick={() => {
+                          setIndustriesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Marketing
+                      </Link>
+                      <Link
+                        to="/industries/website-development"
+                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
+                        onClick={() => {
+                          setIndustriesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Website Development
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -269,6 +289,16 @@ export default function Layout({ children }: LayoutProps) {
                         }}
                       >
                         Blog
+                      </Link>
+                      <Link
+                        to="/ai-info"
+                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
+                        onClick={() => {
+                          setCareersDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        AI Info
                       </Link>
                       <Link
                         to="/events"
@@ -503,6 +533,28 @@ export default function Layout({ children }: LayoutProps) {
                         >
                           E-Commerce
                         </Link>
+                        <Link
+                          to="/industries/marketing"
+                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setIndustriesDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Marketing
+                        </Link>
+                        <Link
+                          to="/industries/website-development"
+                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setIndustriesDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Website Development
+                        </Link>
                       </div>
                     )}
                   </div>
@@ -545,6 +597,17 @@ export default function Layout({ children }: LayoutProps) {
                           }}
                         >
                           Blog
+                        </Link>
+                        <Link
+                          to="/ai-info"
+                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setCareersDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          AI Info
                         </Link>
                         <Link
                           to="/events"
@@ -739,6 +802,15 @@ export default function Layout({ children }: LayoutProps) {
                   className="block text-blue-200 hover:text-white transition-colors"
                 >
                   Blog
+                </Link>
+                <Link
+                  to="/ai-info"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="block text-blue-200 hover:text-white transition-colors"
+                >
+                  AI Info
                 </Link>
                 <Link
                   to="/events"
