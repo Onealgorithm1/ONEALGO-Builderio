@@ -6,13 +6,16 @@ import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
 export default function Terms() {
   useSEO({
     title: "Terms & Conditions — OneAlgorithm",
-    description: "Review OneAlgorithm's Terms & Conditions governing use of our website and services.",
+    description:
+      "Review OneAlgorithm's Terms & Conditions governing use of our website and services.",
     canonical: getCanonicalUrl("/terms"),
     ogTitle: "Terms & Conditions — OneAlgorithm",
-    ogDescription: "Understand the terms governing use of our website and services.",
+    ogDescription:
+      "Understand the terms governing use of our website and services.",
     ogUrl: getCanonicalUrl("/terms"),
     twitterTitle: "Terms & Conditions — OneAlgorithm",
-    twitterDescription: "Understand the terms governing use of our website and services."
+    twitterDescription:
+      "Understand the terms governing use of our website and services.",
   });
   return (
     <Layout>

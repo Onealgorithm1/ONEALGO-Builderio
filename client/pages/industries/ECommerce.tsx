@@ -21,11 +21,13 @@ import {
 export default function ECommerce() {
   useSEO({
     title: "E‑Commerce Solutions — OneAlgorithm",
-    description: "Platform integration, order management, payments, and analytics for online retail.",
+    description:
+      "Platform integration, order management, payments, and analytics for online retail.",
     canonical: getCanonicalUrl("/industries/ecommerce"),
     ogTitle: "E‑Commerce Solutions — OneAlgorithm",
-    ogDescription: "Scale your online business with connected systems and automation.",
-    ogUrl: getCanonicalUrl("/industries/ecommerce")
+    ogDescription:
+      "Scale your online business with connected systems and automation.",
+    ogUrl: getCanonicalUrl("/industries/ecommerce"),
   });
   const features = [
     {

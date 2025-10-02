@@ -14,11 +14,13 @@ import { Target, TrendingUp, Users, Zap, BarChart3, Mail } from "lucide-react";
 export default function Marketing() {
   useSEO({
     title: "Marketing Solutions — OneAlgorithm",
-    description: "Campaign management, AI insights, journeys, and automation for growth teams.",
+    description:
+      "Campaign management, AI insights, journeys, and automation for growth teams.",
     canonical: getCanonicalUrl("/industries/marketing"),
     ogTitle: "Marketing Solutions — OneAlgorithm",
-    ogDescription: "Personalized experiences and measurable ROI across channels.",
-    ogUrl: getCanonicalUrl("/industries/marketing")
+    ogDescription:
+      "Personalized experiences and measurable ROI across channels.",
+    ogUrl: getCanonicalUrl("/industries/marketing"),
   });
   const features = [
     {
