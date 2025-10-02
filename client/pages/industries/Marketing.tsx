@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Layout from "../../components/Layout";
+import { useSEO, getCanonicalUrl } from "../../hooks/use-seo";
 import {
   Card,
   CardContent,
@@ -11,6 +12,14 @@ import { Button } from "../../components/ui/button";
 import { Target, TrendingUp, Users, Zap, BarChart3, Mail } from "lucide-react";
 
 export default function Marketing() {
+  useSEO({
+    title: "Marketing Solutions — OneAlgorithm",
+    description: "Campaign management, AI insights, journeys, and automation for growth teams.",
+    canonical: getCanonicalUrl("/industries/marketing"),
+    ogTitle: "Marketing Solutions — OneAlgorithm",
+    ogDescription: "Personalized experiences and measurable ROI across channels.",
+    ogUrl: getCanonicalUrl("/industries/marketing")
+  });
   const features = [
     {
       icon: <Target className="w-8 h-8 text-onealgo-orange-500" />,
