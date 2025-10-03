@@ -339,7 +339,7 @@ export function createLocalBusinessSchema() {
     sameAs: [
       "https://www.linkedin.com/company/onealgorithm",
       "https://twitter.com/onealgorithm",
-      "https://www.facebook.com/onealgorithm"
+      "https://www.facebook.com/onealgorithm",
     ],
   };
 }

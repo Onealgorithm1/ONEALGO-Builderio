@@ -492,7 +492,6 @@ export default function Contact() {
                   />
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -501,7 +500,9 @@ export default function Contact() {
       {/* Our Global Offices - full width row under the contact form and map */}
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Our Global Offices</h3>
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
+            Our Global Offices
+          </h3>
           <div className="w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors p-4">
