@@ -6,12 +6,35 @@
     <link rel="preconnect" href="https://fonts.bunny.net" crossorigin />
 
     <!-- Preload critical CSS (non-blocking) and fonts -->
-    <link rel="preload" href="/assets/index.css" as="style" onload="this.rel='stylesheet'" />
+    <link
+      rel="preload"
+      href="/assets/index.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
     <noscript><link rel="stylesheet" href="/assets/index.css" /></noscript>
 
-    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="https://fonts.bunny.net/fonts/roboto/files/roboto-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="https://fonts.bunny.net/fonts/roboto/files/roboto-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.bunny.net/fonts/roboto/files/roboto-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://fonts.bunny.net/fonts/roboto/files/roboto-latin-700-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
     <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
@@ -48,9 +71,13 @@
           // If the rejection is an Axios-like error containing a 401, swallow to avoid noisy console errors
           if (
             reason &&
-            (reason.response?.status === 401 || String(reason).indexOf("401") !== -1)
+            (reason.response?.status === 401 ||
+              String(reason).indexOf("401") !== -1)
           ) {
-            console.warn("Suppressed unhandled rejection with 401 status from third-party script.", reason);
+            console.warn(
+              "Suppressed unhandled rejection with 401 status from third-party script.",
+              reason,
+            );
             event.preventDefault && event.preventDefault();
             return;
           }
@@ -62,8 +89,16 @@
       // Generic window error handler for noisy embed scripts (keep lightweight)
       window.addEventListener("error", function (e) {
         try {
-          if (e && e.message && e.message.indexOf && e.message.indexOf("Request failed with status code 401") !== -1) {
-            console.warn("Suppressed error: third-party request returned 401", e.message);
+          if (
+            e &&
+            e.message &&
+            e.message.indexOf &&
+            e.message.indexOf("Request failed with status code 401") !== -1
+          ) {
+            console.warn(
+              "Suppressed error: third-party request returned 401",
+              e.message,
+            );
             e.preventDefault && e.preventDefault();
           }
         } catch (err) {}
