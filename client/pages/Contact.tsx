@@ -497,9 +497,9 @@ export default function Contact() {
                 Our Global Offices
               </h3>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <div className="flex flex-wrap gap-4 items-start">
                 {/* USA Office */}
-                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors flex-1 min-w-[220px]">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
                       <span className="text-xl">🇺🇸</span>
@@ -523,7 +523,7 @@ export default function Contact() {
                 </Card>
 
                 {/* India Office */}
-                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors flex-1 min-w-[220px]">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
                       <span className="text-xl">🇮🇳</span>
@@ -549,7 +549,7 @@ export default function Contact() {
                 </Card>
 
                 {/* UAE Office */}
-                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors flex-1 min-w-[220px]">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
                       <span className="text-xl">🇦🇪</span>
@@ -573,7 +573,7 @@ export default function Contact() {
                 </Card>
 
                 {/* Canada Office */}
-                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors flex-1 min-w-[220px]">
                   <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
                       <span className="text-xl">🇨🇦</span>
