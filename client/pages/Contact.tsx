@@ -479,6 +479,20 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* Map Embed */}
+              <div className="mb-8">
+                <div className="w-full rounded overflow-hidden shadow-sm">
+                  <iframe
+                    title="OneAlgorithm Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.4774062403612!2d-75.5771397!3d40.042445799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6f327d5340c9d%3A0x218ca530a72f1726!2sOneAlgorithm%20Consulting!5e0!3m2!1sen!2sus!4v1759511875621!5m2!1sen!2sus"
+                    className="w-full h-64 sm:h-96 border-0"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
+
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">
                 Our Global Offices
               </h3>
