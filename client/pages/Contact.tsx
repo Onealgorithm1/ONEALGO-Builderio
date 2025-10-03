@@ -502,9 +502,9 @@ export default function Contact() {
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Our Global Offices</h3>
-          <div className="flex flex-wrap -mx-2">
-            <div className="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
-              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors">
+          <div className="w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors p-4">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
                     <span className="text-xl">🇺🇸</span>
@@ -526,10 +526,8 @@ export default function Contact() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
 
-            <div className="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
-              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors">
+              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors p-4">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
                     <span className="text-xl">🇮🇳</span>
@@ -553,10 +551,8 @@ export default function Contact() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
 
-            <div className="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
-              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors">
+              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors p-4">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
                     <span className="text-xl">🇦🇪</span>
@@ -578,10 +574,8 @@ export default function Contact() {
                   </div>
                 </CardContent>
               </Card>
-            </div>
 
-            <div className="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
-              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors">
+              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors p-4">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
                     <span className="text-xl">🇨🇦</span>
