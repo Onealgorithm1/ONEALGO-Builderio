@@ -36,7 +36,7 @@ import { JSONLDScript } from "../components/JSONLDScript";
 export default function Index() {
   // Re-enabling useSEO hook after React stability fix
   useSEO({
-    title: "OneAlgorithm — IT Consulting & Web Development",
+    title: "OneAlgorithm �� IT Consulting & Web Development",
     description:
       "One Algorithm delivers custom software development, system integration, and growth marketing services. Based in Malvern, PA, we build scalable applications, automate workflows, and integrate 200+ platforms. Fast delivery, no vendor lock-in, 24/7 support. Founded 2020.",
     canonical: getCanonicalUrl("/"),
@@ -60,13 +60,27 @@ export default function Index() {
       <JSONLDScript data={createFAQSchema()} />
       <JSONLDScript data={createLocalBusinessSchema()} />
       {/* Hero Section */}
-      <section
-        className="relative py-20 lg:py-32 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 94, 170, 0.7), rgba(0, 94, 170, 0.5)), url('https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fe4cc18ffb8df4986a719ab3b27dcbabc?format=webp&width=1920')`,
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="https://cdn.builder.io/o/assets%2Fb90cab62d3d34e0087abec352888a96d%2F56a1800ee414437887a011bb3a039cf9?alt=media&token=3fbd2ca2-5ea8-4079-8fee-1190bfa18e0c&apiKey=b90cab62d3d34e0087abec352888a96d"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+
+        {/* Gradient overlay to preserve contrast */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(0, 94, 170, 0.7), rgba(0, 94, 170, 0.5))",
+          }}
+        />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in">
               <span className="text-white drop-shadow-lg">OneAlgorithm —</span>{" "}
