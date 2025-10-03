@@ -310,9 +310,11 @@ export function createLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "One Algorithm",
+    url: "https://onealgorithm.com",
+    logo: "https://onealgorithm.com/logo.webp",
     image: "https://onealgorithm.com/logo.webp",
     telephone: "(610) 298-9069",
-    email: "contact@onealgorithm.com",
+    email: "service@onealgorithm.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "625 Swedesford Rd",
@@ -321,6 +323,12 @@ export function createLocalBusinessSchema() {
       postalCode: "19355",
       addressCountry: "US",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 40.0424458,
+      longitude: -75.5771397,
+    },
+    areaServed: ["United States", "Canada", "India", "United Arab Emirates"],
     priceRange: "$$$",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
@@ -328,6 +336,11 @@ export function createLocalBusinessSchema() {
       opens: "09:00",
       closes: "18:00",
     },
+    sameAs: [
+      "https://www.linkedin.com/company/onealgorithm",
+      "https://twitter.com/onealgorithm",
+      "https://www.facebook.com/onealgorithm"
+    ],
   };
 }
 
