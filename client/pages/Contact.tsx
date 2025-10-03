@@ -600,6 +600,115 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Our Global Offices - full width row under the contact form and map */}
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Our Global Offices</h3>
+          <div className="flex flex-wrap -mx-2">
+            <div className="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
+              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
+                    <span className="text-xl">🇺🇸</span>
+                    USA
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-4 h-4 text-onealgo-orange-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-600 text-sm">
+                        625 Swedesford Rd
+                        <br />
+                        Malvern, PA 19355
+                        <br />
+                        (610) 298-9069
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
+              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
+                    <span className="text-xl">🇮🇳</span>
+                    India
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-4 h-4 text-onealgo-orange-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-600 text-sm">
+                        2nd Floor, Plot No. 536
+                        <br />
+                        Madhapur, Hyderabad
+                        <br />
+                        Telangana 500081, IN
+                        <br />
+                        +91 98765 43211
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
+              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
+                    <span className="text-xl">🇦🇪</span>
+                    UAE
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-4 h-4 text-onealgo-orange-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-600 text-sm">
+                        Building R118, Suite 201-A-42
+                        <br />
+                        Al Suq Al Kabeer, Dubai
+                        <br />
+                        +971 4 123 4567
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="w-full sm:w-1/2 md:w-1/4 px-2 mb-4">
+              <Card className="h-full border-2 hover:border-onealgo-orange-500 transition-colors">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center gap-2 text-onealgo-blue-950 text-lg">
+                    <span className="text-xl">🇨🇦</span>
+                    Canada
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-4 h-4 text-onealgo-orange-500 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-600 text-sm">
+                        120 Adelaide St W<br />
+                        Toronto, ON M5H 1T1
+                        <br />
+                        +1 (416) 555-1234
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SEO Content Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
