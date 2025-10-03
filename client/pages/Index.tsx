@@ -36,7 +36,7 @@ import { JSONLDScript } from "../components/JSONLDScript";
 export default function Index() {
   // Re-enabling useSEO hook after React stability fix
   useSEO({
-    title: "OneAlgorithm �� IT Consulting & Web Development",
+    title: "OneAlgorithm — IT Consulting & Web Development",
     description:
       "One Algorithm delivers custom software development, system integration, and growth marketing services. Based in Malvern, PA, we build scalable applications, automate workflows, and integrate 200+ platforms. Fast delivery, no vendor lock-in, 24/7 support. Founded 2020.",
     canonical: getCanonicalUrl("/"),
@@ -68,6 +68,8 @@ export default function Index() {
           muted
           loop
           playsInline
+          preload="metadata"
+          poster="https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fe4cc18ffb8df4986a719ab3b27dcbabc?format=webp&width=1200"
           aria-hidden="true"
         />
 
