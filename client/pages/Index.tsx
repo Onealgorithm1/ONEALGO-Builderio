@@ -273,7 +273,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
             {/* Construction */}
             <Link to="/industries/construction" className="group">
               <div className="text-center p-6 rounded-lg border-2 border-transparent hover:border-onealgo-orange-500 transition-colors cursor-pointer">
