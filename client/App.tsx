@@ -127,6 +127,7 @@ const App = () => (
               <Route path="/services/seo" element={<Seo />} />
               <Route path="/services/martech" element={<Martech />} />
               <Route path="/services/google-ads" element={<GoogleAds />} />
+              <Route path="/services/nonprofit" element={<Nonprofit />} />
               <Route
                 path="/services/staff-augmentation"
                 element={<StaffAugmentation />}
