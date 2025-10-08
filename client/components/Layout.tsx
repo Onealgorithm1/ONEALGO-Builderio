@@ -537,6 +537,17 @@ export default function Layout({ children }: LayoutProps) {
                           SEO Services
                         </Link>
                         <Link
+                          to="/services/nonprofit"
+                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setServicesDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Nonprofit Services
+                        </Link>
+                        <Link
                           to="/services/staff-augmentation"
                           className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
                           onClick={() => {
