@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
-import { Bank, Users, Shield, Zap, Clock } from "lucide-react";
+import { Building2, Users, Shield, Zap, Clock } from "lucide-react";
 
 export default function Government() {
   useSEO({
@@ -30,7 +30,7 @@ export default function Government() {
         "Hardened systems with audit trails, role-based access, and compliance with federal/state regulations.",
     },
     {
-      icon: <Bank className="w-8 h-8 text-onealgo-orange-500" />,
+      icon: <Building2 className="w-8 h-8 text-onealgo-orange-500" />,
       title: "Citizen Services",
       description:
         "Modern web and mobile services that improve access, transparency, and satisfaction for constituents.",
@@ -61,7 +61,7 @@ export default function Government() {
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Bank className="w-24 h-24 text-onealgo-orange-500 mx-auto mb-6 animate-bounce-slow" />
+            <Building2 className="w-24 h-24 text-onealgo-orange-500 mx-auto mb-6 animate-bounce-slow" />
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Government <span className="text-onealgo-orange-500">Solutions</span>
             </h1>
