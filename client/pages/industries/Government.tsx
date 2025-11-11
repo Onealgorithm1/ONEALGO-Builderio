@@ -11,7 +11,8 @@ import { Button } from "../../components/ui/button";
 import { Users, Shield, Zap, Clock } from "lucide-react";
 
 // GovernmentIcon — raster-based mask using provided asset so it inherits currentColor (brand color)
-const GOV_ICON_URL = "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F20b6adccade9436b84c4533a7665043f?format=webp&width=800";
+const GOV_ICON_URL =
+  "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F20b6adccade9436b84c4533a7665043f?format=webp&width=800";
 function GovernmentIcon({ className }: { className?: string }) {
   return (
     <div
@@ -89,7 +90,8 @@ export default function Government() {
           <div className="text-center">
             <GovernmentIcon className="w-24 h-24 text-onealgo-orange-500 mx-auto mb-6 animate-bounce-slow" />
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Government <span className="text-onealgo-orange-500">Solutions</span>
+              Government{" "}
+              <span className="text-onealgo-orange-500">Solutions</span>
             </h1>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-4">
               Empowering Government Transformation Through Data, AI, and
@@ -97,7 +99,8 @@ export default function Government() {
             </p>
 
             <p className="text-sm text-white max-w-3xl mx-auto mb-6">
-              One Algorithm LLC (LLC) — UEI: W8DYK38MEKP3 • CAGE Code: 14G18 • D-U-N-S: 118835343
+              One Algorithm LLC (LLC) — UEI: W8DYK38MEKP3 • CAGE Code: 14G18 •
+              D-U-N-S: 118835343
             </p>
 
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
@@ -132,7 +135,9 @@ export default function Government() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Who We Serve</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+              Who We Serve
+            </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               We partner with federal, state, and local government entities to
               deliver secure, scalable, and results-driven technology solutions.
@@ -142,55 +147,83 @@ export default function Government() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="p-6 border-2">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">Federal agencies and commissions</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  Federal agencies and commissions
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Program modernization, mission systems, and interagency integration.</p>
+                <p className="text-gray-600">
+                  Program modernization, mission systems, and interagency
+                  integration.
+                </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 border-2">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">State departments and regional authorities</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  State departments and regional authorities
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Digital services, case management, and statewide analytics.</p>
+                <p className="text-gray-600">
+                  Digital services, case management, and statewide analytics.
+                </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 border-2">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">County and city governments</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  County and city governments
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Public-facing portals, permitting, and citizen engagement tools.</p>
+                <p className="text-gray-600">
+                  Public-facing portals, permitting, and citizen engagement
+                  tools.
+                </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 border-2">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">Public safety & emergency response</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  Public safety & emergency response
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Real-time operations, dispatching, and incident analytics.</p>
+                <p className="text-gray-600">
+                  Real-time operations, dispatching, and incident analytics.
+                </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 border-2">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">Public health & medical agencies</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  Public health & medical agencies
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Secure health data integration, dashboards, and contact tracing workflows.</p>
+                <p className="text-gray-600">
+                  Secure health data integration, dashboards, and contact
+                  tracing workflows.
+                </p>
               </CardContent>
             </Card>
 
             <Card className="p-6 border-2">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">Education, transportation, courts & utilities</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  Education, transportation, courts & utilities
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Solutions for K–12, higher education, transport planning, and utilities management.</p>
+                <p className="text-gray-600">
+                  Solutions for K–12, higher education, transport planning, and
+                  utilities management.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -201,14 +234,27 @@ export default function Government() {
       <section className="py-16 bg-onealgo-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Government-Focused Services</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">An integrated suite of technology and staffing services designed to help agencies operate smarter, faster, and more securely.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Government-Focused Services
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              An integrated suite of technology and staffing services designed
+              to help agencies operate smarter, faster, and more securely.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-xl font-semibold text-onealgo-blue-950 mb-3">AI & Data Intelligence</h3>
-              <p className="text-gray-700 mb-3">Unlock the potential of your data with secure, ethical, and explainable AI. We design machine learning models, data pipelines, and predictive analytics systems that strengthen decision-making, streamline operations, and elevate public services.</p>
+              <h3 className="text-xl font-semibold text-onealgo-blue-950 mb-3">
+                AI & Data Intelligence
+              </h3>
+              <p className="text-gray-700 mb-3">
+                Unlock the potential of your data with secure, ethical, and
+                explainable AI. We design machine learning models, data
+                pipelines, and predictive analytics systems that strengthen
+                decision-making, streamline operations, and elevate public
+                services.
+              </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>AI-driven data automation and analytics</li>
                 <li>Predictive modeling for resource and budget planning</li>
@@ -218,21 +264,37 @@ export default function Government() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-onealgo-blue-950 mb-3">Salesforce for Government</h3>
-              <p className="text-gray-700 mb-3">As a trusted Salesforce implementation partner, One Algorithm customizes CRM and workflow solutions that align with public sector needs—from permitting and licensing to grants and case management.</p>
+              <h3 className="text-xl font-semibold text-onealgo-blue-950 mb-3">
+                Salesforce for Government
+              </h3>
+              <p className="text-gray-700 mb-3">
+                As a trusted Salesforce implementation partner, One Algorithm
+                customizes CRM and workflow solutions that align with public
+                sector needs—from permitting and licensing to grants and case
+                management.
+              </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>CRM for citizen and constituent management</li>
                 <li>Workflow automation and service delivery optimization</li>
                 <li>Analytics and performance dashboards</li>
-                <li>System integration with existing government infrastructure</li>
+                <li>
+                  System integration with existing government infrastructure
+                </li>
               </ul>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-onealgo-blue-950 mb-3">IT Modernization</h3>
-              <p className="text-gray-700 mb-3">We help agencies retire outdated systems and transition to cloud-enabled, resilient, and compliant architectures. Our modernization framework focuses on operational efficiency, data security, and mission readiness.</p>
+              <h3 className="text-xl font-semibold text-onealgo-blue-950 mb-3">
+                IT Modernization
+              </h3>
+              <p className="text-gray-700 mb-3">
+                We help agencies retire outdated systems and transition to
+                cloud-enabled, resilient, and compliant architectures. Our
+                modernization framework focuses on operational efficiency, data
+                security, and mission readiness.
+              </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>Cloud migration and infrastructure automation</li>
                 <li>Application refactoring and platform upgrades</li>
@@ -242,8 +304,14 @@ export default function Government() {
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-onealgo-blue-950 mb-3">Strategic Workforce & Staffing Solutions</h3>
-              <p className="text-gray-700 mb-3">We provide mission-critical technology professionals to federal, state, and local agencies. Our workforce model ensures agility, scalability, and full compliance with public sector regulations.</p>
+              <h3 className="text-xl font-semibold text-onealgo-blue-950 mb-3">
+                Strategic Workforce & Staffing Solutions
+              </h3>
+              <p className="text-gray-700 mb-3">
+                We provide mission-critical technology professionals to federal,
+                state, and local agencies. Our workforce model ensures agility,
+                scalability, and full compliance with public sector regulations.
+              </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>Cleared technical specialists and program managers</li>
                 <li>Data scientists, AI engineers, and Salesforce experts</li>
@@ -259,24 +327,46 @@ export default function Government() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Trusted by the Public Sector</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">One Algorithm LLC supports digital transformation across government, education, and regulated sectors. Our work reflects a commitment to performance, compliance, and long-term collaboration.</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              Trusted by the Public Sector
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              One Algorithm LLC supports digital transformation across
+              government, education, and regulated sectors. Our work reflects a
+              commitment to performance, compliance, and long-term
+              collaboration.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold text-onealgo-blue-950 mb-2">Compliance & Frameworks</h3>
-              <p className="text-gray-700">Deep understanding of FedRAMP, FISMA, CJIS, HIPAA, FERPA, NIST, and Section 508 frameworks.</p>
+              <h3 className="font-semibold text-onealgo-blue-950 mb-2">
+                Compliance & Frameworks
+              </h3>
+              <p className="text-gray-700">
+                Deep understanding of FedRAMP, FISMA, CJIS, HIPAA, FERPA, NIST,
+                and Section 508 frameworks.
+              </p>
             </div>
 
             <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold text-onealgo-blue-950 mb-2">Mission Focus</h3>
-              <p className="text-gray-700">We align technology outcomes with policy goals and citizen needs to deliver measurable impact.</p>
+              <h3 className="font-semibold text-onealgo-blue-950 mb-2">
+                Mission Focus
+              </h3>
+              <p className="text-gray-700">
+                We align technology outcomes with policy goals and citizen needs
+                to deliver measurable impact.
+              </p>
             </div>
 
             <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold text-onealgo-blue-950 mb-2">Ethical & Transparent AI</h3>
-              <p className="text-gray-700">Every solution is designed with accountability, explainability, and public trust in mind.</p>
+              <h3 className="font-semibold text-onealgo-blue-950 mb-2">
+                Ethical & Transparent AI
+              </h3>
+              <p className="text-gray-700">
+                Every solution is designed with accountability, explainability,
+                and public trust in mind.
+              </p>
             </div>
           </div>
         </div>
@@ -287,32 +377,62 @@ export default function Government() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Partner With One Algorithm</h3>
-              <p className="text-gray-700 mb-4">Whether your agency is modernizing IT infrastructure, implementing AI for public services, or scaling your technical workforce, One Algorithm brings the expertise, innovation, and reliability you can trust.</p>
-              <Button asChild className="bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white w-full">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                Partner With One Algorithm
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Whether your agency is modernizing IT infrastructure,
+                implementing AI for public services, or scaling your technical
+                workforce, One Algorithm brings the expertise, innovation, and
+                reliability you can trust.
+              </p>
+              <Button
+                asChild
+                className="bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white w-full"
+              >
                 <Link to="/contact">Get Started Today</Link>
               </Button>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Company Identifiers</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                Company Identifiers
+              </h3>
               <ul className="text-gray-700 space-y-2">
-                <li><strong>Legal Name:</strong> One Algorithm LLC</li>
-                <li><strong>UEI:</strong> W8DYK38MEKP3</li>
-                <li><strong>CAGE Code:</strong> 14G18</li>
-                <li><strong>D-U-N-S:</strong> 118835343</li>
+                <li>
+                  <strong>Legal Name:</strong> One Algorithm LLC
+                </li>
+                <li>
+                  <strong>UEI:</strong> W8DYK38MEKP3
+                </li>
+                <li>
+                  <strong>CAGE Code:</strong> 14G18
+                </li>
+                <li>
+                  <strong>D-U-N-S:</strong> 118835343
+                </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">NAICS & Service Codes</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                NAICS & Service Codes
+              </h3>
               <ul className="text-gray-700 space-y-2">
-                <li>518210 — Computing Infrastructure Providers, Data Processing, Web Hosting</li>
+                <li>
+                  518210 — Computing Infrastructure Providers, Data Processing,
+                  Web Hosting
+                </li>
                 <li>519210 — Libraries and Archives</li>
-                <li>519290 — Web Search Portals and All Other Information Services</li>
+                <li>
+                  519290 — Web Search Portals and All Other Information Services
+                </li>
                 <li>541511 — Custom Computer Programming Services</li>
                 <li>541512 — Computer Systems Design Services</li>
-                <li>541519 — Other Computer Related Services / Information Technology Value Added Resellers</li>
+                <li>
+                  541519 — Other Computer Related Services / Information
+                  Technology Value Added Resellers
+                </li>
               </ul>
             </div>
           </div>
@@ -323,24 +443,44 @@ export default function Government() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Why Government Agencies Choose One Algorithm</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Compliance-driven, mission-focused, secure, and scalable solutions with ethical AI and measurable outcomes.</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              Why Government Agencies Choose One Algorithm
+            </h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Compliance-driven, mission-focused, secure, and scalable solutions
+              with ethical AI and measurable outcomes.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div className="p-6 border rounded-lg">
-              <h4 className="font-semibold text-onealgo-blue-950 mb-2">Compliance-Driven</h4>
-              <p className="text-gray-700">Deep experience with FedRAMP, FISMA, CJIS, HIPAA, FERPA, NIST, and Section 508 compliance.</p>
+              <h4 className="font-semibold text-onealgo-blue-950 mb-2">
+                Compliance-Driven
+              </h4>
+              <p className="text-gray-700">
+                Deep experience with FedRAMP, FISMA, CJIS, HIPAA, FERPA, NIST,
+                and Section 508 compliance.
+              </p>
             </div>
 
             <div className="p-6 border rounded-lg">
-              <h4 className="font-semibold text-onealgo-blue-950 mb-2">Mission-Focused</h4>
-              <p className="text-gray-700">We align technology outcomes with policy goals and citizen needs.</p>
+              <h4 className="font-semibold text-onealgo-blue-950 mb-2">
+                Mission-Focused
+              </h4>
+              <p className="text-gray-700">
+                We align technology outcomes with policy goals and citizen
+                needs.
+              </p>
             </div>
 
             <div className="p-6 border rounded-lg">
-              <h4 className="font-semibold text-onealgo-blue-950 mb-2">Secure & Scalable</h4>
-              <p className="text-gray-700">Solutions adapt to the needs of small municipalities and large agencies alike.</p>
+              <h4 className="font-semibold text-onealgo-blue-950 mb-2">
+                Secure & Scalable
+              </h4>
+              <p className="text-gray-700">
+                Solutions adapt to the needs of small municipalities and large
+                agencies alike.
+              </p>
             </div>
           </div>
         </div>
