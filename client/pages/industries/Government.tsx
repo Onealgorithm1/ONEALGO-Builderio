@@ -10,24 +10,51 @@ import {
 import { Button } from "../../components/ui/button";
 import { Users, Shield, Zap, Clock } from "lucide-react";
 
-// Inline U.S. Capitol icon SVG — styled via className prop
+// Inline U.S. Capitol style icon derived from provided asset — styled via className prop
 function CapitolIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      viewBox="0 0 64 64"
+      fill="currentColor"
       aria-hidden="true"
     >
-      <path d="M12 2c1.657 0 3 1.567 3 3.5v.5H9v-.5C9 3.567 10.343 2 12 2z" />
-      <path d="M5 11c0-1.657 3.134-3 7-3s7 1.343 7 3v2H5v-2z" />
-      <path d="M3 13h18v2a2 2 0 0 1-2 2h-2v3H8v-3H6a2 2 0 0 1-2-2v-2z" />
-      <path d="M7 20v-2m10 2v-2" />
+      {/* Foundation / base */}
+      <rect x="4" y="52" width="56" height="4" rx="1" />
+
+      {/* Main platform */}
+      <rect x="6" y="44" width="52" height="6" rx="1" />
+
+      {/* Columns */}
+      <rect x="10" y="26" width="6" height="18" />
+      <rect x="20" y="26" width="6" height="18" />
+      <rect x="30" y="26" width="6" height="18" />
+      <rect x="40" y="26" width="6" height="18" />
+      <rect x="50" y="26" width="6" height="18" />
+
+      {/* Entry band above columns */}
+      <rect x="10" y="22" width="46" height="4" rx="1" />
+
+      {/* Pediment / triangular roof */}
+      <path d="M8 22 L32 10 L56 22 Z" />
+
+      {/* Dome */}
+      <path d="M32 6
+               C42 6 50 14 50 24
+               H14
+               C14 14 22 6 32 6
+               Z" />
+
+      {/* Central lower doorway */}
+      <rect x="28" y="34" width="8" height="10" rx="2" />
+
+      {/* Flag pole and flag */}
+      <rect x="31" y="0" width="2" height="8" />
+      <path d="M33 3
+               C36 3 38 2 41 3
+               C38 4 36 4 33 4
+               Z" />
     </svg>
   );
 }
