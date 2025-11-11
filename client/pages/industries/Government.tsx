@@ -10,54 +10,29 @@ import {
 import { Button } from "../../components/ui/button";
 import { Users, Shield, Zap, Clock } from "lucide-react";
 
-// Refined U.S. Capitol silhouette icon — single-color silhouette responding to currentColor
-function CapitolIcon({ className }: { className?: string }) {
+// GovernmentIcon — raster-based mask using provided asset so it inherits currentColor (brand color)
+const GOV_ICON_URL = "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F20b6adccade9436b84c4533a7665043f?format=webp&width=800";
+function GovernmentIcon({ className }: { className?: string }) {
   return (
-    <svg
+    <div
       className={className}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 64 64"
-      fill="currentColor"
-      aria-hidden="true"
       role="img"
-    >
-      {/* Base line */}
-      <rect x="2" y="56" width="60" height="2" />
-
-      {/* Lower platform */}
-      <rect x="6" y="48" width="52" height="6" rx="1" />
-
-      {/* Column base bar */}
-      <rect x="8" y="44" width="48" height="4" />
-
-      {/* Columns (gaps for visual rhythm) */}
-      <g>
-        <rect x="10" y="28" width="4" height="16" />
-        <rect x="18" y="28" width="4" height="16" />
-        <rect x="26" y="28" width="4" height="16" />
-        <rect x="34" y="28" width="4" height="16" />
-        <rect x="42" y="28" width="4" height="16" />
-        <rect x="50" y="28" width="4" height="16" />
-      </g>
-
-      {/* Central doorway */}
-      <rect x="30" y="36" width="4" height="8" rx="1" />
-
-      {/* Pediment / roof */}
-      <path d="M6 44 L32 28 L58 44 Z" />
-
-      {/* Dome — smooth semi-circle */}
-      <path d="M12 28
-               C18 12 46 12 52 28
-               L52 32
-               L12 32 Z" />
-
-      {/* Flag pole */}
-      <rect x="31" y="4" width="2" height="12" />
-
-      {/* Flag */}
-      <path d="M33 6 C38 6 40 5 44 6 C40 7 38 7 33 7 Z" />
-    </svg>
+      aria-hidden="true"
+      style={{
+        backgroundColor: "currentColor",
+        WebkitMaskImage: `url(${GOV_ICON_URL})`,
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskSize: "contain",
+        WebkitMaskPosition: "center",
+        maskImage: `url(${GOV_ICON_URL})`,
+        maskRepeat: "no-repeat",
+        maskSize: "contain",
+        maskPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        display: "inline-block",
+      }}
+    />
   );
 }
 
@@ -81,7 +56,7 @@ export default function Government() {
         "Hardened systems with audit trails, role-based access, and compliance with federal/state regulations.",
     },
     {
-      icon: <CapitolIcon className="w-8 h-8 text-onealgo-orange-500" />,
+      icon: <GovernmentIcon className="w-8 h-8 text-onealgo-orange-500" />,
       title: "Citizen Services",
       description:
         "Modern web and mobile services that improve access, transparency, and satisfaction for constituents.",
@@ -112,7 +87,7 @@ export default function Government() {
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <CapitolIcon className="w-24 h-24 text-onealgo-orange-500 mx-auto mb-6 animate-bounce-slow" />
+            <GovernmentIcon className="w-24 h-24 text-onealgo-orange-500 mx-auto mb-6 animate-bounce-slow" />
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Government <span className="text-onealgo-orange-500">Solutions</span>
             </h1>
