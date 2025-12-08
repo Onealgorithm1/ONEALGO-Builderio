@@ -100,15 +100,17 @@ export default function Government() {
             </p>
 
             <p className="text-sm text-white max-w-3xl mx-auto mb-6">
-              {siteConfig.legalName} — UEI: {siteConfig.identifiers.uei} • CAGE Code: {siteConfig.identifiers.cage}
+              {siteConfig.legalName} — UEI: {siteConfig.identifiers.uei} • CAGE
+              Code: {siteConfig.identifiers.cage}
             </p>
 
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-              At {siteConfig.legalName}, we enable government agencies to modernize,
-              automate, and innovate responsibly. From upgrading legacy
-              infrastructure to deploying secure AI systems that enhance citizen
-              services, our solutions are engineered to help public institutions
-              achieve their mission with speed, transparency, and impact.
+              At {siteConfig.legalName}, we enable government agencies to
+              modernize, automate, and innovate responsibly. From upgrading
+              legacy infrastructure to deploying secure AI systems that enhance
+              citizen services, our solutions are engineered to help public
+              institutions achieve their mission with speed, transparency, and
+              impact.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

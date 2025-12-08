@@ -72,12 +72,24 @@ export const siteConfig: CompanyConfig = {
   },
   codes: {
     naics: [
-      "238110", "238140", "238160", "238910", "238990",
-      "513210", "518210", "519210", "519290",
-      "541511", "541512", "541519",
-      "541611", "541613", "541618",
-      "561311", "561320",
-      "611430"
+      "238110",
+      "238140",
+      "238160",
+      "238910",
+      "238990",
+      "513210",
+      "518210",
+      "519210",
+      "519290",
+      "541511",
+      "541512",
+      "541519",
+      "541611",
+      "541613",
+      "541618",
+      "561311",
+      "561320",
+      "611430",
     ],
     psc: ["DA10", "7A20", "7E20", "U099", "R408", "7A21", "H270"],
   },
@@ -111,5 +123,5 @@ export function getFullAddress(includeUnit = true): string {
 // Helper function to format postal address for display
 export function getPostalAddress(): string {
   const { street, streetUnit, city, region, postalCode } = siteConfig.address;
-  return `${street}${streetUnit ? ' ' + streetUnit : ''}\n${city}, ${region} ${postalCode}`;
+  return `${street}${streetUnit ? " " + streetUnit : ""}\n${city}, ${region} ${postalCode}`;
 }

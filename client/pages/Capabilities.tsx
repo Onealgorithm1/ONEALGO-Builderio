@@ -21,7 +21,10 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
-import { StructuredData, createOrganizationSchema } from "../components/StructuredData";
+import {
+  StructuredData,
+  createOrganizationSchema,
+} from "../components/StructuredData";
 import { siteConfig, getFullAddress } from "../lib/siteConfig";
 
 export default function Capabilities() {
@@ -99,15 +102,23 @@ export default function Capabilities() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>Cloud platforms, API integrations, and enterprise automation</span>
+                      <span>
+                        Cloud platforms, API integrations, and enterprise
+                        automation
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>Cybersecurity, data integrity, and compliance solutions</span>
+                      <span>
+                        Cybersecurity, data integrity, and compliance solutions
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>CRM implementation, workflow optimization, and AI-driven solutions</span>
+                      <span>
+                        CRM implementation, workflow optimization, and AI-driven
+                        solutions
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -124,11 +135,17 @@ export default function Capabilities() {
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>Strategic planning, business development, and market expansion</span>
+                      <span>
+                        Strategic planning, business development, and market
+                        expansion
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>Financial planning, operational efficiency, and risk assessment</span>
+                      <span>
+                        Financial planning, operational efficiency, and risk
+                        assessment
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
@@ -153,36 +170,48 @@ export default function Capabilities() {
               <div className="text-center">
                 <div className="bg-white rounded-lg p-6 shadow-sm h-full">
                   <Lightbulb className="w-12 h-12 text-onealgo-orange-500 mx-auto mb-4" />
-                  <h4 className="font-semibold text-gray-900 mb-2">Integrated Expertise</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    Integrated Expertise
+                  </h4>
                   <p className="text-sm text-gray-600">
-                    Combines technology, operations, and small business consulting in one firm.
+                    Combines technology, operations, and small business
+                    consulting in one firm.
                   </p>
                 </div>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-6 shadow-sm h-full">
                   <Users className="w-12 h-12 text-onealgo-orange-500 mx-auto mb-4" />
-                  <h4 className="font-semibold text-gray-900 mb-2">Experienced Leadership</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    Experienced Leadership
+                  </h4>
                   <p className="text-sm text-gray-600">
-                    Executives with strong experience in tech, operations, and business growth.
+                    Executives with strong experience in tech, operations, and
+                    business growth.
                   </p>
                 </div>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-6 shadow-sm h-full">
                   <Target className="w-12 h-12 text-onealgo-orange-500 mx-auto mb-4" />
-                  <h4 className="font-semibold text-gray-900 mb-2">Scalable Solutions</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    Scalable Solutions
+                  </h4>
                   <p className="text-sm text-gray-600">
-                    Able to manage multiple projects, digital platforms, and consulting engagements simultaneously.
+                    Able to manage multiple projects, digital platforms, and
+                    consulting engagements simultaneously.
                   </p>
                 </div>
               </div>
               <div className="text-center">
                 <div className="bg-white rounded-lg p-6 shadow-sm h-full">
                   <CheckCircle className="w-12 h-12 text-onealgo-orange-500 mx-auto mb-4" />
-                  <h4 className="font-semibold text-gray-900 mb-2">Client-Centric Approach</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    Client-Centric Approach
+                  </h4>
                   <p className="text-sm text-gray-600">
-                    Focused on reliability, performance-driven outcomes, and measurable results.
+                    Focused on reliability, performance-driven outcomes, and
+                    measurable results.
                   </p>
                 </div>
               </div>
@@ -197,17 +226,25 @@ export default function Capabilities() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
                 <CardHeader>
-                  <CardTitle className="text-onealgo-blue-950">Technology Projects</CardTitle>
+                  <CardTitle className="text-onealgo-blue-950">
+                    Technology Projects
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>Developed enterprise SaaS platforms, CRM systems, and workflow automation tools for private clients.</span>
+                      <span>
+                        Developed enterprise SaaS platforms, CRM systems, and
+                        workflow automation tools for private clients.
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>Built secure compliance and monitoring solutions to support operational efficiency.</span>
+                      <span>
+                        Built secure compliance and monitoring solutions to
+                        support operational efficiency.
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -215,17 +252,26 @@ export default function Capabilities() {
 
               <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
                 <CardHeader>
-                  <CardTitle className="text-onealgo-blue-950">Small Business Consulting Projects</CardTitle>
+                  <CardTitle className="text-onealgo-blue-950">
+                    Small Business Consulting Projects
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>Provided strategic planning, IT project management, and business analyst services for small businesses.</span>
+                      <span>
+                        Provided strategic planning, IT project management, and
+                        business analyst services for small businesses.
+                      </span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
-                      <span>Developed marketing strategies, CRM systems, and operational process improvements to scale client operations.</span>
+                      <span>
+                        Developed marketing strategies, CRM systems, and
+                        operational process improvements to scale client
+                        operations.
+                      </span>
                     </li>
                   </ul>
                 </CardContent>
@@ -244,12 +290,17 @@ export default function Capabilities() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">NAICS Codes</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  NAICS Codes
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-3 gap-2 text-sm text-gray-700">
                   {siteConfig.codes.naics.map((code) => (
-                    <div key={code} className="bg-onealgo-light px-3 py-2 rounded text-center font-mono">
+                    <div
+                      key={code}
+                      className="bg-onealgo-light px-3 py-2 rounded text-center font-mono"
+                    >
                       {code}
                     </div>
                   ))}
@@ -259,12 +310,17 @@ export default function Capabilities() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">PSC Codes</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  PSC Codes
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-3 gap-2 text-sm text-gray-700">
                   {siteConfig.codes.psc.map((code) => (
-                    <div key={code} className="bg-onealgo-light px-3 py-2 rounded text-center font-mono">
+                    <div
+                      key={code}
+                      className="bg-onealgo-light px-3 py-2 rounded text-center font-mono"
+                    >
                       {code}
                     </div>
                   ))}
@@ -284,7 +340,9 @@ export default function Capabilities() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">Swapna Amirisetti</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  Swapna Amirisetti
+                </CardTitle>
                 <p className="text-sm text-gray-600">CEO / President</p>
               </CardHeader>
               <CardContent>
@@ -296,24 +354,30 @@ export default function Capabilities() {
 
             <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">Sreenivas Amirisetti</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  Sreenivas Amirisetti
+                </CardTitle>
                 <p className="text-sm text-gray-600">Secretary / CTO</p>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  Oversees IT project management, business analysis, and technology strategy.
+                  Oversees IT project management, business analysis, and
+                  technology strategy.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
               <CardHeader>
-                <CardTitle className="text-onealgo-blue-950">Louis Rubino</CardTitle>
+                <CardTitle className="text-onealgo-blue-950">
+                  Louis Rubino
+                </CardTitle>
                 <p className="text-sm text-gray-600">COO</p>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  Manages small business consulting, construction & business development, and marketing initiatives.
+                  Manages small business consulting, construction & business
+                  development, and marketing initiatives.
                 </p>
               </CardContent>
             </Card>
@@ -333,7 +397,9 @@ export default function Capabilities() {
               <h4 className="font-semibold mb-2">Phone</h4>
               <p className="text-blue-200">{siteConfig.contact.phonePrimary}</p>
               {siteConfig.contact.phoneAlt && (
-                <p className="text-blue-200 text-sm mt-1">{siteConfig.contact.phoneAlt}</p>
+                <p className="text-blue-200 text-sm mt-1">
+                  {siteConfig.contact.phoneAlt}
+                </p>
               )}
             </div>
             <div className="text-center">
@@ -341,7 +407,9 @@ export default function Capabilities() {
               <h4 className="font-semibold mb-2">Email</h4>
               <p className="text-blue-200">{siteConfig.contact.emailPrimary}</p>
               {siteConfig.contact.emailAlt && (
-                <p className="text-blue-200 text-sm mt-1">{siteConfig.contact.emailAlt}</p>
+                <p className="text-blue-200 text-sm mt-1">
+                  {siteConfig.contact.emailAlt}
+                </p>
               )}
             </div>
             <div className="text-center">
@@ -350,7 +418,8 @@ export default function Capabilities() {
               <p className="text-blue-200">
                 {siteConfig.address.street} {siteConfig.address.streetUnit}
                 <br />
-                {siteConfig.address.city}, {siteConfig.address.region} {siteConfig.address.postalCode}
+                {siteConfig.address.city}, {siteConfig.address.region}{" "}
+                {siteConfig.address.postalCode}
               </p>
             </div>
           </div>
@@ -358,7 +427,10 @@ export default function Capabilities() {
           <div className="text-center">
             <p className="text-lg text-blue-200 mb-2">
               <strong>Website:</strong>{" "}
-              <a href={siteConfig.url} className="text-onealgo-orange-500 hover:underline">
+              <a
+                href={siteConfig.url}
+                className="text-onealgo-orange-500 hover:underline"
+              >
                 {siteConfig.url}
               </a>
             </p>
