@@ -323,55 +323,6 @@ export default function Government() {
         </div>
       </section>
 
-      {/* Trusted & Compliance */}
-      <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              Trusted by the Public Sector
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              One Algorithm LLC supports digital transformation across
-              government, education, and regulated sectors. Our work reflects a
-              commitment to performance, compliance, and long-term
-              collaboration.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-            <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold text-onealgo-blue-950 mb-2">
-                Compliance & Frameworks
-              </h3>
-              <p className="text-gray-700">
-                Deep understanding of FedRAMP, FISMA, CJIS, HIPAA, FERPA, NIST,
-                and Section 508 frameworks.
-              </p>
-            </div>
-
-            <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold text-onealgo-blue-950 mb-2">
-                Mission Focus
-              </h3>
-              <p className="text-gray-700">
-                We align technology outcomes with policy goals and citizen needs
-                to deliver measurable impact.
-              </p>
-            </div>
-
-            <div className="p-6 border rounded-lg">
-              <h3 className="font-semibold text-onealgo-blue-950 mb-2">
-                Ethical & Transparent AI
-              </h3>
-              <p className="text-gray-700">
-                Every solution is designed with accountability, explainability,
-                and public trust in mind.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* NAICS / Services Codes and Partner CTA */}
       <section className="py-12 bg-onealgo-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -434,53 +385,6 @@ export default function Government() {
                   Technology Value Added Resellers
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Existing Benefits CTA retained */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              Why Government Agencies Choose One Algorithm
-            </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Compliance-driven, mission-focused, secure, and scalable solutions
-              with ethical AI and measurable outcomes.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-            <div className="p-6 border rounded-lg">
-              <h4 className="font-semibold text-onealgo-blue-950 mb-2">
-                Compliance-Driven
-              </h4>
-              <p className="text-gray-700">
-                Deep experience with FedRAMP, FISMA, CJIS, HIPAA, FERPA, NIST,
-                and Section 508 compliance.
-              </p>
-            </div>
-
-            <div className="p-6 border rounded-lg">
-              <h4 className="font-semibold text-onealgo-blue-950 mb-2">
-                Mission-Focused
-              </h4>
-              <p className="text-gray-700">
-                We align technology outcomes with policy goals and citizen
-                needs.
-              </p>
-            </div>
-
-            <div className="p-6 border rounded-lg">
-              <h4 className="font-semibold text-onealgo-blue-950 mb-2">
-                Secure & Scalable
-              </h4>
-              <p className="text-gray-700">
-                Solutions adapt to the needs of small municipalities and large
-                agencies alike.
-              </p>
             </div>
           </div>
         </div>
