@@ -9,6 +9,7 @@ import {
 } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
 import { Users, Shield, Zap, Clock } from "lucide-react";
+import { siteConfig } from "../../lib/siteConfig";
 
 // GovernmentIcon — raster-based mask using provided asset so it inherits currentColor (brand color)
 const GOV_ICON_URL =
@@ -99,12 +100,11 @@ export default function Government() {
             </p>
 
             <p className="text-sm text-white max-w-3xl mx-auto mb-6">
-              One Algorithm LLC (LLC) — UEI: W8DYK38MEKP3 • CAGE Code: 14G18 •
-              D-U-N-S: 118835343
+              {siteConfig.legalName} — UEI: {siteConfig.identifiers.uei} • CAGE Code: {siteConfig.identifiers.cage}
             </p>
 
             <p className="text-xl text-blue-200 max-w-3xl mx-auto mb-8">
-              At One Algorithm LLC, we enable government agencies to modernize,
+              At {siteConfig.legalName}, we enable government agencies to modernize,
               automate, and innovate responsibly. From upgrading legacy
               infrastructure to deploying secure AI systems that enhance citizen
               services, our solutions are engineered to help public institutions
@@ -351,40 +351,45 @@ export default function Government() {
               </h3>
               <ul className="text-gray-700 space-y-2">
                 <li>
-                  <strong>Legal Name:</strong> One Algorithm LLC
+                  <strong>Legal Name:</strong> {siteConfig.legalName}
                 </li>
                 <li>
-                  <strong>UEI:</strong> W8DYK38MEKP3
+                  <strong>UEI:</strong> {siteConfig.identifiers.uei}
                 </li>
                 <li>
-                  <strong>CAGE Code:</strong> 14G18
-                </li>
-                <li>
-                  <strong>D-U-N-S:</strong> 118835343
+                  <strong>CAGE Code:</strong> {siteConfig.identifiers.cage}
                 </li>
               </ul>
+              <div className="mt-4">
+                <Link
+                  to="/capabilities"
+                  className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline text-sm"
+                >
+                  View Full Company Capabilities →
+                </Link>
+              </div>
             </div>
 
             <div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">
-                NAICS & Service Codes
+                NAICS Codes (Primary)
               </h3>
-              <ul className="text-gray-700 space-y-2">
-                <li>
-                  518210 — Computing Infrastructure Providers, Data Processing,
-                  Web Hosting
-                </li>
-                <li>519210 — Libraries and Archives</li>
-                <li>
-                  519290 — Web Search Portals and All Other Information Services
-                </li>
+              <ul className="text-gray-700 space-y-2 text-sm">
                 <li>541511 — Custom Computer Programming Services</li>
                 <li>541512 — Computer Systems Design Services</li>
-                <li>
-                  541519 — Other Computer Related Services / Information
-                  Technology Value Added Resellers
-                </li>
+                <li>541519 — Other Computer Related Services</li>
+                <li>518210 — Computing Infrastructure Providers</li>
+                <li>541611 — Administrative Management Consulting</li>
+                <li>541613 — Marketing Consulting Services</li>
               </ul>
+              <div className="mt-3">
+                <Link
+                  to="/capabilities"
+                  className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline text-sm"
+                >
+                  View All NAICS & PSC Codes →
+                </Link>
+              </div>
             </div>
           </div>
         </div>
