@@ -18,6 +18,7 @@ import {
   MapPin,
   Shield,
   Lightbulb,
+  ExternalLink,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
@@ -69,6 +70,18 @@ export default function Capabilities() {
                 <FileText className="w-5 h-5" />
                 <span>D-U-N-S: {siteConfig.identifiers.duns}</span>
               </div>
+            </div>
+            <div className="mt-4">
+              <a
+                href={siteConfig.sbaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-onealgo-orange-500 hover:text-onealgo-orange-400 underline transition-colors"
+              >
+                <FileText className="w-4 h-4" />
+                One Algorithm SBA Certification
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
