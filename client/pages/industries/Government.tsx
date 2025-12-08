@@ -361,6 +361,9 @@ export default function Government() {
                 <li>
                   <strong>CAGE Code:</strong> {siteConfig.identifiers.cage}
                 </li>
+                <li>
+                  <strong>D-U-N-S:</strong> {siteConfig.identifiers.duns}
+                </li>
               </ul>
               <div className="mt-4">
                 <Link
