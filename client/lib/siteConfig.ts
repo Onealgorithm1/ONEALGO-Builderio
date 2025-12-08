@@ -24,6 +24,7 @@ export interface CompanyConfig {
   identifiers: {
     cage: string;
     uei: string;
+    duns: string;
   };
   codes: {
     naics: string[];
@@ -69,6 +70,7 @@ export const siteConfig: CompanyConfig = {
   identifiers: {
     cage: "14G18",
     uei: "W8DYK38MEKP3",
+    duns: "118835343",
   },
   codes: {
     naics: [

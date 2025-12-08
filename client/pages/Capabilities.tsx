@@ -64,6 +64,11 @@ export default function Capabilities() {
                 <FileText className="w-5 h-5" />
                 <span>UEI: {siteConfig.identifiers.uei}</span>
               </div>
+              <div className="hidden sm:block text-blue-300">|</div>
+              <div className="flex items-center gap-2">
+                <FileText className="w-5 h-5" />
+                <span>D-U-N-S: {siteConfig.identifiers.duns}</span>
+              </div>
             </div>
           </div>
         </div>
