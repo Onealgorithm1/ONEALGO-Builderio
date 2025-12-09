@@ -71,18 +71,6 @@ export default function Capabilities() {
                 <span>D-U-N-S: {siteConfig.identifiers.duns}</span>
               </div>
             </div>
-            <div className="mt-4">
-              <a
-                href={siteConfig.sbaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-onealgo-orange-500 hover:text-onealgo-orange-400 underline transition-colors"
-              >
-                <FileText className="w-4 h-4" />
-                One Algorithm SBA Certification
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
           </div>
         </div>
       </section>
