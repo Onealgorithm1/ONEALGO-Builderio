@@ -249,6 +249,27 @@ export default function Capabilities() {
             </div>
           </div>
 
+          {/* Certifications & Standards */}
+          {siteConfig.certifications && siteConfig.certifications.length > 0 && (
+            <div className="mb-16">
+              <h3 className="text-2xl md:text-3xl font-bold text-onealgo-blue-950 mb-8 text-center">
+                Certifications & Standards
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {siteConfig.certifications.map((cert, index) => (
+                  <Card key={index} className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                    <CardContent className="pt-6">
+                      <div className="flex items-start gap-4">
+                        <Shield className="w-8 h-8 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+                        <p className="text-gray-700 font-medium">{cert}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Project Highlights */}
           <div className="mb-16">
             <h3 className="text-2xl md:text-3xl font-bold text-onealgo-blue-950 mb-8 text-center">
