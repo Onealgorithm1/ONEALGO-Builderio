@@ -339,6 +339,11 @@ export default function Capabilities() {
           <h3 className="text-2xl md:text-3xl font-bold text-onealgo-blue-950 mb-8 text-center">
             NAICS / PSC Codes
           </h3>
+          <div className="mb-6 text-center">
+            <p className="text-lg text-gray-700">
+              <strong>Primary NAICS:</strong> 541511 – Custom Computer Programming Services
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
@@ -424,12 +429,11 @@ export default function Capabilities() {
                 <CardTitle className="text-onealgo-blue-950">
                   Louis Rubino
                 </CardTitle>
-                <p className="text-sm text-gray-600">COO</p>
+                <p className="text-sm text-gray-600">Director of Compliance & Contract Administration</p>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700">
-                  Manages small business consulting, construction & business
-                  development, and marketing initiatives.
+                  Manages federal compliance, proposal operations, and partner relationships.
                 </p>
               </CardContent>
             </Card>
