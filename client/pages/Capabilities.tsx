@@ -30,15 +30,15 @@ import { siteConfig, getFullAddress } from "../lib/siteConfig";
 
 export default function Capabilities() {
   useSEO({
-    title: "OneAlgorithm — Company Capabilities & Profile",
+    title: "Company Capabilities & Federal Contracting Profile | OneAlgorithm",
     description:
-      "ONE ALGORITHM LLC provides technology and compliance solutions, software development, digital transformation, and small business consulting. CAGE: 14G18 | UEI: W8DYK38MEKP3",
+      "Cloud modernization, cybersecurity compliance, and systems integration for federal and commercial clients. CAGE: 14G18 | UEI: W8DYK38MEKP3 | NIST 800-171 Compliant",
     canonical: getCanonicalUrl("/capabilities"),
     keywords:
-      "OneAlgorithm capabilities, CAGE 14G18, UEI W8DYK38MEKP3, software development, digital transformation, small business consulting, NAICS codes, PSC codes",
-    ogTitle: "OneAlgorithm — Company Capabilities & Profile",
+      "OneAlgorithm capabilities, federal contracting, cloud modernization, DevSecOps, NIST 800-171, DFARS, ISO 9001, cybersecurity compliance, CAGE 14G18, UEI W8DYK38MEKP3, NAICS 541511",
+    ogTitle: "Company Capabilities & Federal Contracting Profile | OneAlgorithm",
     ogDescription:
-      "Technology and compliance solutions firm offering secure software development, digital transformation, and small business consulting services.",
+      "Cloud modernization, cybersecurity compliance, and systems integration for federal and commercial clients. NIST 800-171 | DFARS Compliant.",
     ogUrl: getCanonicalUrl("/capabilities"),
   });
 
@@ -84,6 +84,9 @@ export default function Capabilities() {
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               {siteConfig.description}
+            </p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto mt-4 leading-relaxed">
+              Our mission is to enable organizations to operate securely, efficiently, and at scale—across mission-critical and enterprise environments. Our ISO 9001–compliant quality management and NIST 800-171 cybersecurity practices ensure every engagement meets the highest standards of reliability, traceability, and security.
             </p>
           </div>
 
