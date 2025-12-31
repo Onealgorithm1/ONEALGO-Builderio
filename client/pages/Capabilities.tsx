@@ -444,57 +444,73 @@ export default function Capabilities() {
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-br from-onealgo-blue-950 to-onealgo-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center">
             Contact Information
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <Phone className="w-8 h-8 mx-auto mb-3 text-onealgo-orange-500" />
-              <h4 className="font-semibold mb-2">Phone</h4>
-              <p className="text-blue-200">{siteConfig.contact.phonePrimary}</p>
-              {siteConfig.contact.phoneAlt && (
-                <p className="text-blue-200 text-sm mt-1">
-                  {siteConfig.contact.phoneAlt}
+
+          <div className="max-w-3xl mx-auto space-y-6 mb-12">
+            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
+              <MapPin className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold mb-1">Address</h4>
+                <p className="text-blue-200">
+                  {siteConfig.address.street} {siteConfig.address.streetUnit}
+                  <br />
+                  {siteConfig.address.city}, {siteConfig.address.region}{" "}
+                  {siteConfig.address.postalCode}
                 </p>
-              )}
+              </div>
             </div>
-            <div className="text-center">
-              <Mail className="w-8 h-8 mx-auto mb-3 text-onealgo-orange-500" />
-              <h4 className="font-semibold mb-2">Email</h4>
-              <p className="text-blue-200">{siteConfig.contact.emailPrimary}</p>
-              {siteConfig.contact.emailAlt && (
-                <p className="text-blue-200 text-sm mt-1">
-                  {siteConfig.contact.emailAlt}
+
+            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
+              <Mail className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold mb-1">Email</h4>
+                <p className="text-blue-200">
+                  <a href={`mailto:${siteConfig.contact.emailPrimary}`} className="hover:text-onealgo-orange-500 transition-colors">
+                    {siteConfig.contact.emailPrimary}
+                  </a>
                 </p>
-              )}
+              </div>
             </div>
-            <div className="text-center">
-              <MapPin className="w-8 h-8 mx-auto mb-3 text-onealgo-orange-500" />
-              <h4 className="font-semibold mb-2">Address</h4>
-              <p className="text-blue-200">
-                {siteConfig.address.street} {siteConfig.address.streetUnit}
-                <br />
-                {siteConfig.address.city}, {siteConfig.address.region}{" "}
-                {siteConfig.address.postalCode}
-              </p>
+
+            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
+              <Phone className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold mb-1">Phone</h4>
+                <p className="text-blue-200">
+                  <a href={`tel:${siteConfig.contact.phoneAlt}`} className="hover:text-onealgo-orange-500 transition-colors">
+                    {siteConfig.contact.phoneAlt}
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
+              <Building2 className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold mb-1">Website</h4>
+                <p className="text-blue-200">
+                  <a
+                    href={siteConfig.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-onealgo-orange-500 transition-colors"
+                  >
+                    {siteConfig.url}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="text-center">
-            <p className="text-lg text-blue-200 mb-2">
-              <strong>Website:</strong>{" "}
-              <a
-                href={siteConfig.url}
-                className="text-onealgo-orange-500 hover:underline"
-              >
-                {siteConfig.url}
-              </a>
-            </p>
-            <p className="text-lg text-blue-200 mb-2">
+          <div className="text-center border-t border-blue-700 pt-8">
+            <p className="text-lg text-blue-200 mb-4">
               <strong>CAGE Code:</strong> {siteConfig.identifiers.cage} |{" "}
-              <strong>UEI:</strong> {siteConfig.identifiers.uei}
+              <strong>UEI:</strong> {siteConfig.identifiers.uei} |{" "}
+              <strong>D-U-N-S:</strong> {siteConfig.identifiers.duns}
             </p>
-            <p className="text-lg text-blue-200 mb-6">
+            <p className="text-blue-200 mb-8">
               <a
                 href={siteConfig.sbaUrl}
                 target="_blank"
