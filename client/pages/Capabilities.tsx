@@ -72,27 +72,29 @@ export default function Capabilities() {
             <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
               {siteConfig.legalName} — Technology & Compliance Solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-blue-100">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col items-center gap-4 text-blue-100 sm:flex-row sm:justify-center">
+              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
                 <Shield className="w-5 h-5" />
                 <span>CAGE Code: {siteConfig.identifiers.cage}</span>
               </div>
+              <div className="h-px w-16 bg-blue-300/40 sm:hidden" aria-hidden="true" />
               <div className="hidden sm:block text-blue-300">|</div>
-              <div className="flex items-center gap-2">
+              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
                 <FileText className="w-5 h-5" />
                 <span>UEI: {siteConfig.identifiers.uei}</span>
               </div>
+              <div className="h-px w-16 bg-blue-300/40 sm:hidden" aria-hidden="true" />
               <div className="hidden sm:block text-blue-300">|</div>
-              <div className="flex items-center gap-2">
+              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
                 <FileText className="w-5 h-5" />
                 <span>D-U-N-S: {siteConfig.identifiers.duns}</span>
               </div>
             </div>
-            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
               <Button
                 asChild
                 size="lg"
-                className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white w-full sm:w-auto"
               >
                 <a
                   href="/api/capabilities.pdf"
