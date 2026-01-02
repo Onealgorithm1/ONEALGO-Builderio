@@ -19,6 +19,11 @@ import {
   Shield,
   Lightbulb,
   ExternalLink,
+  Briefcase,
+  CalendarDays,
+  ClipboardList,
+  Handshake,
+  Layers,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -32,6 +37,9 @@ import {
   differentiators,
   projectHighlights,
   keyPersonnel,
+  federalExperience,
+  complianceProfile,
+  strategicPartnerships,
 } from "../../shared/capabilities-data";
 import type { IconName } from "../../shared/capabilities-data";
 import { siteConfig } from "../lib/siteConfig";
@@ -69,8 +77,18 @@ export default function Capabilities() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Company Capabilities
             </h1>
-            <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-blue-200 max-w-4xl mx-auto">
               {siteConfig.legalName} — Technology & Compliance Solutions
+            </p>
+            <p className="text-lg text-blue-100 max-w-5xl mx-auto mt-4">
+              Woman- and Minority-Owned Small Business (WOSB/MBE pending)
+              delivering secure, standards-aligned technology and compliance
+              services for federal and commercial clients nationwide.
+            </p>
+            <p className="text-lg text-blue-100 max-w-5xl mx-auto mt-2">
+              Mission: enable government and enterprise customers to modernize
+              securely, efficiently, and accessibly while meeting every
+              compliance and performance objective.
             </p>
             <div className="flex flex-col items-center gap-4 text-blue-100 sm:flex-row sm:justify-center">
               <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
@@ -111,7 +129,7 @@ export default function Capabilities() {
                   className="inline-flex items-center gap-2"
                 >
                   <FileText className="w-5 h-5" />
-                  Download Capabilities PDF
+                  Download Capabilities Statement (PDF)
                 </a>
               </Button>
             </div>
