@@ -17,6 +17,7 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
+
 import { Link } from "react-router-dom";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
 import {
