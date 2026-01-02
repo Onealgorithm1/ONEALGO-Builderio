@@ -18,7 +18,8 @@
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "deploy:netlify": "netlify deploy --dir=dist/spa --functions=netlify/functions --prod"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
@@ -81,6 +82,7 @@
     "globals": "^16.3.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.539.0",
+    "netlify-cli": "^17.34.1",
     "next-themes": "^0.4.6",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
