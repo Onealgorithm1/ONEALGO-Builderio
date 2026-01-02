@@ -206,8 +206,8 @@ export default function Capabilities() {
                       className="border-2 hover:border-onealgo-orange-500 transition-colors"
                     >
                       <CardContent className="pt-6">
-                        <div className="flex items-start gap-4">
-                          <Shield className="w-8 h-8 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+                        <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
+                          <Shield className="w-8 h-8 text-onealgo-orange-500 sm:flex-shrink-0 sm:mt-1" />
                           <p className="text-gray-700 font-medium">{cert}</p>
                         </div>
                       </CardContent>
