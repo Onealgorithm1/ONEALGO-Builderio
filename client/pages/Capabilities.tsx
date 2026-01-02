@@ -480,6 +480,28 @@ export default function Capabilities() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700">{person.summary}</p>
+                  {(person.email || person.phone) && (
+                    <div className="mt-4 space-y-2 text-sm text-gray-600">
+                      {person.email && (
+                        <a
+                          href={`mailto:${person.email}`}
+                          className="flex items-center gap-2 hover:text-onealgo-orange-500 transition-colors"
+                        >
+                          <Mail className="w-4 h-4" />
+                          {person.email}
+                        </a>
+                      )}
+                      {person.phone && (
+                        <a
+                          href={`tel:${person.phone}`}
+                          className="flex items-center gap-2 hover:text-onealgo-orange-500 transition-colors"
+                        >
+                          <Phone className="w-4 h-4" />
+                          {person.phone}
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             ))}
