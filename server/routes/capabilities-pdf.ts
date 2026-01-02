@@ -149,10 +149,7 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
     });
 
     sectionHeading("Compliance & Certifications");
-    doc
-      .fontSize(11)
-      .fillColor("#1f2937")
-      .text("Pending Certifications:");
+    doc.fontSize(11).fillColor("#1f2937").text("Pending Certifications:");
     doc.list(complianceProfile.pendingCertifications, {
       bulletRadius: 2,
       textIndent: 20,
