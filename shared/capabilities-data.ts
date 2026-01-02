@@ -117,9 +117,7 @@ export const differentiators: Differentiator[] = [
 export const projectHighlights: ProjectHighlight[] = [
   {
     title: "Photon Infotech, Inc.",
-    items: [
-      "System modernization and software development services ($195K).",
-    ],
+    items: ["System modernization and software development services ($195K)."],
   },
   {
     title: "Radius 180 LLC / Republic Services",
@@ -153,7 +151,8 @@ export const federalExperience: FederalExperienceItem[] = [
     status: "Evaluation in progress",
   },
   {
-    title: "Library of Congress – FADGI Digitization & Accessibility Modernization",
+    title:
+      "Library of Congress – FADGI Digitization & Accessibility Modernization",
     rfq: "RFQ 030ADV26Q0011",
     role: "Prime Contractor: One Algorithm LLC",
     partner: "Proposed Partner: Irongrove LLC",
@@ -202,8 +201,7 @@ export const keyPersonnel: KeyPerson[] = [
   {
     name: "Louis Rubino",
     role: "Director, Compliance & Contract Administration",
-    summary:
-      "Federal compliance, proposal operations, and partner management.",
+    summary: "Federal compliance, proposal operations, and partner management.",
     email: "lrubino@onealgorithm.com",
     phone: "(516) 451-5139",
   },
