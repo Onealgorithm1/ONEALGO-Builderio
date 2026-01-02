@@ -384,8 +384,8 @@ export default function Capabilities() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
-              <Building2 className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+            <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
+              <Building2 className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
                 <h4 className="font-semibold mb-1">Website</h4>
                 <p className="text-blue-200">
