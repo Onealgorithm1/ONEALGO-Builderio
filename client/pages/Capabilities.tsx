@@ -270,7 +270,7 @@ export default function Capabilities() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-3 gap-2 text-sm text-gray-700">
+                <div className="grid grid-cols-2 gap-2 text-sm text-gray-700 sm:grid-cols-3">
                   {siteConfig.codes.naics.map((code) => (
                     <div
                       key={code}
@@ -290,7 +290,7 @@ export default function Capabilities() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-3 gap-2 text-sm text-gray-700">
+                <div className="grid grid-cols-2 gap-2 text-sm text-gray-700 sm:grid-cols-3">
                   {siteConfig.codes.psc.map((code) => (
                     <div
                       key={code}
