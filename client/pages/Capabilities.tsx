@@ -72,27 +72,35 @@ export default function Capabilities() {
             <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
               {siteConfig.legalName} — Technology & Compliance Solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-blue-100">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col items-center gap-4 text-blue-100 sm:flex-row sm:justify-center">
+              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
                 <Shield className="w-5 h-5" />
                 <span>CAGE Code: {siteConfig.identifiers.cage}</span>
               </div>
+              <div
+                className="h-px w-16 bg-blue-300/40 sm:hidden"
+                aria-hidden="true"
+              />
               <div className="hidden sm:block text-blue-300">|</div>
-              <div className="flex items-center gap-2">
+              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
                 <FileText className="w-5 h-5" />
                 <span>UEI: {siteConfig.identifiers.uei}</span>
               </div>
+              <div
+                className="h-px w-16 bg-blue-300/40 sm:hidden"
+                aria-hidden="true"
+              />
               <div className="hidden sm:block text-blue-300">|</div>
-              <div className="flex items-center gap-2">
+              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
                 <FileText className="w-5 h-5" />
                 <span>D-U-N-S: {siteConfig.identifiers.duns}</span>
               </div>
             </div>
-            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
               <Button
                 asChild
                 size="lg"
-                className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white w-full sm:w-auto"
               >
                 <a
                   href="/api/capabilities.pdf"
@@ -204,8 +212,8 @@ export default function Capabilities() {
                       className="border-2 hover:border-onealgo-orange-500 transition-colors"
                     >
                       <CardContent className="pt-6">
-                        <div className="flex items-start gap-4">
-                          <Shield className="w-8 h-8 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+                        <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
+                          <Shield className="w-8 h-8 text-onealgo-orange-500 sm:flex-shrink-0 sm:mt-1" />
                           <p className="text-gray-700 font-medium">{cert}</p>
                         </div>
                       </CardContent>
@@ -268,7 +276,7 @@ export default function Capabilities() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-3 gap-2 text-sm text-gray-700">
+                <div className="grid grid-cols-2 gap-2 text-sm text-gray-700 sm:grid-cols-3">
                   {siteConfig.codes.naics.map((code) => (
                     <div
                       key={code}
@@ -288,7 +296,7 @@ export default function Capabilities() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-3 gap-2 text-sm text-gray-700">
+                <div className="grid grid-cols-2 gap-2 text-sm text-gray-700 sm:grid-cols-3">
                   {siteConfig.codes.psc.map((code) => (
                     <div
                       key={code}
@@ -339,8 +347,8 @@ export default function Capabilities() {
           </h3>
 
           <div className="max-w-3xl mx-auto space-y-6 mb-12">
-            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
-              <MapPin className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+            <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
+              <MapPin className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
                 <h4 className="font-semibold mb-1">Address</h4>
                 <p className="text-blue-200">
@@ -352,8 +360,8 @@ export default function Capabilities() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
-              <Mail className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+            <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
+              <Mail className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
                 <h4 className="font-semibold mb-1">Email</h4>
                 <p className="text-blue-200">
@@ -367,8 +375,8 @@ export default function Capabilities() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
-              <Phone className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+            <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
+              <Phone className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
                 <h4 className="font-semibold mb-1">Phone</h4>
                 <p className="text-blue-200">
@@ -382,8 +390,8 @@ export default function Capabilities() {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 bg-onealgo-blue-900/50 rounded-lg p-6">
-              <Building2 className="w-6 h-6 text-onealgo-orange-500 flex-shrink-0 mt-1" />
+            <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
+              <Building2 className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
                 <h4 className="font-semibold mb-1">Website</h4>
                 <p className="text-blue-200">
