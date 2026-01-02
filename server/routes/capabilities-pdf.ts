@@ -233,16 +233,10 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
       .text(
         `Alternate Contact: ${siteConfig.contact.emailAlt ?? "N/A"} | ${siteConfig.contact.phoneAlt ?? "N/A"}`,
       )
+      .text(`Website: ${siteConfig.url}`)
+      .text(`Address: ${getFullAddress()}`)
+      .text(`Mailing Address: ${getPostalAddress().replace("\n", ", ")}`)
       .moveDown(0.5);
-
-    if (siteConfig.certifications?.length) {
-      doc.text("Certifications & Standards:");
-      doc.list(siteConfig.certifications, {
-        bulletRadius: 2,
-        textIndent: 20,
-        bulletIndent: 10,
-      });
-    }
 
     doc.end();
   } catch (error) {
