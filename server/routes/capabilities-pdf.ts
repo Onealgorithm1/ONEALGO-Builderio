@@ -10,6 +10,9 @@ import {
   differentiators,
   projectHighlights,
   keyPersonnel,
+  federalExperience,
+  complianceProfile,
+  strategicPartnerships,
 } from "../../shared/capabilities-data";
 
 export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
