@@ -101,18 +101,19 @@ Status: Ready to push
 
 ## **🚀 DEPLOYMENT INSTRUCTIONS**
 
-### **Option 1: Use Top-Right Button (Recommended)**
+### **Automatic Push-to-Deploy (GitHub Actions + Netlify)**
 
-1. Click the **Push/Create/PR button** in the top-right corner of the UI
-2. This will push all 13 commits to your GitHub repository
-3. Your existing CI/CD pipeline will automatically deploy
+1. In your GitHub repository settings, add two secrets: `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` (you can grab both from the Netlify dashboard for the site you want to publish).
+2. Ensure the branch that should auto-deploy (currently `main`) allows direct pushes or fast-forwards. If branch protections enforce reviews, merge PRs into `main`—the workflow still runs immediately after the merge commit lands.
+3. The workflow lives at `.github/workflows/production-deploy.yml`. It checks out the code, installs dependencies with pnpm, runs `pnpm build`, and then executes `pnpm deploy:netlify`, which calls `netlify deploy --dir=dist/spa --functions=netlify/functions --prod`.
+4. Push changes straight to `main` (e.g., with the Builder UI **Push/Create/PR** button configured for direct pushes). As soon as the commit hits GitHub, the "Deploy to Netlify on push" workflow will build and publish the site live without waiting for a PR approval.
+5. Need to halt a bad deploy? Revert the commit (or use Netlify’s "Rollback deploy" button) and push again—the workflow will redeploy the previous good state.
 
-### **Option 2: Connect Deployment Service**
+> Prefer to manage hosting without GitHub Actions? You can still [Connect Netlify](#open-mcp-popover) or [Connect Vercel](#open-mcp-popover) via MCP and trigger deploys directly from Builder.
 
-- [Connect Netlify MCP](#open-mcp-popover) for automatic deployment
-- [Connect Vercel MCP](#open-mcp-popover) for automatic deployment
+### **Manual Git Push (Fallback)**
 
-### **Option 3: Manual Git Push**
+If you ever need to bypass the automation (for instance, while rotating secrets), you can still push manually:
 
 ```bash
 git push origin ai_main_c12c8e76f0c4:main
