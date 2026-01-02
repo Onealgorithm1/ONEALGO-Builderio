@@ -129,7 +129,7 @@ export default function Capabilities() {
                   className="inline-flex items-center gap-2"
                 >
                   <FileText className="w-5 h-5" />
-                  Download Capabilities PDF
+                  Download Capabilities Statement (PDF)
                 </a>
               </Button>
             </div>
