@@ -533,7 +533,7 @@ export default function Capabilities() {
             <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
               <Mail className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
-                <h4 className="font-semibold mb-1">Email</h4>
+                <h4 className="font-semibold mb-1">Primary Contact</h4>
                 <p className="text-blue-200">
                   <a
                     href={`mailto:${siteConfig.contact.emailPrimary}`}
@@ -542,21 +542,41 @@ export default function Capabilities() {
                     {siteConfig.contact.emailPrimary}
                   </a>
                 </p>
+                <p className="text-blue-200">
+                  <a
+                    href={`tel:${siteConfig.contact.phonePrimary}`}
+                    className="hover:text-onealgo-orange-500 transition-colors"
+                  >
+                    {siteConfig.contact.phonePrimary}
+                  </a>
+                </p>
               </div>
             </div>
 
             <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
               <Phone className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
-                <h4 className="font-semibold mb-1">Phone</h4>
-                <p className="text-blue-200">
-                  <a
-                    href={`tel:${siteConfig.contact.phoneAlt}`}
-                    className="hover:text-onealgo-orange-500 transition-colors"
-                  >
-                    {siteConfig.contact.phoneAlt}
-                  </a>
-                </p>
+                <h4 className="font-semibold mb-1">Alternate Contact</h4>
+                {siteConfig.contact.emailAlt && (
+                  <p className="text-blue-200">
+                    <a
+                      href={`mailto:${siteConfig.contact.emailAlt}`}
+                      className="hover:text-onealgo-orange-500 transition-colors"
+                    >
+                      {siteConfig.contact.emailAlt}
+                    </a>
+                  </p>
+                )}
+                {siteConfig.contact.phoneAlt && (
+                  <p className="text-blue-200">
+                    <a
+                      href={`tel:${siteConfig.contact.phoneAlt}`}
+                      className="hover:text-onealgo-orange-500 transition-colors"
+                    >
+                      {siteConfig.contact.phoneAlt}
+                    </a>
+                  </p>
+                )}
               </div>
             </div>
 
