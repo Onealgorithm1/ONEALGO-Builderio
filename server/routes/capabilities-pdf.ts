@@ -4,13 +4,13 @@ import {
   siteConfig,
   getFullAddress,
   getPostalAddress,
-} from "@shared/companyProfile";
+} from "../../shared/companyProfile";
 import {
   coreCompetencies,
   differentiators,
   projectHighlights,
   keyPersonnel,
-} from "@shared/capabilities-data";
+} from "../../shared/capabilities-data";
 
 export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
   try {
