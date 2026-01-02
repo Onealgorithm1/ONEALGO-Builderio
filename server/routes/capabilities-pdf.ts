@@ -199,11 +199,31 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
         .text(`${person.name} — ${person.role}`)
         .fontSize(11)
         .fillColor("#1f2937")
-        .text(person.summary)
-        .moveDown(0.3);
+        .text(person.summary);
+      if (person.email) {
+        doc.text(`Email: ${person.email}`);
+      }
+      if (person.phone) {
+        doc.text(`Phone: ${person.phone}`);
+      }
+      doc.moveDown(0.3);
     });
 
-    sectionHeading("Contact & Certifications");
+    sectionHeading("NAICS & PSC Codes");
+    doc.fontSize(11).fillColor("#1f2937").text("NAICS Codes:");
+    doc.list(siteConfig.codes.naics, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+    doc.text("PSC Codes:");
+    doc.list(siteConfig.codes.psc, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+
+    sectionHeading("Contact Information");
     doc
       .fontSize(11)
       .fillColor("#1f2937")
