@@ -19,6 +19,11 @@ import {
   Shield,
   Lightbulb,
   ExternalLink,
+  Briefcase,
+  CalendarDays,
+  ClipboardList,
+  Handshake,
+  Layers,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -31,7 +36,9 @@ import {
   coreCompetencies,
   differentiators,
   projectHighlights,
-  keyPersonnel,
+  federalExperience,
+  complianceProfile,
+  strategicPartnerships,
 } from "../../shared/capabilities-data";
 import type { IconName } from "../../shared/capabilities-data";
 import { siteConfig } from "../lib/siteConfig";
@@ -69,8 +76,18 @@ export default function Capabilities() {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Company Capabilities
             </h1>
-            <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-blue-200 max-w-4xl mx-auto">
               {siteConfig.legalName} — Technology & Compliance Solutions
+            </p>
+            <p className="text-lg text-blue-100 max-w-5xl mx-auto mt-4">
+              Woman- and Minority-Owned Small Business (WOSB/MBE pending)
+              delivering secure, standards-aligned technology and compliance
+              services for federal and commercial clients nationwide.
+            </p>
+            <p className="text-lg text-blue-100 max-w-5xl mx-auto mt-2">
+              Mission: enable government and enterprise customers to modernize
+              securely, efficiently, and accessibly while meeting every
+              compliance and performance objective.
             </p>
             <div className="flex flex-col items-center gap-4 text-blue-100 sm:flex-row sm:justify-center">
               <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
@@ -111,7 +128,7 @@ export default function Capabilities() {
                   className="inline-flex items-center gap-2"
                 >
                   <FileText className="w-5 h-5" />
-                  Download Capabilities PDF
+                  Download Capabilities Statement (PDF)
                 </a>
               </Button>
             </div>
@@ -198,30 +215,169 @@ export default function Capabilities() {
             </div>
           </div>
 
-          {/* Certifications & Standards */}
-          {siteConfig.certifications &&
-            siteConfig.certifications.length > 0 && (
-              <div className="mb-16">
-                <h3 className="text-2xl md:text-3xl font-bold text-onealgo-blue-950 mb-8 text-center">
-                  Certifications & Standards
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {siteConfig.certifications.map((cert, index) => (
-                    <Card
-                      key={index}
-                      className="border-2 hover:border-onealgo-orange-500 transition-colors"
-                    >
-                      <CardContent className="pt-6">
-                        <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-start sm:text-left">
-                          <Shield className="w-8 h-8 text-onealgo-orange-500 sm:flex-shrink-0 sm:mt-1" />
-                          <p className="text-gray-700 font-medium">{cert}</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            )}
+          {/* Federal Contract Experience */}
+          <div className="mb-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-onealgo-blue-950 mb-8 text-center">
+              Federal Contract Experience
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {federalExperience.map((item) => (
+                <Card
+                  key={`${item.title}-${item.rfq}`}
+                  className="border-2 hover:border-onealgo-orange-500 transition-colors"
+                >
+                  <CardHeader>
+                    <CardTitle className="text-onealgo-blue-950">
+                      {item.title}
+                    </CardTitle>
+                    <p className="text-sm text-gray-500">{item.rfq}</p>
+                  </CardHeader>
+                  <CardContent className="space-y-3 text-gray-700">
+                    <p className="font-medium text-onealgo-blue-900">
+                      {item.role}
+                    </p>
+                    {item.partner && (
+                      <p className="text-sm text-gray-600">{item.partner}</p>
+                    )}
+                    <p className="text-sm leading-relaxed">{item.scope}</p>
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 pt-2 border-t border-gray-100">
+                      <span className="font-semibold text-gray-900">
+                        {item.submissionDate}
+                      </span>
+                      <span className="text-onealgo-orange-600">
+                        {item.status}
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Compliance & Credentials */}
+          <div className="mb-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-onealgo-blue-950 mb-8 text-center">
+              Compliance & Credentials
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-onealgo-blue-950">
+                    Pending Certifications
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-gray-700">
+                    {complianceProfile.pendingCertifications.map((cert) => (
+                      <li key={cert} className="flex items-start gap-2">
+                        <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
+                        <span>{cert}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-onealgo-blue-950">
+                    Federal Compliance
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-gray-700">
+                    {complianceProfile.federalCompliance.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <Shield className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-onealgo-blue-950">
+                    Quality & Security Programs
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-gray-700">
+                    {complianceProfile.qualityAndSecurity.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <Shield className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              {siteConfig.certifications?.length ? (
+                <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                  <CardHeader>
+                    <CardTitle className="text-onealgo-blue-950">
+                      Industry Certifications
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-gray-700">
+                      {siteConfig.certifications.map((cert) => (
+                        <li key={cert} className="flex items-start gap-2">
+                          <CheckCircle className="w-5 h-5 text-onealgo-orange-500 mt-0.5 flex-shrink-0" />
+                          <span>{cert}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ) : null}
+
+              <Card className="border-2 hover:border-onealgo-orange-500 transition-colors">
+                <CardHeader>
+                  <CardTitle className="text-onealgo-blue-950">
+                    Bonding & Registration
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-gray-700">
+                  <p>
+                    <strong>Bonding Capacity:</strong>{" "}
+                    {complianceProfile.bondingCapacity}
+                  </p>
+                  <p>
+                    <strong>SAM Registration:</strong>{" "}
+                    {complianceProfile.samRegistration}
+                  </p>
+                  <p>
+                    <strong>CAGE Code:</strong> {siteConfig.identifiers.cage}
+                  </p>
+                  <p>
+                    <strong>UEI:</strong> {siteConfig.identifiers.uei}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Strategic Partnerships */}
+          <div className="mb-16">
+            <h3 className="text-2xl md:text-3xl font-bold text-onealgo-blue-950 mb-8 text-center">
+              Strategic Partnerships
+            </h3>
+            <div className="bg-onealgo-light rounded-2xl p-8 space-y-4">
+              {strategicPartnerships.map((note, index) => (
+                <p
+                  key={index}
+                  className="text-gray-700 text-lg leading-relaxed"
+                >
+                  {note}
+                </p>
+              ))}
+            </div>
+          </div>
 
           {/* Project Highlights */}
           <div className="mb-16">
@@ -312,33 +468,6 @@ export default function Capabilities() {
         </div>
       </section>
 
-      {/* Key Personnel */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-2xl md:text-3xl font-bold text-onealgo-blue-950 mb-8 text-center">
-            Key Personnel / Consultants
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {keyPersonnel.map((person) => (
-              <Card
-                key={person.name}
-                className="border-2 hover:border-onealgo-orange-500 transition-colors"
-              >
-                <CardHeader>
-                  <CardTitle className="text-onealgo-blue-950">
-                    {person.name}
-                  </CardTitle>
-                  <p className="text-sm text-gray-600">{person.role}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-700">{person.summary}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-br from-onealgo-blue-950 to-onealgo-blue-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -363,7 +492,7 @@ export default function Capabilities() {
             <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
               <Mail className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
-                <h4 className="font-semibold mb-1">Email</h4>
+                <h4 className="font-semibold mb-1">Primary Contact</h4>
                 <p className="text-blue-200">
                   <a
                     href={`mailto:${siteConfig.contact.emailPrimary}`}
@@ -378,15 +507,17 @@ export default function Capabilities() {
             <div className="flex flex-col gap-3 rounded-lg bg-onealgo-blue-900/50 p-6 text-center sm:flex-row sm:items-center sm:gap-4 sm:text-left">
               <Phone className="w-6 h-6 text-onealgo-orange-500 mx-auto sm:mx-0 sm:mt-1 sm:flex-shrink-0" />
               <div>
-                <h4 className="font-semibold mb-1">Phone</h4>
-                <p className="text-blue-200">
-                  <a
-                    href={`tel:${siteConfig.contact.phoneAlt}`}
-                    className="hover:text-onealgo-orange-500 transition-colors"
-                  >
-                    {siteConfig.contact.phoneAlt}
-                  </a>
-                </p>
+                <h4 className="font-semibold mb-1">Alternate Contact</h4>
+                {siteConfig.contact.emailAlt && (
+                  <p className="text-blue-200">
+                    <a
+                      href={`mailto:${siteConfig.contact.emailAlt}`}
+                      className="hover:text-onealgo-orange-500 transition-colors"
+                    >
+                      {siteConfig.contact.emailAlt}
+                    </a>
+                  </p>
+                )}
               </div>
             </div>
 

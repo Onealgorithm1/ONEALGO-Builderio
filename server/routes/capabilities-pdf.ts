@@ -10,6 +10,9 @@ import {
   differentiators,
   projectHighlights,
   keyPersonnel,
+  federalExperience,
+  complianceProfile,
+  strategicPartnerships,
 } from "../../shared/capabilities-data";
 
 export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
@@ -111,6 +114,24 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
         .moveDown(0.5);
     });
 
+    sectionHeading("Federal Contract Experience");
+    federalExperience.forEach((item) => {
+      doc
+        .fontSize(13)
+        .fillColor("#0f172a")
+        .text(`${item.title} (${item.rfq})`)
+        .fontSize(11)
+        .fillColor("#1f2937")
+        .text(item.role);
+      if (item.partner) {
+        doc.text(item.partner);
+      }
+      doc
+        .text(item.scope)
+        .text(`${item.submissionDate} — ${item.status}`)
+        .moveDown(0.5);
+    });
+
     sectionHeading("Commercial Project Highlights");
     projectHighlights.forEach((project) => {
       doc
@@ -127,6 +148,46 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
         .moveDown(0.5);
     });
 
+    sectionHeading("Compliance & Certifications");
+    doc.fontSize(11).fillColor("#1f2937").text("Pending Certifications:");
+    doc.list(complianceProfile.pendingCertifications, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+    doc.text("Federal Compliance:");
+    doc.list(complianceProfile.federalCompliance, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+    doc.text("Quality & Security Programs:");
+    doc.list(complianceProfile.qualityAndSecurity, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+    doc
+      .moveDown(0.3)
+      .text(`Bonding Capacity: ${complianceProfile.bondingCapacity}`)
+      .text(`SAM Registration: ${complianceProfile.samRegistration}`)
+      .text(
+        `CAGE: ${siteConfig.identifiers.cage}  |  UEI: ${siteConfig.identifiers.uei}  |  D-U-N-S: ${siteConfig.identifiers.duns}`,
+      );
+    if (siteConfig.certifications?.length) {
+      doc.text("Industry Certifications:");
+      doc.list(siteConfig.certifications, {
+        bulletRadius: 2,
+        textIndent: 20,
+        bulletIndent: 10,
+      });
+    }
+
+    sectionHeading("Strategic Partnerships");
+    strategicPartnerships.forEach((note) => {
+      doc.fontSize(11).fillColor("#1f2937").text(note).moveDown(0.3);
+    });
+
     sectionHeading("Key Personnel / Consultants");
     keyPersonnel.forEach((person) => {
       doc
@@ -135,11 +196,31 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
         .text(`${person.name} — ${person.role}`)
         .fontSize(11)
         .fillColor("#1f2937")
-        .text(person.summary)
-        .moveDown(0.3);
+        .text(person.summary);
+      if (person.email) {
+        doc.text(`Email: ${person.email}`);
+      }
+      if (person.phone) {
+        doc.text(`Phone: ${person.phone}`);
+      }
+      doc.moveDown(0.3);
     });
 
-    sectionHeading("Contact & Certifications");
+    sectionHeading("NAICS & PSC Codes");
+    doc.fontSize(11).fillColor("#1f2937").text("NAICS Codes:");
+    doc.list(siteConfig.codes.naics, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+    doc.text("PSC Codes:");
+    doc.list(siteConfig.codes.psc, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+
+    sectionHeading("Contact Information");
     doc
       .fontSize(11)
       .fillColor("#1f2937")
@@ -149,16 +230,10 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
       .text(
         `Alternate Contact: ${siteConfig.contact.emailAlt ?? "N/A"} | ${siteConfig.contact.phoneAlt ?? "N/A"}`,
       )
+      .text(`Website: ${siteConfig.url}`)
+      .text(`Address: ${getFullAddress()}`)
+      .text(`Mailing Address: ${getPostalAddress().replace("\n", ", ")}`)
       .moveDown(0.5);
-
-    if (siteConfig.certifications?.length) {
-      doc.text("Certifications & Standards:");
-      doc.list(siteConfig.certifications, {
-        bulletRadius: 2,
-        textIndent: 20,
-        bulletIndent: 10,
-      });
-    }
 
     doc.end();
   } catch (error) {
