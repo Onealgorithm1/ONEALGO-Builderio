@@ -148,6 +148,49 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
         .moveDown(0.5);
     });
 
+    sectionHeading("Compliance & Certifications");
+    doc
+      .fontSize(11)
+      .fillColor("#1f2937")
+      .text("Pending Certifications:");
+    doc.list(complianceProfile.pendingCertifications, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+    doc.text("Federal Compliance:");
+    doc.list(complianceProfile.federalCompliance, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+    doc.text("Quality & Security Programs:");
+    doc.list(complianceProfile.qualityAndSecurity, {
+      bulletRadius: 2,
+      textIndent: 20,
+      bulletIndent: 10,
+    });
+    doc
+      .moveDown(0.3)
+      .text(`Bonding Capacity: ${complianceProfile.bondingCapacity}`)
+      .text(`SAM Registration: ${complianceProfile.samRegistration}`)
+      .text(
+        `CAGE: ${siteConfig.identifiers.cage}  |  UEI: ${siteConfig.identifiers.uei}  |  D-U-N-S: ${siteConfig.identifiers.duns}`,
+      );
+    if (siteConfig.certifications?.length) {
+      doc.text("Industry Certifications:");
+      doc.list(siteConfig.certifications, {
+        bulletRadius: 2,
+        textIndent: 20,
+        bulletIndent: 10,
+      });
+    }
+
+    sectionHeading("Strategic Partnerships");
+    strategicPartnerships.forEach((note) => {
+      doc.fontSize(11).fillColor("#1f2937").text(note).moveDown(0.3);
+    });
+
     sectionHeading("Key Personnel / Consultants");
     keyPersonnel.forEach((person) => {
       doc
