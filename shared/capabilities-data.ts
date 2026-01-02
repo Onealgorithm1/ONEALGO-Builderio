@@ -26,6 +26,26 @@ export interface KeyPerson {
   name: string;
   role: string;
   summary: string;
+  email?: string;
+  phone?: string;
+}
+
+export interface FederalExperienceItem {
+  title: string;
+  rfq: string;
+  role: string;
+  partner?: string;
+  scope: string;
+  submissionDate: string;
+  status: string;
+}
+
+export interface ComplianceProfile {
+  pendingCertifications: string[];
+  federalCompliance: string[];
+  qualityAndSecurity: string[];
+  bondingCapacity: string;
+  samRegistration: string;
 }
 
 export const coreCompetencies: CoreCompetency[] = [
@@ -33,7 +53,7 @@ export const coreCompetencies: CoreCompetency[] = [
     title: "Technology & Digital Engineering",
     icon: "target",
     items: [
-      "Cloud architecture and modernization (AWS, Azure, GovCloud)",
+      "Cloud architecture and modernization (Azure Government, AWS, GovCloud)",
       "Secure software development and API integration",
       "Data engineering, analytics, and AI/ML automation",
       "DevSecOps pipelines with continuous compliance monitoring",
@@ -54,9 +74,9 @@ export const coreCompetencies: CoreCompetency[] = [
     title: "Small Business & Strategic Consulting",
     icon: "users",
     items: [
-      "Business operations strategy, planning, and growth enablement",
+      "Business operations strategy and financial planning",
       "Federal capture and proposal management support",
-      "Risk assessment, cost optimization, and financial planning",
+      "Risk assessment and cost optimization for small business scalability",
     ],
   },
 ];
@@ -66,64 +86,125 @@ export const differentiators: Differentiator[] = [
     title: "Secure DevSecOps Framework",
     icon: "shield",
     description:
-      "Integrated CI/CD pipelines with vulnerability management and compliance validation.",
+      "Integrated CI/CD pipelines with vulnerability management and continuous compliance validation.",
   },
   {
     title: "Federal Compliance Expertise",
     icon: "checkCircle",
-    description: "Proven alignment with NIST, DFARS, and ISO standards.",
+    description:
+      "Alignment with NIST SP 800-171, DFARS 252.204-7012, ISO 27001, SOC 2, HIPAA, and CMMC 2.0 (Level 2 in progress).",
   },
   {
     title: "Scalable Delivery",
     icon: "target",
-    description: "Small business agility with enterprise-grade processes.",
+    description:
+      "Small business agility with enterprise-grade quality and process control.",
   },
   {
     title: "Experienced Leadership",
     icon: "users",
     description:
-      "Executives with 20+ years of experience in technology, operations, and program management.",
+      "Executives with 20+ years across technology, operations, and program management.",
   },
   {
     title: "Customer-Focused Execution",
     icon: "lightbulb",
-    description: "Commitment to measurable results and mission continuity.",
+    description:
+      "Commitment to measurable results, compliance, and mission continuity.",
   },
 ];
 
 export const projectHighlights: ProjectHighlight[] = [
   {
-    title: "Technology Projects",
+    title: "Photon Infotech, Inc.",
     items: [
-      "Developed enterprise SaaS platforms, CRM systems, and workflow automation tools for private clients.",
-      "Built secure compliance and monitoring solutions to support operational efficiency.",
+      "System modernization and software development services ($195K).",
     ],
   },
   {
-    title: "Small Business Consulting Projects",
+    title: "Radius 180 LLC / Republic Services",
     items: [
-      "Provided strategic planning, IT project management, and business analyst services for small businesses.",
-      "Developed marketing strategies, CRM systems, and operational process improvements to scale client operations.",
+      "Automation and modernization of operational management systems ($315K).",
     ],
   },
+  {
+    title: "BMC Software",
+    items: [
+      "Enterprise application integration and workflow automation ($500K).",
+    ],
+  },
+  {
+    title: "Gillespie Contracting, Inc.",
+    items: [
+      "Roofing and infrastructure modernization (Construction Division, $3M bonded).",
+    ],
+  },
+];
+
+export const federalExperience: FederalExperienceItem[] = [
+  {
+    title: "Library of Congress – CRIMS Modernization",
+    rfq: "RFQ 030ADV26Q0024",
+    role: "Prime Contractor: One Algorithm LLC",
+    partner: "Proposed Partner: Irongrove LLC",
+    scope:
+      "Cloud modernization, accessibility compliance (WCAG 2.1 AA), and Azure GovOps infrastructure.",
+    submissionDate: "Submitted December 19, 2025",
+    status: "Evaluation in progress",
+  },
+  {
+    title: "Library of Congress – FADGI Digitization & Accessibility Modernization",
+    rfq: "RFQ 030ADV26Q0011",
+    role: "Prime Contractor: One Algorithm LLC",
+    partner: "Proposed Partner: Irongrove LLC",
+    scope:
+      "Metadata automation, digital preservation workflows, and Azure-based accessibility modernization.",
+    submissionDate: "Submitted January 5, 2026",
+    status: "Evaluation in progress",
+  },
+];
+
+export const complianceProfile: ComplianceProfile = {
+  pendingCertifications: [
+    "Women-Owned Small Business (WOSB/EDWOSB) – filed Dec 31, 2025",
+    "Minority Business Enterprise (MBE) – pending",
+  ],
+  federalCompliance: [
+    "DFARS 252.204-7012",
+    "NIST SP 800-171",
+    "CMMC 2.0 (Level 2 in progress)",
+  ],
+  qualityAndSecurity: ["ISO 27001", "SOC 2 Type II", "HIPAA", "ISO 9001"],
+  bondingCapacity: "$500,000 (single / aggregate)",
+  samRegistration: "Active SAM Registration – UEI: W8DYK38MEKP3 | CAGE: 14G18",
+};
+
+export const strategicPartnerships: string[] = [
+  "One Algorithm LLC partners selectively with Veteran-Owned and 8(a) firms (including Irongrove LLC) for modernization initiatives requiring additional cleared technical personnel.",
 ];
 
 export const keyPersonnel: KeyPerson[] = [
   {
     name: "Swapna Amirisetti",
     role: "CEO / President",
-    summary: "Leads strategy, operations, and business growth.",
+    summary:
+      "Strategic growth, federal partnerships, and operations management.",
+    email: "swapna@onealgorithm.com",
+    phone: "(832) 633-7051",
   },
   {
     name: "Sreenivas Amirisetti",
-    role: "Secretary / CTO",
-    summary:
-      "Oversees IT project management, business analysis, and technology strategy.",
+    role: "CTO / Secretary",
+    summary: "Technical delivery, IT modernization, and program leadership.",
+    email: "sreeni@onealgorithm.com",
+    phone: "(832) 434-9891",
   },
   {
     name: "Louis Rubino",
-    role: "Director of Compliance & Contract Administration",
+    role: "Director, Compliance & Contract Administration",
     summary:
-      "Manages federal compliance, proposal operations, and partner relationships.",
+      "Federal compliance, proposal operations, and partner management.",
+    email: "lrubino@onealgorithm.com",
+    phone: "(516) 451-5139",
   },
 ];
