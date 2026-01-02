@@ -406,10 +406,7 @@ export default function Layout({ children }: LayoutProps) {
                 </button>
               </div>
 
-              <div
-                className="px-4 py-4 overflow-auto"
-                style={{ maxHeight: "calc(100vh - 64px)" }}
-              >
+              <div className="px-4 py-4 overflow-auto max-h-[calc(100vh-64px)]">
                 <nav className="space-y-1">
                   <Link
                     to="/"

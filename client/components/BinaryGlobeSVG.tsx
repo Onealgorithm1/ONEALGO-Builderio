@@ -1,5 +1,8 @@
 import React from "react";
 
+import { cn } from "@/lib/utils";
+import styles from "./BinaryGlobeSVG.module.css";
+
 interface BinaryGlobeSVGProps {
   size?: number;
   className?: string;
@@ -17,20 +20,11 @@ export default function BinaryGlobeSVG({
       alt="OneAlgorithm Logo"
       width={size}
       height={size}
-      className={`inline-block ${className}`}
-      style={{
-        objectFit: "contain",
-        aspectRatio: `auto ${size} / ${size}`,
-        borderColor: "rgba(255, 255, 255, 0)",
-        color: "rgba(255, 255, 255, 0.58)",
-        filter:
-          "drop-shadow(rgba(0, 0, 0, 0.07) 0px 4px 3px) drop-shadow(rgba(0, 0, 0, 0.06) 0px 2px 2px)",
-        fontWeight: 700,
-        textDecoration: "rgb(255, 255, 255)",
-        backgroundColor: "rgba(255, 255, 255, 0)",
-        width: "28px",
-        alignSelf: "center",
-      }}
+      className={cn(
+        "inline-block self-center",
+        styles.binaryGlobeImage,
+        className,
+      )}
       loading="lazy"
       decoding="async"
     />
