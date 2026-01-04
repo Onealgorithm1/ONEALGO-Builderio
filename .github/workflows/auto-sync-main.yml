@@ -1,0 +1,41 @@
+name: Auto Sync Main
+
+on:
+  push:
+    branches:
+      - ai_main_*
+  workflow_dispatch:
+
+concurrency:
+  group: auto-sync-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout pushed branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch main
+        run: git fetch origin main
+
+      - name: Fast-forward main to builder commit
+        run: |
+          git checkout main
+          git merge --ff-only $GITHUB_SHA
+
+      - name: Push updated main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: git push origin main
