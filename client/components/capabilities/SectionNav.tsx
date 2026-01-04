@@ -9,9 +9,10 @@ export interface SectionNavItem {
 interface SectionNavProps {
   sections: SectionNavItem[];
   className?: string;
+  sticky?: boolean;
 }
 
-export function SectionNav({ sections, className }: SectionNavProps) {
+export function SectionNav({ sections, className, sticky = true }: SectionNavProps) {
   const [activeId, setActiveId] = React.useState<string>(sections[0]?.id ?? "");
 
   React.useEffect(() => {
