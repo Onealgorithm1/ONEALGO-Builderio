@@ -134,24 +134,24 @@ export const differentiators: Differentiator[] = [
 export const projectHighlights: ProjectHighlight[] = [
   {
     title: "Photon Infotech, Inc.",
-    items: ["System modernization and software development services ($195K)."],
+    items: ["System modernization & software development services ($195K)."],
   },
   {
     title: "Radius 180 LLC / Republic Services",
     items: [
-      "Automation and modernization of operational management systems ($315K).",
+      "Automation & modernization of operational management systems ($315K).",
     ],
   },
   {
     title: "BMC Software",
     items: [
-      "Enterprise application integration and workflow automation ($500K).",
+      "Enterprise application integration & workflow automation ($500K).",
     ],
   },
   {
     title: "Gillespie Contracting, Inc.",
     items: [
-      "Roofing and infrastructure modernization (Construction Division, $3M bonded).",
+      "Roofing & infrastructure modernization (Construction Division, $3M bonded).",
     ],
   },
 ];
