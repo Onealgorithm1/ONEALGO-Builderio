@@ -19,7 +19,11 @@ export function createServer() {
   });
 
   app.get("/api/demo", handleDemo);
-  app.get("/api/capabilities.pdf", handleCapabilitiesPdf);
+
+  // Support both direct Express access and Netlify function rewrites
+  ["/api/capabilities.pdf", "/.netlify/functions/api/capabilities.pdf"].forEach(
+    (path) => app.get(path, handleCapabilitiesPdf),
+  );
 
   // Client-side JS error reporting endpoint
   app.post("/api/log-js-error", (req, res) => {
