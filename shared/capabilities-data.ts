@@ -196,7 +196,8 @@ export const complianceProfile: ComplianceProfile = {
 };
 
 export const strategicPartnerships: string[] = [
-  "One Algorithm LLC partners selectively with Veteran-Owned and 8(a) firms (including Irongrove LLC) for modernization initiatives requiring additional cleared technical personnel.",
+  "One Algorithm actively seeks mentor-protégé and strategic teaming partnerships with leading federal prime contractors to expand modernization, cybersecurity, and AI-driven transformation initiatives.",
+  "We maintain an SBA-compliant Joint Venture with Irongrove LLC (Veteran-Owned) with each partner performing 30%+ of total contract work in accordance with SBA 13 CFR 125.8.",
 ];
 
 export const keyPersonnel: KeyPerson[] = [
