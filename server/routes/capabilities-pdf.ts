@@ -51,7 +51,7 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
     doc
       .fontSize(22)
       .fillColor("#0f172a")
-      .text(`${siteConfig.legalName} Capabilities Statement`, {
+      .text(`${siteConfig.legalName} Capabilities Statement (2026 Edition)`, {
         align: "center",
       })
       .moveDown(0.5);
@@ -59,7 +59,9 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
     doc
       .fontSize(14)
       .fillColor("#1e293b")
-      .text("Technology & Compliance Solutions", { align: "center" })
+      .text("Modernizing Federal Systems Securely and Intelligently", {
+        align: "center",
+      })
       .moveDown(0.5);
 
     doc
