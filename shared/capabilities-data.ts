@@ -48,6 +48,23 @@ export interface ComplianceProfile {
   samRegistration: string;
 }
 
+export interface MentorProtegeHighlight {
+  title: string;
+  description: string;
+}
+
+export interface JointVenturePartnerInfo {
+  name: string;
+  summary: string;
+  address: string;
+  cage: string;
+  uei: string;
+  samStatus: string;
+  certifications: string;
+  services: string[];
+  website: string;
+}
+
 export const coreCompetencies: CoreCompetency[] = [
   {
     title: "Technology & Digital Engineering",
