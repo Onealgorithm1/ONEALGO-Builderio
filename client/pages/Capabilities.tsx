@@ -75,52 +75,87 @@ export default function Capabilities() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-onealgo-blue-950 via-onealgo-blue-900 to-onealgo-blue-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Company Capabilities
+          <div className="text-center space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-wide text-blue-100">
+              Capabilities Statement · 2026 Edition
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white">
+              One Algorithm LLC — Capabilities Statement
             </h1>
-            <p className="text-xl text-blue-200 max-w-4xl mx-auto">
-              {siteConfig.legalName} — Technology & Compliance Solutions
+            <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              Modernizing Federal Systems Securely and Intelligently
             </p>
-            <p className="text-lg text-blue-100 max-w-5xl mx-auto mt-4">
-              Woman- and Minority-Owned Small Business (WOSB/MBE pending)
-              delivering secure, standards-aligned technology and compliance
-              services for federal and commercial clients nationwide.
-            </p>
-            <p className="text-lg text-blue-100 max-w-5xl mx-auto mt-2">
-              Mission: enable government and enterprise customers to modernize
-              securely, efficiently, and accessibly while meeting every
-              compliance and performance objective.
-            </p>
-            <div className="flex flex-col items-center gap-4 text-blue-100 sm:flex-row sm:justify-center">
-              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
-                <Shield className="w-5 h-5" />
-                <span>CAGE Code: {siteConfig.identifiers.cage}</span>
+            <div className="space-y-4 text-lg text-blue-100 max-w-5xl mx-auto">
+              <p>
+                Woman- and Minority-Owned Small Business (WOSB/MBE pending)
+                delivering secure, standards-aligned technology and compliance
+                solutions to federal and commercial clients nationwide.
+              </p>
+              <p>
+                Mission: enable government and enterprise customers to
+                modernize securely, efficiently, and accessibly—meeting all
+                compliance and mission objectives.
+              </p>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-blue-100">
+              <div className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm">
+                <Shield className="w-4 h-4" />
+                CAGE: {siteConfig.identifiers.cage}
               </div>
-              <div
-                className="h-px w-16 bg-blue-300/40 sm:hidden"
-                aria-hidden="true"
-              />
-              <div className="hidden sm:block text-blue-300">|</div>
-              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
-                <FileText className="w-5 h-5" />
-                <span>UEI: {siteConfig.identifiers.uei}</span>
+              <div className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm">
+                <FileText className="w-4 h-4" />
+                UEI: {siteConfig.identifiers.uei}
               </div>
-              <div
-                className="h-px w-16 bg-blue-300/40 sm:hidden"
-                aria-hidden="true"
-              />
-              <div className="hidden sm:block text-blue-300">|</div>
-              <div className="flex w-full items-center justify-center gap-2 text-center text-base sm:w-auto sm:text-left">
-                <FileText className="w-5 h-5" />
-                <span>D-U-N-S: {siteConfig.identifiers.duns}</span>
+              <div className="flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-sm">
+                <FileText className="w-4 h-4" />
+                D-U-N-S: {siteConfig.identifiers.duns}
               </div>
             </div>
-            <div className="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center">
+            <div className="grid grid-cols-1 gap-4 text-left text-blue-100 md:grid-cols-2 lg:grid-cols-4">
+              <div className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3">
+                <MapPin className="w-5 h-5" />
+                <span>
+                  {siteConfig.address.street} {siteConfig.address.streetUnit},
+                  {" "}
+                  {siteConfig.address.city}, {siteConfig.address.region} {" "}
+                  {siteConfig.address.postalCode}
+                </span>
+              </div>
+              <div className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3">
+                <Building2 className="w-5 h-5" />
+                <a
+                  href={siteConfig.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-onealgo-orange-300 transition-colors"
+                >
+                  {siteConfig.url}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3">
+                <Mail className="w-5 h-5" />
+                <a
+                  href={`mailto:${siteConfig.contact.emailPrimary}`}
+                  className="hover:text-onealgo-orange-300 transition-colors"
+                >
+                  {siteConfig.contact.emailPrimary}
+                </a>
+              </div>
+              <div className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3">
+                <Phone className="w-5 h-5" />
+                <a
+                  href={`tel:${siteConfig.contact.phonePrimary}`}
+                  className="hover:text-onealgo-orange-300 transition-colors"
+                >
+                  {siteConfig.contact.phonePrimary}
+                </a>
+              </div>
+            </div>
+            <div className="pt-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white w-full sm:w-auto"
+                className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
               >
                 <a
                   href="/api/capabilities.pdf"
