@@ -105,9 +105,10 @@ Status: Ready to push
 
 1. In your GitHub repository settings, add two secrets: `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID` (copy both from the Netlify site dashboard). These let the workflow authenticate against your exact production site.
 2. Keep `main` as the deploy branch (or update the workflow if you prefer another). Direct pushes or merged PRs into `main` will both trigger the pipeline immediately.
-3. The automation now lives at `.github/workflows/deploy.yml`. It checks out the repo, installs dependencies with pnpm, runs `pnpm test` ➜ `pnpm typecheck` ➜ `pnpm build`, and finally executes `pnpm deploy:netlify`, which wraps `netlify deploy --dir=dist/spa --functions=netlify/functions --prod`.
-4. To verify the pipeline, push a small change (or use **Actions → Build and Deploy → Run workflow**) and watch the GitHub Actions log; on success Netlify will show a matching “Production deploy” entry. Failed builds keep the previous live version untouched.
-5. Need to halt or roll back? Revert the commit (or click “Rollback deploy” in Netlify) and push again—the workflow redeploys the last good state automatically.
+3. Builder-created branches (pattern `ai_main_*`) now auto-sync into `main` via `.github/workflows/auto-sync-main.yml`. When a push lands in Builder, that workflow fast-forwards `main` to the same commit (assuming no conflicts) and then the deploy workflow runs.
+4. The deployment automation lives at `.github/workflows/deploy.yml`. It checks out the repo, installs dependencies with pnpm, runs `pnpm test` ➜ `pnpm typecheck` ➜ `pnpm build`, and finally executes `pnpm deploy:netlify`, which wraps `netlify deploy --dir=dist/spa --functions=netlify/functions --prod`.
+5. To verify everything end-to-end, push a small change (or use **Actions → Auto Sync Main → Run workflow** followed by **Build and Deploy → Run workflow**) and watch the GitHub Actions logs; on success Netlify will show a matching “Production deploy” entry. Failed builds keep the previous live version untouched.
+6. Need to halt or roll back? Revert the commit (or click “Rollback deploy” in Netlify) and push again—the workflow redeploys the last good state automatically.
 
 > Prefer to manage hosting without GitHub Actions? You can still [Connect Netlify](#open-mcp-popover) or [Connect Vercel](#open-mcp-popover) via MCP and trigger deploys directly from Builder.
 
