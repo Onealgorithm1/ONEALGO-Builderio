@@ -85,56 +85,54 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
 
     sectionHeading("Company Overview");
     doc
-      .fontSize(11)
+      .fontSize(8)
       .fillColor("#1f2937")
-      .text(siteConfig.description)
-      .moveDown();
+      .text(siteConfig.description, { lineGap: -1 })
+      .moveDown(0.15);
 
     sectionHeading("Core Competencies");
     coreCompetencies.forEach((competency) => {
       doc
-        .fontSize(13)
+        .fontSize(9)
         .fillColor("#0f172a")
         .text(competency.title)
-        .fontSize(11)
+        .fontSize(7.5)
         .fillColor("#1f2937")
         .list(competency.items, {
-          bulletRadius: 2,
-          textIndent: 20,
-          bulletIndent: 10,
+          bulletRadius: 1.5,
+          textIndent: 12,
+          bulletIndent: 8,
+          lineGap: -1,
         })
-        .moveDown(0.5);
+        .moveDown(0.15);
     });
 
     sectionHeading("Differentiators");
     differentiators.forEach((item) => {
       doc
-        .fontSize(13)
+        .fontSize(8)
         .fillColor("#0f172a")
-        .text(item.title)
-        .fontSize(11)
+        .text(`${item.title}: `, { continued: true })
+        .fontSize(7.5)
         .fillColor("#1f2937")
-        .text(item.description)
-        .moveDown(0.5);
+        .text(item.description, { lineGap: -1 });
     });
+    doc.moveDown(0.15);
 
     sectionHeading("Federal Contract Experience");
     federalExperience.forEach((item) => {
       doc
-        .fontSize(13)
+        .fontSize(8)
         .fillColor("#0f172a")
-        .text(`${item.title} (${item.rfq})`)
-        .fontSize(11)
-        .fillColor("#1f2937")
-        .text(item.role);
+        .text(`${item.title} (${item.rfq}) - ${item.role}`, { lineGap: -1 })
+        .fontSize(7.5)
+        .fillColor("#1f2937");
       if (item.partner) {
-        doc.text(item.partner);
+        doc.text(item.partner, { lineGap: -1 });
       }
-      doc
-        .text(item.scope)
-        .text(`${item.submissionDate} — ${item.status}`)
-        .moveDown(0.5);
+      doc.text(`${item.submissionDate} — ${item.status}`, { lineGap: -1 });
     });
+    doc.moveDown(0.15);
 
     sectionHeading("Mentor-Protégé & Partnership Readiness");
     mentorProtegeHighlights.forEach((item) => {
