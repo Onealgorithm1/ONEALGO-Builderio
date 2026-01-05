@@ -19,7 +19,7 @@ import {
 
 export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
   try {
-    const doc = new PDFDocument({ margin: 50 });
+    const doc = new PDFDocument({ margin: 30, size: "LETTER" });
 
     res.setHeader("Content-Type", "application/pdf");
     res.setHeader(
@@ -39,49 +39,49 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
     doc.pipe(res);
 
     const sectionHeading = (title: string) => {
-      doc.moveDown(0.5);
+      doc.moveDown(0.2);
       doc
-        .fontSize(16)
+        .fontSize(11)
         .fillColor("#0f172a")
         .text(title, { underline: true })
-        .moveDown(0.3)
+        .moveDown(0.15)
         .fillColor("#1f2937");
     };
 
+    // Compact header
     doc
-      .fontSize(22)
+      .fontSize(14)
       .fillColor("#0f172a")
       .text(`${siteConfig.legalName} Capabilities Statement`, {
         align: "center",
       })
-      .moveDown(0.5);
+      .moveDown(0.2);
 
     doc
-      .fontSize(14)
+      .fontSize(10)
       .fillColor("#1e293b")
       .text("Modernizing Federal Systems Securely and Intelligently", {
         align: "center",
       })
-      .moveDown(0.5);
+      .moveDown(0.2);
 
     doc
-      .fontSize(12)
+      .fontSize(8)
       .fillColor("#0f172a")
       .text(
-        `CAGE: ${siteConfig.identifiers.cage}  |  UEI: ${siteConfig.identifiers.uei}  |  D-U-N-S: ${siteConfig.identifiers.duns}`,
+        `CAGE: ${siteConfig.identifiers.cage} | UEI: ${siteConfig.identifiers.uei} | D-U-N-S: ${siteConfig.identifiers.duns}`,
         { align: "center" },
       )
-      .moveDown();
+      .moveDown(0.15);
 
     doc
-      .fontSize(11)
+      .fontSize(8)
       .fillColor("#0f172a")
-      .text(`Website: ${siteConfig.url}`)
-      .text(`Email: ${siteConfig.contact.emailPrimary}`)
-      .text(`Phone: ${siteConfig.contact.phonePrimary}`)
-      .text(`Address: ${getFullAddress()}`)
-      .text(`Mailing Address: ${getPostalAddress().replace("\n", ", ")}`)
-      .moveDown();
+      .text(
+        `${siteConfig.url} | ${siteConfig.contact.emailPrimary} | ${siteConfig.contact.phonePrimary} | ${getFullAddress()}`,
+        { align: "center" },
+      )
+      .moveDown(0.2);
 
     sectionHeading("Company Overview");
     doc
