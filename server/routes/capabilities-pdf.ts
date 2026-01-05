@@ -148,8 +148,13 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
       .text(jointVenturePartner.name)
       .fontSize(7.5)
       .fillColor("#1f2937")
-      .text(`${jointVenturePartner.cage} | ${jointVenturePartner.uei} | ${jointVenturePartner.samStatus} | ${jointVenturePartner.certifications}`, { lineGap: -1 })
-      .text(`Services: ${jointVenturePartner.services.join(", ")}`, { lineGap: -1 })
+      .text(
+        `${jointVenturePartner.cage} | ${jointVenturePartner.uei} | ${jointVenturePartner.samStatus} | ${jointVenturePartner.certifications}`,
+        { lineGap: -1 },
+      )
+      .text(`Services: ${jointVenturePartner.services.join(", ")}`, {
+        lineGap: -1,
+      })
       .moveDown(0.15);
 
     sectionHeading("Commercial Project Highlights");
@@ -171,12 +176,23 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
 
     sectionHeading("Compliance & Certifications");
     doc.fontSize(7.5).fillColor("#1f2937");
-    doc.text(`Pending: ${complianceProfile.pendingCertifications.join(", ")}`, { lineGap: -1 });
-    doc.text(`Federal: ${complianceProfile.federalCompliance.join(", ")}`, { lineGap: -1 });
-    doc.text(`Security: ${complianceProfile.qualityAndSecurity.join(", ")}`, { lineGap: -1 });
-    doc.text(`Bonding: ${complianceProfile.bondingCapacity} | SAM: ${complianceProfile.samRegistration}`, { lineGap: -1 });
+    doc.text(`Pending: ${complianceProfile.pendingCertifications.join(", ")}`, {
+      lineGap: -1,
+    });
+    doc.text(`Federal: ${complianceProfile.federalCompliance.join(", ")}`, {
+      lineGap: -1,
+    });
+    doc.text(`Security: ${complianceProfile.qualityAndSecurity.join(", ")}`, {
+      lineGap: -1,
+    });
+    doc.text(
+      `Bonding: ${complianceProfile.bondingCapacity} | SAM: ${complianceProfile.samRegistration}`,
+      { lineGap: -1 },
+    );
     if (siteConfig.certifications?.length) {
-      doc.text(`Industry Certs: ${siteConfig.certifications.join(", ")}`, { lineGap: -1 });
+      doc.text(`Industry Certs: ${siteConfig.certifications.join(", ")}`, {
+        lineGap: -1,
+      });
     }
     doc.moveDown(0.15);
 
@@ -197,7 +213,9 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
         .fillColor("#1f2937")
         .text(` - ${person.summary}`, { lineGap: -1 });
       if (person.email || person.phone) {
-        const contact = [person.email, person.phone].filter(Boolean).join(" | ");
+        const contact = [person.email, person.phone]
+          .filter(Boolean)
+          .join(" | ");
         doc.text(contact, { lineGap: -1 });
       }
     });
