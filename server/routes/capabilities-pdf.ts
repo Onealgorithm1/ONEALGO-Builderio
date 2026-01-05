@@ -135,92 +135,50 @@ export const handleCapabilitiesPdf: RequestHandler = (_req, res) => {
     doc.moveDown(0.15);
 
     sectionHeading("Mentor-Protégé & Partnership Readiness");
+    doc.fontSize(7.5).fillColor("#1f2937");
     mentorProtegeHighlights.forEach((item) => {
-      doc
-        .fontSize(13)
-        .fillColor("#0f172a")
-        .text(item.title)
-        .fontSize(11)
-        .fillColor("#1f2937")
-        .text(item.description)
-        .moveDown(0.3);
+      doc.text(`• ${item.title}: ${item.description}`, { lineGap: -1 });
     });
+    doc.moveDown(0.15);
 
     sectionHeading("Active SBA-Compliant Joint Venture");
     doc
-      .fontSize(13)
+      .fontSize(8)
       .fillColor("#0f172a")
       .text(jointVenturePartner.name)
-      .fontSize(11)
+      .fontSize(7.5)
       .fillColor("#1f2937")
-      .text(jointVenturePartner.summary)
-      .moveDown(0.3)
-      .text(`Address: ${jointVenturePartner.address}`)
-      .text(`${jointVenturePartner.cage}  |  ${jointVenturePartner.uei}`)
-      .text(jointVenturePartner.samStatus)
-      .text(jointVenturePartner.certifications)
-      .moveDown(0.3)
-      .text("Core Services:");
-    doc.list(jointVenturePartner.services, {
-      bulletRadius: 2,
-      textIndent: 20,
-      bulletIndent: 10,
-    });
-    doc
-      .moveDown(0.3)
-      .text(`Website: ${jointVenturePartner.website}`)
-      .moveDown(0.5);
+      .text(`${jointVenturePartner.cage} | ${jointVenturePartner.uei} | ${jointVenturePartner.samStatus} | ${jointVenturePartner.certifications}`, { lineGap: -1 })
+      .text(`Services: ${jointVenturePartner.services.join(", ")}`, { lineGap: -1 })
+      .moveDown(0.15);
 
     sectionHeading("Commercial Project Highlights");
     projectHighlights.forEach((project) => {
       doc
-        .fontSize(13)
+        .fontSize(8)
         .fillColor("#0f172a")
         .text(project.title)
-        .fontSize(11)
+        .fontSize(7.5)
         .fillColor("#1f2937")
         .list(project.items, {
-          bulletRadius: 2,
-          textIndent: 20,
-          bulletIndent: 10,
+          bulletRadius: 1.5,
+          textIndent: 12,
+          bulletIndent: 8,
+          lineGap: -1,
         })
-        .moveDown(0.5);
+        .moveDown(0.1);
     });
 
     sectionHeading("Compliance & Certifications");
-    doc.fontSize(11).fillColor("#1f2937").text("Pending Certifications:");
-    doc.list(complianceProfile.pendingCertifications, {
-      bulletRadius: 2,
-      textIndent: 20,
-      bulletIndent: 10,
-    });
-    doc.text("Federal Compliance:");
-    doc.list(complianceProfile.federalCompliance, {
-      bulletRadius: 2,
-      textIndent: 20,
-      bulletIndent: 10,
-    });
-    doc.text("Quality & Security Programs:");
-    doc.list(complianceProfile.qualityAndSecurity, {
-      bulletRadius: 2,
-      textIndent: 20,
-      bulletIndent: 10,
-    });
-    doc
-      .moveDown(0.3)
-      .text(`Bonding Capacity: ${complianceProfile.bondingCapacity}`)
-      .text(`SAM Registration: ${complianceProfile.samRegistration}`)
-      .text(
-        `CAGE: ${siteConfig.identifiers.cage}  |  UEI: ${siteConfig.identifiers.uei}  |  D-U-N-S: ${siteConfig.identifiers.duns}`,
-      );
+    doc.fontSize(7.5).fillColor("#1f2937");
+    doc.text(`Pending: ${complianceProfile.pendingCertifications.join(", ")}`, { lineGap: -1 });
+    doc.text(`Federal: ${complianceProfile.federalCompliance.join(", ")}`, { lineGap: -1 });
+    doc.text(`Security: ${complianceProfile.qualityAndSecurity.join(", ")}`, { lineGap: -1 });
+    doc.text(`Bonding: ${complianceProfile.bondingCapacity} | SAM: ${complianceProfile.samRegistration}`, { lineGap: -1 });
     if (siteConfig.certifications?.length) {
-      doc.text("Industry Certifications:");
-      doc.list(siteConfig.certifications, {
-        bulletRadius: 2,
-        textIndent: 20,
-        bulletIndent: 10,
-      });
+      doc.text(`Industry Certs: ${siteConfig.certifications.join(", ")}`, { lineGap: -1 });
     }
+    doc.moveDown(0.15);
 
     sectionHeading("Strategic Partnerships");
     strategicPartnerships.forEach((note) => {
