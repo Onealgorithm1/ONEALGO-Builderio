@@ -72,12 +72,18 @@ export interface JointVenturePartnerInfo {
 
 export const registrations: Registration[] = [
   {
-    category: "SBA Certifications",
+    category: "Active SBA Certifications",
     certifications: [
-      "WOSB/8(a): SBA Pending",
       "WBENC: WBE2600434",
+      "WBENC: WOSB260411",
       "SDB & SB: Cert # 561511",
       "NMSDC MBE: PT100000051",
+    ],
+  },
+  {
+    category: "Pending SBA Certifications",
+    certifications: [
+      "WOSB/8(a): SBA Pending",
       "VA SWaM: Pending",
     ],
   },
@@ -90,6 +96,7 @@ export const registrations: Registration[] = [
       "OhioBuys: ID 00341565-0",
       "Bid Net: 3063593",
       "Cal: eProcure: BID126344",
+      "Florida: F-----9444",
       "Jaggaer: 0000561511",
       "Euna: Nation Wide",
       "GSA eBuy: Pending",
