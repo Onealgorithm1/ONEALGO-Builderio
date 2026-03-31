@@ -48,6 +48,11 @@ export interface ComplianceProfile {
   samRegistration: string;
 }
 
+export interface Registration {
+  category: string;
+  certifications: string[];
+}
+
 export interface MentorProtegeHighlight {
   title: string;
   description: string;
@@ -65,69 +70,106 @@ export interface JointVenturePartnerInfo {
   website: string;
 }
 
+export const registrations: Registration[] = [
+  {
+    category: "SBA Certifications",
+    certifications: [
+      "WOSB/8(a): SBA Pending",
+      "WBENC: WBE2600434",
+      "SDB & SB: Cert # 561511",
+      "NMSDC MBE: PT100000051",
+      "VA SWaM: Pending",
+    ],
+  },
+  {
+    category: "Procurement Registrations",
+    certifications: [
+      "SAM.gov UEI: W8DYK38MEKP3",
+      "COSTARS (PA): #4400033848",
+      "EVA (VA): SUP347430",
+      "OhioBuys: ID 00341565-0",
+      "Bid Net: 3063593",
+      "Cal: eProcure: BID126344",
+      "Jaggaer: 0000561511",
+      "Euna: Nation Wide",
+      "GSA eBuy: Pending",
+      "FedConnect: Active",
+    ],
+  },
+];
+
 export const coreCompetencies: CoreCompetency[] = [
   {
-    title: "Technology & Digital Engineering",
-    icon: "target",
-    items: [
-      "Cloud architecture and modernization (Azure Government, AWS, GovCloud)",
-      "Secure software development and API integration",
-      "Data engineering, analytics, and AI/ML automation",
-      "DevSecOps pipelines with continuous compliance monitoring",
-      "Cybersecurity and information assurance (DFARS 252.204-7012, NIST 800-171, SOC 2)",
-    ],
-  },
-  {
-    title: "Digital Transformation & Enterprise Automation",
+    title: "AI & Machine Learning Solutions",
     icon: "lightbulb",
     items: [
-      "Workflow optimization and business process automation",
-      "CRM and ERP integration (Salesforce, MS Dynamics, Zoho, HubSpot)",
-      "Agile program management and technology roadmapping",
-      "Enterprise analytics and dashboard development",
+      "Data Management & Advanced Analytics",
+      "Cloud Computing & AI-Enabled Modernization",
+      "Custom Software & Systems Development",
     ],
   },
   {
-    title: "Small Business & Strategic Consulting",
+    title: "Cybersecurity & Compliance",
+    icon: "shield",
+    items: [
+      "Cybersecurity & Secure AI Implementation",
+      "Risk Management, Governance & Compliance",
+      "Business Process Optimization",
+    ],
+  },
+  {
+    title: "Workforce & Project Management",
     icon: "users",
     items: [
-      "Business operations strategy and financial planning",
-      "Federal capture and proposal management support",
-      "Risk assessment and cost optimization for small business scalability",
+      "IT Training & Staff Augmentation",
+      "Salesforce Platform Experts",
+      "Program & Project Management",
     ],
   },
 ];
 
 export const differentiators: Differentiator[] = [
   {
-    title: "Secure DevSecOps Framework",
-    icon: "shield",
-    description:
-      "Integrated CI/CD pipelines with vulnerability management and continuous compliance validation.",
-  },
-  {
-    title: "Federal Compliance Expertise",
+    title: "Woman- & Minority-Owned (WOSB / MBE)",
     icon: "checkCircle",
     description:
-      "Alignment with NIST SP 800-171, DFARS 252.204-7012, ISO 27001, SOC 2, HIPAA, and CMMC 2.0 (Level 2 in progress).",
+      "Strategic advantage with federal contracting preferences and priority consideration.",
   },
   {
-    title: "Scalable Delivery",
+    title: "Applied AI Expertise",
+    icon: "lightbulb",
+    description:
+      "Advanced machine learning and AI-driven automation for modernization and optimization.",
+  },
+  {
+    title: "Small Business Agility with Large-Integrator Capability",
     icon: "target",
     description:
       "Small business agility with enterprise-grade quality and process control.",
   },
   {
-    title: "Experienced Leadership",
+    title: "SBA- and FAR-Compliant Joint Venture Execution",
     icon: "users",
     description:
-      "Executives with 20+ years across technology, operations, and program management.",
+      "Multiple Strategic Joint Ventures ensuring 30%+ partner performance and cleared personnel capacity.",
   },
   {
-    title: "Customer-Focused Execution",
-    icon: "lightbulb",
+    title: "End-to-End Modernization Capability",
+    icon: "shield",
     description:
-      "Commitment to measurable results, compliance, and mission continuity.",
+      "From cloud infrastructure to AI implementation, cybersecurity to compliance—complete federal modernization solutions.",
+  },
+  {
+    title: "Cost Advantage Without Quality Trade-Offs",
+    icon: "checkCircle",
+    description:
+      "Experienced Federal Technical Leadership delivering reliable operations & mission-critical support.",
+  },
+  {
+    title: "Flexible, Scalable Federal Staffing Model",
+    icon: "users",
+    description:
+      "Rapid team scaling and IT training expertise to meet surge capacity and staffing requirements.",
   },
 ];
 
