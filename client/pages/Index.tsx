@@ -98,24 +98,8 @@ export default function Index() {
               From Strategy to Support
             </p>
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto drop-shadow-md animate-fade-in-up">
-              We streamline operations, automate workflows, and integrate systems for mid-market and enterprise clients. Whether you're implementing Oracle ERP, optimizing supply chains, or transforming marketing operations — we guide you end-to-end.
+              Think bigger. Build smarter. Move faster — with technology solutions tailored to you.
             </p>
-
-            {/* Proof points */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto">
-              <div className="bg-white/10 backdrop-blur rounded-lg px-4 py-3 animate-fade-in-up">
-                <p className="text-onealgo-orange-500 text-2xl font-bold">200+</p>
-                <p className="text-white/90 text-sm">Successful Implementations</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-lg px-4 py-3 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                <p className="text-onealgo-orange-500 text-2xl font-bold">98%</p>
-                <p className="text-white/90 text-sm">Client Satisfaction</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur rounded-lg px-4 py-3 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                <p className="text-onealgo-orange-500 text-2xl font-bold">40%+</p>
-                <p className="text-white/90 text-sm">Avg. Cost Reduction</p>
-              </div>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
               <Button
                 asChild
@@ -123,14 +107,6 @@ export default function Index() {
                 className="bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 <Link to="/contact">Get Started Today</Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-onealgo-blue-950 px-8 py-4 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-              >
-                <Link to="/services">Explore Our Approach</Link>
               </Button>
             </div>
           </div>
