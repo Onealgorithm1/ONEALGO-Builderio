@@ -15,10 +15,8 @@ export default function Layout({ children }: LayoutProps) {
   const [servicesDropdownOpen, setServicesDropdownOpen] = React.useState(false);
   const [industriesDropdownOpen, setIndustriesDropdownOpen] =
     React.useState(false);
-  const [careersDropdownOpen, setCareersDropdownOpen] = React.useState(false);
   const servicesDropdownRef = React.useRef<HTMLDivElement>(null);
   const dropdownRef = React.useRef<HTMLDivElement>(null);
-  const careersDropdownRef = React.useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   // Close all dropdowns when mobile menu closes
@@ -26,7 +24,6 @@ export default function Layout({ children }: LayoutProps) {
     if (!mobileMenuOpen) {
       setServicesDropdownOpen(false);
       setIndustriesDropdownOpen(false);
-      setCareersDropdownOpen(false);
     }
   }, [mobileMenuOpen]);
 
@@ -36,7 +33,6 @@ export default function Layout({ children }: LayoutProps) {
       // Close all dropdowns on resize to prevent state sync issues
       setServicesDropdownOpen(false);
       setIndustriesDropdownOpen(false);
-      setCareersDropdownOpen(false);
     };
 
     window.addEventListener("resize", handleResize);
@@ -59,12 +55,6 @@ export default function Layout({ children }: LayoutProps) {
         !dropdownRef.current.contains(event.target as Node)
       ) {
         setIndustriesDropdownOpen(false);
-      }
-      if (
-        careersDropdownRef.current &&
-        !careersDropdownRef.current.contains(event.target as Node)
-      ) {
-        setCareersDropdownOpen(false);
       }
     };
 
@@ -90,7 +80,6 @@ export default function Layout({ children }: LayoutProps) {
     setMobileMenuOpen(false);
     setServicesDropdownOpen(false);
     setIndustriesDropdownOpen(false);
-    setCareersDropdownOpen(false);
     try {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (_) {
@@ -312,67 +301,6 @@ export default function Layout({ children }: LayoutProps) {
                 )}
               </div>
 
-              {/* Careers & Insights Dropdown */}
-              <div className="relative" ref={careersDropdownRef}>
-                <button
-                  onClick={() => setCareersDropdownOpen(!careersDropdownOpen)}
-                  className="flex items-center gap-1 text-gray-900 hover:text-onealgo-blue-950 transition-colors"
-                >
-                  Careers & Insights
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform ${careersDropdownOpen ? "rotate-180" : ""}`}
-                  />
-                </button>
-
-                {careersDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                    <div className="py-2">
-                      <Link
-                        to="/careers"
-                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
-                        onClick={() => {
-                          setCareersDropdownOpen(false);
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        Careers
-                      </Link>
-                      <Link
-                        to="/blog"
-                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
-                        onClick={() => {
-                          setCareersDropdownOpen(false);
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        Blog
-                      </Link>
-                      <Link
-                        to="/events"
-                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
-                        onClick={() => {
-                          setCareersDropdownOpen(false);
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        Events
-                      </Link>
-                      <div className="px-4 py-2 border-t block md:hidden">
-                        <Link
-                          to="/contact"
-                          className="block text-center bg-onealgo-orange-500 text-white rounded-md px-3 py-2 font-semibold mt-2"
-                          onClick={() => {
-                            setCareersDropdownOpen(false);
-                            window.scrollTo({ top: 0, behavior: "smooth" });
-                          }}
-                        >
-                          Contact
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
               <Link
                 to="/contact"
                 className="text-gray-900 hover:text-onealgo-blue-950 transition-colors"
@@ -647,59 +575,6 @@ export default function Layout({ children }: LayoutProps) {
                     )}
                   </div>
 
-                  <div className="pt-2 border-t">
-                    <button
-                      onClick={() =>
-                        setCareersDropdownOpen(!careersDropdownOpen)
-                      }
-                      className="w-full flex items-center justify-between px-3 py-2 text-gray-700 font-medium text-sm"
-                      aria-expanded={careersDropdownOpen}
-                      aria-controls="mobile-careers"
-                    >
-                      <span>Careers & Insights</span>
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform ${careersDropdownOpen ? "rotate-180" : ""}`}
-                      />
-                    </button>
-
-                    {careersDropdownOpen && (
-                      <div id="mobile-careers" className="pl-4">
-                        <Link
-                          to="/careers"
-                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setCareersDropdownOpen(false);
-                            window.scrollTo({ top: 0, behavior: "smooth" });
-                          }}
-                        >
-                          Careers
-                        </Link>
-                        <Link
-                          to="/blog"
-                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setCareersDropdownOpen(false);
-                            window.scrollTo({ top: 0, behavior: "smooth" });
-                          }}
-                        >
-                          Blog
-                        </Link>
-                        <Link
-                          to="/events"
-                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setCareersDropdownOpen(false);
-                            window.scrollTo({ top: 0, behavior: "smooth" });
-                          }}
-                        >
-                          Events
-                        </Link>
-                      </div>
-                    )}
-                  </div>
                 </nav>
               </div>
             </div>
