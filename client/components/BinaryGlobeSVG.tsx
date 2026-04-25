@@ -21,7 +21,7 @@ export default function BinaryGlobeSVG({
       width={size}
       height={size}
       className={cn(
-        "inline-block self-center",
+        "inline-block self-center mx-auto",
         styles.binaryGlobeImage,
         className,
       )}
