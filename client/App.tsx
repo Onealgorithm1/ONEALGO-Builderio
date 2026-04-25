@@ -77,6 +77,12 @@ const ITConsulting = lazy(() => import("./pages/services/ITConsulting"));
 const OperationsTechnology = lazy(
   () => import("./pages/services/OperationsTechnology"),
 );
+const OracleERP = lazy(() => import("./pages/services/OracleERP"));
+const OracleFinancials = lazy(
+  () => import("./pages/services/OracleFinancials"),
+);
+const OracleSCM = lazy(() => import("./pages/services/OracleSCM"));
+const OracleHCM = lazy(() => import("./pages/services/OracleHCM"));
 const Blog = lazy(() => import("./pages/Blog"));
 const AiInfo = lazy(() => import("./pages/AiInfo"));
 const Capabilities = lazy(() => import("./pages/Capabilities"));
@@ -142,6 +148,13 @@ const App = () => (
                 path="/services/operations-technology"
                 element={<OperationsTechnology />}
               />
+              <Route path="/services/oracle-erp" element={<OracleERP />} />
+              <Route
+                path="/services/oracle-financials"
+                element={<OracleFinancials />}
+              />
+              <Route path="/services/oracle-scm" element={<OracleSCM />} />
+              <Route path="/services/oracle-hcm" element={<OracleHCM />} />
               <Route path="/industries" element={<Industries />} />
               <Route
                 path="/industries/construction"

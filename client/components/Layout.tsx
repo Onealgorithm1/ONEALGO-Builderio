@@ -225,6 +225,50 @@ export default function Layout({ children }: LayoutProps) {
                       >
                         Operations Technology
                       </Link>
+                      <div className="border-t border-gray-200 my-2"></div>
+                      <div className="px-4 py-2 text-sm font-semibold text-onealgo-blue-950 bg-onealgo-light">
+                        Oracle ERP Services
+                      </div>
+                      <Link
+                        to="/services/oracle-erp"
+                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
+                        onClick={() => {
+                          setServicesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Oracle ERP Overview
+                      </Link>
+                      <Link
+                        to="/services/oracle-financials"
+                        className="block px-4 py-2 pl-8 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors text-sm"
+                        onClick={() => {
+                          setServicesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        • Oracle Financials
+                      </Link>
+                      <Link
+                        to="/services/oracle-scm"
+                        className="block px-4 py-2 pl-8 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors text-sm"
+                        onClick={() => {
+                          setServicesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        • Oracle SCM
+                      </Link>
+                      <Link
+                        to="/services/oracle-hcm"
+                        className="block px-4 py-2 pl-8 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors text-sm"
+                        onClick={() => {
+                          setServicesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        • Oracle HCM
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -545,6 +589,53 @@ export default function Layout({ children }: LayoutProps) {
                           }}
                         >
                           Operations Technology
+                        </Link>
+                        <div className="border-t my-2 pt-2 pl-3 text-xs font-semibold text-onealgo-blue-950 uppercase">
+                          Oracle ERP Services
+                        </div>
+                        <Link
+                          to="/services/oracle-erp"
+                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setServicesDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Oracle ERP Overview
+                        </Link>
+                        <Link
+                          to="/services/oracle-financials"
+                          className="block px-3 py-2 pl-6 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setServicesDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          • Oracle Financials
+                        </Link>
+                        <Link
+                          to="/services/oracle-scm"
+                          className="block px-3 py-2 pl-6 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setServicesDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          • Oracle SCM
+                        </Link>
+                        <Link
+                          to="/services/oracle-hcm"
+                          className="block px-3 py-2 pl-6 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setServicesDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          • Oracle HCM
                         </Link>
                       </div>
                     )}
@@ -946,6 +1037,47 @@ export default function Layout({ children }: LayoutProps) {
                   className="block text-blue-200 hover:text-white transition-colors"
                 >
                   Operations Technology
+                </Link>
+                <div className="pt-2 border-t border-blue-800/50 mt-2">
+                  <p className="text-xs font-semibold text-blue-300 mb-2">
+                    Oracle ERP Services
+                  </p>
+                </div>
+                <Link
+                  to="/services/oracle-erp"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="block text-blue-200 hover:text-white transition-colors"
+                >
+                  Oracle ERP
+                </Link>
+                <Link
+                  to="/services/oracle-financials"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="block text-blue-200 hover:text-white transition-colors text-sm"
+                >
+                  Oracle Financials
+                </Link>
+                <Link
+                  to="/services/oracle-scm"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="block text-blue-200 hover:text-white transition-colors text-sm"
+                >
+                  Oracle SCM
+                </Link>
+                <Link
+                  to="/services/oracle-hcm"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="block text-blue-200 hover:text-white transition-colors text-sm"
+                >
+                  Oracle HCM
                 </Link>
               </div>
             </div>
