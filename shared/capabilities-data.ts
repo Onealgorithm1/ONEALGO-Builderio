@@ -250,3 +250,126 @@ export const jointVenturePartner: JointVenturePartnerInfo = {
   ],
   website: "https://www.irongrove.com",
 };
+
+export interface PastPerformanceClient {
+  name: string;
+  logoUrl?: string;
+}
+
+export const pastPerformanceClients: PastPerformanceClient[] = [
+  {
+    name: "BMC Software",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fa6c4f9b8f1d34d6e9c1b5e3f2a7d4c8b",
+  },
+  {
+    name: "FREEDOM Federal Bonding Agency",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fb7d5g0c9g2e45e7f0d2c6f4g3b8e5d9c",
+  },
+  {
+    name: "Republic Services",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fc8e6h1d0h3f56f8g1e3d7g5h4c9f6e0d",
+  },
+  {
+    name: "New York State",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fd9f7i2e1i4g67g9h2f4e8h6i5d0g7f1e",
+  },
+  {
+    name: "Office of Mental Health",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fe0g8j3f2j5h78h0i3g5f9i7j6e1h8g2f",
+  },
+  {
+    name: "MK",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Ff1h9k4g3k6i89i1j4h6g0j8k7f2i9h3g",
+  },
+  {
+    name: "Cigna",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fg2i0l5h4l7j90j2k5i7h1k9l8g3j0i4h",
+  },
+  {
+    name: "Emerson",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fh3j1m6i5m8k01k3l6j8i2l0m9h4k1j5i",
+  },
+  {
+    name: "BlueCross BlueShield",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fi4k2n7j6n9l12l4m7k9j3m1n0i5l2k6j",
+  },
+  {
+    name: "Willis Towers Watson",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fj5l3o8k7o0m23m5n8l0k4n2o1j6m3l7k",
+  },
+  {
+    name: "OneShield",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fk6m4p9l8p1n34n6o9m1l5o3p2k7n4m8l",
+  },
+  {
+    name: "Shimmick",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fl7n5q0m9q2o45o7p0n2m6p4q3l8o5n9m",
+  },
+  {
+    name: "American Express",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fm8o6r1n0r3p56p8q1o3n7q5r4m9p6o0n",
+  },
+  {
+    name: "T-Mobile",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fn9p7s2o1s4q67q9r2p4o8r6s5n0q7p1o",
+  },
+  {
+    name: "Pepsico",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fo0q8t3p2t5r78r0s3q5p9s7t6o1r8q2p",
+  },
+  {
+    name: "Credit One",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fp1r9u4q3u6s89s1t4r6q0t8u7p2s9r3q",
+  },
+  {
+    name: "Stony Brook Foundation",
+    logoUrl:
+      "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2Fq2s0v5r4v7t90t2u5s7r1u9v8q3t0s4r",
+  },
+];
+
+export const registrations = {
+  edwosb: "Certified",
+  wbenc: {
+    wbe: "WBE2600434",
+    wosb: "WOSB260411",
+  },
+  sdb_sb: "Cert # 561511",
+  nmsdc_mbe: "PT100000051",
+  va_swam: "Pending",
+};
+
+export const procurementRegistrations = {
+  federal: {
+    sam_gov: "W8DYK38MEKP3",
+    fedConnect: "Active",
+    gsa_ebuy: "Pending",
+  },
+  stateAndLocal: [
+    { label: "COSTARS (PA)", value: "#4400033848" },
+    { label: "EVA (VA)", value: "SUP347430" },
+    { label: "OhioBuys", value: "ID 00341565-0" },
+    { label: "Bid Net", value: "3063593" },
+    { label: "Cal eProcure", value: "BID126344" },
+    { label: "Florida", value: "F-----9444" },
+    { label: "commbuys", value: "ID 00085083" },
+    { label: "Jaggaer", value: "0000561511" },
+    { label: "Euna", value: "Nation Wide" },
+  ],
+};
