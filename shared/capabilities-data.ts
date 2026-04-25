@@ -183,6 +183,7 @@ export const federalExperience: FederalExperienceItem[] = [
 export const complianceProfile: ComplianceProfile = {
   pendingCertifications: [
     "Economically Disadvantaged Women-Owned Small Business (EDWOSB) – certified",
+    "Minority Business Enterprise (MBE) – certified",
   ],
   federalCompliance: [
     "DFARS 252.204-7012",
