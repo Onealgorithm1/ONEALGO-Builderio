@@ -80,7 +80,7 @@ export default function Capabilities() {
             </p>
             <div className="space-y-4 text-lg text-blue-100 max-w-5xl mx-auto">
               <p>
-                Economically Disadvantaged Women-Owned Small Business (EDWOSB)
+                Economically Disadvantaged Women-Owned Small Business (EDWOSB) and Minority Business Enterprise (MBE) certified
                 delivering secure, standards-aligned technology and compliance
                 solutions to federal and commercial clients nationwide.
               </p>
