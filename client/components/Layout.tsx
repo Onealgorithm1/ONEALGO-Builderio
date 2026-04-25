@@ -228,6 +228,16 @@ export default function Layout({ children }: LayoutProps) {
                       >
                         Oracle ERP
                       </Link>
+                      <Link
+                        to="/services/salesforce"
+                        className="block px-4 py-2 text-gray-700 hover:bg-onealgo-light hover:text-onealgo-blue-950 transition-colors"
+                        onClick={() => {
+                          setServicesDropdownOpen(false);
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        Salesforce
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -495,6 +505,17 @@ export default function Layout({ children }: LayoutProps) {
                           }}
                         >
                           Oracle ERP
+                        </Link>
+                        <Link
+                          to="/services/salesforce"
+                          className="block px-3 py-2 text-gray-600 hover:text-onealgo-blue-950 text-sm"
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            setServicesDropdownOpen(false);
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Salesforce
                         </Link>
                       </div>
                     )}
@@ -841,6 +862,15 @@ export default function Layout({ children }: LayoutProps) {
                   className="block text-blue-200 hover:text-white transition-colors"
                 >
                   Oracle ERP
+                </Link>
+                <Link
+                  to="/services/salesforce"
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
+                  className="block text-blue-200 hover:text-white transition-colors"
+                >
+                  Salesforce
                 </Link>
               </div>
             </div>
