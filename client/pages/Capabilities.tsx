@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { FileText } from "lucide-react";
+import { FileText, Shield } from "lucide-react";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
 import {
   StructuredData,
