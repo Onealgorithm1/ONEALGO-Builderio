@@ -12,6 +12,7 @@ export default function TrustedPartnerships() {
     "Oracle",
     "Twilio",
     "Aircall",
+    "Zendesk",
     "QuickBooks",
     "DocuSign",
     "OneFlow",
