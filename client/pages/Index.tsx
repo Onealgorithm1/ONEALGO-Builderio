@@ -25,6 +25,9 @@ import {
   Users,
   Zap,
   Handshake,
+  Briefcase,
+  Database,
+  LifeBuoy,
 } from "lucide-react";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
 import {
@@ -257,6 +260,72 @@ export default function Index() {
                 </Collapsible>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Oracle ERP Section */}
+      <section className="py-20 bg-gradient-to-r from-onealgo-blue-950/5 to-onealgo-orange-500/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-fade-in">
+              Enterprise ERP <span className="text-onealgo-orange-500">Implementation</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up">
+              Position OneAlgorithm as a leader in Oracle Cloud ERP implementation with full-lifecycle services from strategy to post-implementation support.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-white rounded-lg border-2 border-onealgo-blue-950/10 p-6 hover:border-onealgo-orange-500 transition-colors">
+              <Briefcase className="w-12 h-12 text-onealgo-orange-500 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Strategic Consulting
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Business process re-engineering and roadmap alignment with corporate goals.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border-2 border-onealgo-blue-950/10 p-6 hover:border-onealgo-orange-500 transition-colors">
+              <Zap className="w-12 h-12 text-onealgo-orange-500 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Full-Scale Implementation
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Complete deployment of Financials, SCM, and HCM modules.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border-2 border-onealgo-blue-950/10 p-6 hover:border-onealgo-orange-500 transition-colors">
+              <Database className="w-12 h-12 text-onealgo-orange-500 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Data Migration & Integration
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Secure data movement and OIC integration with third-party apps.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg border-2 border-onealgo-blue-950/10 p-6 hover:border-onealgo-orange-500 transition-colors">
+              <LifeBuoy className="w-12 h-12 text-onealgo-orange-500 mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                Post-Implementation Support
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Hypercare, optimization, and ongoing managed services.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button
+              asChild
+              size="lg"
+              className="bg-onealgo-blue-950 hover:bg-onealgo-blue-900 text-white px-8 py-4"
+            >
+              <Link to="/services/oracle-erp">Explore Oracle ERP Services</Link>
+            </Button>
           </div>
         </div>
       </section>
