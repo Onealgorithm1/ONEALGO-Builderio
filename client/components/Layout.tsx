@@ -749,24 +749,6 @@ export default function Layout({ children }: LayoutProps) {
                   Industries We Serve
                 </Link>
                 <Link
-                  to="/careers"
-                  onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
-                  }
-                  className="block text-blue-200 hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-                <Link
-                  to="/blog"
-                  onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
-                  }
-                  className="block text-blue-200 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-                <Link
                   to="/capabilities"
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -774,15 +756,6 @@ export default function Layout({ children }: LayoutProps) {
                   className="block text-blue-200 hover:text-white transition-colors"
                 >
                   Company Capabilities
-                </Link>
-                <Link
-                  to="/events"
-                  onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
-                  }
-                  className="block text-blue-200 hover:text-white transition-colors"
-                >
-                  Events
                 </Link>
                 <Link
                   to="/contact"
