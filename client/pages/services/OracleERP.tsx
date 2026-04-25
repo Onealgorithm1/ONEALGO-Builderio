@@ -8,11 +8,6 @@ import {
   CardTitle,
 } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "../../components/ui/collapsible";
 import SocialShare from "../../components/SocialShare";
 import {
   Briefcase,
@@ -248,40 +243,39 @@ export default function OracleERP() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {servicePillars.map((pillar) => (
-              <Collapsible
-                key={pillar.id}
-                open={expandedPillar === pillar.id}
-                onOpenChange={(open) =>
-                  setExpandedPillar(open ? pillar.id : null)
-                }
-              >
-                <CollapsibleTrigger asChild>
-                  <Card className="border-2 hover:border-onealgo-blue-950 transition-colors cursor-pointer h-full">
-                    <CardHeader>
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="flex items-start gap-4 flex-1">
-                          {pillar.icon}
-                          <div className="flex-1">
-                            <CardTitle className="text-xl text-onealgo-blue-950">
-                              {pillar.title}
-                            </CardTitle>
-                          </div>
+              <div key={pillar.id}>
+                <Card
+                  className="border-2 hover:border-onealgo-blue-950 transition-colors cursor-pointer h-full"
+                  onClick={() =>
+                    setExpandedPillar(
+                      expandedPillar === pillar.id ? null : pillar.id
+                    )
+                  }
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-start gap-4 flex-1">
+                        {pillar.icon}
+                        <div className="flex-1">
+                          <CardTitle className="text-xl text-onealgo-blue-950">
+                            {pillar.title}
+                          </CardTitle>
                         </div>
-                        <ChevronDown
-                          className={cn(
-                            "w-5 h-5 text-onealgo-orange-500 flex-shrink-0 transition-transform",
-                            expandedPillar === pillar.id && "rotate-180",
-                          )}
-                        />
                       </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-600">{pillar.description}</p>
-                    </CardContent>
-                  </Card>
-                </CollapsibleTrigger>
-                <CollapsibleContent className="mt-4">
-                  <Card className="border-2 border-onealgo-orange-500/30 bg-onealgo-light">
+                      <ChevronDown
+                        className={cn(
+                          "w-5 h-5 text-onealgo-orange-500 flex-shrink-0 transition-transform",
+                          expandedPillar === pillar.id && "rotate-180",
+                        )}
+                      />
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600">{pillar.description}</p>
+                  </CardContent>
+                </Card>
+                {expandedPillar === pillar.id && (
+                  <Card className="border-2 border-onealgo-orange-500/30 bg-onealgo-light mt-4">
                     <CardContent className="pt-6">
                       <ul className="space-y-3">
                         {pillar.details.map((detail, idx) => (
@@ -293,8 +287,8 @@ export default function OracleERP() {
                       </ul>
                     </CardContent>
                   </Card>
-                </CollapsibleContent>
-              </Collapsible>
+                )}
+              </div>
             ))}
           </div>
         </div>
