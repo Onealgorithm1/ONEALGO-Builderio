@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import { Code, Users, Megaphone, Brain, Cpu } from "lucide-react";
+import { Code, Users, Megaphone, Brain, Cpu, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useSEO, getCanonicalUrl } from "../hooks/use-seo";
 import {
@@ -19,20 +19,20 @@ export default function Services() {
   useSEO({
     title: "OneAlgorithm — Services",
     description:
-      "Comprehensive technology services including website development, IT consulting, operations technology, and staff augmentation. Accelerate business growth.",
+      "Comprehensive technology services including website development, IT consulting, operations technology, Oracle ERP implementation, and staff augmentation. Accelerate business growth.",
     canonical: getCanonicalUrl("/services"),
     keywords:
-      "technology services, IT consulting services, website development services, operations technology, staff augmentation, marketing services, business technology solutions",
+      "technology services, IT consulting services, website development services, operations technology, Oracle ERP implementation, staff augmentation, marketing services, business technology solutions",
     ogTitle: "OneAlgorithm — Services",
     ogDescription:
-      "Comprehensive technology services including website development, IT consulting, operations technology, staff augmentation, and marketing solutions.",
+      "Comprehensive technology services including website development, IT consulting, Oracle ERP implementation, operations technology, staff augmentation, and marketing solutions.",
     ogUrl: getCanonicalUrl("/services"),
     ogImage:
       "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=png&width=1200",
     twitterTitle:
-      "Technology Services - OneAlgorithm | IT Consulting, Website Development & More",
+      "Technology Services - OneAlgorithm | IT Consulting, Website Development, Oracle ERP & More",
     twitterDescription:
-      "Comprehensive technology services including website development, IT consulting, operations technology, staff augmentation, and marketing solutions. Accelerate your business growth with OneAlgorithm.",
+      "Comprehensive technology services including website development, IT consulting, Oracle ERP implementation, operations technology, staff augmentation, and marketing solutions. Accelerate your business growth with OneAlgorithm.",
     twitterImage:
       "https://cdn.builder.io/api/v1/image/assets%2Fb90cab62d3d34e0087abec352888a96d%2F33f56ea89d674e2eb7334b03e9c57fd8?format=png&width=1200",
   });
@@ -228,6 +228,28 @@ export default function Services() {
                   className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
                 >
                   <Link to="/services/operations-technology">Learn More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Oracle ERP Implementation */}
+            <Card className="border-2 hover:border-onealgo-blue-950 transition-colors h-full hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+              <CardHeader>
+                <Award className="w-16 h-16 text-onealgo-blue-950 mb-4 animate-bounce-slow hover:text-amber-500 transition-colors duration-300" />
+                <CardTitle className="text-2xl text-onealgo-blue-950">
+                  Oracle ERP Implementation
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Full-lifecycle Oracle Cloud ERP implementation services from
+                  strategic consulting through post-implementation support.
+                </p>
+                <Button
+                  asChild
+                  className="w-full bg-onealgo-orange-500 hover:bg-onealgo-orange-600 text-white"
+                >
+                  <Link to="/services/oracle-erp">Learn More</Link>
                 </Button>
               </CardContent>
             </Card>
