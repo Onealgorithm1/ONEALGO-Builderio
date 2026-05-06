@@ -18,8 +18,7 @@
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc",
-    "deploy:netlify": "netlify deploy --dir=dist/spa --functions=netlify/functions --prod"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
