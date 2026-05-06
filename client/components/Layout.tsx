@@ -9,7 +9,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: LayoutProps) {
+function Layout({ children }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = React.useState(false);
   const [industriesDropdownOpen, setIndustriesDropdownOpen] =
@@ -905,3 +905,5 @@ export default function Layout({ children }: LayoutProps) {
     </div>
   );
 }
+
+export default React.memo(Layout);
