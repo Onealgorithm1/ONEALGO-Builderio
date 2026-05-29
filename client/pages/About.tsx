@@ -152,18 +152,6 @@ export default function About() {
               <div className="bg-gradient-to-r from-onealgo-orange-50 to-onealgo-blue-50 rounded-2xl p-8">
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <Target className="w-8 h-8 text-onealgo-orange-500 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        Targeted Solutions
-                      </h3>
-                      <p className="text-gray-600">
-                        Industry-specific technology that addresses your unique
-                        operational challenges.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
                     <Lightbulb className="w-8 h-8 text-onealgo-orange-500 mt-1" />
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">

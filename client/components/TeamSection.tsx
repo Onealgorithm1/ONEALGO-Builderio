@@ -156,21 +156,6 @@ export default function TeamSection() {
                     {member.roleSummary}
                   </p>
 
-                  {/* Expertise Tags */}
-                  <div className="mb-4">
-                    <div className="flex flex-wrap gap-2">
-                      {member.expertise.map((exp) => (
-                        <Badge
-                          key={exp}
-                          variant="secondary"
-                          className="bg-onealgo-blue-50 text-onealgo-blue-950 border-onealgo-blue-200 text-xs"
-                        >
-                          {exp}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
                   {/* Background */}
                   <p className="text-sm text-gray-600 leading-relaxed border-t pt-4">
                     {member.background}
