@@ -148,36 +148,6 @@ export default function About() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-r from-onealgo-orange-50 to-onealgo-blue-50 rounded-2xl p-8">
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <Lightbulb className="w-8 h-8 text-onealgo-orange-500 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        Smart Innovation
-                      </h3>
-                      <p className="text-gray-600">
-                        Practical automation and intelligent systems that
-                        deliver immediate value.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Users className="w-8 h-8 text-onealgo-orange-500 mt-1" />
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                        Partnership Approach
-                      </h3>
-                      <p className="text-gray-600">
-                        We become extension of your team, committed to your
-                        long-term success.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
