@@ -108,33 +108,6 @@ export default function About() {
                 </Link>
                 .
               </p>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                We believe that with the right technology foundation, any
-                business can achieve remarkable efficiency, reduce operational
-                costs, and focus on what they do best – serving their customers
-                and growing their impact. Whether you're in{" "}
-                <Link
-                  to="/industries/construction"
-                  className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
-                >
-                  construction
-                </Link>
-                ,{" "}
-                <Link
-                  to="/industries/manufacturing"
-                  className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
-                >
-                  manufacturing
-                </Link>
-                , or{" "}
-                <Link
-                  to="/industries/ecommerce"
-                  className="text-onealgo-blue-950 hover:text-onealgo-orange-500 underline"
-                >
-                  e-commerce
-                </Link>
-                , we have specialized solutions for your industry.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   asChild
