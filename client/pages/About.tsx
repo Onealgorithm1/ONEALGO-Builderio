@@ -84,10 +84,10 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style="font-size: 45px !important;">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" style={{ fontSize: '45px' }}>
                 Our Mission
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed" style="font-size: 20px !important;">
+              <p className="text-lg text-gray-600 leading-relaxed" style={{ fontSize: '20px' }}>
                 Our mission is to help organizations modernize, automate, and grow. We deliver practical technology solutions that simplify operations, improve efficiency, and create lasting business value.
               </p>
             </div>
