@@ -45,7 +45,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: "louis",
-    name: "Louis C. Rubino",
+    name: "Louis Rubino",
     title: "Director",
     roleSummary:
       "Leads compliance, operations, and government contracting initiatives at One Algorithm. Oversees certifications, partnerships, and regulatory requirements that support federal, state, and commercial opportunities.",
@@ -145,12 +145,7 @@ export default function TeamSection() {
                     </a>
                   </div>
 
-                  {/* Role Summary */}
-                  <p className="text-sm text-gray-600 mb-4 leading-relaxed mt-3">
-                    {member.roleSummary}
-                  </p>
-
-                  {/* Background */}
+                  {/* Bio */}
                   <p className="text-sm text-gray-600 leading-relaxed border-t pt-4">
                     {member.background}
                   </p>
