@@ -62,7 +62,6 @@ export default function About() {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               About <span className="text-onealgo-orange-500">OneAlgorithm</span>
-              — Transforming Businesses Through Technology
             </h1>
             <p className="text-xl text-blue-200 max-w-4xl mx-auto mb-8">
               We transform struggling businesses into thriving enterprises. With deep expertise across multiple industries, we design and execute technology solutions that simplify operations, reduce costs, and accelerate growth.
@@ -86,9 +85,7 @@ export default function About() {
           <div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Mission:{" "}
-                <span className="text-onealgo-orange-500">Empowering</span>{" "}
-                Struggling Businesses
+                Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Every day, we witness capable businesses struggle with outdated
